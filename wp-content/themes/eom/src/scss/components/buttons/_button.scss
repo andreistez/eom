@@ -1,0 +1,17 @@
+button,
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: $ff;
+	font-size: $fs-md;
+	font-weight: $fw-bold;
+	line-height: $lh;
+	color: $black;
+	text-transform: uppercase;
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	border-radius: 0
+}

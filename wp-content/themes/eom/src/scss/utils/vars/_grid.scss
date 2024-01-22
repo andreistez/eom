@@ -1,0 +1,16 @@
+// Grid.
+$xs: 375px;
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1366px;
+
+// Container padding.
+$container-padding: 20px;
+
+// Container max-width.
+$container-md: calc($md - $container-padding * 2);
+$container-lg: calc($lg - $container-padding * 2);
+$container-xl: calc($xl - $container-padding * 2);
+$container-xxl: calc($xxl - $container-padding * 2);
