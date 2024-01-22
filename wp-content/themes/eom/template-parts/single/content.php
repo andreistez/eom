@@ -14,15 +14,17 @@ $post_id = get_the_ID();
 ?>
 
 <article class="post-single post-<?php echo esc_attr( $post_id ) ?>">
-	<section class="news-link-hero">
-		<div class="container">
+	<div class="container">
+		<div class="post-single-content">
 			<h1 class="h1"><?php the_title() ?></h1>
 
 			<?php
 			if( has_post_thumbnail() )
 				echo get_the_post_thumbnail( $post_id, 'large' );
+
+			the_content();
 			?>
 		</div>
-	</section>
+	</div>
 </article><!-- .post-single -->
 
