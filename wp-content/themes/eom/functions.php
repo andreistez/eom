@@ -28,6 +28,7 @@ function eom_load_theme_dependencies(): void
 	require_once( 'theme-functions/acf-fc-templates-generator.php' );
 	// Please place all custom functions declarations in this file.
 	require_once( 'theme-functions/theme-functions.php' );
+	require_once( 'gutenberg/blocks-init.php' );
 	require_once( 'theme-functions/ajax.php' );
 }
 
