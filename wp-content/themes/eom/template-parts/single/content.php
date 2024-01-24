@@ -10,7 +10,9 @@
 // If this is NOT single post page - do nothing.
 if( ! is_singular( 'post' ) ) return;
 
-$post_id = get_the_ID();
+$post_id	= get_the_ID();
+$info		= get_field( 'info' );
+$additional	= get_field( 'additional_info' );
 ?>
 
 <article class="post-single post-<?php echo esc_attr( $post_id ) ?>">
