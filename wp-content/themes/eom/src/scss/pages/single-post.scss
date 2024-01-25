@@ -1,2 +1,57 @@
 @import '../utils/vars/vars';
 @import '../utils/base/wp-content';
+
+.post-single {
+    padding: 50px 0;
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+            border-radius: $border20;
+        }
+    }
+
+    &-info {
+        &-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        &-inner {
+            p {
+                font-family: $ff;
+                font-size: $fs-lg;
+                line-height: $lh;
+                color: $black;
+            }
+
+            a {
+                color: $black;
+                transition: opacity ease $tr;
+
+                &:hover {
+                    opacity: $op07;
+                }
+            }
+        }
+    }
+
+    &-additional-info {
+        p {
+            font-family: $ff;
+            font-weight: $fw-regular;
+            line-height: $lh;
+            font-size: $fs-lg;
+            color: $black;
+        }
+    }
+}

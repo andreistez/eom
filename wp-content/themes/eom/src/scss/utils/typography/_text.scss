@@ -9,7 +9,21 @@ a {
 }
 
 p {
-	margin: 0 0 24px;
+    font-family: $ff;
+	font-size: $fs-md;
+    line-height: $lh-title;
+    font-style: normal;
+    text-align: center;
+    margin: 0 0 16px;
+
+	@media(min-width: $md) {
+		font-size: $fs-lg;
+        margin-bottom: 40px
+	}
+
+    @media(min-width: $lg) {
+        margin: 0 0 24px;
+	}
 
 	&:last-child {
 		margin-bottom: 0
