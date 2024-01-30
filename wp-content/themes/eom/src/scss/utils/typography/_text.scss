@@ -1,3 +1,5 @@
+@import '../typography/mixins';
+
 a {
 	display: inline-block;
 	text-decoration: underline;
@@ -9,25 +11,55 @@ a {
 }
 
 p {
-    font-family: $ff;
-	font-size: $fs-md;
-    line-height: $lh-title;
-    font-style: normal;
-    text-align: center;
-    margin: 0 0 16px;
+   @include standfirst
+}
 
-	@media(min-width: $md) {
-		font-size: $fs-lg;
-        margin-bottom: 40px
-	}
+blockquote {
+    p {
+        font-family: $ff;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 31px;
+        color: $white;
 
-    @media(min-width: $lg) {
-        margin: 0 0 24px;
-	}
+        @media(min-width: $md) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    
+        @media(min-width: $xl) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
 
-	&:last-child {
-		margin-bottom: 0
-	}
+    .blockquote__name, .blockquote__job {
+        color: $white;
+        font-family: $ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 20px;
+
+        @media(min-width: $md) {
+            font-size: 16px;
+        }
+
+        @media(min-width: $xl) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    .blockquote__job {
+        font-style: italic;
+        margin-top: 4px;
+
+        @media(min-width: $md) {
+            margin-top: 10px;
+        }
+    }
 }
 
 b, strong {

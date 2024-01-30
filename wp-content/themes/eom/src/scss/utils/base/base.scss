@@ -29,6 +29,45 @@ img {
 	height: auto;
 }
 
+form,fieldset,textarea {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+input, textarea {
+    font-family: $ff;
+    color: $dark-blue;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+
+    &::placeholder {
+        opacity: 1;
+        font-family: $ff;
+        color: $dark-blue;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 18px;
+        letter-spacing: -0.54px;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
