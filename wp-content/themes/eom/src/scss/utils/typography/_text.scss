@@ -2,12 +2,7 @@
 
 a {
 	display: inline-block;
-	text-decoration: underline;
-	transition: opacity ease-out $tr;
-
-	&:hover {
-		text-decoration: none
-	}
+	text-decoration: none;
 }
 
 p {

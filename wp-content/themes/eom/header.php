@@ -51,14 +51,44 @@ $site_desc = get_bloginfo( 'description', 'display' );
 	<div class="wrapper">
 		<header class="header color">
             <div class="container">
-                <div class="header-inner" id="menu-lock">
-                    <?php
-                    wp_nav_menu( [
-                        'theme_location'	=> 'header_menu',
-                        'container'			=> 'nav',
-                        'container_class'	=> 'header-nav'
-                    ] );
-                    ?>
+                <div class="header__wrapper">
+                    <div class="header__logo_wrapper">
+                        <a href="/" class="header__logo">
+                            <div class="header__logo_inner">
+                                <div class="header__logo_gears">
+                                    <div class="violet__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                    </div>
+                                    <div class="red__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                    </div>
+                                    <div class="green__gear">
+                                    <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                    </div>
+                                    <div class="blue__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                    </div>
+                                </div>
+                                <div class="header__logo_text">
+                                    <div> Economics</div>
+                                    <div>of mutuality</div>
+                                    <div>alliance</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header__inner" id="menu-lock">
+                        <?php
+                        wp_nav_menu( [
+                            'theme_location'	=> 'header_menu',
+                            'container'			=> 'nav',
+                            'container_class'	=> 'header-nav'
+                        ] );
+                        ?>
+                    </div>
+                    <button class="burger__button">
+                        <span></span>
+                    </button>
                 </div>
             </div>
 		</header>

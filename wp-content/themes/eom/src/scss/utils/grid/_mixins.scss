@@ -1,19 +1,24 @@
 @mixin container() {
 	width: 100%;
 	max-width: 100%;
-	padding: 0 $container-padding;
+	padding: 0;
 	margin: 0 auto;
 
+    @media (min-width: $sm) {
+        padding: 0 $container-padding;
+    }
+
 	@media (min-width: $md) {
-		max-width: $container-md
-	}
+        padding: 0 30px;
+    }
 
 	@media (min-width: $lg) {
 		max-width: $container-lg
 	}
 
 	@media (min-width: $xl) {
-		max-width: $container-xl
+		max-width: $container-xl;
+        padding: 0 $container-padding;
 	}
 
     @media (min-width: $xxl) {

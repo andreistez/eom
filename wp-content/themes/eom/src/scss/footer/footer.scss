@@ -1,2 +1,59 @@
 .footer {
+    .container {
+        position: relative;
+    }
 }
+
+.lines {
+    @include container;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: $dark-blue;
+        bottom: 0;
+    }
+
+    &::before {
+        left: 0;
+
+        @media (min-width: $sm) {
+            left: 20px;
+        }
+
+        @media (min-width: $md) {
+            left: 30px;
+        }
+
+        @media (min-width: $xl) {
+            left: 20px;
+        }
+    }
+
+    &::after {
+        right: 0;
+
+        @media (min-width: $sm) {
+            right: 20px;
+        }
+
+        @media (min-width: $md) {
+            right: 30px;
+        }
+
+        @media (min-width: $xl) {
+            right: 20px;
+        }
+       
+    }
+}
+

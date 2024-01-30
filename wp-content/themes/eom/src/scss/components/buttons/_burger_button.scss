@@ -1,0 +1,65 @@
+.burger__button {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    transition: opacity ease $tr;
+    position: relative;
+    z-index: 100;
+
+    span {
+        width: 100%;
+        height: 2px;
+        background-color: $dark-blue;
+        position: relative;
+        transition: transform ease $tr;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $dark-blue;
+            transition: opacity ease $tr,
+                        transform ease $tr,
+                        top ease $tr;
+        }
+
+        &::before {
+            top: -6px;
+        }
+
+        &::after {
+            top: 6px;
+        }
+    }
+
+    @media (min-width: $md) {
+        margin-right: 20px;
+    }
+
+    @media (min-width: $lg) {
+        display: none;
+    }
+
+    &:hover {
+        opacity: $op07;
+    }
+
+    &.clicked {
+        span {
+            transform: rotate(45deg);
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
