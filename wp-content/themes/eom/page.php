@@ -11,10 +11,16 @@ get_header();
 
 // Hero styles and scripts.
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
-// Global text styles and scripts.
-wp_enqueue_style( 'global_text', THEME_URI . '/static/css/global_text/global_text.min.css', [], THEME_VERSION );
-// Image_text styles and scripts.
-wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
+
+// global text styles.
+wp_enqueue_style( 'global-text', THEME_URI . '/static/css/global_text/global_text.min.css', [], THEME_VERSION );
+
+// image_text styles.
+wp_enqueue_style( 'image-text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
+
+// main_video styles and scripts.
+wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.min.js', ['jquery'], THEME_VERSION, true );
 ?>
 
 <main class="main">
@@ -78,6 +84,19 @@ wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.m
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main__video">
+        <div class="container">
+            <div class="main__video_wrapper">
+                <video src="<?php echo THEME_URI ?>/src/video/bg.mp4" playsinline poster="<?php echo THEME_URI ?>/static/img/main-video-bg.png" type="video/webm"">
+                    <source src="<?php echo THEME_URI ?>/src/video/bg.webm" type="video/webm">
+                </video>
+                <div class="play">
+                    <img src="<?php echo THEME_URI ?>/static/img/play.png" alt="">
                 </div>
             </div>
         </div>
