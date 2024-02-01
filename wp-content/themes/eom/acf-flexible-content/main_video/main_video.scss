@@ -17,7 +17,7 @@
 
         &.playing {
             .play {
-                display: none;
+                animation: removePlay 1s forwards ease;
             }
         }
 

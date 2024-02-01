@@ -42,3 +42,18 @@ $tr07: 0.7s;
         transform: translateX(100%);
     }
 }
+
+//For videos with play button
+@keyframes removePlay {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
