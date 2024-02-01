@@ -11,26 +11,21 @@ h5, .h5 {
 
 h1, .h1 {
     font-family: $ff;
-    font-size: 83px;
+    font-size: 87px;
     font-style: normal;
-    font-weight: 700;
+    color: $white;
+    font-weight: $fw-bold;
     line-height: 88px;
-    letter-spacing: -2.6px; 
+    letter-spacing: -2.6px;
+    max-width: 788px;
 
 	@media(min-width: $md) {
         font-size: 100px;
         font-style: normal;
         font-weight: $fw-bold;
         line-height: 100px;
-        letter-spacing: -3px; 
+        letter-spacing: -3px;
 	}
-
-    @media(min-width: $xl) {
-		font-size: 45px;
-        margin-bottom: 50px
-	}
-
-
 }
 
 h2, .h2 {
