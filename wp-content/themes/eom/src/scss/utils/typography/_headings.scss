@@ -36,17 +36,22 @@ h2, .h2 {
     line-height: 54px;
     letter-spacing: -1.5px;
     color: $white;
+    max-width: 350px;
+    margin-bottom: 31px;
 
 	@media all and (min-width: $md) {
 		font-size: 52px;
         line-height: 56px;
         letter-spacing: -1.56px; 
+        margin-bottom: 31px;
 	}
 
     @media all and (min-width: $xl) {
 		font-size: 56px;
         line-height: 60px;
         letter-spacing: -1.68px; 
+        max-width: 100%;
+        margin-bottom: 0;
 	}
 
     &.violet {
@@ -74,7 +79,6 @@ h2, .h2 {
     font-weight: $fw-bold;
     line-height: 10px;
     letter-spacing: 0.9px;
-    margin-bottom: 8px;
     text-transform: uppercase;
 
     @media all and (min-width: $md) {

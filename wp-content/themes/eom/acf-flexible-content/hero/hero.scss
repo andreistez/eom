@@ -8,7 +8,7 @@
         align-items: flex-end;
         padding: 7px 7px 30px 7px;
         position: relative;
-        min-height: 710px;
+        min-height: 706px;
 
         @media(min-width: $md) {
             padding: 20px 16px 43px 16px;
@@ -16,6 +16,7 @@
 
         @media(min-width: $xl) {
             padding: 40px 32px 60px 32px;
+            min-height: 710px;
         }
     }
 
