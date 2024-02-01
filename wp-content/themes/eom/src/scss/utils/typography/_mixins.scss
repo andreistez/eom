@@ -58,3 +58,38 @@
         color: $dark-blue;
     }
 }
+
+@mixin firstLine {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 23px;
+    letter-spacing: -0.4px;
+
+    @media(min-width: $md) {
+		font-size: 22px;
+        line-height: 25px;
+        letter-spacing: -0.44px;
+	}
+
+    @media(min-width: $xl) {
+        font-size: 26px;
+        line-height: 29px;
+        letter-spacing: -0.52px;
+	}
+}
+
+@mixin borderTop {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 2px;
+        background-color: $dark-blue;
+        margin-left: calc(50vw - 50%);
+    } 
+}
