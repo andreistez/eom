@@ -2,7 +2,11 @@
 @import '../../src/scss/utils/typography/typography.scss';
 
 .dropdowns {
-    padding: 5px 0 32px;
+    padding: 5px 0 15px;
+
+    @media(min-width: $md) {
+        padding: 5px 0 30px;
+    }
 
     @media(min-width: $xl) {
         padding: 58px 0 32px;

@@ -208,6 +208,38 @@ wp_enqueue_script( 'dropdowns', THEME_URI . '/static/js/dropdowns/dropdowns.min.
 				</div>
 			</div>
 	</section>
+
+	<section class="image__text violet reverse column small-image">
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/text-img2.png" alt="">
+				</div>
+				<div class="image__text_right">
+					<div class="image__text_inner">
+						<div class="subtitle white">
+							OUR APPROACH
+						</div>
+						<div class="image__text_info">
+							<div class="image__text_heading">
+								<h2 class="h2">
+									Superior Value Creation
+								</h2>
+							</div>
+							<div class="image__text_paragraphs">
+								<p>
+									The Economics of Mutuality emerged from a multi-year business research initiative led by <a href="https://www.mars.com/news-and-stories/articles/economics-mutuality-foundation" target="_blank">Mars, Inc.</a> that engaged a range of cross-sector partners including <a href="https://www.sbs.ox.ac.uk/research/centres-and-initiatives/responsible-business/economics-mutuality-lab" target="_blank">Oxford University’s Saïd Business School</a>.
+								</p>
+								<p>
+									If offers companies an enhanced form of value creation suited to the new realities of business in the 21st century: mutual value creation.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 <?php
