@@ -11,13 +11,18 @@ h5, .h5 {
 
 h1, .h1 {
     font-family: $ff;
-    font-size: 87px;
+    font-size: 70px;
     font-style: normal;
     color: $white;
     font-weight: $fw-bold;
-    line-height: 88px;
+    line-height: 70px;
     letter-spacing: -2.6px;
     max-width: 788px;
+
+    @media(min-width: $xs) {
+        font-size: 87px;
+        line-height: 88px;
+    }
 
 	@media(min-width: $md) {
         font-size: 100px;

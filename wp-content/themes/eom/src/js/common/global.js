@@ -58,3 +58,12 @@ export const scrollToElem = ( elementSelector, ignoreHeaderHeight = false, scrol
 		behavior: 'smooth'
 	} )
 }
+
+export const reCalculateDropdownHeight = dropdown => {
+    const dropdownOpen  = dropdown.querySelector( '.dropdown__open' ),
+        dropdownInner   = dropdown.querySelector( '.dropdown__inner' )
+
+    if (! dropdownOpen || ! dropdownInner) return
+
+    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
+}

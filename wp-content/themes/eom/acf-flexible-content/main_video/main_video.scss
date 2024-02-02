@@ -3,8 +3,7 @@
 
 .main__video {
     @include borderTop;
-    padding-bottom: 300px;
-
+    @include borderBottom;
 
     &_wrapper {
         position: relative;
@@ -29,11 +28,11 @@
             object-fit: cover;
 
             @media(min-width: $md) {
-                max-height: 336px;
+                max-height: 334px;
             }
 
             @media(min-width: $xl) {
-                max-height: 618px;
+                max-height: 614px;
             }
         }
 

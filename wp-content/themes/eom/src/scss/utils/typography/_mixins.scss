@@ -81,10 +81,38 @@
 	}
 }
 
+@mixin caps {
+    color: $white;
+    font-family: $ff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @media(min-width: $md) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
 @mixin borderTop {
     position: relative;
 
     &::before {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 2px;
+        background-color: $dark-blue;
+        margin-left: calc(50vw - 50%);
+    } 
+}
+
+@mixin borderBottom {
+    position: relative;
+
+    &::after {
         content: '';
         display: block;
         width: 100vw;
