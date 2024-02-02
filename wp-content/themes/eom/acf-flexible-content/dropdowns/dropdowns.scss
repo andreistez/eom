@@ -32,19 +32,6 @@
         }
     }
 
-    &__heading {
-        width: 100%;
-        margin-bottom: 5px;
-
-        @media(min-width: $md) {
-            width: calc(50% - 8px);
-        }
-
-        @media(min-width: $xl) {
-            width: calc(50% - 16px);
-        }
-    }
-
     &__text {
         width: 100%;
 

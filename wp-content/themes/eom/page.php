@@ -109,11 +109,11 @@ wp_enqueue_script( 'dropdowns', THEME_URI . '/static/js/dropdowns/dropdowns.min.
 	<section class="dropdowns">
 		<div class="container">
 			<div class="dropdowns__top">
-				<div class="dropdowns__heading">
-					<div class="subtitle grass">
+				<div class="h2__wrapper grass">
+					<div class="subtitle">
 						OUR APPROACH
 					</div>
-					<h2 class="h2 grass">
+					<h2 class="h2">
 						How It Works
 					</h2>
 				</div>

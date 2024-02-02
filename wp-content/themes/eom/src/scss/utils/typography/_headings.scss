@@ -114,6 +114,43 @@ h2, .h2 {
     }
 }
 
+.h2__wrapper {
+    width: 100%;
+    margin-bottom: 5px;
+
+    @media(min-width: $md) {
+        width: calc(50% - 8px);
+    }
+
+    @media(min-width: $xl) {
+        width: calc(50% - 16px);
+    }
+
+    &.violet {
+        h2, .subtitle {
+            color: $violet;
+        }
+    }
+
+    &.grass {
+        h2, .subtitle {
+            color: $grass;
+        }
+    }
+
+    &.white {
+        h2, .subtitle {
+            color: $white;
+        }
+    }
+
+    &.cerulean {
+        h2, .subtitle {
+            color: $cerulean;
+        }
+    }
+}
+
 h3, .h3 {
     font-family: $ff;
     color: $violet;
