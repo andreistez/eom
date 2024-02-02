@@ -235,7 +235,7 @@
     }
 
     &__inner {
-        transition: background-color ease $tr;
+        background-color: $white;
     }
 
     &__title {
@@ -293,10 +293,6 @@
             span::before {
                 opacity: 0;
             }
-        }
-
-        .dropdown__inner {
-            background-color: $white;
         }
     }
 }
