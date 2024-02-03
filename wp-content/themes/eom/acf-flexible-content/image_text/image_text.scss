@@ -87,18 +87,6 @@
         }
     }
 
-    &.small-image {
-        .image__text_left {
-            img {
-                max-height: 379px;
-
-                @media(min-width: $xl) {
-                    max-height: 339px;
-                }
-            }
-        }
-    }
-
     &_wrapper {
         width: 100%;
         display: flex;
