@@ -28,6 +28,9 @@ wp_enqueue_script( 'dropdowns', THEME_URI . '/static/js/dropdowns/dropdowns.min.
 
 // quote styles.
 wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], THEME_VERSION );
+
+// perks styles.
+wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], THEME_VERSION );
 ?>
 
 <main class="main">
@@ -111,90 +114,91 @@ wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], TH
 
 	<section class="dropdowns">
 		<div class="container">
-			<div class="dropdowns__top">
-				<div class="h2__wrapper grass">
-					<div class="subtitle">
-						OUR APPROACH
-					</div>
-					<h2 class="h2">
-						How It Works
-					</h2>
-				</div>
-				<div class="dropdowns__text">
-					<p>
-						With support from our consultants, you can implement the Economics of Mutuality operating model in your company, applying one or more of its four domains to deliver optimal results.
-					</p>
-				</div>
-			</div>
-			<div class="dropdowns__circle_wrapper">
-				<div class="dropdowns__circle">
-					<div class="circle__lines"></div>
-					<div class="circle__top">
-						<div class="circle__top_left" data-id="0">
-							<img class="top-left" src="<?php echo THEME_URI ?>/static/img/top-left.svg" alt="">
-						</div>
-						<div class="circle__top_right" data-id="1">
-							<img class="top-right" src="<?php echo THEME_URI ?>/static/img/top-right.svg" alt="">
-						</div>
-					</div>
-					<div class="circle__bottom">
-						<div class="circle__bottom_left" data-id="3">
-							<img class="bot-left" src="<?php echo THEME_URI ?>/static/img/bot-left.svg" alt="">
-						</div>
-						<div class="circle__bottom_right" data-id="2">
-							<img class="bot-right" src="<?php echo THEME_URI ?>/static/img/bot-right.svg" alt="">
-						</div>
-					</div>
-					<img class="svg-center" src="<?php echo THEME_URI ?>/static/img/center.svg" alt="">
-				</div>
-			</div>
-		   <div class="dropdown__items">
-				<div class="dropdown terracota" data-id="0">
-					<div class="dropdown__title">
-						<div class="dropdown__start">
-							discover
-						</div>
-						<span></span>
-					</div>
-					<div class="dropdown__open">
-						<div class="dropdown__inner">
-							<div class="dropdown__text">
-								Leverage our AI-enabled big data tools to uncover new strategic opportunities by pinpointing societal challenges to address that are relevant to your capabilities and industry. This fertile ground for growth and impact is where your company's interest meets collective interest.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="dropdown cerulean" data-id="1">
-					<div class="dropdown__title">
-						<div class="dropdown__start">
-							analyze
-						</div>
-						<span></span>
-					</div>
-					<div class="dropdown__open">
-						<div class="dropdown__inner">
-							<p class="dropdown__text">
-								Transform your company’s operations and culture by developing mutual practices and mindsets through our digitally enabled learning and engagement offerings.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="dropdown violet" data-id="2">
-					<div class="dropdown__title">
-						<div class="dropdown__start">
-						innovate
-						</div>
-						<span></span>
-					</div>
-					<div class="dropdown__open">
-						<div class="dropdown__inner">
-							<div class="dropdown__text">
-								Engage our AI-powered scanning and mapping tools to gain unparalleled insight into your ecosystem of stakeholders – expanding your visibility of value creation opportunities, as well as value erosion risks, such as breakdowns in trust or misuse of resources.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="dropdown grass" data-id="3">
+            <div class="dropdowns__wrapper">
+                <div class="h2__box grass">
+                    <div class="h2__wrapper">
+                        <div class="subtitle">
+                            OUR APPROACH
+                        </div>
+                        <h2 class="h2">
+                            How It Works
+                        </h2>
+                    </div>
+                    <div class="h2__box_text">
+                        <p>
+                            With support from our consultants, you can implement the Economics of Mutuality operating model in your company, applying one or more of its four domains to deliver optimal results.
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdowns__circle_wrapper">
+                    <div class="dropdowns__circle">
+                        <div class="circle__lines"></div>
+                        <div class="circle__top">
+                            <div class="circle__top_left" data-id="0">
+                                <img class="top-left" src="<?php echo THEME_URI ?>/static/img/top-left.svg" alt="">
+                            </div>
+                            <div class="circle__top_right" data-id="1">
+                                <img class="top-right" src="<?php echo THEME_URI ?>/static/img/top-right.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="circle__bottom">
+                            <div class="circle__bottom_left" data-id="3">
+                                <img class="bot-left" src="<?php echo THEME_URI ?>/static/img/bot-left.svg" alt="">
+                            </div>
+                            <div class="circle__bottom_right" data-id="2">
+                                <img class="bot-right" src="<?php echo THEME_URI ?>/static/img/bot-right.svg" alt="">
+                            </div>
+                        </div>
+                        <img class="svg-center" src="<?php echo THEME_URI ?>/static/img/center.svg" alt="">
+                    </div>
+                </div>
+                <div class="dropdown__items">			
+                    <div class="dropdown terracota" data-id="0">
+                        <div class="dropdown__title">
+                            <div class="dropdown__start">
+                                discover
+                            </div>
+                            <span></span>
+                        </div>
+                        <div class="dropdown__open">
+                            <div class="dropdown__inner">
+                                <div class="dropdown__text">
+                                    Leverage our AI-enabled big data tools to uncover new strategic opportunities by pinpointing societal challenges to address that are relevant to your capabilities and industry. This fertile ground for growth and impact is where your company's interest meets collective interest.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown cerulean" data-id="1">
+                        <div class="dropdown__title">
+                            <div class="dropdown__start">
+                                analyze
+                            </div>
+                            <span></span>
+                        </div>
+                        <div class="dropdown__open">
+                            <div class="dropdown__inner">
+                                <p class="dropdown__text">
+                                    Transform your company’s operations and culture by developing mutual practices and mindsets through our digitally enabled learning and engagement offerings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown violet" data-id="2">
+                        <div class="dropdown__title">
+                            <div class="dropdown__start">
+                            innovate
+                            </div>
+                            <span></span>
+                        </div>
+                        <div class="dropdown__open">
+                            <div class="dropdown__inner">
+                                <div class="dropdown__text">
+                                    Engage our AI-powered scanning and mapping tools to gain unparalleled insight into your ecosystem of stakeholders – expanding your visibility of value creation opportunities, as well as value erosion risks, such as breakdowns in trust or misuse of resources.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown grass" data-id="3">
 					<div class="dropdown__title">
 						<div class="dropdown__start">
 							evolve
@@ -210,6 +214,7 @@ wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], TH
 					</div>
 				</div>
 			</div>
+        </div>
 	</section>
 
 	<section class="image__text violet reverse column small-image">
@@ -269,6 +274,28 @@ wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], TH
 			</div>
 		</div>
 	</section>
+
+    <section class="perks">
+        <div class="container">
+            <div class="perks__wrapper">
+                <div class="h2__box cerulean">
+                    <div class="h2__wrapper">
+                        <div class="subtitle">
+                            OUR APPROACH
+                        </div>
+                        <h2 class="h2">
+                            Thriving Business
+                        </h2>
+                    </div>
+                    <div class="h2__box_text">
+                        <p>
+                            An opportunity, not an obligation, the Economics of Mutuality engineers beneficial practices into the heart of your company, uncovering and realizing multiple opportunities and benefits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php

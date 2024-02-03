@@ -3,7 +3,6 @@
 
 .main__video {
     @include borderTop;
-    @include borderBottom;
 
     &_wrapper {
         position: relative;

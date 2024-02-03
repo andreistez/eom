@@ -114,16 +114,47 @@ h2, .h2 {
     }
 }
 
-.h2__wrapper {
-    width: 100%;
-    margin-bottom: 5px;
+.h2__box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10px;
 
     @media(min-width: $md) {
-        width: calc(50% - 8px);
+        flex-direction: row;
+        padding: 0 18px;
     }
 
     @media(min-width: $xl) {
-        width: calc(50% - 16px);
+        padding: 0 110px;
+        gap: 32px;
+    }
+
+    &_text {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(50% - 8px);
+            padding-top: 28px;         
+        }
+
+        @media(min-width: $xl) {
+            width: calc(50% - 16px);
+            padding-top: 0;
+        }
+    }
+
+    .h2__wrapper {
+        width: 100%;
+        margin-bottom: 5px;
+    
+        @media(min-width: $md) {
+            width: calc(50% - 8px);
+        }
+    
+        @media(min-width: $xl) {
+            width: calc(50% - 16px);
+        }
     }
 
     &.violet {
@@ -150,6 +181,8 @@ h2, .h2 {
         }
     }
 }
+
+
 
 h3, .h3 {
     font-family: $ff;

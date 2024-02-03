@@ -1,0 +1,10 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.perks {
+    @include borderTop;
+
+    &__wrapper {
+        padding: 64px 0 32px;
+    }
+}
