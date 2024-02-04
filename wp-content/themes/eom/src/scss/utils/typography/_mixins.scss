@@ -82,17 +82,29 @@
 }
 
 @mixin caps {
-    color: $white;
     font-family: $ff;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: $fw-bold;
     line-height: 20px;
     text-transform: uppercase;
 
     @media(min-width: $md) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media(min-width: $xl) {
         font-size: 20px;
         line-height: 24px;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    &.blue {
+        color: $dark-blue;
     }
 }
 
@@ -109,15 +121,14 @@
     } 
 }
 
-@mixin borderBottom {
-    position: relative;
+@mixin textBoxes {
+    font-family: $ff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 20px;
 
-    &::after {
-        content: '';
-        display: block;
-        width: 100vw;
-        height: 2px;
-        background-color: $dark-blue;
-        margin-left: calc(50vw - 50%);
-    } 
+    &.blue {
+        color: $dark-blue;
+    }
 }

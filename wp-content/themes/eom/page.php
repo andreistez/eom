@@ -155,7 +155,7 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
                 <div class="dropdown__items">			
                     <div class="dropdown terracota" data-id="0">
                         <div class="dropdown__title">
-                            <div class="dropdown__start">
+                            <div class="dropdown__start white">
                                 discover
                             </div>
                             <span></span>
@@ -170,7 +170,7 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
                     </div>
                     <div class="dropdown cerulean" data-id="1">
                         <div class="dropdown__title">
-                            <div class="dropdown__start">
+                            <div class="dropdown__start white">
                                 analyze
                             </div>
                             <span></span>
@@ -185,7 +185,7 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
                     </div>
                     <div class="dropdown violet" data-id="2">
                         <div class="dropdown__title">
-                            <div class="dropdown__start">
+                            <div class="dropdown__start white">
                             innovate
                             </div>
                             <span></span>
@@ -200,7 +200,7 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
                     </div>
                     <div class="dropdown grass" data-id="3">
 					<div class="dropdown__title">
-						<div class="dropdown__start">
+						<div class="dropdown__start white">
 							evolve
 						</div>
 						<span></span>
@@ -291,6 +291,73 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
                         <p>
                             An opportunity, not an obligation, the Economics of Mutuality engineers beneficial practices into the heart of your company, uncovering and realizing multiple opportunities and benefits.
                         </p>
+                    </div>
+                </div>
+                <div class="perks__cards">
+                    <div class="perks__card">
+                        <div class="perks__card_img">
+                            <img src="<?php echo THEME_URI ?>/static/img/perk1.png" alt="">
+                        </div>
+                        <div class="perks__card_inner">
+                            <div class="perks__card_title blue">
+                                strategic
+                            </div>
+                            <div class="perks__card_text blue">
+                                Organizational alignment enables strategic transformation and innovation
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perks__card">
+                        <div class="perks__card_img">
+                            <img src="<?php echo THEME_URI ?>/static/img/perk2.png" alt="">
+                        </div>
+                        <div class="perks__card_inner">
+                            <div class="perks__card_title blue">
+                                organisational
+                            </div>
+                            <div class="perks__card_text blue">
+                                Motivated, engaged colleagues are more productive and more loyal
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perks__card">
+                        <div class="perks__card_img">
+                            <img src="<?php echo THEME_URI ?>/static/img/perk3.png" alt="">
+                        </div>
+                        <div class="perks__card_inner">
+                            <div class="perks__card_title blue">
+                                reputational
+                            </div>
+                            <div class="perks__card_text blue">
+                                Respected and trusted brands create preference and build intangible value
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perks__card">
+                        <div class="perks__card_img">
+                            <img src="<?php echo THEME_URI ?>/static/img/perk4.png" alt="">
+                        </div>
+                        <div class="perks__card_inner">
+                            <div class="perks__card_title blue">
+                                financial
+                            </div>
+                            <div class="perks__card_text blue">
+                                Efficiency savings, risk reduction and sustained growth enhances profitability
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perks__card">
+                        <div class="perks__card_img">
+                            <img src="<?php echo THEME_URI ?>/static/img/perk5.png" alt="">
+                        </div>
+                        <div class="perks__card_inner">
+                            <div class="perks__card_title blue">
+                                social and environmental
+                            </div>
+                            <div class="perks__card_text blue">
+                                Healthier, flourishing communities and positive environmental impact
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
