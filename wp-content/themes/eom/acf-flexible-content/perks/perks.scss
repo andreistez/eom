@@ -5,14 +5,14 @@
     @include borderTop;
 
     &__wrapper {
-        padding: 6px 0;
+        padding: 6px 7px 16px 7px;
 
         @media(min-width: $md) {
-            padding: 26px 0 32px;
+            padding: 25px 20px 32px 20px;
         }
 
         @media(min-width: $xl) {
-            padding: 64px 0 32px;
+            padding: 64px 110px 32px 110px;
         }
     }
 
@@ -20,7 +20,7 @@
         margin-bottom: 25px;
 
         @media(min-width: $md) {
-            margin-bottom: 4px;
+            margin-bottom: 35px;
         }
 
         @media(min-width: $xl) {
@@ -31,18 +31,9 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 9px;
-
-        @media(min-width: $md) {
-            padding: 0 20px;
-        }
 
         @media(min-width: $xl) {
-            padding: 0 59px;
-        }
-
-        @media(min-width: $xxl) {
-            padding: 0 118px;
+            padding: 0 10px;
         }
     }
 

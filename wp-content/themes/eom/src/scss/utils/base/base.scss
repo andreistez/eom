@@ -47,26 +47,47 @@ ul, ol {
 input, textarea {
     font-family: $ff;
     color: $dark-blue;
+    padding: 4px 14px;
     font-size: 18px;
     font-style: normal;
     font-weight: $fw-regular;
     line-height: 18px;
-    letter-spacing: -0.54px;
+    letter-spacing: -0.42px; 
+    border: 1px solid $dark-blue;
+    background-color: $white;
 
     &::placeholder {
         opacity: 1;
         font-family: $ff;
         color: $dark-blue;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: $fw-regular;
+        line-height: 14px;
+        letter-spacing: -0.42px; 
+
+        @media(min-width: $md) {
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: -0.54px;
+        }
+    }
+
+    @media(min-width: $md) {
+        font-size: 18px;
         line-height: 18px;
         letter-spacing: -0.54px;
+        padding: 5.5px 14px;
     }
 }
 
 textarea {
     resize: none;
+    min-height: 100px;
+
+    @media(min-width: $md) {
+        min-height: 150px;
+    }
 }
 
 .wrapper {
