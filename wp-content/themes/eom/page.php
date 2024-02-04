@@ -217,7 +217,7 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
         </div>
 	</section>
 
-	<section class="image__text violet reverse column small-image">
+	<section class="image__text violet reverse column">
 		<div class="container">
 			<div class="image__text_wrapper">
 				<div class="image__text_left">
@@ -363,6 +363,41 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
             </div>
         </div>
     </section>
+
+    <section class="image__text terracota column column-row">
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/text-img-red.png" alt="">
+				</div>
+				<div class="image__text_right">
+					<div class="image__text_inner">
+						<div class="subtitle white">
+							OUR APPROACH
+						</div>
+						<div class="image__text_info">
+							<div class="image__text_heading">
+								<h2 class="h2">
+                                    Flourishing Society
+								</h2>
+							</div>
+							<div class="image__text_paragraphs">
+								<p>
+                                    You no longer have to choose between building a thriving business and contributing to a flourishing society. The Economics of Mutuality is an engine of transformation that empowers you to do both.
+								</p>
+								<p>
+                                    The truth is that creating value for your stakeholders and your shareholders doesn’t have to be mutually exclusive. It can be mutually beneficial.
+								</p>
+                                <p>
+                                    Everybody wins when you address the problems of people, place, and planet... profitably.
+                                </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 <?php

@@ -45,7 +45,7 @@
         }
     }
 
-    &.column {
+    &.column, &.column-row {
         .image__text_wrapper {
             flex-direction: column;
 
@@ -85,6 +85,14 @@
                 width: 100%;
             }
         }
+    }
+
+    &.column-row {
+        .image__text_wrapper {
+            @media(min-width: $md) {
+                flex-direction: row;
+            }
+        }     
     }
 
     &_wrapper {
