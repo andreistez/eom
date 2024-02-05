@@ -51,4 +51,22 @@
             max-width: 582px;
         }
     }
+
+    &.flex-start {
+        .quote__wrapper {
+            justify-content: flex-start;
+        }
+
+        blockquote {
+            max-width: 600px;
+
+            @media(min-width: $md) {
+                max-width: 389px;
+            }
+    
+            @media(min-width: $xl) {
+                max-width: 720px;
+            }
+        }
+    }
 }
