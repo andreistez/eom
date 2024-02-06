@@ -59,12 +59,17 @@
         color: $dark-blue;
     }
 
+    &.spacebetween {
+        display: flex;
+        justify-content: space-between;
+    } 
+
     &:hover {
         opacity: $op07;
     }
 }
 
-@mixin firstLine {
+@mixin firstLine() {
     color: $dark-blue;
     font-family: $ff;
     font-size: 20px;
@@ -86,7 +91,7 @@
 	}
 }
 
-@mixin caps {
+@mixin caps() {
     font-family: $ff;
     font-size: 20px;
     font-style: normal;
@@ -113,7 +118,7 @@
     }
 }
 
-@mixin borderTop {
+@mixin borderTop() {
     position: relative;
 
     &::before {
@@ -126,7 +131,7 @@
     } 
 }
 
-@mixin textBoxes {
+@mixin textBoxes() {
     font-family: $ff;
     font-size: 16px;
     font-style: normal;
