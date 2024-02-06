@@ -26,10 +26,18 @@
 
     &__items {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 8px;
     }
 
     &__item {
+        width: 100%;
+
+        @media all and (min-width: $xs) {
+            width: calc((100% / 3) - 6px);
+        }
+
         &_inner {
             display: flex;
             flex-direction: column;
@@ -70,6 +78,14 @@
             background-color: $dark-blue;
             color: $white;
             opacity: 1;
+        }
+    }
+}
+
+.home {
+    .resources {
+        @media all and (min-width: $md) {
+            display: none;
         }
     }
 }

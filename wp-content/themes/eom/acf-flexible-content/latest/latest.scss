@@ -170,19 +170,13 @@
         line-height: 18px;
         letter-spacing: -0.54px;
         transition: opacity ease $tr;
-        position: relative;
-        padding-right: 15px;
 
         span {
             margin-left: 5px;
-            position: absolute;
-            right: 0;
-            top: -2px;
             font-size: 15px;
 
             @media(min-width: $md) {
                 font-size: 18px;
-                top: 0;
             }
         }
 

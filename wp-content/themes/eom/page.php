@@ -43,6 +43,10 @@ wp_enqueue_style( 'latest', THEME_URI . '/static/css/latest/latest.min.css', [],
 
 // resources styles.
 wp_enqueue_style( 'resources', THEME_URI . '/static/css/resources/resources.min.css', [], THEME_VERSION );
+
+// dropdowns styles and scripts.
+wp_enqueue_style( 'slides', THEME_URI . '/static/css/slides/slides.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jquery'], THEME_VERSION, true );
 ?>
 
 <main class="main">
@@ -972,6 +976,103 @@ wp_enqueue_style( 'resources', THEME_URI . '/static/css/resources/resources.min.
             </div>
         </div>
     </section>
+
+    <section class="slides"> <!-- This is slide for another pages -->
+        <div class="container">
+            <div class="slides__wrapper">
+                <h2 class="h2 grass">
+                    Meet our team
+                </h2>
+                <div class="slides__items">
+                    <div class="swiper team-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__img">
+                                    <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
+                                </div>
+                                <div class="swiper-slide__inner">
+                                    <div class="swiper-slide__name">
+                                        Jay Jakub
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Executive Director
+                                    </div>
+                                    <a href="#" class="latest__link">
+                                        View Profile
+                                        <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__img">
+                                    <img src="<?php echo THEME_URI ?>/static/img/bio2.png" alt="">
+                                </div>
+                                <div class="swiper-slide__inner">
+                                    <div class="swiper-slide__name">
+                                        Stephen badger
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Chairman of the Board 
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Former Chairman of the Board, Mars, Inc.
+                                    </div>
+                                    <a href="#" class="latest__link">
+                                        View Profile
+                                        <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__img">
+                                    <img src="<?php echo THEME_URI ?>/static/img/bio3.png" alt="">
+                                </div>
+                                <div class="swiper-slide__inner">
+                                    <div class="swiper-slide__name">
+                                        Ann florini
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Vice-Chairman of the Board
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Fellow, New America; Prof. of Practice, Thunderbird ASU; Former Prof., National University of Singapore, Singapore Management University; Former Senior Fellow, Brookings
+                                    </div>
+                                    <a href="#" class="latest__link">
+                                        View Profile
+                                        <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__img">
+                                    <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
+                                </div>
+                                <div class="swiper-slide__inner">
+                                    <div class="swiper-slide__name">
+                                        Jay Jakub
+                                    </div>
+                                    <div class="swiper-slide__text">
+                                        Executive Director
+                                    </div>
+                                    <a href="#" class="latest__link">
+                                        View Profile
+                                        <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <div class="swiper-prev"><span>→</span></div>
+                            <a href="#" class="latest__link">
+                                View more
+                            </a>
+                            <div class="swiper-next"><span>→</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
 </main>
 
 <?php
