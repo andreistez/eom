@@ -1,0 +1,52 @@
+.subscribe {
+    .input__wrapper {
+        position: relative;
+        width: 120px;
+
+        @media(min-width: $xs) {
+            width: 170px;
+        }
+
+        @media(min-width: $md) {
+            width: 202px;
+        }
+
+        .subscribe__button {
+            position: absolute;
+            right: 8px;
+            top: 45%;
+            transform: translateY(-50%);
+        }
+    }
+
+    input {
+        border-color: $white;
+        background-color: transparent;
+        width: 100%;
+        color: $white;
+        font-family: $ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 16px;
+
+        &::placeholder {
+            color: $white;
+            font-family: $ff;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: 10px;
+
+            @media(min-width: $md) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        @media(min-width: $md) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-const ajaxUrl = window.wpData.ajaxUrl
+// const ajaxUrl = window.wpData.ajaxUrl
 let targetElement
 
 export const getTargetElement = () => targetElement
@@ -57,4 +57,13 @@ export const scrollToElem = ( elementSelector, ignoreHeaderHeight = false, scrol
 		top		: offset,
 		behavior: 'smooth'
 	} )
+}
+
+export const reCalculateDropdownHeight = dropdown => {
+    const dropdownOpen  = dropdown.querySelector( '.dropdown__open' ),
+        dropdownInner   = dropdown.querySelector( '.dropdown__inner' )
+
+    if (! dropdownOpen || ! dropdownInner) return
+
+    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
 }

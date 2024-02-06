@@ -1,1 +1,59 @@
-$tr: 0.35s;
+$tr  : 0.35s;
+$tr07: 0.7s;
+
+//Keyframes for header logo gears
+@keyframes rotationForward {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationReverse {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+//For burger menu
+@keyframes burgerIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes burgerOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+//For videos with play button
+@keyframes removePlay {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

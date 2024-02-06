@@ -1,0 +1,223 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.image__text {
+    @include borderTop;
+
+    &.terracota {
+        .image__text_right {
+            background-color: $terracota;
+        }
+    }
+
+    &.violet {
+        .image__text_right {
+            background-color: $violet;
+        }
+    }
+
+    &.grass {
+        .image__text_right {
+            background-color: $grass;
+        }
+    }
+
+    &.white {
+        .image__text_right {
+            background-color: $white;
+        }
+    }
+
+    &.cerulean {
+        .image__text_right {
+            background-color: $cerulean;
+        }
+    }
+
+    &_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: $md) {
+            flex-direction: row;
+        }
+    }
+
+    &_left {
+        width: 100%;
+        height: 200px;
+        position: relative;
+
+        @media(min-width: $md) {
+            width: calc(32.5% - 2px);
+            height: auto;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_right {
+        width: 100%;
+        padding: 5px 16px 20px 10px;
+        border-left: $border-2px;
+
+        @media(min-width: $md) {
+            width: 67.5%;
+            padding: 10px 16px 20px 16px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 27px 16px 27px 32px;
+        }
+            
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+        @media(min-width: $xl) {
+            flex-direction: row;
+        }
+    }
+
+    &_heading {
+        width: 100%;
+
+        @media(min-width: $xl) {
+            width: 50%;
+        }
+    }
+
+    &_paragraphs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: $xl) {
+            width: 50%;
+        }
+
+        p {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.reverse {
+        .image__text_wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .image__text_right {
+            border-left: 0;
+            border-right: $border-2px;
+        }
+    }
+
+    &.column, &.column-row {
+        .image__text_wrapper {
+            flex-direction: column;
+
+            @media(min-width: $md) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .image__text_info {
+            flex-direction: column;
+
+            .h2 {
+                margin-bottom: 13px;
+
+                @media(min-width: $xl) {
+                    margin-bottom: 24px;
+                }
+            }
+    
+            .image__text_heading {
+                width: 100%;
+            }
+    
+            .image__text_paragraphs {
+                width: 100%;
+            }
+        }
+    }
+
+    &.column-row {
+        .image__text_wrapper {
+            @media(min-width: $md) {
+                flex-direction: row;
+            }
+        }  
+    }
+
+    &.column-row-reverse {
+        .image__text_wrapper {
+            @media(min-width: $md) {
+                flex-direction: row-reverse;
+            }
+        }  
+    }
+
+    &.big {
+        .image__text_info {
+            padding-bottom: 96px;
+            position: relative;
+            padding-bottom: 30px;
+
+            @media(min-width: $md) {
+                padding-bottom: 48px;
+            }
+
+            @media(min-width: $xl) {
+                padding-bottom: 96px;
+            }
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: $white;
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+
+                @media(min-width: $md) {
+                    bottom: 24px;
+                }
+    
+                @media(min-width: $xl) {
+                    bottom: 48px;
+                }
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

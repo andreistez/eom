@@ -1,0 +1,276 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.dropdowns {
+    @include borderTop;
+    
+    &__wrapper {
+        padding: 6px 7px 16px 7px;
+
+        @media(min-width: $md) {
+            padding: 6px 20px 28px 20px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 64px 110px 26px 110px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .h2__box {
+        margin-bottom: 18px;
+        
+        @media(min-width: $md) {
+            margin-bottom: 46px;
+        }
+    }
+
+    &__circle_wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__circle {
+        position: relative;
+        width: 290px;
+        height: 290px;
+
+        @media(min-width: $md) {
+            width: 371px;
+            height: 371px;           
+        }
+
+        @media(min-width: $xl) {
+            width: 480px;
+            height: 480px;           
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            outline: 2px solid $black;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        &::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+            width: 230px;
+            height: 230px;
+
+            @media(min-width: $md) {
+                width: 294px;
+                height: 294px;       
+            }
+
+            @media(min-width: $xl) {
+                width: 379px;
+                height: 379px;       
+            }
+        }
+
+        .circle__top, .circle__bottom {
+            display: flex;
+
+            &_left, &_right {
+                width: 50%;
+            }
+        }
+
+         .svg-center, .big-circle, .small-circle {
+            position: absolute;
+            pointer-events: none;
+         }
+
+         .svg-center {
+            width: 119px;
+            height: 119px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            @media(min-width: $md) {
+                width: 152px;
+                height: 152px;
+            }
+
+            @media(min-width: $xl) {
+                width: 196px;
+                height: 196px;
+            }
+         }
+
+         .circle__bottom_left, .circle__bottom_right, .circle__top_left, .circle__top_right {
+            z-index: 1;
+            transition: filter ease $tr;
+            cursor: pointer;
+         }
+
+         &:hover {
+            .circle__bottom_left, .circle__bottom_right, .circle__top_left, .circle__top_right {
+                filter: brightness(0.7);
+            }
+         }
+
+         .circle__bottom_left, .circle__bottom_right, .circle__top_left, .circle__top_right {
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+    }
+
+    .circle__lines {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: $black;
+            position: absolute;
+            left: 50%;
+        }
+
+        &::before {
+            height: calc(100% + 52px);
+            transform: translateX(-50%);
+
+            @media(min-width: $md) {
+                height: calc(100% + 32px);
+            }
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.dropdown__items {
+    width: 100%;
+    max-width: 373px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 52px auto 0 auto;
+    border: $border-2px;
+
+    @media(min-width: $md) {
+        margin: 30px auto 0 auto;
+        max-width: 604px;      
+    }
+}
+
+.dropdown {
+    outline: $border-2px;
+    cursor: pointer;
+
+    &.terracota {
+        background-color: $terracota;
+    }
+
+    &.cerulean {
+        background-color: $cerulean;
+    }
+
+    &.violet {
+        background-color: $violet;
+    }
+
+    &.grass {
+        background-color: $grass;
+    }
+
+    &__open {
+        overflow: hidden;
+		height: 0;
+		transition: height ease 0.5s;
+    }
+
+    &__inner {
+        background-color: $white;
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+
+        @media(min-width: $md) {
+            padding: 16px 10px;
+        }
+
+        span {
+            display: block;
+            width: 14px;
+            height: 14px;
+            position: relative;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 4px;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $white;
+                transition: opacity ease $tr;
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+
+    &__text {
+        @include standfirst;
+
+        padding: 10px;
+    }
+
+    &__start {
+        @include caps;
+    }
+
+    &.opened {
+        overflow: hidden;
+
+        .dropdown__title {
+            outline: $border-2px;
+
+            span::before {
+                opacity: 0;
+            }
+        }
+    }
+}

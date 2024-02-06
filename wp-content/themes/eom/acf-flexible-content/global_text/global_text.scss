@@ -1,0 +1,22 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.global__text {
+   @include borderTop;
+
+    &_wrapper {
+        padding: 15px 10px;
+
+        @media(min-width: $md) {
+            padding: 20px 20px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 38px 9% 40px 32px;
+        }
+    }
+
+    p {
+        @include firstLine
+    }
+}

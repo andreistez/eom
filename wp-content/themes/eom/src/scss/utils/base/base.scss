@@ -20,7 +20,7 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $light
 }
 
 img {
@@ -29,15 +29,81 @@ img {
 	height: auto;
 }
 
+form,fieldset,textarea {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input, textarea {
+    font-family: $ff;
+    color: $dark-blue;
+    padding: 4px 14px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.42px; 
+    border: 1px solid $dark-blue;
+    background-color: $white;
+
+    &::placeholder {
+        opacity: 1;
+        font-family: $ff;
+        color: $dark-blue;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 14px;
+        letter-spacing: -0.42px; 
+
+        @media(min-width: $md) {
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: -0.54px;
+        }
+    }
+
+    @media(min-width: $md) {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.54px;
+        padding: 5.5px 14px;
+    }
+}
+
+textarea {
+    resize: none;
+    min-height: 100px;
+
+    @media(min-width: $md) {
+        min-height: 150px;
+    }
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
-	overflow: hidden;
 
 	.footer {
 		margin-top: auto
 	}
+}
+
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

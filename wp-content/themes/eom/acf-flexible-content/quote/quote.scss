@@ -1,0 +1,72 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.quote {
+    @include borderTop;
+
+    &__wrapper {
+        width: 100%;
+        min-height: 607px;
+        position: relative;
+        padding: 10px 10px 42px 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        @media(min-width: $md) {
+            min-height: 450px;
+            padding: 32px 32px 40px 32px;
+        }
+
+        @media(min-width: $xl) {
+            min-height: 603px;
+            padding: 38px 32px;
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    blockquote {
+        width: 100%;
+        max-width: 582px;
+
+        @media(min-width: $md) {
+            max-width: 472px;
+        }
+
+        @media(min-width: $xl) {
+            max-width: 582px;
+        }
+    }
+
+    &.flex-start {
+        .quote__wrapper {
+            justify-content: flex-start;
+        }
+
+        blockquote {
+            max-width: 600px;
+
+            @media(min-width: $md) {
+                max-width: 389px;
+            }
+    
+            @media(min-width: $xl) {
+                max-width: 720px;
+            }
+        }
+    }
+}

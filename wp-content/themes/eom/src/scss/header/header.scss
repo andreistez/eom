@@ -1,2 +1,109 @@
 .header {
+
+    .header__logo_wrapper {
+        padding: 25px 0 20px 0;
+
+        @media (min-width: $md) {
+            padding: 15px 0 15px 10px;
+        }
+
+        @media (min-width: $xl) {
+            padding: 29.5px 0 27.5px 20px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid $dark-blue;
+        position: relative;
+
+        @media (min-width: $lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            border-bottom: 0;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: calc(100% - 4px);
+            margin-left: calc(50% - 50vw);
+            border-top: 2px solid $dark-blue;
+            border-bottom: 2px solid $dark-blue;
+            z-index: -1;
+        }
+
+        @media (min-width: $lg) {
+            position: sticky;
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        &.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        &.opened {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: $white;
+            z-index: 100;
+            width: 250px;
+            height: 100%;
+            padding: 50px 0;
+            overflow-y: auto;
+            border-left: 2px solid $dark-blue;
+            animation: burgerIn 1s forwards ease;
+
+            &::before {
+                display: none;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
+            .header-nav {
+                width: 100%;
+                height: auto;
+                margin: auto 0;
+            }
+
+            .menu {
+                margin-left: 0;
+                width: 100%;
+
+                &-item {
+                    border: 0;
+                    margin-bottom: 10px;
+    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.closed {
+            animation: burgerOut $tr forwards ease;
+        }
+    }
 }

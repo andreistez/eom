@@ -1,2 +1,254 @@
 .footer {
+    background-color: $dark-blue;
+    padding-bottom: 32px;
+
+    .container {
+        position: relative;
+    }
+
+    &__wrapper {
+        padding: 16px 10px 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        @media(min-width: $md) {
+            padding: 60px 48px 0 48px;
+            margin-bottom: 81px;
+        }
+
+        @media(min-width: $xl) {
+            margin-bottom: 81px;
+            padding: 120px 30px 0 30px;
+        }
+    }
+
+    &__logo {
+        width: 159px;
+        height: 100px;
+        margin-bottom: 32px;
+
+        @media(min-width: $md) {
+            width: 249px;
+            height: 157px;
+            margin-bottom: 64px;
+        }
+
+        @media(min-width: $xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        @media(min-width: $md) {
+            gap: 32px;
+        }
+
+        @media(min-width: $xl) {
+            max-width: 788px;
+            flex-wrap: nowrap;
+        }
+    }
+
+    a {
+        color: $white;
+        font-family: $ff;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 10px;
+        transition: opacity ease $tr;
+
+        &:hover {
+            opacity: $op07;
+        }
+
+        @media(min-width: $md) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__nav {
+        width: calc(50% - 6px);
+        margin-bottom: 32px;
+
+        @media(min-width: $md) {
+            width: calc(30% - 16px);
+            min-width: 168px;
+            margin-bottom: 0;
+        }
+
+        @media(min-width: $xl) {
+            width: fit-content;
+        }
+    }
+
+    &__links {
+        order: 2;
+
+        a {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media(min-width: $md) {
+            order: 0;
+        }
+
+        &_inner {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .subscribe {
+        width: calc(50% - 6px);
+
+        @media(min-width: $md) {
+            width: 100%;
+            margin-top: 32px;
+        }
+
+        @media(min-width: $xl) {
+            width: auto;
+            margin-top: 0;
+        }
+    }
+
+    .menu-item {
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__heading {
+        color: $white;
+        font-family: $ff;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: $fw-bold;
+        line-height: 10px;
+        letter-spacing: 1.26px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+        @media(min-width: $md) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        justify-content: center;
+        padding: 0 25px;
+
+        &_wrapper {
+            width: 100%;
+            max-width: 470px;
+        }
+
+        &_links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__year {
+        color: $white;
+        font-family: $ff;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media(min-width: $md) {
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+
+    .legal__link {
+        color: $white;
+        font-family: $ff;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        @media(min-width: $md) {
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
 }
+
+.lines {
+    @include container;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: $dark-blue;
+        bottom: 0;
+    }
+
+    &::before {
+        left: 0;
+
+        @media (min-width: $sm) {
+            left: 20px;
+        }
+
+        @media (min-width: $md) {
+            left: 30px;
+        }
+
+        @media (min-width: $xl) {
+            left: 20px;
+        }
+    }
+
+    &::after {
+        right: 0;
+
+        @media (min-width: $sm) {
+            right: 20px;
+        }
+
+        @media (min-width: $md) {
+            right: 30px;
+        }
+
+        @media (min-width: $xl) {
+            right: 20px;
+        }
+       
+    }
+}
+
