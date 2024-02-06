@@ -21,13 +21,13 @@ $site_desc = get_bloginfo( 'description', 'display' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 	<!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 	<!-- /Favicon -->
 
@@ -52,31 +52,8 @@ $site_desc = get_bloginfo( 'description', 'display' );
 		<header class="header color">
             <div class="container">
                 <div class="header__wrapper">
-                    <div class="header__logo_wrapper">
-                        <a href="/" class="logo">
-                            <div class="logo__inner">
-                                <div class="logo__gears">
-                                    <div class="violet__gear">
-                                        <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
-                                    </div>
-                                    <div class="red__gear">
-                                        <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
-                                    </div>
-                                    <div class="green__gear">
-                                    <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
-                                    </div>
-                                    <div class="blue__gear">
-                                        <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
-                                    </div>
-                                </div>
-                                <div class="logo__text">
-                                    <div> Economics</div>
-                                    <div>of mutuality</div>
-                                    <div>alliance</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <?php get_template_part( 'components/logo/header' ) ?>
+
                     <div class="header__inner" id="menu-lock">
                         <?php
                         wp_nav_menu( [
@@ -86,6 +63,7 @@ $site_desc = get_bloginfo( 'description', 'display' );
                         ] );
                         ?>
                     </div>
+
                     <button class="burger__button">
                         <span></span>
                     </button>
