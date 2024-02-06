@@ -1,0 +1,290 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.members {
+    .h2__box_additional {
+        margin-bottom: 23px;
+
+        @media(min-width: $md) {
+            margin-bottom: 65px;
+        }
+
+        @media(min-width: $xl) {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__wrapper {
+        padding: 18px 7px 16px 10px;
+
+        @media(min-width: $md) {
+            padding: 32px 20px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 64px 113px 32px 113px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            margin-bottom: 14px;
+
+            @media(min-width: $md) {
+                margin-bottom: 24px;
+            }
+
+            .violet__gear, .green__gear {
+                animation: rotationForward 5s infinite linear;
+            }
+
+            .red__gear, .blue__gear {
+                animation: rotationReverse 5s infinite linear;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &_lines {
+            width: 140px;
+            height: 25px;
+            position: relative;
+
+            @media(min-width: $md) {
+                width: 170px;
+                height: 70px;
+            }
+
+            @media(min-width: $xl) {
+                width: 230px;
+            }
+            
+            .horizontal__line {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $dark-blue;
+            }
+
+            .vertical__line {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(calc(-50% + 1px));
+                width: 2px;
+                height: 100%;
+                background-color: $dark-blue;
+            }
+        }
+    }
+
+    &__items_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid $dark-blue;
+        border-top: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $dark-blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__item {
+        width: calc(100% / 2);
+        border-bottom: 2px solid $dark-blue;
+        border-left: 2px solid $dark-blue;
+
+        &:nth-last-child(-n + 2) {
+            border-bottom: 0;
+        }
+
+        &:nth-child(odd) {
+            border-left: 0;
+        }
+
+        @media(min-width: $md) {
+            width: calc(100% / 2);
+
+            &:nth-child(odd) {
+                border-left: 0;
+            }
+        }
+
+        @media(min-width: $xl) {
+            width: calc(100% / 4);
+            border-bottom: 0;
+            border-left: 2px solid $dark-blue;
+
+            &:nth-child(odd) {
+                border-left: 2px solid $dark-blue;
+            }
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+        &_logo {
+            display: flex;
+            justify-content: center;
+            padding: 17px 0;
+            border-bottom: 1px solid $dark-blue;
+
+            @media(min-width: $md) {
+                justify-content: flex-start;
+                padding: 15px 14px;
+            }
+        }
+
+        &_inner {
+            display: flex;
+            height: calc(100% - 91px);
+            flex-direction: column;
+            padding: 5px 11px 10px 7px;
+            min-height: 148px;
+
+            @media(min-width: $md) {
+                height: calc(100% - 115px);
+                padding: 5px 16px 16px 16px;       
+            }
+        }
+
+        &_title {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: $fw-bold;
+            line-height: 16px;
+            margin-bottom: 7px;
+
+            @media(min-width: $md) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &_text {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: 16px;
+
+            @media(min-width: $md) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        &_link {
+           @include link;
+            padding-top: 10px;
+           margin: auto 0 0 auto;
+        }
+    }
+
+    &__slogan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        gap: 10px;
+
+        @media(min-width: $md) {
+            gap: 32px;
+        }
+
+        &_left, &_right {
+            width: 100%;
+            max-width: 73px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 100%;
+                max-width: 254px;
+            }
+
+            @media(min-width: $md) {
+                max-width: 118px;
+            }
+
+            @media(min-width: $xl) {
+                max-width: 254px;
+            }
+
+            .mobile__arrow {
+                @media(min-width: $md) {
+                    display: none;
+                }
+            }
+
+            .tab__arrow {
+                display: none;
+
+                @media(min-width: $md) {
+                    display: block;
+                }
+
+                @media(min-width: $xl) {
+                    display: none;
+                }
+            }
+
+            .desktop__arrow {
+                display: none;
+
+                @media(min-width: $xl) {
+                    display: block;
+                }
+            }
+        }
+
+        &_right {
+            display: flex;
+            justify-content: flex-end;
+            
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
+        &_text {
+            width: 100%;
+            max-width: 208px;
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: $fw-bold;
+            line-height: 20px;
+            text-transform: uppercase;
+            text-align: center;
+
+            @media(min-width: $md) {
+                font-size: 20px;
+                line-height: 24px;
+                max-width: 470px;
+            }
+        }
+    }
+}

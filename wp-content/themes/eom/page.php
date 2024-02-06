@@ -34,6 +34,9 @@ wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], TH
 
 // discuss styles.
 wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', [], THEME_VERSION );
+
+// discuss styles.
+wp_enqueue_style( 'members', THEME_URI . '/static/css/members/members.min.css', [], THEME_VERSION );
 ?>
 
 <main class="main">
@@ -446,7 +449,7 @@ wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', 
                             <button class="form__button">
                                 Submit
                                 <div class="form__button_arrow">
-                                    &#8594;
+                                    →
                                 </div>
                             </button>
                         </div>
@@ -481,6 +484,257 @@ wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', 
 			</div>
 		</div>
 	</section>
+
+    <section class="members">
+        <div class="container">
+            <div class="members__wrapper">
+                <div class="h2__box_additional violet">
+                    <div class="subtitle">
+                            Our Organization
+                    </div>
+                    <div class="h2__wrapper">
+                        <div class="h2__titles">
+                            <h2 class="h2">
+                                Alliance
+                            </h2>
+                            <h2 class="h2">
+                                Members
+                            </h2>
+                        </div>
+                        <div class="h2__box_text">
+                            <p>
+                                The Economics of Mutuality Alliance is comprised of two non-profits that each own a for-profit subsidiary. Working independently or collaboratively, they advance and implement the Economics of Mutuality operating model.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="members__items">
+                    <div class="members__logo">
+                        <div class="logo big">
+                            <div class="logo__inner">
+                                <div class="logo__gears">
+                                    <div class="violet__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                    </div>
+                                    <div class="red__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                    </div>
+                                    <div class="green__gear">
+                                    <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                    </div>
+                                    <div class="blue__gear">
+                                        <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                    </div>
+                                </div>
+                                <div class="logo__text">
+                                    <div> Economics</div>
+                                    <div>of mutuality</div>
+                                    <div>alliance</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="members__logo_lines">
+                            <span class="horizontal__line"></span>
+                            <span class="vertical__line"></span>
+                        </div>
+                    </div>
+                    <div class="members__items_wrapper">
+                        <div class="members__item">
+                            <div class="members__item_logo">
+                                <div class="logo small">
+                                    <div class="logo__inner">
+                                        <div class="logo__gears">
+                                            <div class="violet__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                            </div>
+                                            <div class="red__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                            </div>
+                                            <div class="green__gear">
+                                            <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                            </div>
+                                            <div class="blue__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                            </div>
+                                        </div>
+                                        <div class="logo__text">
+                                            <div>Economics</div>
+                                            <div>of mutuality</div>
+                                            <div>foundation</div>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="members__item_inner">
+                                <div class="members__item_title">
+                                    For Good Societies
+                                </div>
+                                <div class="members__item_text">
+                                    Advancing the operating model through events, thought leadership, education and research.
+                                </div>
+                                <a href="#" class="members__item_link dark">
+                                    Learn more
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="members__item">
+                            <div class="members__item_logo">
+                                <div class="logo small">
+                                    <div class="logo__inner">
+                                        <div class="logo__gears">
+                                            <div class="violet__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                            </div>
+                                            <div class="red__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                            </div>
+                                            <div class="green__gear">
+                                            <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                            </div>
+                                            <div class="blue__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                            </div>
+                                        </div>
+                                        <div class="logo__text">
+                                            <div>Mutual</div>
+                                            <div>Value</div>
+                                            <div>Labs</div>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="members__item_inner">
+                                <div class="members__item_title">
+                                    For Good Companies
+                                </div>
+                                <div class="members__item_text">
+                                    Equipping companies to implement the operating model through digitally enabled consulting, proprietary tools, and leadership development.
+                                </div>
+                                <a href="#" class="members__item_link dark">
+                                    Learn more
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="members__item">
+                            <div class="members__item_logo">
+                                <div class="logo small">
+                                    <div class="logo__inner">
+                                        <div class="logo__gears">
+                                            <div class="violet__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                            </div>
+                                            <div class="red__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                            </div>
+                                            <div class="green__gear">
+                                            <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                            </div>
+                                            <div class="blue__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                            </div>
+                                        </div>
+                                        <div class="logo__text">
+                                            <div>Mutual</div>
+                                            <div>Value</div>
+                                            <div>Investments</div>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="members__item_inner">
+                                <div class="members__item_title">
+                                    For Good Investments
+                                </div>
+                                <div class="members__item_text">
+                                    Equipping investors to implement the operating model in private and public equity investments.
+                                </div>
+                                <a href="#" class="members__item_link dark">
+                                    Learn more
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="members__item">
+                            <div class="members__item_logo">
+                                <div class="logo small">
+                                    <div class="logo__inner">
+                                        <div class="logo__gears">
+                                            <div class="violet__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/violet-gear.svg" alt="">
+                                            </div>
+                                            <div class="red__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/red-gear.svg"  alt="">
+                                            </div>
+                                            <div class="green__gear">
+                                            <img src="<?php echo THEME_URI ?>/static/img/green-gear.svg"  alt="">
+                                            </div>
+                                            <div class="blue__gear">
+                                                <img src="<?php echo THEME_URI ?>/static/img/blue-gear.svg"  alt="">
+                                            </div>
+                                        </div>
+                                        <div class="logo__text">
+                                            <div>Human</div>
+                                            <div>Flourishing</div>
+                                            <div>foundation</div>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="members__item_inner">
+                            <div class="members__item_title">
+                                For Good Communities
+                            </div>
+                            <div class="members__item_text">
+                                Advancing the operating model through vocational training and financial support in regions that have been left behind by globalization.
+                            </div>
+                            <a href="#" class="members__item_link dark">
+                                Learn more
+                                <span>
+                                    →
+                                </span>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="members__slogan">
+                    <div class="members__slogan_left">
+                       <div class="mobile__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/mobile-arr.svg" alt="">
+                       </div>
+                       <div class="tab__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/tab-arr.svg" alt="">
+                       </div>
+                       <div class="desktop__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/desktop-arr.svg" alt="">
+                       </div>
+                    </div>
+                    <div class="members__slogan_text">
+                        Working Together for the Common Good
+                    </div>
+                    <div class="members__slogan_right">
+                        <div class="mobile__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/mobile-arr.svg" alt="">
+                       </div>
+                       <div class="tab__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/tab-arr.svg" alt="">
+                       </div>
+                       <div class="desktop__arrow">
+                            <img src="<?php echo THEME_URI ?>/static/img/desktop-arr.svg" alt="">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php
