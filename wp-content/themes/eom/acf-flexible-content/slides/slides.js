@@ -11,7 +11,6 @@ const initSwiper = (selector, next, prev) => {
     if(!selector) return
 
     const swiper = new Swiper(selector, {
-        slidesPerView: 'auto',
         spaceBetween: 32,
         modules: [Navigation],
 
