@@ -180,6 +180,11 @@
     }
 
     &.big {
+        .image__text_right {
+            border-left: 0;
+            border-right: 2px solid $dark-blue;
+        }
+
         .image__text_info {
             padding-bottom: 96px;
             position: relative;
@@ -218,6 +223,31 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    li {
+        position: relative;
+        padding-left: 20px;
+        
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            background-color: $dark-blue;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+    
+        &.blue {
+            color: $dark-blue;
+        }
+    
+        &.white {
+            color: $white;
         }
     }
 }
