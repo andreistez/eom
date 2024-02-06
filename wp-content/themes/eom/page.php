@@ -932,7 +932,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
         </div>
     </section>
 
-    <section class="resources">
+    <section class="resources"> <!-- On main page removed if viewport > 768px -->
         <div class="container">
             <div class="resources__wrapper">
                 <h2 class="h2 violet">
@@ -1073,6 +1073,100 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
             </div>
         </div>
     </section> 
+
+	<section class="image__text violet column-row-reverse big"> <!-- With 2 headings in section -->
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/text-img2.png" alt="">
+				</div>
+				<div class="image__text_right">
+					<div class="image__text_inner">
+						<div class="subtitle white">
+                            For Good Companies
+						</div>
+						<div class="image__text_info">
+							<div class="image__text_heading">
+								<h2 class="h2">
+									Superior Value Creation
+								</h2>
+							</div>
+							<div class="image__text_paragraphs">
+								<p>
+                                    Mutual Value Labs is a forward-facing management consulting firm owned by the non-profit Economics of Mutuality Foundation.
+                                </p>
+                                <p>
+                                    We equip companies to implement the Economics of Mutuality operating model through digitally enabled consulting, proprietary tools, and leadership development.
+                                </p>
+                                <p>
+                                    Our evidence-based philosophy can be summed up as 'Business for Good, Good for Business'.
+                                </p>
+							</div>
+						</div>
+						<div class="image__text_info">
+							<div class="image__text_heading">
+								<h2 class="h2">
+                                    Our clients
+								</h2>
+							</div>
+							<div class="image__text_paragraphs">
+								<p>
+                                    We serve and support a range of companies – primarily SMEs and business units within multinationals. We work with front-line leaders to help them address problems at a local level. Tackling issues such as financial inclusion or social isolation uncovers opportunities for superior and sustained mutual value creation.
+                                </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+		</div>
+	</section>
+
+    <section class="image__text violet reverse column">
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/text-img2.png" alt="">
+				</div>
+				<div class="image__text_right">
+					<div class="image__text_inner">
+						<div class="subtitle white">
+							OUR APPROACH
+						</div>
+						<div class="image__text_info">
+							<div class="image__text_heading">
+								<h2 class="h2">
+                                    Our offer
+								</h2>
+							</div>
+							<div class="image__text_paragraphs">
+								<p>
+                                    By embedding the Economics of Mutuality operating model, we provide companies with the ability to identify and solve societal problems profitably and at scale. This supports agile business transformation and creates innovation opportunities. Our support is operational, agile and adaptable to the client’s needs.
+                                </p>
+                                <p>
+                                    Our capabilities include:
+                                </p>
+                                <ul>
+                                    <li class="white">
+                                        Conducting and analyzing research across business ecosystems, utilizing digital tools
+                                    </li>
+                                    <li class="blue">
+                                        Creating opportunities for sustained value creation by focusing on societal impact
+                                    </li>
+                                    <li class="white">
+                                        Developing leadership capabilities
+                                    </li>
+                                    <li class="blue">
+                                        Educating and certifying Economics of Mutuality practitioners
+                                    </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 <?php
