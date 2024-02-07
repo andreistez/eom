@@ -64,7 +64,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 					Working Together for the Common Good
 				</h1>
 				<video src="<?php echo THEME_URI ?>/src/video/bg.mp4" autoplay muted playsinline loop>
-						<source src="<?php echo THEME_URI ?>/src/video/bg.webm" type="video/webm">
+					<source src="<?php echo THEME_URI ?>/src/video/bg.webm" type="video/webm">
 				</video>
 			</div>
 		</div>

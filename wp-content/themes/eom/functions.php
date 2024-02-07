@@ -49,7 +49,7 @@ function eom_init_theme(): void
 	add_theme_support( 'post-thumbnails' );
 
 	// Custom image sizes.
-//	add_image_size( 'full-hd', 1920 );
+	add_image_size( 'image-text', 409 );
 }
 
 add_action( 'wp_enqueue_scripts', 'eom_inclusion_enqueue' );
