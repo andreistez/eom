@@ -4,36 +4,6 @@
 .image__text {
     @include borderTop;
 
-    &.terracota {
-        .image__text_right {
-            background-color: $terracota;
-        }
-    }
-
-    &.violet {
-        .image__text_right {
-            background-color: $violet;
-        }
-    }
-
-    &.grass {
-        .image__text_right {
-            background-color: $grass;
-        }
-    }
-
-    &.white {
-        .image__text_right {
-            background-color: $white;
-        }
-    }
-
-    &.cerulean {
-        .image__text_right {
-            background-color: $cerulean;
-        }
-    }
-
     &_wrapper {
         width: 100%;
         display: flex;
@@ -108,12 +78,7 @@
             width: 50%;
         }
 
-        p {
-            color: $white;
-        }
-
         a {
-            color: $white;
             text-decoration: underline;
 
             &:hover {
@@ -186,7 +151,6 @@
         }
 
         .image__text_info {
-            padding-bottom: 96px;
             position: relative;
             padding-bottom: 30px;
 
@@ -240,14 +204,6 @@
             position: absolute;
             left: 0;
             top: 50%;
-        }
-    
-        &.blue {
-            color: $dark-blue;
-        }
-    
-        &.white {
-            color: $white;
         }
     }
 }
