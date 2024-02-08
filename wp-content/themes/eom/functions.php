@@ -50,6 +50,8 @@ function eom_init_theme(): void
 
 	// Custom image sizes.
 	add_image_size( 'image-text', 409 );
+	add_image_size( 'video-poster', 1204, 614 );
+	add_image_size( 'full', 1264 );
 }
 
 add_action( 'wp_enqueue_scripts', 'eom_inclusion_enqueue' );

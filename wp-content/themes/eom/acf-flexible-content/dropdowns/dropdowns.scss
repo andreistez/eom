@@ -190,20 +190,20 @@
     outline: $border-2px;
     cursor: pointer;
 
-    &.terracota {
-        background-color: $terracota;
+    &:first-child {
+        background-color: $terracota
     }
 
-    &.cerulean {
-        background-color: $cerulean;
+    &:nth-child(2) {
+        background-color: $cerulean
     }
 
-    &.violet {
-        background-color: $violet;
+    &:nth-child(3) {
+        background-color: $violet
     }
 
-    &.grass {
-        background-color: $grass;
+    &:last-child {
+        background-color: $grass
     }
 
     &__open {
