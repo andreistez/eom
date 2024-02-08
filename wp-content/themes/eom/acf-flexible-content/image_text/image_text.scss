@@ -79,6 +79,8 @@
         }
 
         a {
+			display: inline;
+			color: inherit;
             text-decoration: underline;
 
             &:hover {

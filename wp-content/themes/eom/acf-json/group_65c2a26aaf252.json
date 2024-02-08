@@ -24,6 +24,26 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_65c2a2d7845a2",
+                            "label": "Video Background",
+                            "name": "video_bg",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_65c2a2cc845a1",
                             "label": "Title",
                             "name": "title",
@@ -33,7 +53,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -44,24 +64,22 @@
                             "append": ""
                         },
                         {
-                            "key": "field_65c2a2d7845a2",
-                            "label": "Video Background",
-                            "name": "video_bg",
+                            "key": "field_65c4bc38c0c1f",
+                            "label": "Title Color",
+                            "name": "title_color",
                             "aria-label": "",
-                            "type": "file",
+                            "type": "color_picker",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            "default_value": "#ffffff",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         }
                     ],
                     "min": "",
@@ -103,6 +121,31 @@
                     "label": "Image & Text",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_65c4c006eb103",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "normal": "Normal",
+                                "reverse": "Reverse"
+                            },
+                            "default_value": "normal",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
                         {
                             "key": "field_65c2a73171ceb",
                             "label": "Subtitle",
@@ -189,7 +232,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "75",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -216,6 +259,31 @@
                             "default_value": "",
                             "enable_opacity": 0,
                             "return_format": "string"
+                        },
+                        {
+                            "key": "field_65c4bef58b562",
+                            "label": "Text Type",
+                            "name": "text_type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "column": "One Column",
+                                "default": "Two Columns"
+                            },
+                            "default_value": "default",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         },
                         {
                             "key": "field_65c2a70d71ce9",
@@ -288,5 +356,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707255742
+    "modified": 1707393090
 }

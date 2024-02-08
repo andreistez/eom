@@ -11,6 +11,7 @@
 
 wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
 
+$type			= get_sub_field( 'type' ) ?: '';
 $subtitle		= get_sub_field( 'subtitle' );
 $subtitle_color	= get_sub_field( 'subtitle_color' );
 $subtitle_color	= $subtitle_color ? ' style="color:' . esc_attr( $subtitle_color ) . '"' : '';
@@ -18,6 +19,8 @@ $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' );
 $title_color	= $title_color ? ' style="color:' . esc_attr( $title_color ) . '"' : '';
 $text			= get_sub_field( 'text' );
+$text_type		= get_sub_field( 'text_type' );
+$type			= $text_type ? " $type $text_type" : " $type";
 $text_color		= get_sub_field( 'text_color' );
 $text_color		= $text_color ? ' style="color:' . esc_attr( $text_color ) . '"' : '';
 $image			= get_sub_field( 'image' );
@@ -25,7 +28,7 @@ $bg_color		= get_sub_field( 'bg_color' );
 $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' : '';
 ?>
 
-<section class="image__text terracota"<?php echo $bg ?>>
+<section class="image__text<?php echo esc_attr( $type ) ?>">
 	<div class="container">
 		<div class="image__text_wrapper" style="color: #fff">
 			<?php
@@ -35,7 +38,7 @@ $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' :
 				'</div>';
 			?>
 
-			<div class="image__text_right">
+			<div class="image__text_right"<?php echo $bg ?>>
 				<div class="image__text_inner">
 					<?php
 					if( $subtitle )

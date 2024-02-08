@@ -11,15 +11,17 @@
 
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
 
-$title		= get_sub_field( 'title' );
-$video_bg	= get_sub_field( 'video_bg' );
+$video_bg		= get_sub_field( 'video_bg' );
+$title			= get_sub_field( 'title' );
+$title_color	= get_sub_field( 'title_color' ) ?: '#fff';
 ?>
 
 <section class="hero">
 	<div class="container">
 		<div class="hero__wrapper">
 			<?php
-			if( $title ) echo '<h1 class="h1">', esc_html( $title ), '</h1>';
+			if( $title )
+				echo '<h1 class="h1" style="color: ', esc_attr( $title_color ), '">', esc_html( $title ), '</h1>';
 
 			if( $video_bg ){
 				?>
