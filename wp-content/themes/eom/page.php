@@ -88,11 +88,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 				</div>
 				<div class="image__text_right">
 					<div class="image__text_inner">
-						<div class="subtitle white">
-							OUR APPROACH
-						</div>
 						<div class="image__text_info">
 							<div class="image__text_heading">
+                                <p>
+                                    OUR APPROACH
+                                </p>
 								<h2 class="h2">
 									A better way of seeing and doing business
 								</h2>
@@ -133,9 +133,9 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
             <div class="dropdowns__wrapper">
                 <div class="h2__box grass">
                     <div class="h2__wrapper">
-                        <div class="subtitle">
+                        <p>
                             OUR APPROACH
-                        </div>
+                        </p>
                         <h2 class="h2">
                             How It Works
                         </h2>
@@ -233,7 +233,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
         </div>
 	</section>
 
-	<section class="image__text violet reverse column">
+	<section class="image__text violet reverse">
 		<div class="container">
 			<div class="image__text_wrapper">
 				<div class="image__text_left">
@@ -241,11 +241,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 				</div>
 				<div class="image__text_right">
 					<div class="image__text_inner">
-						<div class="subtitle white">
-							OUR APPROACH
-						</div>
-						<div class="image__text_info">
+						<div class="image__text_info column">
 							<div class="image__text_heading">
+                                <p>
+                                    OUR APPROACH
+                                </p>
 								<h2 class="h2">
 									Superior Value Creation
 								</h2>
@@ -296,9 +296,9 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
             <div class="perks__wrapper">
                 <div class="h2__box cerulean">
                     <div class="h2__wrapper">
-                        <div class="subtitle">
+                        <p>
                             OUR APPROACH
-                        </div>
+                        </p>
                         <h2 class="h2">
                             Thriving Business
                         </h2>
@@ -380,7 +380,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
         </div>
     </section>
 
-    <section class="image__text terracota column column-row">
+    <section class="image__text terracota">
 		<div class="container">
 			<div class="image__text_wrapper">
 				<div class="image__text_left">
@@ -388,11 +388,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 				</div>
 				<div class="image__text_right">
 					<div class="image__text_inner">
-						<div class="subtitle white">
-							OUR APPROACH
-						</div>
-						<div class="image__text_info">
+						<div class="image__text_info column">
 							<div class="image__text_heading">
+                                <p>
+							        OUR APPROACH
+						        </p>
 								<h2 class="h2">
                                     Flourishing Society
 								</h2>
@@ -498,24 +498,19 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
     <section class="members">
         <div class="container">
             <div class="members__wrapper">
-                <div class="h2__box_additional violet">
-                    <div class="subtitle">
-                            Our Organization
-                    </div>
+                <div class="h2__box grass">
                     <div class="h2__wrapper">
-                        <div class="h2__titles">
-                            <h2 class="h2">
-                                Alliance
-                            </h2>
-                            <h2 class="h2">
-                                Members
-                            </h2>
-                        </div>
-                        <div class="h2__box_text">
-                            <p>
-                                The Economics of Mutuality Alliance is comprised of two non-profits that each own a for-profit subsidiary. Working independently or collaboratively, they advance and implement the Economics of Mutuality operating model.
-                            </p>
-                        </div>
+                        <p>
+                            OUR APPROACH
+                        </p>
+                        <h2 class="h2">
+                            Alliance Members
+                        </h2>
+                    </div>
+                    <div class="h2__box_text">
+                        <p>
+                            The Economics of Mutuality Alliance is comprised of two non-profits that each own a for-profit subsidiary. Working independently or collaboratively, they advance and implement the Economics of Mutuality operating model.
+                        </p>
                     </div>
                 </div>
                 <div class="members__items">
@@ -1074,7 +1069,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
         </div>
     </section> 
 
-	<section class="image__text violet column-row-reverse big"> <!-- With 2 headings in section -->
+	<section class="image__text violet"> <!-- With 2 headings in section -->
 		<div class="container">
 			<div class="image__text_wrapper">
 				<div class="image__text_left">
@@ -1082,11 +1077,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 				</div>
 				<div class="image__text_right">
 					<div class="image__text_inner">
-						<div class="subtitle white">
-                            For Good Companies
-						</div>
 						<div class="image__text_info">
 							<div class="image__text_heading">
+                                <p>
+                                    For Good Companies
+                                </p>
 								<h2 class="h2">
 									Superior Value Creation
 								</h2>
@@ -1105,14 +1100,18 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 						</div>
 						<div class="image__text_info">
 							<div class="image__text_heading">
-								<h2 class="h2">
+								<h3 class="h3">
                                     Our clients
-								</h2>
+								</h3>
 							</div>
 							<div class="image__text_paragraphs">
 								<p>
                                     We serve and support a range of companies – primarily SMEs and business units within multinationals. We work with front-line leaders to help them address problems at a local level. Tackling issues such as financial inclusion or social isolation uncovers opportunities for superior and sustained mutual value creation.
                                 </p>
+                                <a href="#">
+                                    Read online for free
+                                    <span>→</span>
+                                </a>
 							</div>
 						</div>
 					</div>
@@ -1122,7 +1121,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 		</div>
 	</section>
 
-    <section class="image__text violet reverse column">
+    <section class="image__text violet reverse">
 		<div class="container">
 			<div class="image__text_wrapper">
 				<div class="image__text_left">
@@ -1130,11 +1129,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 				</div>
 				<div class="image__text_right">
 					<div class="image__text_inner">
-						<div class="subtitle white">
-							OUR APPROACH
-						</div>
-						<div class="image__text_info">
+						<div class="image__text_info column">
 							<div class="image__text_heading">
+                                <p>
+							        OUR APPROACH
+						        </p>
 								<h2 class="h2">
                                     Our offer
 								</h2>
@@ -1147,16 +1146,16 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                     Our capabilities include:
                                 </p>
                                 <ul>
-                                    <li class="white">
+                                    <li>
                                         Conducting and analyzing research across business ecosystems, utilizing digital tools
                                     </li>
-                                    <li class="blue">
+                                    <li>
                                         Creating opportunities for sustained value creation by focusing on societal impact
                                     </li>
-                                    <li class="white">
+                                    <li>
                                         Developing leadership capabilities
                                     </li>
-                                    <li class="blue">
+                                    <li>
                                         Educating and certifying Economics of Mutuality practitioners
                                     </li>
                                 </ul>

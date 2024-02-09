@@ -74,7 +74,7 @@ h2, .h2 {
     }
 }
 
-.subtitle {
+.image__text_heading p, .h2__wrapper p {
     display: none;
     font-family: $ff;
     font-size: 10px;
@@ -112,7 +112,7 @@ h2, .h2 {
     }
 }
 
-.h2__box, .h2__box_additional {
+.h2__box {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -177,38 +177,6 @@ h2, .h2 {
     &.cerulean {
         h2, .subtitle {
             color: $cerulean;
-        }
-    }
-}
-
-.h2__box_additional {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0;
-
-    .h2__wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 28px;
-
-        @media(min-width: $md) {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 32px;
-        }
-    }
-
-    .h2__box_text {
-        padding-top: 0;
-    }
-
-    .h2__titles {
-        width: calc(50% - 16px);
-
-        @media(min-width: $md) {
-            width: calc(50% - 16px);
         }
     }
 }
