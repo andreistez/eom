@@ -2,7 +2,7 @@
 @import '../../src/scss/utils/typography/typography.scss';
 
 .members {
-    .h2__box {
+    .h2__box_additional {
         margin-bottom: 23px;
 
         @media(min-width: $md) {
@@ -89,8 +89,6 @@
     &__items_wrapper {
         display: flex;
         flex-wrap: wrap;
-        border: 2px solid $dark-blue;
-        border-top: 0;
         position: relative;
 
         &::before {
@@ -106,36 +104,29 @@
 
     &__item {
         width: calc(100% / 2);
-        border-bottom: 2px solid $dark-blue;
-        border-left: 2px solid $dark-blue;
+        border: 2px solid $dark-blue;
+        border-bottom-width: 0;
 
         &:nth-last-child(-n + 2) {
-            border-bottom: 0;
+            border-bottom-width: 2px;
         }
 
-        &:nth-child(odd) {
-            border-left: 0;
-        }
-
-        @media(min-width: $md) {
-            width: calc(100% / 2);
-
-            &:nth-child(odd) {
-                border-left: 0;
-            }
+        &:nth-child(2n + 1) {
+            border-right-width: 0px;
         }
 
         @media(min-width: $xl) {
             width: calc(100% / 4);
-            border-bottom: 0;
-            border-left: 2px solid $dark-blue;
-
-            &:nth-child(odd) {
-                border-left: 2px solid $dark-blue;
+            &:nth-last-child(-n + 4) {
+                border-bottom-width: 2px;
             }
 
-            &:first-child {
-                border-left: 0;
+            &:nth-child(2n) {
+                border-right-width: 0px;
+            }
+
+            &:nth-child(4n) {
+                border-right-width: 2px;
             }
         }
 
