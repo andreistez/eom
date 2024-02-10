@@ -23,56 +23,60 @@
         }
     }
 
-    input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin: 0;
+    input[type="checkbox"] {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		margin: 0;
 
-        & + label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-            color: $dark-blue;
-            font-family: $ff;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: $fw-regular;
-            line-height: 14px;
-            letter-spacing: -0.42px;
-            cursor: pointer;
-            position: relative;
+		&:checked + .wpcf7-list-item-label::before {
+			border-color: $violet;
+			background-color: $violet;
+			color: $white
+		}
+	}
 
-            @media(min-width: $md) {
-                font-size: 18px;
-                letter-spacing: -0.54px;
-                line-height: 18px;
-            }
+	.wpcf7-list-item-label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 14px;
+		letter-spacing: -0.42px;
+		cursor: pointer;
+		position: relative;
 
-            &::before {
-                content: '';
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 14px;
-                height: 14px;
-                border: 2px solid $dark-blue;
-                margin-right: 6px;
+		@media(min-width: $md) {
+			font-size: 18px;
+			letter-spacing: -0.54px;
+			line-height: 18px;
+		}
 
-                @media(min-width: $xl) {
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-        }
+		&::before {
+			content: '\2713';
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 14px;
+			height: 14px;
+			font-size: 12px;
+			color: transparent;
+			border: 2px solid $dark-blue;
+			margin-right: 6px;
 
-        &:checked+label::before {
-            content: '\2713';
-            border-color: $violet;
-            background-color: $violet;
-            color: $white;
-            font-size: 12px;
-        }
+			@media(min-width: $xl) {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&::after {
+			display: none
+		}
     }
 }

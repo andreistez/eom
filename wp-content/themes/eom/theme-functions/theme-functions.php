@@ -3,7 +3,7 @@
 /**
  * Remove auto paragraph wrap in Contact Form 7.
  */
-//add_filter( 'wpcf7_autop_or_not', '__return_false' );
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 /**
  * Theme custom functions.
