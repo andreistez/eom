@@ -10,6 +10,7 @@
  */
 
 wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'quote', THEME_URI . '/static/js/quote/quote.min.js', ['jquery'], THEME_VERSION, true );
 
 $type		= get_sub_field( 'type' );
 $type		= $type === 'standard' ? '' : ' flex-start';

@@ -10,27 +10,18 @@
  */
 
 wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'image-text', THEME_URI . '/static/js/image_text/image_text.min.js', ['jquery'], THEME_VERSION, true );
 
 $type			= get_sub_field( 'type' ) ?: '';
-$subtitle		= get_sub_field( 'subtitle' );
-$subtitle_color	= get_sub_field( 'subtitle_color' );
-$subtitle_color	= $subtitle_color ? ' style="color:' . esc_attr( $subtitle_color ) . '"' : '';
-$title			= get_sub_field( 'title' );
-$title_color	= get_sub_field( 'title_color' );
-$title_color	= $title_color ? ' style="color:' . esc_attr( $title_color ) . '"' : '';
-$text			= get_sub_field( 'text' );
-$text_type		= get_sub_field( 'text_type' );
-$type			= $text_type ? " $type $text_type" : " $type";
-$text_color		= get_sub_field( 'text_color' );
-$text_color		= $text_color ? ' style="color:' . esc_attr( $text_color ) . '"' : '';
 $image			= get_sub_field( 'image' );
 $bg_color		= get_sub_field( 'bg_color' );
 $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' : '';
+$text_blocks	= get_sub_field( 'text_blocks' );
 ?>
 
-<section class="image__text<?php echo esc_attr( $type ) ?>">
+<section class="image__text">
 	<div class="container">
-		<div class="image__text_wrapper" style="color: #fff">
+		<div class="image__text_wrapper">
 			<?php
 			if( $image )
 				echo '<div class="image__text_left">',
@@ -39,28 +30,18 @@ $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' :
 			?>
 
 			<div class="image__text_right"<?php echo $bg ?>>
-				<div class="image__text_inner">
-					<?php
-					if( $subtitle )
-						echo '<div class="subtitle white"', $subtitle_color, '>',
-							esc_html( $subtitle ),
-						'</div>';
+				<?php
+				if( ! empty( $text_blocks ) ){
 					?>
-
-					<div class="image__text_info">
+					<div class="image__text_inner">
 						<?php
-						if( $title )
-							echo '<div class="image__text_heading"', $title_color, '><h2 class="h2">',
-								esc_html( $title ),
-							'</h2></div>';
-
-						if( $text )
-							echo '<div class="image__text_paragraphs"', $text_color, '>',
-								$text,
-							'</div>';
+						foreach( $text_blocks as $block )
+							get_template_part( 'acf-flexible-content/image_text/text-block', null, ['block' => $block] );
 						?>
 					</div>
-				</div>
+					<?php
+				}
+				?>
 			</div>
 		</div>
 	</div>

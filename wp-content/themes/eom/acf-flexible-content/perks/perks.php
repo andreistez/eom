@@ -10,6 +10,7 @@
  */
 
 wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'perks', THEME_URI . '/static/js/perks/perks.min.js', ['jquery'], THEME_VERSION, true );
 
 $subtitle	= get_sub_field( 'subtitle' );
 $title		= get_sub_field( 'title' );
