@@ -67,3 +67,43 @@ export const reCalculateDropdownHeight = dropdown => {
 
     dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
 }
+
+// For print text
+export const printText = (selector) => {
+    const textSelectors = document.querySelectorAll(selector)
+
+    textSelectors.forEach(textSelector => {
+        const text = textSelector.textContent.trim()
+        const textArray = [...text]
+        textSelector.innerHTML = ''
+
+        textArray.forEach((letter, index) => {
+            const span = document.createElement('span')
+            span.textContent = letter
+            textSelector.appendChild(span)
+            span.style.opacity = 0
+
+            setTimeout(() => {
+                span.style.transition = 'opacity 0.3s'
+                span.style.opacity = 1
+            }, index * 35)
+        })
+    })
+}
+
+// Find element in viewport
+let windowHeight = window.innerHeight
+export const getWindowHeight = () => windowHeight
+export const isInScope = ( elementSelector, st, offset = 100 ) => {
+	const element  = document.querySelector( elementSelector )
+	if ( ! element) return
+	let bodyRect  = document.body.getBoundingClientRect(),
+		elemRect  = element.getBoundingClientRect(),
+		elemTop   = elemRect.top - bodyRect.top
+
+	if( ! element ) return
+
+	return st >= (elemTop - getWindowHeight() + offset) && st <= (elemTop + element.clientHeight - offset)
+}
+
+

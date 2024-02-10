@@ -4,6 +4,31 @@
 .quote {
     @include borderTop;
 
+    &.animated {
+        .quote__bg img {
+            animation: quoteImg 1s forwards ease; 
+        }
+        
+        blockquote {
+            svg {
+                animation: quoteScale 0.2s forwards ease;
+                animation-delay: 0.5s;  
+            }
+    
+            p {
+                animation: quoteText 1s forwards ease;
+                animation-delay: 0.5s;
+                transform: translateX(100%);
+                opacity: 0;
+            }
+    
+            .quote__name, .quote__job {
+                animation: quoteText 1.5s forwards ease; 
+                animation-delay: 0.5s;  
+            }
+        }
+    }
+
     &__wrapper {
         width: 100%;
         min-height: 607px;
@@ -12,6 +37,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        overflow: hidden;
 
         @media(min-width: $md) {
             min-height: 450px;
@@ -33,9 +59,32 @@
         z-index: -1;
 
         img {
-            width: 100%;
+            width: 0;
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    &__mark {
+        margin-bottom: 16px;
+        width: 25px;
+        height: 25px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            scale: 0;
+        }
+
+        @media(min-width: $md) {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 32px;
+        }
+
+        @media(min-width: $xl) {
+            width: 50px;
+            height: 50px;
         }
     }
 

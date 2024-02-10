@@ -2,6 +2,7 @@
 
 .hero {
     &__wrapper {
+        overflow: hidden;
         width: 100%;
         display: flex;
         align-items: flex-end;
@@ -27,5 +28,7 @@
         top: 0;
         object-fit: cover;
         z-index: -1;
+        transform: translateX(-200%);
+        animation: imageTextRight 1s forwards ease;
     }
 }

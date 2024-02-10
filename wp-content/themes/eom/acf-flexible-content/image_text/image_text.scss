@@ -4,10 +4,29 @@
 .image__text {
     @include borderTop;
 
+    &.animated {
+        .image__text_right {
+            animation: imageTextRight 1s forwards ease;
+        }
+
+        .image__text_paragraphs {
+            animation: textOpacity 2s forwards ease;
+            animation-delay: 1.5s;
+        }
+
+        .image__text_heading {
+            p {
+                animation: textOpacity 2s forwards ease;
+                animation-delay: 1s;
+            }
+        }
+    }
+
     &_wrapper {
         width: 100%;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         @media(min-width: $md) {
             flex-direction: row;
@@ -38,6 +57,9 @@
         width: 100%;
         padding: 5px 16px 20px 10px;
         border-left: $border-2px;
+        background-color: $cerulean;
+        transform: translateX(-200%);
+        background-color: orange;
 
         @media(min-width: $md) {
             width: 67.5%;
@@ -67,12 +89,17 @@
         @media(min-width: $xl) {
             width: 50%;
         }
+
+        p {
+            opacity: 0;
+        }
     }
 
     &_paragraphs {
         width: 100%;
         display: flex;
         flex-direction: column;
+        opacity: 0;
 
         @media(min-width: $xl) {
             width: 50%;
@@ -98,11 +125,11 @@
     }
 
     &.reverse {
-      .image__text_wrapper {
-        @media(min-width: $md) {
-            flex-direction: row-reverse;
+        .image__text_wrapper {
+            @media(min-width: $md) {
+                flex-direction: row-reverse;
+            }
         }
-      }
 
         .image__text_right {
             border-left: 0;

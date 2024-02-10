@@ -3,6 +3,13 @@
 
 .dropdowns {
     @include borderTop;
+
+    &.animated {
+        .h2__box_text p {
+            animation: textOpacity 2s forwards ease;
+            animation-delay: 1s;
+        }
+    }
     
     &__wrapper {
         padding: 6px 7px 16px 7px;
@@ -25,6 +32,10 @@
         
         @media(min-width: $md) {
             margin-bottom: 46px;
+        }
+
+        p {
+            opacity: 0;
         }
     }
 

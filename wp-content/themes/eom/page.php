@@ -11,12 +11,14 @@ get_header();
 
 // Hero styles and scripts.
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery'], THEME_VERSION, true );
 
 // global text styles.
 wp_enqueue_style( 'global-text', THEME_URI . '/static/css/global_text/global_text.min.css', [], THEME_VERSION );
 
-// image_text styles.
+// image_text styles and scripts.
 wp_enqueue_style( 'image-text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'image-text', THEME_URI . '/static/js/image_text/image_text.min.js', ['jquery'], THEME_VERSION, true );
 
 // main_video styles and scripts.
 wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.min.css', [], THEME_VERSION );
@@ -26,17 +28,20 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 wp_enqueue_style( 'dropdowns', THEME_URI . '/static/css/dropdowns/dropdowns.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'dropdowns', THEME_URI . '/static/js/dropdowns/dropdowns.min.js', ['jquery'], THEME_VERSION, true );
 
-// quote styles.
+// quote styles and scripts.
 wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'quote', THEME_URI . '/static/js/quote/quote.min.js', ['jquery'], THEME_VERSION, true );
 
-// perks styles.
+// perks styles and scripts.
 wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'perks', THEME_URI . '/static/js/perks/perks.min.js', ['jquery'], THEME_VERSION, true );
 
 // discuss styles.
 wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', [], THEME_VERSION );
 
-// discuss styles.
+// memebers styles and scripts.
 wp_enqueue_style( 'members', THEME_URI . '/static/css/members/members.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'members', THEME_URI . '/static/js/members/members.min.js', ['jquery'], THEME_VERSION, true );
 
 // latest styles.
 wp_enqueue_style( 'latest', THEME_URI . '/static/css/latest/latest.min.css', [], THEME_VERSION );
