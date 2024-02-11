@@ -81,11 +81,3 @@
         }
     }
 }
-
-.home {
-    .resources {
-        @media all and (min-width: $md) {
-            display: none;
-        }
-    }
-}

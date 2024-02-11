@@ -30,6 +30,7 @@ function eom_load_theme_dependencies(): void
 	require_once( 'theme-functions/theme-functions.php' );
 	require_once( 'gutenberg/blocks-init.php' );
 	require_once( 'theme-functions/ajax.php' );
+	require_once( 'theme-functions/custom-post-types.php' );
 }
 
 add_action( 'init', 'eom_init_theme' );
