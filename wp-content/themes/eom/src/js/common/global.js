@@ -95,8 +95,13 @@ export const printText = (selector) => {
 let windowHeight = window.innerHeight
 export const getWindowHeight = () => windowHeight
 export const isInScope = ( elementSelector, st, offset = 100 ) => {
-	const element  = document.querySelector( elementSelector )
+	let element
+
+	if( elementSelector instanceof Element ) element = elementSelector
+	else element  = document.querySelector( elementSelector )
+
 	if ( ! element) return
+
 	let bodyRect  = document.body.getBoundingClientRect(),
 		elemRect  = element.getBoundingClientRect(),
 		elemTop   = elemRect.top - bodyRect.top

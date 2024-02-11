@@ -4,38 +4,28 @@ import { printText } from "../../src/js/common/global"
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
-    document.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('.image__text')
+	const sections = document.querySelectorAll('.image__text')
 
-        if(!sections.length) return
+	if(!sections.length) return
 
-        sections.forEach((section, i) => {
-            const sectionId = `image-text-${i + 1}`
-            section.setAttribute('id', sectionId)
-        })
+	const animateOnScroll = () => {
+		sections.forEach(section => {
+			const sectionH2 = section.querySelector('.image__text_heading h2')
+			const sectionH3 = section.querySelector('.image__text_heading h3')
 
-        document.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.image__text')
+			if(!section.classList.contains('animated')) {
+				if (isInScope(section, window.scrollY)) {
+					section.classList.add('animated')
 
-            sections.forEach(section => {
-                const sectionId = `#${section.id}`
-                const sectionH2 = section.querySelector('.image__text_heading h2')
-                const sectionH3 = section.querySelector('.image__text_heading h3')
+					if(sectionH2) printText('.image__text_heading h2')
 
-                if(!section.classList.contains('animated')) {
-                    if (isInScope(sectionId, window.scrollY)) {
-                        section.classList.add('animated')
-                        
-                        if(sectionH2) {
-                            printText('.image__text_heading h2')
-                        }
+					if(sectionH3) printText('.image__text_heading h3')
+				}
+			}
+		})
+	}
 
-                        if(sectionH3) {
-                            printText('.image__text_heading h3')
-                        }
-                    }
-                }
-            })
-        })
-    })
+	animateOnScroll()
+
+	document.addEventListener('scroll', animateOnScroll)
 })
