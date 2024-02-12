@@ -8,105 +8,84 @@
  * @package WordPress
  * @subpackage eom
  */
+
+$logo			= get_field( 'logo_footer', 'option' );
+$col_title_1	= get_field( 'first_column_title', 'option' );
+$col_title_2	= get_field( 'second_column_title', 'option' );
+$col_title_3	= get_field( 'third_column_title', 'option' );
+$col_title_4	= get_field( 'fourth_column_title', 'option' );
 ?>
 
 			<footer class="footer">
 				<div class="container">
                     <div class="footer__wrapper">
-                        <a href="/" class="footer__logo">
-                            <img src="<?php echo THEME_URI ?>/static/img/footer-logo.svg" alt="">
-                        </a>
+						<?php
+						if( $logo ){
+							?>
+							<a href="<?php echo home_url( '/' ) ?>" class="footer__logo">
+								<?php echo wp_get_attachment_image( $logo, 'medium', false, ['loading' => 'lazy'] ) ?>
+							</a>
+							<?php
+						}
+						?>
+
                         <div class="footer__inner">
                             <nav class="footer__nav">
-                                <div class="footer__heading">
-                                    Economics of Mutuality Alliance Members
-                                </div>
-                                <ul class="menu" id="footer-menu-1">
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Economics of Mutuality Foundation
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Human Flourishing Foundation
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Mutual Value Investments
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Mutual Value Labs
-                                        </a>
-                                    </li>
-                                </ul>
+								<?php
+								if( $col_title_1 ) echo '<div class="footer__heading">', esc_html( $col_title_1 ), '</div>';
+
+	                            wp_nav_menu( [
+		                            'theme_location'	=> 'footer_menu_1',
+		                            'container'			=> false,
+									'menu_id'			=> 'footer-menu-1'
+	                            ] );
+	                            ?>
                             </nav>
+
                             <nav class="footer__nav">
-                                <div class="footer__heading">
-                                    resources
-                                </div>
-                                <ul class="menu" id="footer-menu-2">
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Latest News and Content
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Oxford Book 
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Oxford Forum
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            Knowledge Archive
-                                        </a>
-                                    </li>
-                                </ul>
+	                            <?php
+	                            if( $col_title_2 ) echo '<div class="footer__heading">', esc_html( $col_title_2 ), '</div>';
+
+	                            wp_nav_menu( [
+		                            'theme_location'	=> 'footer_menu_2',
+		                            'container'			=> false,
+		                            'menu_id'			=> 'footer-menu-2'
+	                            ] );
+	                            ?>
                             </nav>
+
                             <div class="footer__links">
-                                <div class="footer__heading">
-                                    Connect
-                                </div>
-                                <div class="footer__links_inner">
-                                    <a href="mailto:eom@gmail.com">
-                                        Email
-                                    </a>
-                                    <a href="https://www.linkedin.com/">
-                                        Linkedin
-                                    </a>
-                                </div>
+	                            <?php
+	                            if( $col_title_3 ) echo '<div class="footer__heading">', esc_html( $col_title_3 ), '</div>';
+
+	                            wp_nav_menu( [
+		                            'theme_location'	=> 'footer_menu_3',
+		                            'container'			=> false,
+		                            'menu_class'		=> 'footer__links_inner'
+	                            ] );
+	                            ?>
                             </div>
-                            <form class="subscribe">
-                                <div class="footer__heading">
-                                    newsletter
-                                </div>
-                                <fieldset>
-                                    <div class="input__wrapper">
-                                        <input name="email" type="email" placeholder="Enter your email">
-                                        <button class="subscribe__button">→</button>
-                                    </div>
-                                </fieldset>
-                            </form>
+
+                            <div class="subscribe">
+                                <?php
+                                if( $col_title_4 ) echo '<div class="footer__heading">', esc_html( $col_title_4 ), '</div>';
+
+								echo do_shortcode( '[contact-form-7 id="d1561b2" title="Subscribe"]' );
+								?>
+                            </div>
                         </div>
                     </div>
+
                     <div class="footer__legal">
                         <div class="footer__legal_wrapper">
-                            <div class="footer__legal_links">
-                                <a class="legal__link" href="#">Legal</a>
-                                <a class="legal__link" href="#">privacy Policy</a>
-                                <a class="legal__link" href="#">Accessibility</a>
-                            </div>
-                            <div class="footer__year">
-                                © Economics of Mutuality Alliance 2024
-                            </div>
+	                        <?php
+	                        wp_nav_menu( [
+		                        'theme_location'	=> 'footer_menu_bottom',
+		                        'container'			=> false,
+		                        'menu_class'		=> 'footer__legal_links'
+	                        ] );
+	                        ?>
+                            <div class="footer__year">© Economics of Mutuality Alliance <?php echo date( 'Y' ) ?></div>
                         </div>
                     </div>
                 </div>
