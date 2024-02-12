@@ -20,8 +20,11 @@ function eom_load_theme_dependencies(): void
 {
 	// Register theme menus.
 	register_nav_menus( [
-		'header_menu'	=> esc_html__( 'Header Menu', 'eom' ),
-		'footer_menu'	=> esc_html__( 'Footer Menu', 'eom' )
+		'header_menu'           => esc_html__( 'Header Menu', 'eom' ),
+		'footer_menu_1'         => esc_html__( 'Footer Menu 1', 'eom' ),
+		'footer_menu_2'         => esc_html__( 'Footer Menu 2', 'eom' ),
+		'footer_menu_3'         => esc_html__( 'Footer Menu 3', 'eom' ),
+		'footer_menu_bottom'    => esc_html__( 'Footer Menu Bottom', 'eom' )
 	] );
 
 	// Auto-generate ACF Flexible Content templates files.

@@ -38,6 +38,10 @@
         @media(min-width: $xl) {
             margin-bottom: 0;
         }
+
+		img {
+			width: 100%
+		}
     }
 
     &__inner {
@@ -122,6 +126,23 @@
             width: auto;
             margin-top: 0;
         }
+
+		.wpcf7 {
+			&-form {
+				position: relative;
+
+				.wpcf7-not-valid-tip {
+					position: absolute
+				}
+			}
+
+			form.invalid .wpcf7-response-output {
+				position: absolute;
+				top: calc(100% + 10px);
+				left: 0;
+				font-size: 14px
+			}
+		}
     }
 
     .menu-item {
@@ -164,6 +185,21 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 16px;
+
+			a {
+				color: $white;
+				font-family: $ff;
+				font-size: 8px;
+				font-style: normal;
+				font-weight: $fw-regular;
+				line-height: 16px;
+				text-transform: uppercase;
+
+				@media(min-width: $md) {
+					font-size: 11px;
+					line-height: 16px;
+				}
+			}
         }
     }
 
@@ -176,21 +212,6 @@
         line-height: 16px;
         text-transform: uppercase;
         text-align: center;
-
-        @media(min-width: $md) {
-            font-size: 11px;
-            line-height: 16px;
-        }
-    }
-
-    .legal__link {
-        color: $white;
-        font-family: $ff;
-        font-size: 8px;
-        font-style: normal;
-        font-weight: $fw-regular;
-        line-height: 16px;
-        text-transform: uppercase;
 
         @media(min-width: $md) {
             font-size: 11px;
