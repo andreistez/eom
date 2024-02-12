@@ -381,6 +381,23 @@
                                     "layout": "vertical",
                                     "save_other_choice": 0,
                                     "parent_repeater": "field_65c2a77d71ced"
+                                },
+                                {
+                                    "key": "field_65ca9b5b8828a",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_65c2a77d71ced"
                                 }
                             ]
                         }
@@ -1452,5 +1469,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707773675
+    "modified": 1707776880
 }
