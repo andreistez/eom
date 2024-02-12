@@ -4,22 +4,25 @@ import { printText } from "../../src/js/common/global"
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
-    document.addEventListener('scroll', () => {
-        const members = document.querySelector('.members')
+    const sections = document.querySelectorAll('.members')
 
+	if(!sections.length) return
 
-        document.addEventListener('scroll', () => {
-            const boxTitle = document.querySelector('.h2__wrapper h2')
+	const animateOnScroll = () => {
+		sections.forEach(section => {
+			const boxTitle = section.querySelector('.h2__wrapper h2')
 
-            if (!members.classList.contains('animated')) {
-                if (isInScope('.members', window.scrollY)) {
-                    members.classList.add('animated')
+			if(!section.classList.contains('animated')) {
+				if (isInScope(section, window.scrollY)) {
+					section.classList.add('animated')
 
-                    if (boxTitle) {
-                        printText('.h2__wrapper h2')
-                    }
-                }
-            }
-        })
-    })
+					if(boxTitle) printText('.h2__wrapper h2')
+				}
+			}
+		})
+	}
+
+	animateOnScroll()
+
+	document.addEventListener('scroll', animateOnScroll)
 })

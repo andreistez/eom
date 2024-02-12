@@ -9,6 +9,10 @@
             animation: textOpacity 2s forwards ease;
             animation-delay: 1s;
         }
+
+        .h2__wrapper p {
+            animation: textOpacity 2s forwards ease;
+        }
     }
 
     &__wrapper {

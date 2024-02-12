@@ -5,26 +5,28 @@ import { reCalculateDropdownHeight } from "../../src/js/common/global"
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
-        document.addEventListener('scroll', () => {
-            const dropdownsSection = document.querySelector('.dropdowns')
-            
-            
-            document.addEventListener('scroll', () => {
-                const boxTitle = document.querySelector('.h2__wrapper h2')
+    const sections = document.querySelectorAll('.dropdowns')
 
-                    if(!dropdownsSection.classList.contains('animated')) {
-                        if (isInScope('.dropdowns', window.scrollY)) {
-                            dropdownsSection.classList.add('animated')
+    const animateOnScroll = () => {
+        sections.forEach(section => {
+            const sectionH2 = section.querySelector('.image__text_heading h2')
+            const sectionH3 = section.querySelector('.image__text_heading h3')
 
-                            if(boxTitle) {
-                                printText('.h2__wrapper h2')
-                            }
-                            
-                        }
-                    }
-                })
-            })
-    
+            if (!section.classList.contains('animated')) {
+                if (isInScope(section, window.scrollY)) {
+                    section.classList.add('animated')
+
+                    if (sectionH2) printText('.image__text_heading h2')
+
+                    if (sectionH3) printText('.image__text_heading h3')
+                }
+            }
+        })
+    }
+
+    document.addEventListener('scroll', animateOnScroll)
+
+    animateOnScroll()
     toggleDropdown()
     mouseEvents()
 })

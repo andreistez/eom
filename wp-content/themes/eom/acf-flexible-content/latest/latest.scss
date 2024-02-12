@@ -209,11 +209,7 @@
     }
 
     &__bottom {
-        display: none;
-    
-        @media(min-width: $md) {
-            display: flex;
-        }
+        display: flex;
     
         &_item {
             width: calc(100% / 4);

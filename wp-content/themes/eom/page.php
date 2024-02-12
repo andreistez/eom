@@ -987,77 +987,85 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                     <div class="swiper team-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="swiper-slide__img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
-                                </div>
-                                <div class="swiper-slide__inner">
-                                    <div class="swiper-slide__name">
-                                        Jay Jakub
+                                <div class="swiper-slide__wrapper">
+                                    <div class="swiper-slide__img">
+                                        <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
                                     </div>
-                                    <div class="swiper-slide__text">
-                                        Executive Director
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__name">
+                                            Jay Jakub
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Executive Director
+                                        </div>
+                                        <a href="#" class="latest__link">
+                                            View Profile
+                                            <span>→</span>
+                                        </a>
                                     </div>
-                                    <a href="#" class="latest__link">
-                                        View Profile
-                                        <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/bio2.png" alt="">
-                                </div>
-                                <div class="swiper-slide__inner">
-                                    <div class="swiper-slide__name">
-                                        Stephen badger
-                                    </div>
-                                    <div class="swiper-slide__text">
-                                        Chairman of the Board 
-                                    </div>
-                                    <div class="swiper-slide__text">
-                                        Former Chairman of the Board, Mars, Inc.
-                                    </div>
-                                    <a href="#" class="latest__link">
-                                        View Profile
-                                        <span>→</span>
-                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="swiper-slide__img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/bio3.png" alt="">
-                                </div>
-                                <div class="swiper-slide__inner">
-                                    <div class="swiper-slide__name">
-                                        Ann florini
+                                <div class="swiper-slide__wrapper">
+                                    <div class="swiper-slide__img">
+                                        <img src="<?php echo THEME_URI ?>/static/img/bio2.png" alt="">
                                     </div>
-                                    <div class="swiper-slide__text">
-                                        Vice-Chairman of the Board
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__name">
+                                            Stephen badger
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Chairman of the Board 
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Former Chairman of the Board, Mars, Inc.
+                                        </div>
+                                        <a href="#" class="latest__link">
+                                            View Profile
+                                            <span>→</span>
+                                        </a>
                                     </div>
-                                    <div class="swiper-slide__text">
-                                        Fellow, New America; Prof. of Practice, Thunderbird ASU; Former Prof., National University of Singapore, Singapore Management University; Former Senior Fellow, Brookings
-                                    </div>
-                                    <a href="#" class="latest__link">
-                                        View Profile
-                                        <span>→</span>
-                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="swiper-slide__img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
+                                <div class="swiper-slide__wrapper">
+                                    <div class="swiper-slide__img">
+                                        <img src="<?php echo THEME_URI ?>/static/img/bio3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__name">
+                                            Ann florini
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Vice-Chairman of the Board
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Fellow, New America; Prof. of Practice, Thunderbird ASU; Former Prof., National University of Singapore, Singapore Management University; Former Senior Fellow, Brookings
+                                        </div>
+                                        <a href="#" class="latest__link">
+                                            View Profile
+                                            <span>→</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide__inner">
-                                    <div class="swiper-slide__name">
-                                        Jay Jakub
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__wrapper">
+                                    <div class="swiper-slide__img">
+                                        <img src="<?php echo THEME_URI ?>/static/img/bio1.png" alt="">
                                     </div>
-                                    <div class="swiper-slide__text">
-                                        Executive Director
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__name">
+                                            Jay Jakub
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            Executive Director
+                                        </div>
+                                        <a href="#" class="latest__link">
+                                            View Profile
+                                            <span>→</span>
+                                        </a>
                                     </div>
-                                    <a href="#" class="latest__link">
-                                        View Profile
-                                        <span>→</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
