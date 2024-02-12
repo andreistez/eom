@@ -31,7 +31,7 @@ $position = get_field( 'position', $person_id );
 
             <?php if( $position ) echo '<div class="swiper-slide__text">', $position, '</div>' ?>
 
-            <a href="<?php echo get_the_permalink( $person_id ) ?>" class="latest__link">
+            <a href="<?php echo get_the_permalink( $person_id ) ?>" class="link__arrow">
                 <?php _e( 'View Profile', 'eom' ) ?> <span>→</span>
             </a>
         </div>

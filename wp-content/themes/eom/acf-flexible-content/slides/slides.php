@@ -36,10 +36,7 @@ $people			= get_sub_field( 'people' );
 
 						<div class="swiper-navigation">
 							<div class="swiper-prev"><span>→</span></div>
-							<a href="#" class="latest__link">
-								<?php _e( 'View more', 'eom' ) ?>
-							</a>
-							<div class="swiper-next"><span>→</span></div>
+							<div class="swiper-next"><span><?php _e( 'View more', 'eom' ) ?></span>→</div>
 						</div>
 					</div><!-- .swiper -->
 				</div><!-- .slides__items -->

@@ -1363,6 +1363,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65ca8eb5e06b1": {
+                    "key": "layout_65ca8eb5e06b1",
+                    "name": "latest",
+                    "label": "Latest",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65ca8eb9e06b7",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_65ca8ec4e06b8",
+                            "label": "Title Color",
+                            "name": "title_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_65ca8edfe06b9",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1388,5 +1452,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707687645
+    "modified": 1707773675
 }
