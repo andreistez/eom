@@ -177,3 +177,45 @@ $tr07: 0.7s;
         transform: translateY(0);
     }
 }
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes scaleCircle {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes circleLine {
+    0% {
+        height: 100%;
+    }
+
+    100% {
+        height: calc(100% + 52px);
+    }
+}
+
+@media(min-width: $md) {
+    @keyframes circleLine {
+        0% {
+            height: 100%;
+        }
+    
+        100% {
+            height: calc(100% + 32px);
+        }
+    }
+} 

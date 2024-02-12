@@ -773,8 +773,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                 <p>
                                     Maua, a Mars Wrigley program in Kenya powered by the Economics...
                                 </p>
-                                <div class="latest__link_wrapper">
-                                    <a class="latest__link" href="#">
+                                <div class="link__arrow_wrapper">
+                                    <a class="link__arrow" href="#">
                                         Read on
                                         <span>
                                             →
@@ -804,8 +804,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                 <p>
                                     A Conversation With Tony Soh
                                 </p>
-                                <div class="latest__link_wrapper">
-                                    <a class="latest__link" href="#">
+                                <div class="link__arrow_wrapper">
+                                    <a class="link__arrow" href="#">
                                         Read on
                                         <span>
                                             →
@@ -833,8 +833,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             <p>
                                 A Conversation With Francisca Larraín Marshall
                             </p>
-                            <div class="latest__link_wrapper">
-                                <a class="latest__link" href="#">
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
                                     Read on
                                     <span>
                                         →
@@ -859,8 +859,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             <p>
                                 Text here
                             </p>
-                            <div class="latest__link_wrapper">
-                                <a class="latest__link" href="#">
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
                                     Read on
                                     <span>
                                         →
@@ -885,8 +885,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             <p>
                                 Text here
                             </p>
-                            <div class="latest__link_wrapper">
-                                <a class="latest__link" href="#">
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
                                     Read on
                                     <span>
                                         →
@@ -911,8 +911,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             <p>
                                 Text here
                             </p>
-                            <div class="latest__link_wrapper">
-                                <a class="latest__link" href="#">
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
                                     Read on
                                     <span>
                                         →
@@ -922,8 +922,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                         </div>
                     </div>
                 </div>
-                <div class="latest__link_wrapper center">
-                    <a href="#" class="latest__link">
+                <div class="link__arrow_wrapper center">
+                    <a href="#" class="link__arrow">
                         Visit our Latest page for more News and Content
                         <span>→</span>
                     </a>
@@ -998,7 +998,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                         <div class="swiper-slide__text">
                                             Executive Director
                                         </div>
-                                        <a href="#" class="latest__link">
+                                        <a href="#" class="link__arrow">
                                             View Profile
                                             <span>→</span>
                                         </a>
@@ -1020,7 +1020,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                         <div class="swiper-slide__text">
                                             Former Chairman of the Board, Mars, Inc.
                                         </div>
-                                        <a href="#" class="latest__link">
+                                        <a href="#" class="link__arrow">
                                             View Profile
                                             <span>→</span>
                                         </a>
@@ -1042,7 +1042,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                         <div class="swiper-slide__text">
                                             Fellow, New America; Prof. of Practice, Thunderbird ASU; Former Prof., National University of Singapore, Singapore Management University; Former Senior Fellow, Brookings
                                         </div>
-                                        <a href="#" class="latest__link">
+                                        <a href="#" class="link__arrow">
                                             View Profile
                                             <span>→</span>
                                         </a>
@@ -1061,7 +1061,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                                         <div class="swiper-slide__text">
                                             Executive Director
                                         </div>
-                                        <a href="#" class="latest__link">
+                                        <a href="#" class="link__arrow">
                                             View Profile
                                             <span>→</span>
                                         </a>
@@ -1071,7 +1071,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                         </div>
                         <div class="swiper-navigation">
                             <div class="swiper-prev"><span>→</span></div>
-                            <a href="#" class="latest__link">
+                            <a href="#" class="link__arrow">
                                 View more
                             </a>
                             <div class="swiper-next"><span>→</span></div>

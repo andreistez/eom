@@ -13,6 +13,20 @@
         .h2__wrapper p {
             animation: textOpacity 2s forwards ease;
         }
+
+        .dropdowns__circle {
+            animation: rotateCircle 2s forwards ease;
+        }
+
+        .svg-center {
+            animation: scaleCircle 2s forwards ease;
+            animation-delay: 1.5s;
+        }
+
+        .circle__lines::before {
+            animation: circleLine 2s forwards ease;
+            animation-delay: 3s;
+        }
     }
     
     &__wrapper {
@@ -52,6 +66,7 @@
         position: relative;
         width: 290px;
         height: 290px;
+        transform: rotate(-45deg);
 
         @media(min-width: $md) {
             width: 371px;
@@ -119,8 +134,9 @@
             height: 119px;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(0);
             z-index: 2;
+            transform-origin: center;
 
             @media(min-width: $md) {
                 width: 152px;
@@ -172,12 +188,8 @@
         }
 
         &::before {
-            height: calc(100% + 52px);
+            height: 100%;
             transform: translateX(-50%);
-
-            @media(min-width: $md) {
-                height: calc(100% + 32px);
-            }
         }
 
         &::after {
