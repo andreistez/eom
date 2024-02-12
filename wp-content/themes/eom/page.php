@@ -752,13 +752,13 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                 <h2 class="h2 grass">
                     Latest News and Content
                 </h2>
-                <div class="latest__top">
-                    <div class="latest__top_item">
-                        <div class="latest__top_inner">
-                            <div class="latest__top_img">
+                <div class="latest__inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__item_img">
                                 <img src="<?php echo THEME_URI ?>/static/img/latest1.png" alt="">
                             </div>
-                            <div class="latest__top_info">
+                            <div class="latest__item_info">
                                 <div class="latest__case_wrapper">
                                     <div class="latest__case">
                                         5 min read
@@ -784,12 +784,12 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             </div>
                         </div>
                     </div>
-                    <div class="latest__top_item">
-                        <div class="latest__top_inner">
-                            <div class="latest__top_img">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__item_img">
                                 <img src="<?php echo THEME_URI ?>/static/img/latest2.png" alt="">
                             </div>
-                            <div class="latest__top_info">
+                            <div class="latest__item_info">
                                 <div class="latest__case_wrapper">
                                     <div class="latest__case">
                                         5 min read
@@ -815,10 +815,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="latest__bottom">
-                    <div class="latest__bottom_item">
-                        <div class="latest__bottom_inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
                             <div class="latest__case_wrapper">
                                 <div class="latest__case">
                                     5 min read
@@ -843,8 +841,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             </div>
                         </div>
                     </div>
-                    <div class="latest__bottom_item">
-                        <div class="latest__bottom_inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
                             <div class="latest__case_wrapper">
                                 <div class="latest__case">
                                     5 min read
@@ -869,8 +867,8 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             </div>
                         </div>
                     </div>
-                    <div class="latest__bottom_item">
-                        <div class="latest__bottom_inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
                             <div class="latest__case_wrapper">
                                 <div class="latest__case">
                                     5 min read
@@ -895,8 +893,86 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                             </div>
                         </div>
                     </div>
-                    <div class="latest__bottom_item">
-                        <div class="latest__bottom_inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
+                                </div>
+                                <div class="latest__case">
+                                    Feb 2024
+                                </div>
+                            </div>
+                            <h5 class="h5">
+                                Economics of Mutuality Foundation Korea Forum
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
+                                </div>
+                                <div class="latest__case">
+                                    Feb 2024
+                                </div>
+                            </div>
+                            <h5 class="h5">
+                                Economics of Mutuality Foundation Korea Forum
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
+                                </div>
+                                <div class="latest__case">
+                                    Feb 2024
+                                </div>
+                            </div>
+                            <h5 class="h5">
+                                Economics of Mutuality Foundation Korea Forum
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
                             <div class="latest__case_wrapper">
                                 <div class="latest__case">
                                     5 min read
@@ -922,12 +998,11 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                         </div>
                     </div>
                 </div>
-                <div class="link__arrow_wrapper center">
-                    <a href="#" class="link__arrow">
-                        Visit our Latest page for more News and Content
-                        <span>→</span>
-                    </a>
-                </div>
+            <div class="link__arrow_wrapper center">
+                <a href="#" class="link__arrow">
+                    Visit our Latest page for more News and Content
+                    <span>→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -1071,10 +1146,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
                         </div>
                         <div class="swiper-navigation">
                             <div class="swiper-prev"><span>→</span></div>
-                            <a href="#" class="link__arrow">
-                                View more
-                            </a>
-                            <div class="swiper-next"><span>→</span></div>
+                            <div class="swiper-next"><span >View more</span>→</div>
                         </div>
                     </div>
                 </div>

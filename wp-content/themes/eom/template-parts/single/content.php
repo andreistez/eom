@@ -64,118 +64,118 @@ $additional	= get_field( 'additional_info' );
             </div>
             <div class="post-single-latest">
                 <h2>Other Articles</h2>
-                <div class="latest-items">
-                        <div class="latest-item">
-                            <div class="latest-inner">
-                                <div class="latest-case-wrapper">
-                                    <div class="latest-case">
-                                        5 min read
-                                    </div>
-                                    <div class="latest-case">
-                                        Feb 2024
-                                    </div>
+                <div class="latest__inner">
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
                                 </div>
-                                <h5 class="h5">
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </h5>
-                                <p>
-                                    A Conversation With Francisca Larraín Marshall
-                                </p>
-                                <div class="latest-link-wrapper">
-                                    <a href="#">
-                                        Read on
-                                        <span>
-                                            →
-                                        </span>
-                                    </a>
+                                <div class="latest__case">
+                                    Feb 2024
                                 </div>
                             </div>
-                        </div>
-                        <div class="latest-item">
-                            <div class="latest-inner">
-                                <div class="latest-case-wrapper">
-                                    <div class="latest-case">
-                                        5 min read
-                                    </div>
-                                    <div class="latest-case">
-                                        Feb 2024
-                                    </div>
-                                </div>
-                                <h5 class="h5">
-                                    Executive Education Program Americas and Europe
-                                </h5>
-                                <p>
-                                    Text here
-                                </p>
-                                <div class="latest-link-wrapper">
-                                    <a href="#">
-                                        Read on
-                                        <span>
-                                            →
-                                        </span>
-                                    </a>
-                                </div>
+                            <h5 class="h5">
+                                Why I’m No Longer Calling Myself a Brand Purpose Consultant
+                            </h5>
+                            <p>
+                                A Conversation With Francisca Larraín Marshall
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <div class="latest-item">
-                            <div class="latest-inner">
-                                <div class="latest-case-wrapper">
-                                    <div class="latest-case">
-                                        5 min read
-                                    </div>
-                                    <div class="latest-case">
-                                        Feb 2024
-                                    </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
                                 </div>
-                                <h5 class="h5">
-                                    Economics of Mutuality Foundation Norway Forum
-                                </h5>
-                                <p>
-                                    Text here
-                                </p>
-                                <div class="latest-link-wrapper">
-                                    <a class="latest-link" href="#">
-                                        Read on
-                                        <span>
-                                            →
-                                        </span>
-                                    </a>
+                                <div class="latest__case">
+                                    Feb 2024
                                 </div>
                             </div>
-                        </div>
-                        <div class="latest-item">
-                            <div class="latest-inner">
-                                <div class="latest-case-wrapper">
-                                    <div class="latest-case">
-                                        5 min read
-                                    </div>
-                                    <div class="latest-case">
-                                        Feb 2024
-                                    </div>
-                                </div>
-                                <h5 class="h5">
-                                    Economics of Mutuality Foundation Korea Forum
-                                </h5>
-                                <p>
-                                    Text here
-                                </p>
-                                <div class="latest-link-wrapper">
-                                    <a href="#">
-                                        Read on
-                                        <span>
-                                            →
-                                        </span>
-                                    </a>
-                                </div>
+                            <h5 class="h5">
+                                Executive Education Program Americas and Europe
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
+                                </div>
+                                <div class="latest__case">
+                                    Feb 2024
+                                </div>
+                            </div>
+                            <h5 class="h5">
+                                Economics of Mutuality Foundation Norway Forum
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest__item">
+                        <div class="latest__item_inner">
+                            <div class="latest__case_wrapper">
+                                <div class="latest__case">
+                                    5 min read
+                                </div>
+                                <div class="latest__case">
+                                    Feb 2024
+                                </div>
+                            </div>
+                            <h5 class="h5">
+                                Economics of Mutuality Foundation Korea Forum
+                            </h5>
+                            <p>
+                                Text here
+                            </p>
+                            <div class="link__arrow_wrapper">
+                                <a class="link__arrow" href="#">
+                                    Read on
+                                    <span>
+                                        →
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="link__arrow_wrapper center">
+                    <a href="#" class="link__arrow">
+                        Visit our Latest page for more News and Content
+                        <span>→</span>
+                    </a>
             </div>
-            <div class="latest-bottom-link">
-                <a href="#">
-                    Visit our Latest page for more News and Content
-                    <span>→</span>
-                </a>
             </div>
 		</div>
 	</div>
