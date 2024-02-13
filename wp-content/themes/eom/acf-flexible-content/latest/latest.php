@@ -32,7 +32,7 @@ $news			= get_posts( [
 
 				foreach( $news as $key => $p ){
 					$type = ( ! $key || $key === 1 ) ? 'thumb' : 'no-thumb';
-				    get_template_part( 'acf-flexible-content/latest/post', null, ['id' => $p->ID, 'type' => $type] );
+				    get_template_part( 'components/cards/post', null, ['id' => $p->ID, 'type' => $type] );
 				}
 
 				echo '</div>';

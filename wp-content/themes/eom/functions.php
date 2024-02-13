@@ -82,6 +82,10 @@ function eom_inclusion_enqueue(): void
 	// Single Person.
 	if( is_singular( 'person' ) )
 		wp_enqueue_style( 'single-person', THEME_URI . '/static/css/pages/single-person.min.css', [], THEME_VERSION );
+
+	// Blog (Posts Page).
+	if( is_home() )
+		wp_enqueue_style( 'blog', THEME_URI . '/static/css/pages/blog.min.css', [], THEME_VERSION );
 }
 
 add_action( 'acf/init', 'eom_acf_init' );
