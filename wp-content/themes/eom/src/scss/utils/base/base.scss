@@ -50,6 +50,15 @@ ul, ol {
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
+    margin-top: 80px;
+
+    @media(min-width: $md) {
+        margin-top: 100px;
+    }
+
+    @media(min-width: $lg) {
+        margin-top: 0;
+    }
 
 	.footer {
 		margin-top: auto

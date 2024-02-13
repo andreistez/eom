@@ -8,11 +8,11 @@
         display: block;
         position: absolute;
         top: 0;
+        scale: 1;
         width: 100vw;
         height: 2px;
         margin-left: calc(50% - 50vw);
         background-color: $dark-blue;
-        transition: width ease $tr;
     }
 
     &::before {

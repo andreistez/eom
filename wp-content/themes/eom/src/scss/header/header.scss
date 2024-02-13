@@ -2,9 +2,11 @@
     position: fixed;
     width: 100%;
     z-index: 99;
+    top: 0;
+    left: 0;
     background-color: $light;
     padding: 15px 0;
-    border-bottom: 2px solid $dark-blue;
+   
 
     @media (min-width: $lg) {
         position: relative;
@@ -32,6 +34,7 @@
     }
 
     &.animated {
+        border-bottom: 2px solid $dark-blue;
         @media (min-width: $lg) {
             .header-nav {
                 position: fixed;
@@ -48,12 +51,6 @@
                 &__text {
                     animation: removeText 1s forwards ease;
                 }
-            }
-        }
-
-        .header-nav {
-            &::before, &::after {
-                width: 0;
             }
         }
     }

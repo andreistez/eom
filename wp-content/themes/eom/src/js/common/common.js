@@ -80,7 +80,7 @@ const animateHeader = () => {
         const scrollY = window.scrollY
 
         if(!header.classList.contains('animated')) {
-            if(navRectTop <= 20) {
+            if(navRectTop <= 0) {
                 header.classList.add('animated')
             }
         }

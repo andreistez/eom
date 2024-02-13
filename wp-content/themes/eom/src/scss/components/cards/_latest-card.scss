@@ -61,10 +61,12 @@
 
         @media(min-width: $md) {
             width: calc(50% - 8px);
+            margin-bottom: 16px;
         }
 
         @media(min-width: $xl) {
             width: calc(50% - 16px);
+            margin-bottom: 32px;
         }
 
         .latest__item_inner {

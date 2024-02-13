@@ -21,11 +21,19 @@
 		}
 
 		&.quarter {
-			width: calc((50% - 15px) / 2)
+			width: 100%;
+
+            @media(min-width: $sm) {
+                width: calc((50% - 15px) / 2);
+            }
 		}
 
 		&.half {
-			width: calc(50% - 5px)
+			width: 100%;
+
+            @media(min-width: $sm) {
+                width: calc(50% - 5px)
+            }
 		}
 	}
 

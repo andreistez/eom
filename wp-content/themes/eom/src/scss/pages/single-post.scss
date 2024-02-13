@@ -1,6 +1,12 @@
 @import '../utils/vars/vars';
 @import '../utils/base/wp-content';
 
+.single-post {
+    .header {
+        border-bottom: 2px solid $dark-blue;
+    }
+}
+
 .post-single {
     &-content-inner {
         padding: 7px 7px 30px 7px;
@@ -22,6 +28,12 @@
                     text-decoration: none;
                 }
             }
+        }
+    }
+
+    p {
+        em {
+            font-style: normal;
         }
     }
 
@@ -143,6 +155,9 @@
             display: block;
             width: 100vw;
             height: 2px;
+            position: absolute;
+            left: 0;
+            top: 0;
             background-color: $dark-blue;
             margin-left: calc(50% - 50vw);
         }
