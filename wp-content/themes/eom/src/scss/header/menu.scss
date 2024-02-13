@@ -1,6 +1,28 @@
 .header-nav {
     display: flex;
     height: 100%;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 2px;
+        margin-left: calc(50% - 50vw);
+        background-color: $dark-blue;
+        transition: width ease $tr;
+    }
+
+    &::before {
+        right: 0;
+    }
+
+    &::after {
+        left: 0;
+    }
+    
 
     ul {
         display: flex;
@@ -10,7 +32,13 @@
 
     li {
         position: relative;
-        border-left: 2px solid $dark-blue;
+        border: 2px solid $dark-blue;
+        border-left-width: 0;
+        border-bottom-width: 0;
+
+        &:first-child {
+            border-left-width: 2px;
+        }
 
         &::before {
             content: "";
@@ -38,7 +66,11 @@
             transition: color ease $tr07;
 
             @media (min-width: $xl) {
-                padding: 17px 36px; 
+                padding: 17px 25px; 
+            }
+
+            @media (min-width: $xxl) {
+                padding: 15px 36px; 
             }
         }
 
@@ -51,5 +83,5 @@
                 width: 100%;
             }
         }
-    }
+    }    
 }
