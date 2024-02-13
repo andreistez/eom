@@ -1,0 +1,18 @@
+.person-links a {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    padding: 10px 16px;
+    border: 1px solid $dark-blue;
+    transition: background-color ease $tr,
+                color ease $tr;
+
+    &:hover {
+        background-color: $dark-blue;
+        color: $white;
+    }
+}

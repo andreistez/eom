@@ -1,0 +1,14 @@
+.back {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    transition: color ease $tr;
+
+    &:hover {
+        color: $cerulean;
+    }
+}

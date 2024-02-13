@@ -80,7 +80,7 @@ function eom_inclusion_enqueue(): void
 		wp_enqueue_style( 'single-post', THEME_URI . '/static/css/pages/single-post.min.css', [], THEME_VERSION );
 
 	// Single Person.
-	if( is_singular( 'post' ) )
+	if( is_singular( 'person' ) )
 		wp_enqueue_style( 'single-person', THEME_URI . '/static/css/pages/single-person.min.css', [], THEME_VERSION );
 }
 

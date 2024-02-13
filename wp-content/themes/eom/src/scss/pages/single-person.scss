@@ -2,7 +2,113 @@
 @import '../utils/base/wp-content';
 
 .single-person {
+    .header {
+        border-bottom: 2px solid $dark-blue;
+    }
 }
 
 .person-single {
+    padding: 40px 0 32px;
+
+    &-content {
+        padding: 0 10px;
+
+        @media (min-width: $md) {
+            padding: 0 30px;
+        }
+
+        @media (min-width: $xl) {
+            padding: 0 116px;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            gap: 32px 0;
+        }
+    }
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        min-height: 400px;
+        margin-bottom: 32px;
+
+        @media (min-width: $md) {
+            flex-direction: row;
+            min-height: 500px;
+        }
+    }
+
+    &-image {
+        width: 100%;
+
+        @media (min-width: $md) {
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-info {
+        width: 100%;
+
+        @media (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    h1 {
+        color: $dark-blue;
+        font-family: $ff;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: $fw-bold;
+        line-height: 60px;
+        letter-spacing: -1.68px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid $dark-blue;
+    }
+
+    .person-position {
+        margin: 10px 0 18px;
+
+        p {
+            font-weight: $fw-bold;
+        }
+    }
+
+    .person-short {
+        p {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: 25px;
+            letter-spacing: -0.48px;
+
+            @media (min-width: $md) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        } 
+    }
+
+    .person-paragraphs {
+        padding-bottom: 32px;
+        border-bottom: 2px solid $dark-blue;
+    }
+
+    .person-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
