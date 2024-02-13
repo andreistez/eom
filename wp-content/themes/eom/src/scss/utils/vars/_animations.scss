@@ -218,4 +218,20 @@ $tr07: 0.7s;
             height: calc(100% + 32px);
         }
     }
-} 
+}
+
+@keyframes removeText {
+    0% {
+        scale: 1;
+    }
+
+    99% {
+        scale: 0;
+    }
+
+    100% {
+        font-size: 0;
+        width: 0;
+        overflow: hidden;
+    }
+}

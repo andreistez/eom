@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	toogleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
+    animateHeader()
 })
 
 
@@ -63,3 +64,37 @@ const closeMenuByTapLink = (button, link, selector) => {
 		})
 	})
 }
+
+const animateHeader = () => {
+    const header     = document.querySelector('.header')
+    const nav        = document.querySelector('.header-nav')
+    const violetGear = document.querySelector('.header .violet__gear')
+    const redtGear   = document.querySelector('.header .red__gear')
+    const greenGear  = document.querySelector('.header .green__gear')
+    const blueGear   = document.querySelector('.header .blue__gear')
+
+    if(!header && !nav) return
+
+    window.addEventListener('scroll', () => {
+        const navRectTop = nav.getBoundingClientRect().top
+        const scrollY = window.scrollY
+
+        if(!header.classList.contains('animated')) {
+            if(navRectTop <= 20) {
+                header.classList.add('animated')
+            }
+        }
+
+        if(window.scrollY <= 20) {
+            header.classList.remove('animated')
+        }
+
+        violetGear.style.transform = `rotate(${scrollY / 20}deg)`
+        redtGear.style.transform = `rotate(${scrollY / -20}deg)`
+        greenGear.style.transform = `rotate(${scrollY / 20}deg)`
+        blueGear.style.transform = `rotate(${scrollY / -20}deg)`
+    })
+}
+
+
+

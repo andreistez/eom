@@ -1,6 +1,8 @@
 @import '../../src/scss/utils/vars/vars';
+@import '../../src/scss/utils/typography/typography.scss';
 
 .hero {
+    @include borderTop;
     &__wrapper {
         overflow: hidden;
         width: 100%;

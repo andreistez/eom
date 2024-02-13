@@ -50,12 +50,13 @@
         padding: 0;
         margin-right: 8px;
         padding-top: 5px;
-        transition: opacity ease $tr;
+        transition: opacity ease $tr, scale ease $tr;
     }
 
     &.swiper-button-disabled { 
         span {
             opacity: 0;
+            scale: 0;
         }
     }
 }
