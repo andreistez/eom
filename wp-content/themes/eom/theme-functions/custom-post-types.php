@@ -32,7 +32,7 @@ register_post_type(
 		'has_archive'			=> false,
 		'hierarchical'			=> false,
 		'menu_position'			=> 6,
-		'supports'				=> ['title', 'thumbnail']
+		'supports'				=> ['title', 'thumbnail', 'editor']
 	]
 );
 
