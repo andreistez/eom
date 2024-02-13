@@ -26,8 +26,8 @@ const toogleBurgerMenu = (button, selector, lock) => {
 		} else {
             burgerButton.classList.remove('clicked')
 			headerInner.classList.add('closed')
-			setTimeout(() => headerInner.classList.remove('opened'), 350);
-			setTimeout(() => headerInner.classList.remove('closed'), 350);
+			setTimeout(() => headerInner.classList.remove('opened'), 350)
+			setTimeout(() => headerInner.classList.remove('closed'), 350)
 			enableBodyScroll(getTargetElement())
 		}
 	})
@@ -57,8 +57,8 @@ const closeMenuByTapLink = (button, link, selector) => {
 			if (headerInner.classList.contains('opened')) {
                 burgerButton.classList.remove('clicked')
                 headerInner.classList.add('closed')
-				setTimeout(() => headerInner.classList.remove('opened'), 350);
-			    setTimeout(() => headerInner.classList.remove('closed'), 350);
+				setTimeout(() => headerInner.classList.remove('opened'), 350)
+			    setTimeout(() => headerInner.classList.remove('closed'), 350)
 				enableBodyScroll(getTargetElement())
 			} else return
 		})
