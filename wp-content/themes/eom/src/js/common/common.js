@@ -4,13 +4,13 @@ import { setTargetElement, getTargetElement } from './global'
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	toogleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
+	generateSectionIds()
+	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
 })
 
-
-const toogleBurgerMenu = (button, selector, lock) => {
+const toggleBurgerMenu = (button, selector, lock) => {
 	const burgerButton = document.querySelector(button)
 	const headerInner = document.querySelector(selector)
 	setTargetElement(document.querySelector(lock)) //Target element for body lock
@@ -54,13 +54,13 @@ const closeMenuByTapLink = (button, link, selector) => {
 
 	links.forEach(link => {
 		link.addEventListener('click', () => {
-			if (headerInner.classList.contains('opened')) {
-                burgerButton.classList.remove('clicked')
-                headerInner.classList.add('closed')
-				setTimeout(() => headerInner.classList.remove('opened'), 350)
-			    setTimeout(() => headerInner.classList.remove('closed'), 350)
-				enableBodyScroll(getTargetElement())
-			} else return
+			if (!headerInner.classList.contains('opened')) return
+
+			burgerButton.classList.remove('clicked')
+			headerInner.classList.add('closed')
+			setTimeout(() => headerInner.classList.remove('opened'), 350)
+			setTimeout(() => headerInner.classList.remove('closed'), 350)
+			enableBodyScroll(getTargetElement())
 		})
 	})
 }
@@ -96,5 +96,35 @@ const animateHeader = () => {
     })
 }
 
+/**
+ * Go through all sections and add ID attributes for them.
+ * We need this because of nav menu anchors.
+ */
+const generateSectionIds = () => {
+	const sections	= document.querySelectorAll( 'section' )
+	let store		= {}
 
+	if( ! sections.length ) return
 
+	sections.forEach( section => {
+		const className = section.className
+
+		if( ! className ) return
+
+		const sectionName = className.split( ' ' )[0]
+		let existing = false
+
+		for( let key in store ){
+			if( key === sectionName ){
+				store[key]  = store[key] + 1
+				existing	= true
+				break
+			}
+		}
+
+		// No such section yet - add it to the store.
+		if( ! existing ) store[sectionName] = 1
+
+		section.id = `${ sectionName }-${ store[sectionName] }`
+	} )
+}
