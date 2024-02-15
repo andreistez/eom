@@ -4,6 +4,10 @@
 .resources {
     @include borderTop;
 
+    &::before {
+        margin-left: calc(50% - 50vw);
+    }
+
     &__wrapper {
         padding: 14px 8px;
 

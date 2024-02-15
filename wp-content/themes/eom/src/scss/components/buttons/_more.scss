@@ -1,0 +1,18 @@
+.more {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    transition: opacity ease $tr;
+
+    &:hover {
+        opacity: $op07;
+    }
+
+    @media all and (min-width: $md) {
+        font-size: 18px;
+    }
+}
