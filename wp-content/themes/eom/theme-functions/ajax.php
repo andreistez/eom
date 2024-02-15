@@ -5,67 +5,44 @@
  *
  * @package WordPress
  * @subpackage eom
- *
+ */
 
 add_action( 'wp_head', 'eom_js_vars_for_frontend' );
 /**
  * JS variables for frontend, such as AJAX URL.
- *
+ */
 function eom_js_vars_for_frontend(): void
 {
 	$variables = ['ajaxUrl' => admin_url( 'admin-ajax.php' )];
 	echo '<script type="text/javascript">window.wpData = ' . json_encode( $variables ) . ';</script>';
 }
 
-add_action( 'wp_ajax_eom_ajax_pagination', 'eom_ajax_pagination' );
-add_action( 'wp_ajax_nopriv_eom_ajax_pagination', 'eom_ajax_pagination' );
+add_action( 'wp_ajax_eom_ajax_load_more_posts', 'eom_ajax_load_more_posts' );
+add_action( 'wp_ajax_nopriv_eom_ajax_load_more_posts', 'eom_ajax_load_more_posts' );
 /**
- * AJAX pagination.
- *
-function eom_ajax_pagination(): void
+ * AJAX load more posts.
+ */
+function eom_ajax_load_more_posts(): void
 {
-	$page		= eom_clean( $_POST['page'] );
-	$term		= eom_clean( $_POST['term'] );
-	$per_page	= isset( $_POST['per-page'] ) ? eom_clean( $_POST['per-page'] ) : get_option( 'posts_per_page' );
+	$page		= ( int ) eom_clean( $_POST['page'] ) + 1;
+	$per_page	= 4;	// yes, just hardcoded count.
 	$offset		= $per_page * $page - $per_page;
 	$args		= [
-		'post_type'			=> 'post',
-		'post_status'		=> 'publish',
-		'offset'			=> $offset,
-		'posts_per_page'	=> $per_page
+		'post_type'		=> 'post',
+		'post_status'	=> 'publish',
+		'offset'		=> $offset,
+		'numberposts'	=> $per_page
 	];
 
-	if( $term )
-		$args['tax_query'] = [ [
-          'taxonomy'	=> 'category',
-          'field'		=> 'id',
-          'terms'		=> [$term]
-      ] ];
+	$posts_arr	= get_posts( $args );
+	$posts		= '';
 
-	$posts_query	= new WP_Query( $args );
-	$pagination		= $posts = '';
+	if( empty( $posts_arr ) )
+		wp_send_json_error( ['msg' => __( 'No posts were found matching your selection.', 'eom' )] );
 
-	if( $posts_query->have_posts() ){
-		while( $posts_query->have_posts() ){
-			$posts_query->the_post();
-			$posts .= eom_load_template_part( 'components/post-card', null, ['id' => get_the_ID()] );
-		}
+	foreach( $posts_arr as $p )
+		$posts .= eom_load_template_part( 'components/cards/post', null, ['id' => $p->ID, 'type' => 'thumb'] );
 
-		$pagination = eom_load_template_part( 'components/pagination', null, [
-			'query'		=> $posts_query,
-			'max_pages'	=> $posts_query->max_num_pages,
-			'page'		=> $page,
-			'per_page'	=> $per_page,
-			'term'		=> $term
-		] );
-
-		wp_reset_query();
-	}	else {
-		$posts = '<p class="posts-not-found">'
-		         . esc_html__( 'No posts were found matching your selection.', 'lightscalpel' ) .
-		         '</p>';
-	}
-
-	wp_send_json_success( ['posts' => $posts, 'pagination' => $pagination] );
-}*/
+	wp_send_json_success( ['posts' => $posts, 'page' => $page] );
+}
 

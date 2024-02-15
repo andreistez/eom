@@ -26,7 +26,10 @@ $term_id		= get_queried_object()->term_id ?? 0;
 				}
 				?>
 			</div>
-            <button class="more">Load more</button>
+
+            <button class="more" data-page="1">
+				<?php _e( 'Load more', 'eom' ) ?>
+			</button>
 
 			<?php get_template_part( 'template-parts/other-resources' ) ?>
 		</div>

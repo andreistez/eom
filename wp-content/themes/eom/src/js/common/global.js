@@ -1,4 +1,4 @@
-// const ajaxUrl = window.wpData.ajaxUrl
+const ajaxUrl = window.wpData.ajaxUrl
 let targetElement
 
 export const getTargetElement = () => targetElement
