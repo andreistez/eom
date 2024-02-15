@@ -26,7 +26,7 @@ $resources		= get_sub_field( 'resources' );
 				echo '<div class="resources__items">';
 
 				foreach( $resources as $res )
-					get_template_part( 'acf-flexible-content/resources/resource', null, ['resource' => $res] );
+					get_template_part( 'components/cards/resource', null, ['resource' => $res] );
 
 				echo '</div>';
 			}

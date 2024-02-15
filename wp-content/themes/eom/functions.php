@@ -116,12 +116,6 @@ function eom_acf_init(): void
 		] );
 
 		acf_add_options_sub_page( [
-			'page_title' 	=> __( 'Header', 'eom' ),
-			'menu_title'	=> __( 'Header', 'eom' ),
-			'parent_slug'	=> $acf_parent_options['menu_slug']
-		] );
-
-		acf_add_options_sub_page( [
 			'page_title' 	=> __( 'Footer', 'eom' ),
 			'menu_title'	=> __( 'Footer', 'eom' ),
 			'parent_slug'	=> $acf_parent_options['menu_slug']
