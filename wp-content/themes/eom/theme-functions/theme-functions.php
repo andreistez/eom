@@ -3,7 +3,7 @@
 /**
  * Remove auto paragraph wrap in Contact Form 7.
  */
-//add_filter( 'wpcf7_autop_or_not', '__return_false' );
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 /**
  * Theme custom functions.
@@ -84,5 +84,23 @@ function eom_load_template_part( string $template_name, string $part_name = null
 	ob_end_clean();
 
 	return $tp;
+}
+
+/**
+ * Counts time to read in minutes.
+ *
+ * @param int $post_id
+ * @param int $speed    How many words person can read during 1 minute.
+ * @return int          Minutes count.
+ */
+function eom_get_reading_time( int $post_id, int $speed = 120 ): int
+{
+	if( ! $post_id ) return 0;
+
+	$content    = get_the_content( null, false, $post_id );
+	$content    = strip_tags( $content );
+	$word_count = str_word_count( trim( $content ) );
+
+	return $word_count < $speed ? 1 : ceil( $word_count / $speed );
 }
 

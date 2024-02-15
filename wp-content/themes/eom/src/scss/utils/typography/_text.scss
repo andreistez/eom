@@ -1,33 +1,74 @@
+@import '../typography/mixins';
+
 a {
 	display: inline-block;
-	text-decoration: underline;
-	transition: opacity ease-out $tr;
-
-	&:hover {
-		text-decoration: none
-	}
+	text-decoration: none;
 }
 
 p {
-    font-family: $ff;
-	font-size: $fs-md;
-    line-height: $lh-title;
-    font-style: normal;
-    text-align: center;
-    margin: 0 0 16px;
+    margin: 0;
+    word-break: break-word;
+   @include standfirst
+}
 
-	@media(min-width: $md) {
-		font-size: $fs-lg;
-        margin-bottom: 40px
-	}
+blockquote {
+    margin: 0;
 
-    @media(min-width: $lg) {
-        margin: 0 0 24px;
-	}
+    p {
+        font-family: $ff;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 31px;
+        color: $white;
+        opacity: 0;
+        transform: translateX(100%);
 
-	&:last-child {
-		margin-bottom: 0
-	}
+        @media(min-width: $md) {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 32px;
+        }
+    
+        @media(min-width: $xl) {
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .quote__name, .quote__job {
+        color: $white;
+        font-family: $ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-regular;
+        line-height: 20px;
+        opacity: 0;
+        transform: translateX(100%);
+
+        @media(min-width: $md) {
+            font-size: 16px;
+        }
+
+        @media(min-width: $xl) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    .quote__job {
+        font-style: italic;
+        margin-top: 4px;
+
+        @media(min-width: $md) {
+            margin-top: 10px;
+        }
+
+        @media(min-width: $xl) {
+            margin-top: 10px;
+        }
+    }
 }
 
 b, strong {

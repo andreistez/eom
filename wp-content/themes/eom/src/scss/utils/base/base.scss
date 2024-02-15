@@ -20,7 +20,7 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $light
 }
 
 img {
@@ -29,15 +29,44 @@ img {
 	height: auto;
 }
 
+form,fieldset,textarea {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
-	overflow: hidden;
+    margin-top: 80px;
+
+    @media(min-width: $md) {
+        margin-top: 100px;
+    }
+
+    @media(min-width: $lg) {
+        margin-top: 0;
+    }
 
 	.footer {
 		margin-top: auto
 	}
+}
+
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

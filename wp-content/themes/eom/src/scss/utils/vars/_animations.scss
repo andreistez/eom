@@ -1,1 +1,237 @@
-$tr: 0.35s;
+$tr  : 0.35s;
+$tr07: 0.7s;
+
+//Keyframes for header logo gears
+@keyframes rotationForward {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationReverse {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+//For burger menu
+@keyframes burgerIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes burgerOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+//For videos with play button
+@keyframes removePlay {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes imageTextRight{
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes textOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes quoteText {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes quoteScale {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes quoteImg {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes linesWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 140px;
+    }
+}
+
+@media(min-width: $md) {
+    @keyframes linesWidth {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 170px;
+        }
+    }
+}
+
+@media(min-width: $xl) {
+    @keyframes linesWidth {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 230px;
+        }
+    }
+}
+
+@keyframes linesHeight {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes borderWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes itemsY {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes scaleCircle {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes circleLine {
+    0% {
+        height: 100%;
+    }
+
+    100% {
+        height: calc(100% + 52px);
+    }
+}
+
+@media(min-width: $md) {
+    @keyframes circleLine {
+        0% {
+            height: 100%;
+        }
+    
+        100% {
+            height: calc(100% + 32px);
+        }
+    }
+}
+
+@keyframes removeText {
+    0% {
+        scale: 1;
+    }
+
+    99% {
+        scale: 0;
+    }
+
+    100% {
+        font-size: 0;
+        width: 0;
+        overflow: hidden;
+    }
+}

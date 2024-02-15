@@ -1,0 +1,130 @@
+.wpcf7-form {
+    display: flex;
+	flex-wrap: wrap;
+	column-gap: 10px;
+	justify-content: space-between;
+
+	&-control-wrap {
+		display: block;
+		width: 100%
+	}
+
+	.form-field {
+		width: 100%;
+
+		&:not(:last-of-type) {
+			margin-bottom: 7px;
+
+			@media(min-width: $md) {
+				margin-bottom: 8px
+			}
+		}
+
+		&.quarter {
+			width: 100%;
+
+            @media(min-width: $sm) {
+                width: calc((50% - 15px) / 2);
+            }
+		}
+
+		&.half {
+			width: 100%;
+
+            @media(min-width: $sm) {
+                width: calc(50% - 5px)
+            }
+		}
+	}
+
+	.wpcf7-list-item {
+		margin: 0
+	}
+
+	.wpcf7-not-valid-tip {
+		font-size: 12px
+	}
+
+	input, textarea {
+		width: 100%;
+		font-family: $ff;
+		color: $dark-blue;
+		padding: 4px 14px;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 18px;
+		letter-spacing: -0.42px;
+		border: 1px solid $dark-blue;
+		background-color: $white;
+
+		&::placeholder {
+			opacity: 1;
+			font-family: $ff;
+			color: $dark-blue;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 14px;
+			letter-spacing: -0.42px;
+
+			@media(min-width: $md) {
+				font-size: 18px;
+				line-height: 18px;
+				letter-spacing: -0.54px;
+			}
+		}
+
+		@media(min-width: $md) {
+			font-size: 18px;
+			line-height: 18px;
+			letter-spacing: -0.54px;
+			padding: 5.5px 14px;
+		}
+
+		&.wpcf7-not-valid {
+			border-color: red
+		}
+	}
+
+	textarea {
+		resize: none;
+		min-height: 100px;
+
+		@media(min-width: $md) {
+			min-height: 150px;
+		}
+	}
+
+    .form__submit {
+		width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+        margin-top: 5px;
+
+        @media(min-width: $xl) {
+            margin-top: 8px
+        }
+    }
+}
+
+.wpcf7 form {
+	.wpcf7-response-output {
+		width: 100%;
+		font-size: 20px;
+		text-align: center;
+		padding: 20px;
+		margin: 20px 0 0
+	}
+
+	&.invalid .wpcf7-response-output {
+		border-color: red;
+		background-color: #ff9696
+	}
+
+	&.sent .wpcf7-response-output {
+		background-color: #b0ffb0
+	}
+}

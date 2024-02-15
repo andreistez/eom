@@ -1,0 +1,184 @@
+.latest__item {
+    width: 100%;
+    margin-bottom: 6px;
+    border: 1px solid $dark-blue;
+
+    @media(min-width: $sm) {
+        width: calc(50% - 6px);
+        margin-right: 6px;
+    }
+
+    @media(min-width: $md) {
+        width: calc(100% / 4);
+        margin-right: 0;
+    }
+
+    h5 {
+        margin-bottom: 16px;
+
+        @media(min-width: $md) {
+            margin-bottom: 16px;
+        }
+
+        @media(min-width: $xl) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .latest__item_inner {
+        display: flex;
+        flex-direction: column;
+        padding: 14px 32px;
+        height: 100%;
+
+        @media(min-width: $md) {
+            padding: 12px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 14px 32px;
+        }
+    }
+
+    &:first-child {
+        margin-right: 6px;
+
+        @media(min-width: $md) {
+            margin-right: 16px;
+        }
+
+        @media(min-width: $xl) {
+            margin-right: 32px;
+        }
+    }
+
+    &:nth-child(-n + 2) {
+        width: calc(50% - 6px);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $dark-blue;
+        margin-bottom: 6px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 8px);
+            margin-bottom: 16px;
+        }
+
+        @media(min-width: $xl) {
+            width: calc(50% - 16px);
+            margin-bottom: 32px;
+        }
+
+        .latest__item_inner {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+
+            @media(min-width: $md) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+
+
+    &_img {
+        width: 100%;
+        min-height: 122px;
+        border-bottom: 2px solid $dark-blue;
+        position: relative;
+
+        @media(min-width: $md) {
+            width: 30%;
+            border-right: 2px solid $dark-blue;
+            border-bottom: 0;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 3px 8px 16px 8px;
+
+        @media(min-width: $md) {
+            width: 70%;
+            padding: 14px 12px 14px 14px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 14px 30px;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+
+            @media(min-width: $md) {
+                margin-bottom: 20px;
+            }
+
+            @media(min-width: $xl) {
+                margin-bottom: 16px;
+            }
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 10px;
+            line-height: 10px;
+
+            @media(min-width: $md) {
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 32px;
+            }
+
+            @media(min-width: $xl) {
+                font-size: 20px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+.latest__case_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @media(min-width: $md) {
+        margin-bottom: 16px;
+    }
+
+    @media(min-width: $xl) {
+        margin-bottom: 30px;
+    }
+}
+
+.latest__case {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    letter-spacing: -0.42px;
+
+    @media(min-width: $md) {
+        font-size: 14px;
+    }
+}

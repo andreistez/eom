@@ -20,8 +20,11 @@ function eom_load_theme_dependencies(): void
 {
 	// Register theme menus.
 	register_nav_menus( [
-		'header_menu'	=> esc_html__( 'Header Menu', 'eom' ),
-		'footer_menu'	=> esc_html__( 'Footer Menu', 'eom' )
+		'header_menu'           => esc_html__( 'Header Menu', 'eom' ),
+		'footer_menu_1'         => esc_html__( 'Footer Menu 1', 'eom' ),
+		'footer_menu_2'         => esc_html__( 'Footer Menu 2', 'eom' ),
+		'footer_menu_3'         => esc_html__( 'Footer Menu 3', 'eom' ),
+		'footer_menu_bottom'    => esc_html__( 'Footer Menu Bottom', 'eom' )
 	] );
 
 	// Auto-generate ACF Flexible Content templates files.
@@ -30,6 +33,7 @@ function eom_load_theme_dependencies(): void
 	require_once( 'theme-functions/theme-functions.php' );
 	require_once( 'gutenberg/blocks-init.php' );
 	require_once( 'theme-functions/ajax.php' );
+	require_once( 'theme-functions/custom-post-types.php' );
 }
 
 add_action( 'init', 'eom_init_theme' );
@@ -49,7 +53,9 @@ function eom_init_theme(): void
 	add_theme_support( 'post-thumbnails' );
 
 	// Custom image sizes.
-//	add_image_size( 'full-hd', 1920 );
+	add_image_size( 'image-text', 409 );
+	add_image_size( 'video-poster', 1204, 614 );
+	add_image_size( 'full', 1264 );
 }
 
 add_action( 'wp_enqueue_scripts', 'eom_inclusion_enqueue' );
@@ -72,6 +78,16 @@ function eom_inclusion_enqueue(): void
 	// Single Post.
 	if( is_singular( 'post' ) )
 		wp_enqueue_style( 'single-post', THEME_URI . '/static/css/pages/single-post.min.css', [], THEME_VERSION );
+
+	// Single Person.
+	if( is_singular( 'person' ) )
+		wp_enqueue_style( 'single-person', THEME_URI . '/static/css/pages/single-person.min.css', [], THEME_VERSION );
+
+	// Blog (Posts Page).
+	if( is_home() ){
+		wp_enqueue_style( 'blog', THEME_URI . '/static/css/pages/blog.min.css', [], THEME_VERSION );
+		wp_enqueue_script( 'blog', THEME_URI . '/static/js/blog/blog.min.js', ['jquery'], THEME_VERSION, true );
+	}
 }
 
 add_action( 'acf/init', 'eom_acf_init' );
@@ -98,12 +114,6 @@ function eom_acf_init(): void
 		acf_add_options_sub_page( [
 			'page_title' 	=> __( 'Global', 'eom' ),
 			'menu_title'	=> __( 'Global', 'eom' ),
-			'parent_slug'	=> $acf_parent_options['menu_slug']
-		] );
-
-		acf_add_options_sub_page( [
-			'page_title' 	=> __( 'Header', 'eom' ),
-			'menu_title'	=> __( 'Header', 'eom' ),
 			'parent_slug'	=> $acf_parent_options['menu_slug']
 		] );
 

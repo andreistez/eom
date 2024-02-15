@@ -1,0 +1,63 @@
+.swiper-prev, .swiper-next {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-blue;
+    text-align: center;
+    font-family: $ff;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    transition: color ease $tr, opacity ease $tr;
+
+    span {
+        padding-bottom: 5px;
+    }
+
+    &:hover {
+        color: $cerulean;
+    }
+
+    &.swiper-button-disabled {
+        opacity: $op07;
+
+        &:hover {
+            opacity: $op07;
+            color: $dark-blue;
+        }
+    }
+}
+
+.swiper-prev {
+    span {
+        transform: scaleX(-1);
+    }
+}
+
+.swiper-next {
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 16px;
+        line-height: 1;
+        padding: 0;
+        margin-right: 8px;
+        padding-top: 5px;
+        transition: opacity ease $tr, scale ease $tr;
+    }
+
+    &.swiper-button-disabled { 
+        span {
+            opacity: 0;
+            scale: 0;
+        }
+    }
+}
+

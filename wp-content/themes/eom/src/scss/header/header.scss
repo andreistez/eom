@@ -1,2 +1,150 @@
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: $light;
+    padding: 15px 0;
+    overflow: hidden;
+   
+
+    @media (min-width: $lg) {
+        position: relative;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .logo {
+        @media (min-width: $lg) {
+            position: fixed;
+            top: 30px;
+        }
+    }
+
+    .header__logo_wrapper {
+        padding-left: 20px;
+
+        @media (min-width: $md) {
+            padding-left: 15px;
+        }
+
+        @media (min-width: $xl) {
+            padding-left: 20px;
+        }
+    }
+
+    &.animated {
+        border-bottom: 2px solid $dark-blue;
+        @media (min-width: $lg) {
+            .header-nav {
+                position: fixed;
+                top: 0;
+                height: 50px;
+                background-color: $light;
+                z-index: 100;
+                border-bottom: 2px solid $dark-blue;
+            }
+        }
+
+        .logo {
+            @media (min-width: $lg) {
+                &__text {
+                    animation: removeText 1s forwards ease;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @media (min-width: $lg) {
+            align-items: flex-end;
+            justify-content: center;
+            border-bottom: 0;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: calc(100% - 4px);
+            margin-left: calc(50% - 50vw);
+            z-index: -1;
+        }
+
+        @media (min-width: $lg) {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            margin-top: 120px;
+        }
+
+        @media (min-width: $xl) {
+            margin-top: 163px;
+        }
+
+        &.opened {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: $white;
+            z-index: 97;
+            width: 250px;
+            height: 100%;
+            padding: 50px 0;
+            overflow-y: auto;
+            border-left: 2px solid $dark-blue;
+            animation: burgerIn 1s forwards ease;
+
+            &::before {
+                display: none;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
+            .header-nav {
+                width: 100%;
+                height: auto;
+                margin: auto 0;
+
+                &::before, &::after {
+                    display: none;
+                }
+            }
+
+            .menu {
+                margin-left: 0;
+                width: 100%;
+
+                &-item {
+                    border: 0;
+                    margin-bottom: 10px;
+    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.closed {
+            animation: burgerOut $tr forwards ease;
+        }
+    }
 }

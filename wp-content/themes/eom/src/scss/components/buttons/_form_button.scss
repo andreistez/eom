@@ -1,0 +1,39 @@
+.form__button {
+    padding: 9px 15px;
+    color: $dark-blue;
+    display: flex;
+    align-items: center;
+    font-family: $ff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: opacity ease $tr;
+
+    &_arrow {
+        margin-left: 5px;
+
+        @media(min-width: $xl) {
+            margin-left: 16px;
+        }
+    }
+
+    &:hover {
+        opacity: $op07;
+    }
+
+    @media(min-width: $md) {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.54px;
+    }
+
+    @media(min-width: $xl) {
+        background-color: $violet;
+        border: 1px solid $dark-blue;
+        color: $white;
+    }
+}

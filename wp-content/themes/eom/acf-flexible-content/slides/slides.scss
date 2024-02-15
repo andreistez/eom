@@ -1,0 +1,131 @@
+@import '../../src/scss/utils/vars/vars.scss';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.slides {
+    @include borderTop;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    &__wrapper {
+        padding: 16px 8px;
+
+        @media(min-width: $md) {
+            padding: 32px 0 20px 20px;
+        }
+
+        @media(min-width: $xl) {
+            padding: 64px 0 32px 30px;
+        }
+    }
+}
+
+.team-swiper {
+    .swiper-slide {
+        width: 100%;
+        border: 2px solid $dark-blue;
+        height: auto;
+
+        @media(min-width: $sm) {
+            width: 350px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+
+            @media(min-width: $md) {
+                padding: 20px 16px 16px;
+                min-height: 199px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 200px;
+            border-bottom: 1px solid $dark-blue;
+
+            @media(min-width: $md) {
+                height: 250px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__name {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: $fw-bold;
+            line-height: 10px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+
+            @media(min-width: $md) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+        }
+
+        &__text p {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: 10px;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media(min-width: $md) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        .link__arrow {
+            margin-top: auto;
+            padding-top: 10px;
+        }
+    }
+
+    .swiper-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+
+        .link__arrow {
+            margin-left: auto;
+            margin-right: 5px;
+        }
+
+        @media(min-width: $md) {
+            padding-right: 20px;
+        }
+
+        @media(min-width: $xl) {
+            padding-right: 30px;
+        }
+    }
+}

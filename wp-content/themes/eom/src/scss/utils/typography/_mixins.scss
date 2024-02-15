@@ -1,0 +1,144 @@
+@mixin standfirst() {
+    font-family: $ff;
+    font-size: $fs-md;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 19px;
+    letter-spacing: -0.32px; 
+    margin-bottom: 14px;
+
+	@media(min-width: $md) {
+		font-size: $fs-lg;
+        line-height: 21px;
+        letter-spacing: -0.36px; 
+	}
+
+    @media(min-width: $xl) {
+        font-size: $fs-xl;
+        line-height: 23px;
+        letter-spacing: -0.4px; 
+	}
+
+	&:last-child {
+		margin-bottom: 0
+	}
+
+    &.bold {
+        font-weight: $fw-bold;
+    }
+
+    &.black {
+        color: $black;
+    }
+
+    &.white {
+        color: $white
+    }
+}
+
+@mixin link() {    
+    font-family: $ff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 18px;
+    transition: opacity ease $tr;
+    
+    @media(min-width: $md) {
+		font-size: $fs-sm;
+        line-height: 16px;
+	}
+
+    @media(min-width: $xl) {
+        font-size: $fs-md;
+        line-height: 15px;
+        letter-spacing: -0.48px; 
+	}
+
+    &.dark {
+        color: $dark-blue;
+    }
+
+    &.spacebetween {
+        display: flex;
+        justify-content: space-between;
+    } 
+
+    &:hover {
+        opacity: $op07;
+    }
+}
+
+@mixin firstLine() {
+    color: $dark-blue;
+    font-family: $ff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 23px;
+    letter-spacing: -0.4px;
+
+    @media(min-width: $md) {
+		font-size: 22px;
+        line-height: 25px;
+        letter-spacing: -0.44px;
+	}
+
+    @media(min-width: $xl) {
+        font-size: 26px;
+        line-height: 29px;
+        letter-spacing: -0.52px;
+	}
+}
+
+@mixin caps() {
+    font-family: $ff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @media(min-width: $md) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media(min-width: $xl) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    &.blue {
+        color: $dark-blue;
+    }
+}
+
+@mixin borderTop() {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 2px;
+        background-color: $dark-blue;
+        margin-left: calc(50vw - 50%);
+    } 
+}
+
+@mixin textBoxes() {
+    font-family: $ff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $fw-regular;
+    line-height: 20px;
+
+    &.blue {
+        color: $dark-blue;
+    }
+}
