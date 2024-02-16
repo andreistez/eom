@@ -16,7 +16,7 @@ $col_title_3	= get_field( 'third_column_title', 'option' );
 $col_title_4	= get_field( 'fourth_column_title', 'option' );
 ?>
 
-			<footer class="footer">
+			<footer class="footer" id="footer">
 				<div class="container">
                     <div class="footer__wrapper">
 						<?php
