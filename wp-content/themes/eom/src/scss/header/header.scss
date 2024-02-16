@@ -20,6 +20,8 @@
             position: fixed;
             top: 30px;
         }
+
+        transition: top ease $tr;
     }
 
     .header__logo_wrapper {
@@ -35,22 +37,114 @@
     }
 
     &.animated {
+        background-color: $light;
         border-bottom: 2px solid $dark-blue;
+
         @media (min-width: $lg) {
             .header-nav {
                 position: fixed;
                 top: 0;
-                height: 50px;
+                height: 64px;
                 background-color: $light;
                 z-index: 100;
-                border-bottom: 2px solid $dark-blue;
+
+                &::after, &::before {
+                    display: none;
+                }
+
+                .menu {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 100vw;
+                        height: 62px;
+                        background-color: $light;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        border-bottom: 2px solid $dark-blue;
+                        z-index: -1;
+                        margin-left: calc(50vw - 50%);
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100vw;
+                        height: 2px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        border-bottom: 2px solid $dark-blue;
+                        z-index: 0;
+                    }
+
+                    &-item {
+                        border-top: 0;
+                    }
+                }
             }
         }
 
+        .header__logo_wrapper {
+            position: relative;
+            z-index: 101;
+        }
+
         .logo {
+            position: relative;
+
             @media (min-width: $lg) {
+                width: 38px;
+                height: 50px;
+                margin-left: 13px;
+                position: relative;
+                z-index: 100;
+                position: fixed;
+                top: 5px;
+
                 &__text {
-                    animation: removeText 1s forwards ease;
+                    display: none;
+                }
+
+                &__inner {
+                    padding-left: 0;
+                }
+
+                .logo__gears {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+    
+                    .violet__gear {
+                        width: 13px;
+                        height: 13px;
+                        right: 5px;
+                        top: 0;
+                    }
+    
+                    .red__gear {
+                        width: 15px;
+                        height: 15px;
+                        left: 8px;
+                        top: 10px;
+                    }
+    
+                    .green__gear {
+                        width: 18px;
+                        height: 18px;
+                        right: 0;
+                        top: 20px;
+                    }
+    
+                    .blue__gear {
+                        width: 21px;
+                        height: 21px;
+                        left: 0;
+                        top: 32px;
+                    }
                 }
             }
         }
