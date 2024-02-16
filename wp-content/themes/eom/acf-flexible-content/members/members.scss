@@ -57,6 +57,7 @@
 
     &__wrapper {
         padding: 18px 7px 16px 10px;
+        overflow: hidden;
 
         @media(min-width: $md) {
             padding: 32px 20px;

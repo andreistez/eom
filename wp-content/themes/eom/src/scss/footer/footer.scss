@@ -12,6 +12,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 60px;
+        overflow: hidden;
 
         @media(min-width: $md) {
             padding: 60px 48px 0 48px;

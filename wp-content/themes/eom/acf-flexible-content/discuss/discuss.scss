@@ -3,6 +3,7 @@
 
 .discuss {
     @include borderTop;
+    overflow: hidden;
 
     &__wrapper {
         padding: 4px 14px 16px 14px;
