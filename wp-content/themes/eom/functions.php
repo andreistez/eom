@@ -84,8 +84,10 @@ function eom_inclusion_enqueue(): void
 		wp_enqueue_style( 'single-person', THEME_URI . '/static/css/pages/single-person.min.css', [], THEME_VERSION );
 
 	// Blog (Posts Page).
-	if( is_home() )
+	if( is_home() ){
 		wp_enqueue_style( 'blog', THEME_URI . '/static/css/pages/blog.min.css', [], THEME_VERSION );
+		wp_enqueue_script( 'blog', THEME_URI . '/static/js/blog/blog.min.js', ['jquery'], THEME_VERSION, true );
+	}
 }
 
 add_action( 'acf/init', 'eom_acf_init' );
@@ -112,12 +114,6 @@ function eom_acf_init(): void
 		acf_add_options_sub_page( [
 			'page_title' 	=> __( 'Global', 'eom' ),
 			'menu_title'	=> __( 'Global', 'eom' ),
-			'parent_slug'	=> $acf_parent_options['menu_slug']
-		] );
-
-		acf_add_options_sub_page( [
-			'page_title' 	=> __( 'Header', 'eom' ),
-			'menu_title'	=> __( 'Header', 'eom' ),
 			'parent_slug'	=> $acf_parent_options['menu_slug']
 		] );
 
