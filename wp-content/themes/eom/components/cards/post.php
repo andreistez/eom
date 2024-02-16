@@ -21,7 +21,7 @@ $type = $args['type'] ?? 'no-thumb';
 		if( $type === 'thumb' ){
 			if( has_post_thumbnail( $post_id ) )
 				echo '<div class="latest__item_img">',
-					get_the_post_thumbnail( $post_id, 'medium' ),
+					get_the_post_thumbnail( $post_id, 'large' ),
 				'</div>';
 			?>
 
