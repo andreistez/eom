@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
+    navHighlighter()
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {
 	const burgerButton = document.querySelector(button)
 	const headerInner = document.querySelector(selector)
 	setTargetElement(document.querySelector(lock)) //Target element for body lock
+    const lines = document.querySelector('.lines')
+    console.log(lines)
 
 	if (!burgerButton && !headerInner) return
 
@@ -22,10 +25,12 @@ const toggleBurgerMenu = (button, selector, lock) => {
             burgerButton.classList.add('clicked')
 			headerInner.classList.add('opened')
 			headerInner.classList.remove('closed')
+            lines.classList.add('hide')
 			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
 		} else {
             burgerButton.classList.remove('clicked')
 			headerInner.classList.add('closed')
+            lines.classList.remove('hide')
 			setTimeout(() => headerInner.classList.remove('opened'), 350)
 			setTimeout(() => headerInner.classList.remove('closed'), 350)
 			enableBodyScroll(getTargetElement())
@@ -40,6 +45,7 @@ const toggleBurgerMenu = (button, selector, lock) => {
             burgerButton.classList.remove('clicked')
 			headerInner.classList.remove('opened')
 			headerInner.classList.remove('closed')
+            lines.classList.remove('hide')
 			enableBodyScroll(getTargetElement())
 		}
 	})
@@ -128,3 +134,29 @@ const generateSectionIds = () => {
 		section.id = `${ sectionName }-${ store[sectionName] }`
 	} )
 }
+
+const sections = document.querySelectorAll('section[id]');
+
+const navHighlighter = () => {
+  let scrollY = window.scrollY;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute('id');
+
+    const menuItem = document.querySelector('.menu-item a[href="#' + sectionId + '"]');
+
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ) {
+      menuItem.parentNode.classList.add('active');
+    } else {
+      menuItem.parentNode.classList.remove('active');
+    }
+  });
+};
+
+window.addEventListener("scroll", navHighlighter);
+

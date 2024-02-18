@@ -111,4 +111,6 @@ export const isInScope = ( elementSelector, st, offset = 100 ) => {
 	return st >= (elemTop - getWindowHeight() + offset) && st <= (elemTop + element.clientHeight - offset)
 }
 
+  
+
 

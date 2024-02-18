@@ -80,6 +80,10 @@
             @media (min-width: $xxl) {
                 padding: 15px 36px; 
             }
+
+            &.active {
+                background-color: #a8a69c;
+            }
         }
 
         &:hover {

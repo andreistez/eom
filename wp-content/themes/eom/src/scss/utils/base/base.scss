@@ -51,6 +51,7 @@ ul, ol {
 	width: 100%;
 	min-height: 100vh;
     margin-top: 80px;
+    overflow: hidden;
 
     @media(min-width: $md) {
         margin-top: 100px;

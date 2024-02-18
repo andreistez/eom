@@ -3,6 +3,7 @@
 
 .resources {
     @include borderTop;
+    overflow: hidden;
 
     &::before {
         margin-left: calc(50% - 50vw);
@@ -10,6 +11,7 @@
 
     &__wrapper {
         padding: 14px 15px;
+        overflow: hidden;
 
         @media all and (min-width: $md) {
             padding: 30px 19px;

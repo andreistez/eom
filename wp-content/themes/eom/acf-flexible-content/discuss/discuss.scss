@@ -3,9 +3,9 @@
 
 .discuss {
     @include borderTop;
-    overflow: hidden;
 
     &__wrapper {
+        overflow: hidden;
         padding: 4px 14px 16px 14px;
 
         @media(min-width: $md) {

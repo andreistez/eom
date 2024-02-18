@@ -238,6 +238,7 @@
         height: 100%;
         background-color: $dark-blue;
         bottom: 0;
+        z-index: 98;
     }
 
     &::before {
@@ -271,6 +272,12 @@
             right: 20px;
         }
        
+    }
+
+    &.hide {
+        &::after {
+            background-color: $white;
+        }
     }
 }
 
