@@ -498,7 +498,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "34",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -518,7 +518,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -527,6 +527,24 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_65d25ca6c731c",
+                            "label": "Title Color",
+                            "name": "title_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         },
                         {
                             "key": "field_65c5376dc5032",
@@ -538,7 +556,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -784,6 +802,24 @@
                             "append": ""
                         },
                         {
+                            "key": "field_65d25c19ef654",
+                            "label": "Title Color",
+                            "name": "title_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
                             "key": "field_65c54847cbb6e",
                             "label": "Text",
                             "name": "text",
@@ -793,7 +829,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -813,7 +849,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "66",
                                 "class": "",
                                 "id": ""
                             },
@@ -992,7 +1028,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "34",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1012,7 +1048,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1021,6 +1057,24 @@
                             "rows": 4,
                             "placeholder": "",
                             "new_lines": "br"
+                        },
+                        {
+                            "key": "field_65d259bf39b8e",
+                            "label": "Title Color",
+                            "name": "title_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         },
                         {
                             "key": "field_65c8bb5a174ca",
@@ -1032,7 +1086,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1491,5 +1545,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708273465
+    "modified": 1708285114
 }
