@@ -85,3 +85,11 @@
         }
     }
 }
+
+.home {
+    .resources {
+        @media all and (min-width: $xl) {
+            display: none;
+        }
+    }
+}

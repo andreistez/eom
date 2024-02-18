@@ -503,7 +503,7 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
     <section class="members">
         <div class="container">
             <div class="members__wrapper">
-                <div class="h2__box grass">
+                <div class="h2__box cerulean">
                     <div class="h2__wrapper">
                         <p>
                             OUR APPROACH

@@ -75,7 +75,7 @@
 	&_spacer {
 		display: none;
 
-		@media (min-width: $md) {
+		@media (min-width: $xl) {
 			display: block
 		}
 	}
@@ -100,6 +100,7 @@
 
         p {
             opacity: 0;
+            margin-bottom: 0;
         }
     }
 
@@ -111,6 +112,7 @@
 
         @media(min-width: $xl) {
             width: 50%;
+            padding-top: 28px;
         }
 
         a {
@@ -143,6 +145,10 @@
             border-left: 0;
             border-right: $border-2px;
         }
+
+        .image__text_paragraphs {
+            padding-top: 0;
+        }
     }
 
     .image__text_info {
@@ -163,6 +169,7 @@
 
             .image__text_paragraphs {
                 width: 100%;
+                padding-top: 0;
             }
         }
 

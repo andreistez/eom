@@ -89,10 +89,10 @@
 
 	textarea {
 		resize: none;
-		min-height: 100px;
+		height: 100px;
 
 		@media(min-width: $md) {
-			min-height: 150px;
+			height: 150px;
 		}
 	}
 

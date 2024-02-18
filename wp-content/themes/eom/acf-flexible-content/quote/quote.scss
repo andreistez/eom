@@ -46,7 +46,7 @@
 
         @media(min-width: $xl) {
             min-height: 603px;
-            padding: 38px 32px;
+            padding: 38px 65px 38px 32px;
         }
     }
 
@@ -90,14 +90,14 @@
 
     blockquote {
         width: 100%;
-        max-width: 582px;
+        max-width: 548px;
 
         @media(min-width: $md) {
             max-width: 472px;
         }
 
         @media(min-width: $xl) {
-            max-width: 582px;
+            max-width: 548px;
         }
     }
 

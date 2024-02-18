@@ -231,10 +231,6 @@
     z-index: 98;
     pointer-events: none;
 
-    @media (min-width: $lg) {
-        z-index: 100;
-    }
-
     &::before, &::after {
         content: '';
         position: absolute;

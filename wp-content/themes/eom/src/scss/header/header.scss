@@ -1,14 +1,13 @@
 .header {
-    position: fixed;
+    // position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 95;
     top: 0;
     left: 0;
     background-color: $light;
-    padding: 15px 0;
+    padding: 21px 0;
     overflow: hidden;
    
-
     @media (min-width: $lg) {
         position: relative;
         padding: 0;
@@ -16,19 +15,18 @@
     }
 
     .logo {
-        @media (min-width: $lg) {
-            position: fixed;
-            top: 30px;
-        }
-
         transition: top ease $tr;
     }
 
     .header__logo_wrapper {
-        padding-left: 20px;
+        padding-left: 5px;
 
         @media (min-width: $md) {
             padding-left: 15px;
+        }
+
+        @media (min-width: $lg) {
+            padding-bottom: 70px;
         }
 
         @media (min-width: $xl) {
@@ -36,119 +34,119 @@
         }
     }
 
-    &.animated {
-        background-color: $light;
-        border-bottom: 2px solid $dark-blue;
+    // &.animated {
+    //     background-color: $light;
+    //     border-bottom: 2px solid $dark-blue;
 
-        @media (min-width: $lg) {
-            .header-nav {
-                position: fixed;
-                top: 0;
-                height: 64px;
-                background-color: $light;
-                z-index: 100;
+    //     @media (min-width: $lg) {
+    //         .header-nav {
+    //             position: fixed;
+    //             top: 0;
+    //             height: 64px;
+    //             background-color: $light;
+    //             z-index: 100;
 
-                &::after, &::before {
-                    display: none;
-                }
+    //             &::after, &::before {
+    //                 display: none;
+    //             }
 
-                .menu {
-                    position: relative;
+    //             .menu {
+    //                 position: relative;
 
-                    &::before {
-                        content: '';
-                        display: block;
-                        width: 100vw;
-                        height: 62px;
-                        background-color: $light;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        border-bottom: 2px solid $dark-blue;
-                        z-index: -1;
-                        margin-left: calc(50vw - 50%);
-                    }
+    //                 &::before {
+    //                     content: '';
+    //                     display: block;
+    //                     width: 100vw;
+    //                     height: 62px;
+    //                     background-color: $light;
+    //                     position: absolute;
+    //                     right: 0;
+    //                     top: 0;
+    //                     border-bottom: 2px solid $dark-blue;
+    //                     z-index: -1;
+    //                     margin-left: calc(50vw - 50%);
+    //                 }
 
-                    &::after {
-                        content: '';
-                        display: block;
-                        width: 100vw;
-                        height: 2px;
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        border-bottom: 2px solid $dark-blue;
-                        z-index: 0;
-                    }
+    //                 &::after {
+    //                     content: '';
+    //                     display: block;
+    //                     width: 100vw;
+    //                     height: 2px;
+    //                     position: absolute;
+    //                     left: 0;
+    //                     bottom: 0;
+    //                     border-bottom: 2px solid $dark-blue;
+    //                     z-index: 0;
+    //                 }
 
-                    &-item {
-                        border-top: 0;
-                    }
-                }
-            }
-        }
+    //                 &-item {
+    //                     border-top: 0;
+    //                 }
+    //             }
+    //         }
+    //     }
 
-        .header__logo_wrapper {
-            position: relative;
-            z-index: 101;
-        }
+    //     .header__logo_wrapper {
+    //         position: relative;
+    //         z-index: 101;
+    //     }
 
-        .logo {
-            position: relative;
+    //     .logo {
+    //         position: relative;
 
-            @media (min-width: $lg) {
-                width: 38px;
-                height: 50px;
-                margin-left: 13px;
-                position: relative;
-                z-index: 100;
-                position: fixed;
-                top: 5px;
+    //         @media (min-width: $lg) {
+    //             width: 38px;
+    //             height: 50px;
+    //             margin-left: 13px;
+    //             position: relative;
+    //             z-index: 100;
+    //             position: fixed;
+    //             top: 5px;
 
-                &__text {
-                    display: none;
-                }
+    //             &__text {
+    //                 display: none;
+    //             }
 
-                &__inner {
-                    padding-left: 0;
-                }
+    //             &__inner {
+    //                 padding-left: 0;
+    //             }
 
-                .logo__gears {
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
+    //             .logo__gears {
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 position: relative;
     
-                    .violet__gear {
-                        width: 13px;
-                        height: 13px;
-                        right: 5px;
-                        top: 0;
-                    }
+    //                 .violet__gear {
+    //                     width: 13px;
+    //                     height: 13px;
+    //                     right: 5px;
+    //                     top: 0;
+    //                 }
     
-                    .red__gear {
-                        width: 15px;
-                        height: 15px;
-                        left: 8px;
-                        top: 10px;
-                    }
+    //                 .red__gear {
+    //                     width: 15px;
+    //                     height: 15px;
+    //                     left: 8px;
+    //                     top: 10px;
+    //                 }
     
-                    .green__gear {
-                        width: 18px;
-                        height: 18px;
-                        right: 0;
-                        top: 20px;
-                    }
+    //                 .green__gear {
+    //                     width: 18px;
+    //                     height: 18px;
+    //                     right: 0;
+    //                     top: 20px;
+    //                 }
     
-                    .blue__gear {
-                        width: 21px;
-                        height: 21px;
-                        left: 0;
-                        top: 32px;
-                    }
-                }
-            }
-        }
-    }
+    //                 .blue__gear {
+    //                     width: 21px;
+    //                     height: 21px;
+    //                     left: 0;
+    //                     top: 32px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     &__wrapper {
         display: flex;
@@ -196,7 +194,7 @@
             right: 0;
             top: 0;
             background-color: $white;
-            z-index: 97;
+            z-index: 95;
             width: 250px;
             height: 100%;
             padding: 50px 0;
