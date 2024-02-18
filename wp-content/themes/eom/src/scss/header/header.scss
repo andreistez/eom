@@ -7,6 +7,10 @@
     background-color: $light;
     padding: 21px 0;
     overflow: hidden;
+
+    @media (min-width: $md) {
+        padding: 15px 0;
+    }
    
     @media (min-width: $lg) {
         position: relative;

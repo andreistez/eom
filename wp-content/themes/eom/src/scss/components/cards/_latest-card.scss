@@ -1,7 +1,9 @@
 .latest__item {
     width: 100%;
     margin-bottom: 6px;
-    border: 1px solid $dark-blue;
+    border: 1px solid $dark-blue; 
+    display: none;
+    background-color: $white;
 
     @media(min-width: $sm) {
         width: calc(50% - 6px);
@@ -11,6 +13,7 @@
     @media(min-width: $md) {
         width: calc(100% / 4);
         margin-right: 0;
+        display: flex;
     }
 
     h5 {
@@ -61,12 +64,11 @@
 
         @media(min-width: $md) {
             width: calc(50% - 8px);
-            margin-bottom: 16px;
+            margin-bottom: 32px;
         }
 
         @media(min-width: $xl) {
             width: calc(50% - 16px);
-            margin-bottom: 32px;
         }
 
         .latest__item_inner {
@@ -96,6 +98,7 @@
             width: 30%;
             border-right: 2px solid $dark-blue;
             border-bottom: 0;
+            min-height: 346px;
         }
 
         img {

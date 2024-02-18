@@ -55,7 +55,7 @@
 
     &_right {
         width: 100%;
-        padding: 5px 16px 20px 10px;
+        padding: 5px 20px 20px 12px;
         border-left: $border-2px;
         background-color: $cerulean;
         transform: translateX(-200%);
@@ -75,7 +75,7 @@
 	&_spacer {
 		display: none;
 
-		@media (min-width: $xl) {
+		@media (min-width: $lg) {
 			display: block
 		}
 	}
@@ -118,11 +118,11 @@
         a {
             text-align: right;
             font-family: $ff;
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: $fw-regular;
-            line-height: 23px;
-            letter-spacing: -0.4px;
+            line-height: 19px;
+            letter-spacing: -0.32px;
 			display: inline;
 			color: inherit;
             text-decoration: underline;
@@ -130,6 +130,12 @@
 
             &:hover {
                 text-decoration: none;
+            }
+
+            @media(min-width: $md) {
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: -0.4px;
             }
         }
     }
