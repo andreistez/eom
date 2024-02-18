@@ -12,10 +12,11 @@
 wp_enqueue_style( 'dropdowns', THEME_URI . '/static/css/dropdowns/dropdowns.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'dropdowns', THEME_URI . '/static/js/dropdowns/dropdowns.min.js', ['jquery'], THEME_VERSION, true );
 
-$subtitle	= get_sub_field( 'subtitle' );
-$title		= get_sub_field( 'title' );
-$text		= get_sub_field( 'text' );
-$dropdowns	= get_sub_field( 'dropdowns' );
+$subtitle		= get_sub_field( 'subtitle' );
+$title			= get_sub_field( 'title' );
+$title_color	= get_sub_field( 'title_color' );
+$text			= get_sub_field( 'text' );
+$dropdowns		= get_sub_field( 'dropdowns' );
 ?>
 
 <section class="dropdowns">
@@ -25,7 +26,8 @@ $dropdowns	= get_sub_field( 'dropdowns' );
 			get_template_part( 'components/h2-box', null, [
 				'subtitle'	=> $subtitle,
 				'title'		=> $title,
-				'text'		=> $text
+				'text'		=> $text,
+				'color'		=> $title_color
 			] );
 			?>
 

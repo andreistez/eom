@@ -14,6 +14,7 @@ wp_enqueue_script( 'members', THEME_URI . '/static/js/members/members.min.js', [
 
 $subtitle		= get_sub_field( 'subtitle' );
 $title			= get_sub_field( 'title' );
+$title_color	= get_sub_field( 'title_color' );
 $text			= get_sub_field( 'text' );
 $main_logo_text	= get_sub_field( 'main_logo_text' );
 $slogan			= get_sub_field( 'slogan' );
@@ -27,7 +28,8 @@ $members		= get_sub_field( 'members' );
 			get_template_part( 'components/h2-box', null, [
 				'subtitle'	=> $subtitle,
 				'title'		=> $title,
-				'text'		=> $text
+				'text'		=> $text,
+				'color'		=> $title_color
 			] );
 			?>
 

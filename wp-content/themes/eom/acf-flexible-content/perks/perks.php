@@ -12,10 +12,11 @@
 wp_enqueue_style( 'perks', THEME_URI . '/static/css/perks/perks.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'perks', THEME_URI . '/static/js/perks/perks.min.js', ['jquery'], THEME_VERSION, true );
 
-$subtitle	= get_sub_field( 'subtitle' );
-$title		= get_sub_field( 'title' );
-$text		= get_sub_field( 'text' );
-$cards		= get_sub_field( 'cards' );
+$subtitle		= get_sub_field( 'subtitle' );
+$title			= get_sub_field( 'title' );
+$title_color	= get_sub_field( 'title_color' );
+$text			= get_sub_field( 'text' );
+$cards			= get_sub_field( 'cards' );
 ?>
 
 <section class="perks">
@@ -26,7 +27,7 @@ $cards		= get_sub_field( 'cards' );
 				'subtitle'	=> $subtitle,
 				'title'		=> $title,
 				'text'		=> $text,
-				'color'		=> 'cerulean'
+				'color'		=> $title_color
 			] );
 
 			if( ! empty( $cards ) ){
