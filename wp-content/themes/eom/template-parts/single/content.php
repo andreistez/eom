@@ -26,14 +26,14 @@ $additional	= get_field( 'additional_info' );
 			?>
 
             <div class="post-single-content-inner">
-                <!-- <div class="post-single-estimate">
+                <div class="post-single-estimate">
                     <div class="post-single-read">
                         <?php echo eom_get_reading_time( $post_id ), ' ', __( 'min read', 'eom' ) ?>
                     </div>
-                    <div class="post-single-date">
-						<?php echo get_the_date( 'M Y', $post_id ) ?>
-                    </div>
-                </div> -->
+                    <!--<div class="post-single-date">
+						<?php /*echo get_the_date( 'M Y', $post_id ) */?>
+                    </div>-->
+                </div>
 
                 <h1 class="h1"><?php the_title() ?></h1>
 
@@ -59,9 +59,14 @@ $additional	= get_field( 'additional_info' );
 						<?php
 					}
 					?>
+
+					<?php get_template_part( 'components/addtoany' ) ?>
                 </div>
 
-				<?php the_content() ?>
+				<?php
+				the_content();
+				get_template_part( 'components/addtoany' );
+				?>
             </div>
 
             <?php get_template_part( 'template-parts/other-articles', null, ['exclude' => $post_id] ) ?>

@@ -1,0 +1,46 @@
+body {
+	div[style="position: static;"],
+	div[style="position:static;"],
+	div[style="position: static"],
+	div[style="position:static"] {
+		display: none
+	}
+}
+
+.post-single-buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	padding-top: 31px;
+	margin-top: 31px;
+	border-top: 2px solid $black;
+
+	&-text {
+		padding: 10px 16px
+	}
+}
+
+.addtoany_shortcode {
+	.addtoany_list {
+		display: flex;
+		gap: 10px;
+
+		a {
+			padding: 0;
+
+			img {
+				display: block
+			}
+		}
+	}
+}
+
+.post-single-info-wrapper {
+	.post-single-buttons {
+		justify-content: flex-start;
+		padding-bottom: 31px;
+		border-bottom: 2px solid $black
+	}
+}

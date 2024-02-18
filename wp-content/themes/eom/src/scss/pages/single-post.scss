@@ -9,18 +9,20 @@
 
 .post-single {
     h1 {
+		padding-bottom: 15px;
         margin-bottom: 32px;
+		border-bottom: 2px solid $black
     }
 
     &-content-inner {
-        padding: 7px 7px 30px 7px;
+        padding: 7px 7px 31px 7px;
 
         @media(min-width: $md) {
-            padding: 20px 16px 43px 16px;
+            padding: 20px 16px 31px 16px;
         }
 
         @media(min-width: $xl) {
-            padding: 40px 114px 64px 114px;
+            padding: 40px 114px 31px 114px;
         }
 
         p {
@@ -89,6 +91,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+		border-bottom: 2px solid $black;
 
         img {
             width: 100%;
@@ -118,7 +121,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 31px
         }
 
         &-inner {
