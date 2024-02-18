@@ -131,7 +131,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "34",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -147,6 +147,28 @@
                             "save_other_choice": 0
                         },
                         {
+                            "key": "field_65d22f08c7ff5",
+                            "label": "Additional Bottom Spacing",
+                            "name": "additional_bottom_spacing",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "min": 0,
+                            "max": "",
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_65c2a70d71ce9",
                             "label": "Image",
                             "name": "image",
@@ -156,7 +178,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -181,7 +203,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1469,5 +1491,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707776880
+    "modified": 1708273465
 }

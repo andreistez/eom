@@ -17,6 +17,7 @@ $type			= $type ? ' ' . esc_attr( $type ) : '';
 $image			= get_sub_field( 'image' );
 $bg_color		= get_sub_field( 'bg_color' );
 $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' : '';
+$bottom_spacing	= get_sub_field( 'additional_bottom_spacing' );
 $text_blocks	= get_sub_field( 'text_blocks' );
 ?>
 
@@ -42,6 +43,9 @@ $text_blocks	= get_sub_field( 'text_blocks' );
 					</div>
 					<?php
 				}
+
+				if( $bottom_spacing )
+					echo '<div class="image__text_spacer" style="height: ', esc_attr( $bottom_spacing ), 'px"></div>';
 				?>
 			</div>
 		</div>

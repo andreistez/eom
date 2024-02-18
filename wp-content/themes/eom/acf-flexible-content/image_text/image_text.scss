@@ -72,6 +72,14 @@
             
     }
 
+	&_spacer {
+		display: none;
+
+		@media (min-width: $md) {
+			display: block
+		}
+	}
+
     &_info {
         display: flex;
         flex-direction: column;
