@@ -68,7 +68,7 @@
 
     .violet__gear, .red__gear, .green__gear, .blue__gear {
         position: absolute;
-        transition: width ease $tr, height ease $tr;
+        transition: width ease $tr;
     }
 
     .violet__gear {

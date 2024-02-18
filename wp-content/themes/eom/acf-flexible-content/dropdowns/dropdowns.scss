@@ -154,19 +154,15 @@
             z-index: 1;
             transition: filter ease $tr;
             cursor: pointer;
-         }
 
-         &:hover {
-            .circle__bottom_left, .circle__bottom_right, .circle__top_left, .circle__top_right {
-                filter: brightness(0.7);
+            &.darkened {
+                filter: brightness(0.7); 
             }
-         }
 
-         .circle__bottom_left, .circle__bottom_right, .circle__top_left, .circle__top_right {
-            &:hover {
+            &.highlighted {
                 filter: brightness(1);
             }
-        }
+         }
     }
 
     .circle__lines {
