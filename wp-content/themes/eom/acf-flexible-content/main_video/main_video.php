@@ -24,9 +24,7 @@ $poster	= $poster ? ' poster="' . wp_get_attachment_image_url( $poster, 'video-p
 			<video playsinline<?php echo $poster ?>>
 				<source src="<?php echo esc_url( $video['url'] ) ?>" type="<?php echo esc_attr( $video['mime_type'] ) ?>">
 			</video>
-			<div class="play">
-				<img src="<?php echo THEME_URI ?>/static/img/play.png" alt="" />
-			</div>
+			<div class="play"></div>
 		</div>
 	</div>
 </section>

@@ -20,6 +20,7 @@ blockquote {
         font-style: normal;
         font-weight: $fw-regular;
         line-height: 31px;
+		letter-spacing: 0;
         color: $white;
         opacity: 0;
         transform: translateX(100%);
