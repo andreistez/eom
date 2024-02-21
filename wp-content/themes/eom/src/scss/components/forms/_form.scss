@@ -79,7 +79,7 @@
 			font-size: 18px;
 			line-height: 18px;
 			letter-spacing: -0.54px;
-			padding: 5.5px 14px;
+			padding: 3px 15px 8px
 		}
 
 		&.wpcf7-not-valid {
@@ -93,6 +93,7 @@
 
 		@media(min-width: $md) {
 			height: 150px;
+			padding-top: 8px
 		}
 	}
 
@@ -105,7 +106,7 @@
         margin-top: 5px;
 
         @media(min-width: $xl) {
-            margin-top: 8px
+            margin-top: 7px
         }
     }
 }

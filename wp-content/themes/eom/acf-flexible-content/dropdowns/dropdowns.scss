@@ -38,7 +38,7 @@
         }
 
         @media(min-width: $xl) {
-            padding: 64px 110px 26px 110px;
+            padding: 59px 110px 28px 110px
         }
     }
 
@@ -205,8 +205,8 @@
     border: $border-2px;
 
     @media(min-width: $md) {
-        margin: 30px auto 0 auto;
-        max-width: 604px;      
+        margin: 32px auto 0 auto;
+        max-width: 604px
     }
 }
 
@@ -245,10 +245,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 10px;
+        padding: 10px;
 
         @media(min-width: $md) {
-            padding: 16px 10px;
+            padding: 12px 10px 20px
         }
 
         span {

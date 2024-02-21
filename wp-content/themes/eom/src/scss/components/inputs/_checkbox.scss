@@ -54,7 +54,7 @@
 		@media(min-width: $md) {
 			font-size: 18px;
 			letter-spacing: -0.54px;
-			line-height: 18px;
+			line-height: 23px
 		}
 
 		&::before {
@@ -67,12 +67,8 @@
 			font-size: 12px;
 			color: transparent;
 			border: 2px solid $dark-blue;
-			margin-right: 6px;
-
-			@media(min-width: $xl) {
-				width: 18px;
-				height: 18px;
-			}
+			margin-top: 6px;
+			margin-right: 6px
 		}
 
 		&::after {

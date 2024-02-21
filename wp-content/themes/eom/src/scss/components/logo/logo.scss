@@ -25,7 +25,8 @@
         }
 
         @media (min-width: $xl) {
-            padding-left: 100px;
+            padding-left: 98px;
+			align-items: center
         }
     }
 
@@ -38,7 +39,7 @@
         color: $black;
         text-transform: uppercase;
         padding-bottom: 4px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.8px;
         word-break: break-all;
 
         @media (min-width: $md) {
@@ -47,6 +48,8 @@
 
         @media (min-width: $xl) {
             font-size: 25px;
+			padding-bottom: 0;
+			margin-top: 18px
         }
     }
 

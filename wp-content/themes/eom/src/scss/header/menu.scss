@@ -40,6 +40,12 @@
             border-left-width: 2px;
         }
 
+		&:last-child a {
+			@media (min-width: $xxl) {
+				padding-right: 31.5px
+			}
+		}
+
         &::before {
             content: "";
             position: absolute;
@@ -78,7 +84,7 @@
             }
 
             @media (min-width: $xxl) {
-                padding: 15px 36px; 
+                padding: 15px 36.3px
             }
 
             &.active {
