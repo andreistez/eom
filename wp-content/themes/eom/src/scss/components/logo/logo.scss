@@ -163,7 +163,7 @@
     }
 
     &.small {
-        max-width: 150px;
+        max-width: 155px;
         height: 56px;
         transition: opacity ease $tr;
     
@@ -274,13 +274,13 @@
     }
 
     &.big {
-        max-width: 182px;
+        max-width: 185px;
         height: 70px;
         transition: opacity ease $tr;
     
         @media (min-width: $md) {
             height: 102px;
-            max-width: 265px;
+            max-width: 266px;
         }
 
         .logo__text {
@@ -307,7 +307,7 @@
             padding-left: 53px;
 
             @media (min-width: $md) {
-                padding-left: 83px;
+                padding-left: 82px;
             }
         }
         

@@ -16,7 +16,6 @@ h1, .h1 {
     font-weight: $fw-bold;
     line-height: 70px;
     letter-spacing: -2.6px;
-    max-width: 788px;
 
     @media(min-width: $xs) {
         font-size: 87px;
@@ -113,6 +112,10 @@ h2, .h2 {
     }
 }
 
+.image__text_heading p {
+    margin-bottom: 8px;
+}
+
 .h2__box {
     display: flex;
     flex-direction: column;
@@ -170,7 +173,7 @@ h2, .h2 {
         }
 
         p {
-            margin-bottom: 0;
+            margin-bottom: 8px;
         }
     }
 
