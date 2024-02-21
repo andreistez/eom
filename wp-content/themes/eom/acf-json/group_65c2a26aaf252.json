@@ -48,7 +48,7 @@
                             "label": "Title",
                             "name": "title",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -59,9 +59,9 @@
                             },
                             "default_value": "",
                             "maxlength": "",
+                            "rows": 4,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_65c4bc38c0c1f",
@@ -1545,5 +1545,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708285114
+    "modified": 1708544157
 }
