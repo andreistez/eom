@@ -20,7 +20,7 @@ $position = get_field( 'position', $person_id );
         <?php
         if( has_post_thumbnail( $person_id ) )
             echo '<div class="swiper-slide__img">',
-                get_the_post_thumbnail( $person_id, 'medium', ['loading' => 'lazy'] ),
+                get_the_post_thumbnail( $person_id, 'large', ['loading' => 'lazy'] ),
             '</div>';
         ?>
 

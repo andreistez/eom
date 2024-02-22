@@ -26,7 +26,7 @@ $position	= get_sub_field( 'position' );
 			<?php
 			if( $image )
 				echo '<div class="quote__bg">',
-					wp_get_attachment_image( $image, 'full', false, ['loading' => 'lazy'] ),
+					wp_get_attachment_image( $image, 'full@2x', false, ['loading' => 'lazy'] ),
 				'</div>';
 
 			if( $text ){

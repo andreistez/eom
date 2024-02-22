@@ -27,7 +27,7 @@ $text_blocks	= get_sub_field( 'text_blocks' );
 			<?php
 			if( $image )
 				echo '<div class="image__text_left">',
-					wp_get_attachment_image( $image, 'image-text', null, ['loading' => 'lazy'] ),
+					wp_get_attachment_image( $image, 'image-text@2x', null, ['loading' => 'lazy'] ),
 				'</div>';
 			?>
 

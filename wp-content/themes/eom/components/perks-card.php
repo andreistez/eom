@@ -22,7 +22,7 @@ if( ! $image && ! $title && ! $text ) return;
 	<?php
 	if( $image )
 		echo '<div class="perks__card_img">',
-			wp_get_attachment_image( $image, 'thumbnail', false, ['loading' => 'lazy'] ),
+			wp_get_attachment_image( $image, 'medium', false, ['loading' => 'lazy'] ),
 		'</div>';
 	?>
 

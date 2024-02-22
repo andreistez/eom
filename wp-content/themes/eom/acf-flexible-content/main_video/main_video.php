@@ -15,7 +15,7 @@ wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.m
 wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.min.js', ['jquery'], THEME_VERSION, true );
 
 $poster	= get_sub_field( 'poster' );
-$poster	= $poster ? ' poster="' . wp_get_attachment_image_url( $poster, 'video-poster' ) . '"' : '';
+$poster	= $poster ? ' poster="' . wp_get_attachment_image_url( $poster, 'video-poster@2x' ) . '"' : '';
 ?>
 
 <section class="main__video">
