@@ -51,20 +51,20 @@
             transition: opacity ease $tr;
             z-index: 10;
 
-			@media(min-width: $xl) {
-				width: 110px;
-				height: 109px;
-				transform: translate(-50%, -36%)
-			}
-
             &::before {
 				content: '';
 				display: block;
 				width: 0;
 				height: 0;
-				border-top: 55px solid transparent;
-				border-bottom: 55px solid transparent;
-				border-left: 110px solid #EEEDE9
+				border-top: 30px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 60px solid #EEEDE9;
+
+                @media(min-width: $md) {
+                    border-top: 55px solid transparent;
+                    border-bottom: 55px solid transparent;
+                    border-left: 110px solid #EEEDE9;
+                }
 			}
 
             &:hover {
