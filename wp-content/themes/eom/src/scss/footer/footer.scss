@@ -15,7 +15,7 @@
         overflow: hidden;
 
         @media(min-width: $md) {
-            padding: 60px 48px 0 48px;
+            padding: 60px 40px 0 20px;
             margin-bottom: 81px;
         }
 
@@ -29,9 +29,10 @@
         width: 159px;
         height: 100px;
         margin-bottom: 32px;
+        position: relative;
 
         @media(min-width: $md) {
-            width: 249px;
+            width: 267px;
             height: 157px;
             margin-bottom: 64px;
         }
@@ -40,9 +41,107 @@
             margin-bottom: 0;
         }
 
-		img {
-			width: 100%
-		}
+        .logo__text {
+            width: auto;
+            color: $white;
+            font-size: 14px;
+            position: absolute;
+            right: 0;
+            bottom: -6px;
+
+            @media(min-width: $md) {
+                font-size: 23px;
+                right: 15px;
+                bottom: -5px;
+            }
+        }
+
+        .logo__gears {
+            position: relative;
+            min-width: 60px;
+
+            @media(min-width: $md) {
+                min-width: 100px;
+            }
+        }
+
+        .violet__gear, .green__gear {
+            animation: rotationForward 5s infinite linear;
+        }
+
+        .red__gear, .blue__gear {
+            animation: rotationReverse 5s infinite linear;
+        }
+
+        .blue__gear, .red__gear, .green__gear, .violet__gear {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .violet__gear {
+            width: 20px;
+            height: 20px;
+            top: 0;
+            right: 10px;
+
+            @media(min-width: $md) {
+                width: 31px;
+                height: 31px;
+                top: 0;
+                right: 15px;             
+            }
+        }
+
+        .red__gear {
+            width: 22px;
+            height: 22px;
+            top: 15px;
+            left: 10px;
+
+            @media(min-width: $md) {
+                width: 35px;
+                height: 35px;
+                top: 23px;
+                left: 22px;             
+            }
+        }
+
+        .green__gear {
+            width: 25px;
+            height: 25px;
+            top: 28px;
+            right: 0;
+
+            @media(min-width: $md) {
+                width: 44px;
+                height: 44px;
+                top: 40px;
+                right: 0;
+                  
+            }
+        }
+
+        .blue__gear {
+            width: 40px;
+            height: 40px;
+            top: 45px;
+            left: 0;
+
+            @media(min-width: $md) {
+                width: 66px;
+                height: 66px;
+                top: 70px;
+                left: 0;              
+            }
+        }
+    }
+
+    .logo__inner {
+        padding-left: 0;
     }
 
     &__inner {
@@ -84,7 +183,7 @@
         margin-bottom: 32px;
 
         @media(min-width: $md) {
-            width: calc(30% - 16px);
+            width: 33%;
             min-width: 168px;
             margin-bottom: 0;
         }

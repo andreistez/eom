@@ -23,7 +23,9 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
 						if( $logo ){
 							?>
 							<a href="<?php echo home_url( '/' ) ?>" class="footer__logo">
-								<?php echo wp_get_attachment_image( $logo, 'medium', false, ['loading' => 'lazy'] ) ?>
+                                <div class="logo__inner">
+                                    <?php get_template_part( 'components/logo/gears-and-text', null, ['text' => 'Economics<br/>of mutuality<br/>alliance'] ) ?>
+                                </div>
 							</a>
 							<?php
 						}

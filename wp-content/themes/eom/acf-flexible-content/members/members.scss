@@ -211,6 +211,14 @@
                 justify-content: flex-start;
                 padding: 15px 14px;
             }
+
+            .violet__gear, .green__gear {
+                animation: rotationForward 5s infinite linear;
+            }
+    
+            .red__gear, .blue__gear {
+                animation: rotationReverse 5s infinite linear;
+            }
         }
 
         &_inner {
