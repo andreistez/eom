@@ -15,7 +15,6 @@ const toggleBurgerMenu = (button, selector, lock) => {
 	const headerInner = document.querySelector(selector)
 	setTargetElement(document.querySelector(lock)) //Target element for body lock
     const lines = document.querySelector('.lines')
-    console.log(lines)
 
 	if (!burgerButton && !headerInner) return
 
