@@ -3,6 +3,9 @@
 
 .quote {
     @include borderTop;
+    &::before {
+        top: -1px;
+    }
 
     &.animated {
         .quote__bg img {

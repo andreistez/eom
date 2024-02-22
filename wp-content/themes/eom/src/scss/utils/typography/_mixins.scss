@@ -129,8 +129,9 @@
         background-color: $dark-blue;
         margin-left: calc(50vw - 50%);
         position: absolute;
-        top: -1px;
+        top: 0;
         left: 0;
+        z-index: 1;
     } 
 }
 

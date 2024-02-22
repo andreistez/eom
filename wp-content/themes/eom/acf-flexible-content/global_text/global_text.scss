@@ -3,6 +3,7 @@
 
 .global__text {
    @include borderTop;
+   font-weight: $fw-light;
 
     &_wrapper {
         padding: 15px 16px;

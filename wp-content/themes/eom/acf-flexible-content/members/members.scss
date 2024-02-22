@@ -2,6 +2,7 @@
 @import '../../src/scss/utils/typography/typography.scss';
 
 .members {
+    @include borderTop;
     &.animated {
         .h2__box_text p {
             animation: textOpacity 2s forwards ease;

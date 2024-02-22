@@ -37,3 +37,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Brown';
+    src: url('../fonts/Brown-Light.eot');
+    src: url('../fonts/Brown-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Brown-Light.woff2') format('woff2'),
+        url('../fonts/Brown-Light.woff') format('woff'),
+        url('../fonts/Brown-Light.ttf') format('truetype'),
+        url('../fonts/Brown-Light.svg#Brown-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+

@@ -58,7 +58,8 @@
         padding: 5px 20px 20px 12px;
         border-left: $border-2px;
         transform: translateX(-200%);
-        background-color: orange;
+        background-color: $white;
+        flex-grow: 1;
 
         @media(min-width: $md) {
             width: 67.5%;
@@ -66,7 +67,7 @@
         }
 
         @media(min-width: $xl) {
-            padding: 28px 18px 41px 30px
+            padding: 28px 20px 41px 30px
         }
             
     }

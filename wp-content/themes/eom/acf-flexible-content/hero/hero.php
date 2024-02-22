@@ -21,7 +21,7 @@ $title_color	= get_sub_field( 'title_color' ) ?: '#fff';
 		<div class="hero__wrapper">
 			<?php
 			if( $title )
-				echo '<h1 class="h1" style="color: ', esc_attr( $title_color ), '">', esc_html( $title ), '</h1>';
+				echo '<h1 class="h1" style="color: ', esc_attr( $title_color ), '">', $title, '</h1>';
 
 			if( $video_bg ){
 				?>
