@@ -26,13 +26,13 @@
     }
 
     &__logo {
-        width: 159px;
+        min-width: 159px;
         height: 100px;
         margin-bottom: 32px;
         position: relative;
 
         @media(min-width: $md) {
-            width: 267px;
+            width: 276px;
             height: 157px;
             margin-bottom: 64px;
         }
@@ -45,14 +45,19 @@
             width: auto;
             color: $white;
             font-size: 14px;
-            position: absolute;
-            right: 0;
-            bottom: -6px;
+            transform: translate(-15px, 6px);
 
             @media(min-width: $md) {
                 font-size: 23px;
-                right: 15px;
-                bottom: -5px;
+                transform: translate(-22px, 6px);
+            }
+
+            @media(min-width: $xl) {
+                transform: translate(0, 16px);
+            }
+
+            @media(min-width: $xxl) {
+                transform: translate(-22px, 36px);
             }
         }
 
