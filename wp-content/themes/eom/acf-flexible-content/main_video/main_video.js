@@ -1,8 +1,21 @@
+import Plyr from 'plyr'
+
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
+	setPlayer()
     playOnClick('.play')
 })
+
+const setPlayer = () => {
+	const players = document.querySelectorAll( 'div[data-plyr-provider="vimeo"]' )
+
+	if( ! players.length ) return
+
+	players.forEach( pl => {
+		new Plyr( pl )
+	} )
+}
 
 const playOnClick = (buttonSelector) => {
     const playButtons = document.querySelectorAll(buttonSelector)

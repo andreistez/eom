@@ -24,26 +24,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_65c2a2d7845a2",
-                            "label": "Video Background",
-                            "name": "video_bg",
-                            "aria-label": "",
-                            "type": "file",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "34",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
                             "key": "field_65c2a2cc845a1",
                             "label": "Title",
                             "name": "title",
@@ -53,7 +33,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -73,13 +53,83 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "default_value": "#ffffff",
                             "enable_opacity": 0,
                             "return_format": "string"
+                        },
+                        {
+                            "key": "field_65d6515897d2c",
+                            "label": "Background Video Type",
+                            "name": "bg_video_type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "local": "Self-hosted",
+                                "vimeo": "Vimeo Iframe"
+                            },
+                            "default_value": "local",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_65c2a2d7845a2",
+                            "label": "Video Background",
+                            "name": "video_bg",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65d6515897d2c",
+                                        "operator": "==",
+                                        "value": "local"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_65d658fed7c53",
+                            "label": "Video Background (Vimeo)",
+                            "name": "video_bg_vimeo",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -434,6 +484,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_65d8fa967787c",
+                            "label": "Video Type",
+                            "name": "video_type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "local": "Self-hosted",
+                                "vimeo": "Vimeo"
+                            },
+                            "default_value": "local",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_65c534d47df7a",
                             "label": "Poster",
                             "name": "poster",
@@ -441,9 +516,17 @@
                             "type": "image",
                             "instructions": "(1204px x 614px)",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65d8fa967787c",
+                                        "operator": "==",
+                                        "value": "local"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -466,9 +549,17 @@
                             "type": "file",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65d8fa967787c",
+                                        "operator": "==",
+                                        "value": "local"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -477,6 +568,31 @@
                             "min_size": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_65d8fb057787d",
+                            "label": "Vimeo URL",
+                            "name": "vimeo_url",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "Please paste Vimeo video URL",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65d8fa967787c",
+                                        "operator": "==",
+                                        "value": "vimeo"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "66",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1545,5 +1661,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708544157
+    "modified": 1708724132
 }
