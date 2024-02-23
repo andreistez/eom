@@ -332,21 +332,20 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    z-index: 98;
+    z-index: 100;
     pointer-events: none;
 
     &::before, &::after {
         content: '';
         position: absolute;
-        width: 2px;
         height: 100%;
-        background-color: $dark-blue;
+        outline: 1px solid $dark-blue;
         bottom: 0;
-        z-index: 98;
+        z-index: 100;
     }
 
     &::before {
-        left: 0;
+        left: 1px;
 
         @media (min-width: $sm) {
             left: 20px;
@@ -362,7 +361,7 @@
     }
 
     &::after {
-        right: 0;
+        right: 1px;
 
         @media (min-width: $sm) {
             right: 20px;
@@ -374,13 +373,6 @@
 
         @media (min-width: $xl) {
             right: 20px;
-        }
-       
-    }
-
-    &.hide {
-        &::after {
-            background-color: $white;
         }
     }
 }

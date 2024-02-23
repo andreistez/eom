@@ -56,12 +56,14 @@
     &_right {
         width: 100%;
         padding: 5px 20px 20px 12px;
-        border-left: $border-2px;
         transform: translateX(-200%);
         background-color: $white;
         flex-grow: 1;
+        border-top: 2px solid $dark-blue;
 
         @media(min-width: $md) {
+            border-top: 0;
+            border-left: $border-2px;
             width: 67.5%;
             padding: 10px 16px 20px 16px;
         }
@@ -148,7 +150,10 @@
 
         .image__text_right {
             border-left: 0;
-            border-right: $border-2px;
+
+            @media(min-width: $md) {
+                border-right: $border-2px;
+            }
         }
 
         .image__text_paragraphs {
