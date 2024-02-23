@@ -53,8 +53,11 @@ $site_desc = get_bloginfo( 'description', 'display' );
             <div class="container">
                 <div class="header__wrapper">
                     <?php get_template_part( 'components/logo/header' ) ?>
-
-                    <div class="header__inner" id="menu-lock">
+                    <button class="burger__button">
+                        <span></span>
+                    </button>
+                </div>
+                 <div class="header__inner" id="menu-lock">
                         <?php
                         wp_nav_menu( [
                             'theme_location'	=> 'header_menu',
@@ -62,11 +65,6 @@ $site_desc = get_bloginfo( 'description', 'display' );
                             'container_class'	=> 'header-nav'
                         ] );
                         ?>
-                    </div>
-
-                    <button class="burger__button">
-                        <span></span>
-                    </button>
                 </div>
             </div>
 		</header>

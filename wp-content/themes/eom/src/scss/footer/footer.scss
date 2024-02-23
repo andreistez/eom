@@ -32,7 +32,7 @@
         position: relative;
 
         @media(min-width: $md) {
-            width: 276px;
+            min-width: 276px;
             height: 157px;
             margin-bottom: 64px;
         }

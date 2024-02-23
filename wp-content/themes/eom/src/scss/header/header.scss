@@ -7,15 +7,11 @@
     background-color: $light;
     padding: 21px 0;
     overflow: hidden;
+    transition: padding ease $tr;
+    border-bottom: 2px solid $dark-blue;
 
     @media (min-width: $md) {
-        padding: 15px 0;
-    }
-   
-    @media (min-width: $lg) {
-        position: relative;
-        padding: 0;
-        border-bottom: 0;
+        padding: 28.5px 0;
     }
 
     .logo {
@@ -36,77 +32,20 @@
         @media (min-width: $md) {
             padding-left: 15px;
         }
-
-        @media (min-width: $lg) {
-            padding-bottom: 70px;
-        }
-
-        @media (min-width: $xl) {
-            padding-left: 20px;
-        }
     }
 
     &.animated {
         background-color: $light;
         border-bottom: 2px solid $dark-blue;
+        padding: 13.5px 0;
 
         .logo {
-            transition: top ease $tr;
-    
             .violet__gear, .green__gear {
                 animation: none;
             }
     
             .red__gear, .blue__gear {
                 animation: none;
-            }
-        }
-
-        @media (min-width: $lg) {
-            .header-nav {
-                position: fixed;
-                top: 0;
-                height: 64px;
-                background-color: $light;
-                z-index: 100;
-
-                &::after, &::before {
-                    display: none;
-                }
-
-                .menu {
-                    position: relative;
-
-                    &::before {
-                        content: '';
-                        display: block;
-                        width: 100vw;
-                        height: 62px;
-                        background-color: $light;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        border-bottom: 2px solid $dark-blue;
-                        z-index: -1;
-                        margin-left: calc(50vw - 50%);
-                    }
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        width: 100vw;
-                        height: 2px;
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        border-bottom: 2px solid $dark-blue;
-                        z-index: 0;
-                    }
-
-                    &-item {
-                        border-top: 0;
-                    }
-                }
             }
         }
 
@@ -117,22 +56,17 @@
 
         .logo {
             position: relative;
-
-            @media (min-width: $lg) {
                 width: 38px;
                 height: 50px;
-                margin-left: 13px;
+                margin-left: 10px;
                 position: relative;
-                z-index: 100;
-                position: fixed;
-                top: 5px;
-
-                &__text {
-                    display: none;
-                }
 
                 &__inner {
                     padding-left: 0;
+                }
+
+                &__text {
+                    display: none;
                 }
 
                 .logo__gears {
@@ -150,26 +84,71 @@
                     .red__gear {
                         width: 15px;
                         height: 15px;
-                        left: 8px;
-                        top: 10px;
+                        left: 5px;
+                        top: 8px;
                     }
     
                     .green__gear {
                         width: 18px;
                         height: 18px;
                         right: 0;
-                        top: 20px;
+                        top: 17px;
                     }
     
                     .blue__gear {
                         width: 21px;
                         height: 21px;
                         left: 0;
-                        top: 32px;
+                        top: 30px;
+                    }
+            }
+
+            @media (min-width: $lg) {
+                width: 58px;
+                height: 77px;
+                margin-left: 13px;
+                position: relative;
+
+                .logo__gears {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+    
+                    .violet__gear {
+                        width: 20px;
+                        height: 20px;
+                        right: 5px;
+                        top: 3px;
+                    }
+    
+                    .red__gear {
+                        width: 23px;
+                        height: 23px;
+                        left: 10px;
+                        top: 15px;
+                    }
+    
+                    .green__gear {
+                        width: 29px;
+                        height: 29px;
+                        right: -5px;
+                        top: 30px;
+                    }
+    
+                    .blue__gear {
+                        width: 33px;
+                        height: 33px;
+                        left: 5px;
+                        top: 48px;
                     }
                 }
             }
         }
+    }
+
+    &.opened {
+        padding-bottom: 0;
+        transition: none;
     }
 
     &__wrapper {
@@ -177,12 +156,6 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-
-        @media (min-width: $lg) {
-            align-items: flex-end;
-            justify-content: center;
-            border-bottom: 0;
-        }
     }
 
     &__inner {
@@ -200,31 +173,12 @@
             z-index: -1;
         }
 
-        @media (min-width: $lg) {
-            display: flex;
-            width: 100%;
-            justify-content: flex-end;
-            margin-top: 120px;
-        }
-
-        @media (min-width: $xl) {
-            margin-top: 163px;
-        }
-
         &.opened {
             display: flex;
             align-items: center;
-            position: fixed;
-            right: 0;
-            top: 0;
-            background-color: $white;
-            z-index: 95;
-            width: 250px;
-            height: 100%;
-            padding: 50px 0;
-            overflow-y: auto;
-            border-left: 2px solid $dark-blue;
-            animation: burgerIn 1s forwards ease;
+            width: 100%;
+            padding-top: 30px;
+            animation: fadeIN 0.7s forwards ease;
 
             &::before {
                 display: none;
@@ -236,8 +190,6 @@
 
             .header-nav {
                 width: 100%;
-                height: auto;
-                margin: auto 0;
 
                 &::before, &::after {
                     display: none;
@@ -247,20 +199,11 @@
             .menu {
                 margin-left: 0;
                 width: 100%;
-
-                &-item {
-                    border: 0;
-                    margin-bottom: 10px;
-    
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
             }
         }
 
         &.closed {
-            animation: burgerOut $tr forwards ease;
+            animation: fadeOUT 1s forwards ease;
         }
     }
 }

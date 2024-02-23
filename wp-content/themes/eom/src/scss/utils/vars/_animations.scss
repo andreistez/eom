@@ -25,21 +25,21 @@ $tr07: 0.7s;
 //For burger menu
 @keyframes burgerIn {
     0% {
-        transform: translateX(100%);
+        transform: translateY(100%);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes burgerOut {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translateX(100%);
+        transform: translateY(100%);
     }
 }
 
@@ -233,5 +233,29 @@ $tr07: 0.7s;
         font-size: 0;
         width: 0;
         overflow: hidden;
+    }
+}
+
+@keyframes fadeIN {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOUT {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
     }
 }

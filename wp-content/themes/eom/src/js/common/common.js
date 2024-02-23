@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {
+    const header = document.querySelector('.header')
 	const burgerButton = document.querySelector(button)
 	const headerInner = document.querySelector(selector)
 	setTargetElement(document.querySelector(lock)) //Target element for body lock
-    const lines = document.querySelector('.lines')
 
 	if (!burgerButton && !headerInner) return
 
@@ -23,12 +23,12 @@ const toggleBurgerMenu = (button, selector, lock) => {
             burgerButton.classList.add('clicked')
 			headerInner.classList.add('opened')
 			headerInner.classList.remove('closed')
-            lines.classList.add('hide')
+            header.classList.add('opened')
 			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
 		} else {
             burgerButton.classList.remove('clicked')
 			headerInner.classList.add('closed')
-            lines.classList.remove('hide')
+            header.classList.remove('opened')
 			setTimeout(() => headerInner.classList.remove('opened'), 350)
 			setTimeout(() => headerInner.classList.remove('closed'), 350)
 			enableBodyScroll(getTargetElement())
@@ -43,7 +43,7 @@ const toggleBurgerMenu = (button, selector, lock) => {
             burgerButton.classList.remove('clicked')
 			headerInner.classList.remove('opened')
 			headerInner.classList.remove('closed')
-            lines.classList.remove('hide')
+            header.classList.remove('opened')
 			enableBodyScroll(getTargetElement())
 		}
 	})
@@ -53,6 +53,7 @@ const closeMenuByTapLink = (button, link, selector) => {
     const burgerButton = document.querySelector(button)
 	const links = document.querySelectorAll(link)
 	const headerInner = document.querySelector(selector)
+    const header = document.querySelector('.header')
 
 	if (!links.length && !headerInner) return
 
@@ -62,6 +63,7 @@ const closeMenuByTapLink = (button, link, selector) => {
 
 			burgerButton.classList.remove('clicked')
 			headerInner.classList.add('closed')
+            header.classList.remove('opened')
 			setTimeout(() => headerInner.classList.remove('opened'), 350)
 			setTimeout(() => headerInner.classList.remove('closed'), 350)
 			enableBodyScroll(getTargetElement())

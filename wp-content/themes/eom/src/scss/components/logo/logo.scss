@@ -1,16 +1,13 @@
 .logo {
-    max-width: 290px;
     height: 50px;
     transition: opacity ease $tr;
 
     @media (min-width: $md) {
         height: 70px;
-        max-width: 200px;
     }
 
     @media (min-width: $xl) {
         height: 106px;
-        max-width: 290px;
     }
 
     &__inner {
@@ -31,7 +28,7 @@
     }
 
     &__text {
-        width: 190px;
+        min-width: 190px;
         font-family: $ff;
         font-weight: $fw-bold;
         line-height: 1;
@@ -40,7 +37,6 @@
         text-transform: uppercase;
         padding-bottom: 4px;
         letter-spacing: 0.8px;
-        word-break: break-all;
 
         @media (min-width: $md) {
             font-size: 17px;
