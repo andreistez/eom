@@ -9,6 +9,7 @@
  * @subpackage eom
  */
 
+wp_enqueue_style( 'swiper', THEME_URI . '/static/css/pages/swiper.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'slides', THEME_URI . '/static/css/slides/slides.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jquery'], THEME_VERSION, true );
 

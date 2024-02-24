@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-document, addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
     initSwiper('.team-swiper', '.swiper-next', '.swiper-prev')
@@ -29,5 +29,4 @@ const initSwiper = (selector, next, prev) => {
             } 
         }
     })
-
 }

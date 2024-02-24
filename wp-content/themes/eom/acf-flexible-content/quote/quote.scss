@@ -3,6 +3,7 @@
 
 .quote {
     @include borderTop;
+
     &::before {
         top: -1px;
     }
@@ -51,6 +52,22 @@
             min-height: 605px;
             padding: 38px 65px 41px 32px
         }
+
+		&.flex-start {
+			justify-content: flex-start;
+
+			blockquote {
+				max-width: 600px;
+
+				@media(min-width: $md) {
+					max-width: 389px;
+				}
+
+				@media(min-width: $xl) {
+					max-width: 720px;
+				}
+			}
+		}
     }
 
     &__bg {
@@ -101,24 +118,6 @@
 
         @media(min-width: $xl) {
             max-width: 550px
-        }
-    }
-
-    &.flex-start {
-        .quote__wrapper {
-            justify-content: flex-start;
-        }
-
-        blockquote {
-            max-width: 600px;
-
-            @media(min-width: $md) {
-                max-width: 389px;
-            }
-    
-            @media(min-width: $xl) {
-                max-width: 720px;
-            }
         }
     }
 }
