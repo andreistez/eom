@@ -14,6 +14,8 @@ wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], TH
 wp_enqueue_script( 'quote', THEME_URI . '/static/js/quote/quote.min.js', ['jquery'], THEME_VERSION, true );
 
 $section_type	= get_sub_field( 'section_type' );
+$bg_image		= get_sub_field( 'bg_image' );
+$style			= $bg_image ? ' style="background-image: url(' . wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) . ')"' : '';
 $single_quote	= [];
 
 if( $section_type === 'slider' ){
@@ -35,7 +37,7 @@ if( $section_type === 'slider' ){
 		if( $section_type === 'slider' ){
 			if( ! empty( $slider ) ){
 				?>
-				<div class="quote-slider swiper">
+				<div class="quote-slider swiper"<?php echo $style ?>>
 					<div class="swiper-wrapper">
 						<?php
 						foreach( $slider as $slide )
@@ -46,7 +48,11 @@ if( $section_type === 'slider' ){
 				<?php
 			}
 		}else{
-			get_template_part( 'components/cards/quote', null, ['quote' => $single_quote] );
+			?>
+			<div class="quote-single"<?php echo $style ?>>
+				<?php get_template_part( 'components/cards/quote', null, ['quote' => $single_quote] ) ?>
+			</div>
+			<?php
 		}
 		?>
 	</div>

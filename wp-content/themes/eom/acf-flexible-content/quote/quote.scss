@@ -33,6 +33,12 @@
         }
     }
 
+	&-single,
+	&-slider {
+		background-size: cover;
+		background-position: center
+	}
+
     &__wrapper {
         width: 100%;
         min-height: 607px;

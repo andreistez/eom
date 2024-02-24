@@ -717,7 +717,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -731,6 +731,31 @@
                             "other_choice": 0,
                             "layout": "horizontal",
                             "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_65c543eb231e2",
+                            "label": "Background Image",
+                            "name": "bg_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "(1264px x auto)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
                         },
                         {
                             "key": "field_65c54547aadea",
@@ -750,7 +775,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -764,39 +789,6 @@
                             "other_choice": 0,
                             "layout": "horizontal",
                             "save_other_choice": 0
-                        },
-                        {
-                            "key": "field_65c543eb231e2",
-                            "label": "Image",
-                            "name": "image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "(1264px x auto)",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65d9e1018fad8",
-                                        "operator": "==",
-                                        "value": "single"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "preview_size": "thumbnail"
                         },
                         {
                             "key": "field_65c543fc231e3",
@@ -1822,5 +1814,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708780532
+    "modified": 1708801360
 }
