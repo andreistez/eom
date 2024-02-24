@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { isInScope } from "../../src/js/common/global"
 
 let sections
@@ -38,6 +39,13 @@ const initSlider = () => {
 
 		if( ! sliderEl ) return
 
-		new Swiper( sliderEl )
+		const swiper = new Swiper(sliderEl, {
+            modules: [Navigation],
+            navigation: {
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
+            },
+        })
 	} )
 }
+
