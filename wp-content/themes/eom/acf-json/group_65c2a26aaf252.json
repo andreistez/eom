@@ -33,7 +33,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -53,38 +53,13 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
                             "default_value": "#ffffff",
                             "enable_opacity": 0,
                             "return_format": "string"
-                        },
-                        {
-                            "key": "field_65d6515897d2c",
-                            "label": "Background Video Type",
-                            "name": "bg_video_type",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "local": "Self-hosted",
-                                "vimeo": "Vimeo Iframe"
-                            },
-                            "default_value": "local",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "layout": "vertical",
-                            "save_other_choice": 0
                         },
                         {
                             "key": "field_65c2a2d7845a2",
@@ -94,17 +69,9 @@
                             "type": "file",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65d6515897d2c",
-                                        "operator": "==",
-                                        "value": "local"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -113,23 +80,6 @@
                             "min_size": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_65d658fed7c53",
-                            "label": "Video Background (Vimeo)",
-                            "name": "video_bg_vimeo",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1872,5 +1822,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708778057
+    "modified": 1708780532
 }
