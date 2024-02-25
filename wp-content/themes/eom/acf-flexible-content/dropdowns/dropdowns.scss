@@ -47,10 +47,10 @@
     }
 
     .h2__box {
-        margin-bottom: 3px;
+        margin-bottom: 16px;
         
         @media(min-width: $md) {
-            margin-bottom: 46px;
+            margin-bottom: 42px;
         }
 
         p {
@@ -64,6 +64,8 @@
     }
 
     &__circle {
+        display: flex;
+        flex-direction: column;
         position: relative;
         width: 290px;
         height: 290px;
@@ -98,22 +100,38 @@
         }
 
         &::before {
-            width: 100%;
-            height: 100%;
-        }
-
-        &::after {
-            width: 230px;
-            height: 230px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            z-index: 10;
 
             @media(min-width: $md) {
-                width: 294px;
-                height: 294px;       
+                width: calc(100% - 3px);
+                height: calc(100% - 3px);              
             }
 
             @media(min-width: $xl) {
-                width: 380px;
-                height: 380px;       
+                width: calc(100% - 3px);
+                height: calc(100% - 3px);               
+            }
+
+            @media(min-width: $xxl) {
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);               
+            }
+        }
+
+        &::after {
+            width: 228px;
+            height: 228px;
+
+            @media(min-width: $md) {
+                width: 292px;
+                height: 292px;       
+            }
+
+            @media(min-width: $xl) {
+                width: 379px;
+                height: 379px;       
             }
         }
 
@@ -171,7 +189,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, calc(-50% + 1px));
         z-index: 2;
 
         &::before, &::after {
@@ -215,19 +233,19 @@
     cursor: pointer;
 
     &:first-child {
-        background-color: $terracota
+        background-color: #EE6A5E;
     }
 
     &:nth-child(2) {
-        background-color: $cerulean
+        background-color: #44929F;
     }
 
     &:nth-child(3) {
-        background-color: $violet
+        background-color: #7379AD;
     }
 
     &:last-child {
-        background-color: $grass
+        background-color: #73932F;
     }
 
     &__open {
@@ -248,7 +266,7 @@
         padding: 10px;
 
         @media(min-width: $md) {
-            padding: 12px 10px 20px
+            padding: 16px 10px;
         }
 
         span {
