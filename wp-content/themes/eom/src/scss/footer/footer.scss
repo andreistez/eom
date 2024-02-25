@@ -70,14 +70,6 @@
             }
         }
 
-        .violet__gear, .green__gear {
-            animation: rotationForward 5s infinite linear;
-        }
-
-        .red__gear, .blue__gear {
-            animation: rotationReverse 5s infinite linear;
-        }
-
         .blue__gear, .red__gear, .green__gear, .violet__gear {
             position: absolute;
 

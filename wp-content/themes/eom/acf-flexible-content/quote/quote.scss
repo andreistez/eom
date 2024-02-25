@@ -126,4 +126,14 @@
             max-width: 550px
         }
     }
+
+    .swiper-navigation {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .swiper-prev, .swiper-next {
+            color: $white;
+        }
+    }
 }

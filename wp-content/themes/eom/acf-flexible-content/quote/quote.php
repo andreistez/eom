@@ -44,6 +44,10 @@ if( $section_type === 'slider' ){
 							get_template_part( 'components/cards/quote', null, ['quote' => $slide] );
 						?>
 					</div>
+                    <div class="swiper-navigation">
+                        <div class="swiper-prev"><span>→</span></div>
+                        <div class="swiper-next"><span><?php _e( 'View more', 'eom' ) ?></span>→</div>
+                    </div>
 				</div>
 				<?php
 			}
