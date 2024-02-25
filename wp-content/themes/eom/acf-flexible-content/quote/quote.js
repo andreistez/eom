@@ -40,6 +40,7 @@ const initSlider = () => {
 		if( ! sliderEl ) return
 
 		const swiper = new Swiper(sliderEl, {
+            slidesPerView: 1,
             modules: [Navigation],
             navigation: {
                 nextEl: '.swiper-next',

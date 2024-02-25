@@ -32,4 +32,29 @@
         flex-wrap: wrap;
         margin-bottom: 32px;
     }
+
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 14px;
+        overflow: hidden;
+        height: 30px;
+        color: $dark-blue;
+
+        @media(min-width: $md) {
+            height: 48px;
+            font-size: 14px;
+        }
+
+        @media(min-width: $lg) {
+            height: 85px;
+            -webkit-line-clamp: 4;
+            font-size: 18px;
+        }
+
+        @media(min-width: $xl) {
+            height: 90px;
+        }
+    }
 }
