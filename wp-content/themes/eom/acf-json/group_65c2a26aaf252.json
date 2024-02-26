@@ -414,11 +414,30 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
                                     "return_format": "array",
+                                    "parent_repeater": "field_65c2a77d71ced"
+                                },
+                                {
+                                    "key": "field_65dcf508b5a3b",
+                                    "label": "Border Color",
+                                    "name": "border_color",
+                                    "aria-label": "",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "#ffffff",
+                                    "enable_opacity": 0,
+                                    "return_format": "string",
                                     "parent_repeater": "field_65c2a77d71ced"
                                 }
                             ]
@@ -1814,5 +1833,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708940169
+    "modified": 1708979485
 }
