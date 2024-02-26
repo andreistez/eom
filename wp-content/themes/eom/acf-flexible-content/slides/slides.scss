@@ -23,6 +23,11 @@
 }
 
 .team-swiper {
+
+    @media(min-width: $sm) {
+        padding-right: 20px;
+    }
+
     .swiper-slide {
         width: 100%;
         border: 2px solid $dark-blue;
