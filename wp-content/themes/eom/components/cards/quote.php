@@ -40,7 +40,7 @@ $position	= $quote['position'];
 			<?php
 			if( $name ) echo '<div class="quote__name">', esc_html( $name ), '</div>';
 
-			if( $position ) echo '<div class="quote__job">', esc_html( $position ), '</div>';
+			if( $position ) echo '<div class="quote__job">', $position, '</div>';
 			?>
 		</blockquote>
 		<?php

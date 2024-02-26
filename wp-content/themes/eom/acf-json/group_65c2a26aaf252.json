@@ -851,7 +851,7 @@
                             "label": "Position",
                             "name": "position",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -870,9 +870,9 @@
                             },
                             "default_value": "",
                             "maxlength": "",
+                            "rows": 4,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_65d9e0ef8fad7",
@@ -1002,7 +1002,7 @@
                                     "label": "Position",
                                     "name": "position",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -1013,9 +1013,9 @@
                                     },
                                     "default_value": "",
                                     "maxlength": "",
+                                    "rows": 4,
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "new_lines": "br",
                                     "parent_repeater": "field_65d9e0ef8fad7"
                                 }
                             ]
@@ -1814,5 +1814,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708801360
+    "modified": 1708940169
 }
