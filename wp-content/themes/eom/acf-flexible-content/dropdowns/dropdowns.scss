@@ -78,7 +78,9 @@
 
         @media(min-width: $xl) {
             width: 480px;
-            height: 480px;           
+            height: 480px;
+            
+            
         }
 
         img {
@@ -278,7 +280,7 @@
             &::before, &::after {
                 content: '';
                 display: block;
-                width: 4px;
+                width: 3px;
                 height: 100%;
                 position: absolute;
                 left: 50%;
