@@ -71,7 +71,6 @@
         @media(min-width: $xl) {
             padding: 28px 20px 41px 30px
         }
-            
     }
 
 	&_spacer {
@@ -139,6 +138,11 @@
                 letter-spacing: -0.4px;
             }
         }
+
+		h1, h2, h3,
+		h4, h5, h6 {
+			color: inherit
+		}
     }
 
     &.reverse {
@@ -183,20 +187,23 @@
             }
         }
 
+		hr {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 32px;
+			width: 100%;
+			height: 2px;
+			border: none
+		}
+
         &:nth-child(n + 2) {
             position: relative;
             padding-top: 64px;
 
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 32px;
-                width: 100%;
-                height: 2px;
-                background-color: $white;
-            }
+			hr {
+				display: block
+			}
         }
     }
 

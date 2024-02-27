@@ -21,9 +21,12 @@ $text			= ( isset( $block['text'] ) && $block['text'] ) ? $block['text'] : '';
 $text_color		= ( isset( $block['text_color'] ) && $block['text_color'] ) ? $block['text_color'] : '#fff';
 $text_type		= ( isset( $block['text_type'] ) && $block['text_type'] ) ? ' ' . esc_attr( $block['text_type'] ) : '';
 $link			= ( isset( $block['link'] ) && $block['link'] ) ? $block['link'] : '';
+$border_color	= ( isset( $block['border_color'] ) && $block['border_color'] ) ? $block['border_color'] : '#fff';
 ?>
 
 <div class="image__text_info<?php echo $text_type ?>">
+	<hr style="background-color: <?php echo esc_attr( $border_color ) ?>" />
+
 	<?php
 	if( $subtitle || $title ){
 		echo '<div class="image__text_heading">';
