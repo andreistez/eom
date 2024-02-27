@@ -17,7 +17,8 @@ $link			= get_sub_field( 'link' );
 $news			= get_posts( [
 	'post_type'		=> 'post',
 	'post_status'	=> 'publish',
-	'numberposts'	=> 6
+	'numberposts'	=> 6,
+	'category_name'	=> 'show-in-section'
 ] );
 ?>
 
