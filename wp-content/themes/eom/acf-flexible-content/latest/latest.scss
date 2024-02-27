@@ -4,6 +4,17 @@
 .latest {
     @include borderTop;
 
+    .subtitle {
+        font-family: $ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-bold;
+        line-height: 20px;
+        letter-spacing: 1.26px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
     &__wrapper {        
         padding: 6px 15px;
         overflow: hidden;

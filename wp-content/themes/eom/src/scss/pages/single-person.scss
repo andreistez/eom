@@ -43,6 +43,7 @@
 
     &-image {
         width: 100%;
+        border: 2px solid $dark-blue;
 
         @media (min-width: $md) {
             width: 50%;

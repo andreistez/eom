@@ -24,6 +24,7 @@ $news			= get_posts( [
 <section class="latest">
 	<div class="container">
 		<div class="latest__wrapper">
+            <div class="subtitle" style="color: <?php echo esc_attr( $title_color ) ?>">Economics of Mutuality Alliance</div>
 			<?php
 			if( $title ) echo '<h2 class="h2" style="color:', esc_attr( $title_color ), '">', $title, '</h2>';
 

@@ -1,11 +1,19 @@
-<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M239.102 239.479C107.223 239.479 0.315796 132.554 0.315796 0.655884H239.102V239.479Z" fill="#73932F"/>
-<path d="M239.064 189.975C134.511 189.975 49.7561 105.207 49.7561 0.637329H239.064V189.975Z" fill="#E5EFCE"/>
-<path d="M74.8377 127.233L72.0199 129.402L75.227 133.574L72.9097 135.373L69.7027 131.201L65.921 134.112L70.3144 139.822L67.9972 141.621L61.5831 133.277L75.1528 122.839L81.4186 130.978L79.0828 132.758L74.8377 127.233Z" fill="#E5EFCE"/>
-<path d="M82.605 132.536L84.8852 135.076L79.3053 146.367L91.151 142.047L93.4311 144.587L76.0427 150.873L74.4855 149.148L82.605 132.554V132.536Z" fill="#E5EFCE"/>
-<path d="M100.346 150.854C104.201 154.469 104.164 159.828 100.828 163.387C97.4907 166.947 92.1333 167.318 88.2959 163.703C84.4401 160.087 84.4771 154.71 87.8139 151.169C91.1508 147.628 96.4897 147.239 100.346 150.854ZM90.3166 161.552C92.6709 163.758 96.2301 163.48 98.4361 161.126C100.642 158.771 100.698 155.211 98.3434 152.986C95.9891 150.761 92.4299 151.058 90.2239 153.413C88.0179 155.767 87.9623 159.327 90.3166 161.552Z" fill="#E5EFCE"/>
-<path d="M108.892 158.808L111.468 160.866L102.589 171.953L108.224 176.459L106.389 178.758L98.1768 172.176L108.892 158.808Z" fill="#E5EFCE"/>
-<path d="M116.9 165.334L119.699 167.281L116.863 179.555L127.392 172.621L130.191 174.568L114.731 184.691L112.822 183.356L116.9 165.334Z" fill="#E5EFCE"/>
-<path d="M133.566 179.926L131.767 182.985L136.291 185.655L134.789 188.195L130.266 185.525L127.837 189.641L134.066 193.312L132.565 195.834L123.5 190.475L132.212 175.717L141.073 180.946L139.572 183.486L133.566 179.944V179.926Z" fill="#E5EFCE"/>
-<path d="M12.8473 29.4496L26.3984 13.4675L42.3966 27.0208" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+	<title>bot-left-svg</title>
+	<defs>
+		<image  width="239" height="240" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO8AAADwCAMAAADfLsPFAAAAAXNSR0IB2cksfwAAATVQTFRFc5Mvc5Mvc5MviKRN5e/O5e/O5e/O5e/O5e/O5e/O5e/OAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/O5e/Oc5MvM+GOIwAAAGd0Uk5T/f7////a/vv69fQAMLEME9X/zyq48e1Imt4gqGZ9/DmLhF9XbaFBdE/0vxok5pIx1tw4BsivufpVq80Lm3ON6iiRcEauClJjQufMNfeByRfan8G8bhye+AMOjd7j4L6/5r3CieQiZ9eZ7s8AAAJqSURBVHic7dh3T5NRHEfxFrdV8edeuLc4ceEC90AFrRvc4/2/BFFj9GmfJ/zDvYRzz0nTlZv0+0nTpmmr1W63W63Z69+XgTlbsnTeWzb3keUrVq5aPR+v1eoUlV52etnpZaeXnV52zd41a9flHJKpRu/g+tiwMeuULDV6N8Xm2LI165YcNXm3xfYdOyN25V2TvgbvUOze0+nsjdiXeU/q6r37Iw78uj0YcSjvntTVeg9HHPlz7+ixOH4i45zk1XmHT8apv/dPn4mz53IOSlyNd+R8XPj3aPBiXLqccVDiaryjceXq/4+vRVzPtid1/d4bMTZefWYo4mauPanr896KuN17aPbr+s7dTIMS1+u9F3G//9SDh/FovP/pRViPd+JxPKk7Nvw0xvre9sVY1Ts5Fc/qz42MxvMce1JX9Xaj23jyxcvkYzJU8b6KqckFW5Knirf7emKhduTK/3PY6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51ednrZ6WWnl51edoV53xTmfVuY911h3unCvDOFed8X5v1QmPfjp7K8n7+U5f36rSzv98I+v6X9ftYLTy+7Ab3o9LLTy04vO73s9LLTy04vO73s9LLTy04vO73s9LLTy04vO73s9LLTy04vO73s9LLTy04vu9K8P34CjYOnXFgPmTsAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #73932f } 
+		.s1 { fill: #e5efce } 
+	</style>
+	<path id="Layer" class="s0" d="m239.1 239.5c-131.9 0-238.8-106.9-238.8-238.8h238.8z"/>
+	<path id="Layer" class="s1" d="m239.1 190c-104.6 0-189.3-84.8-189.3-189.4h189.3z"/>
+	<path id="Layer" class="s1" d="m74.8 127.2l-2.8 2.2 3.2 4.2-2.3 1.8-3.2-4.2-3.8 2.9 4.4 5.7-2.3 1.8-6.4-8.3 13.6-10.5 6.2 8.2-2.3 1.8z"/>
+	<path id="Layer" class="s1" d="m82.6 132.5l2.3 2.6-5.6 11.3 11.9-4.4 2.2 2.6-17.4 6.3-1.5-1.8 8.1-16.5z"/>
+	<path id="Layer" fill-rule="evenodd" class="s1" d="m100.3 150.9c3.9 3.6 3.9 8.9 0.5 12.5-3.3 3.5-8.7 3.9-12.5 0.3-3.9-3.6-3.8-9-0.5-12.5 3.4-3.6 8.7-4 12.5-0.3zm-10 10.7c2.4 2.2 5.9 1.9 8.1-0.5 2.2-2.3 2.3-5.9-0.1-8.1-2.3-2.2-5.9-1.9-8.1 0.4-2.2 2.4-2.2 5.9 0.1 8.2z"/>
+	<path id="Layer" class="s1" d="m108.9 158.8l2.6 2.1-8.9 11.1 5.6 4.5-1.8 2.3-8.2-6.6z"/>
+	<path id="Layer" class="s1" d="m116.9 165.3l2.8 2-2.8 12.3 10.5-7 2.8 2-15.5 10.1-1.9-1.3z"/>
+	<path id="Layer" class="s1" d="m133.6 179.9l-1.8 3.1 4.5 2.7-1.5 2.5-4.5-2.7-2.5 4.1 6.3 3.7-1.5 2.5-9.1-5.3 8.7-14.8 8.9 5.2-1.5 2.6-6-3.6z"/>
+	<use id="Layer" href="#img1" x="1" y="0"/>
 </svg>
