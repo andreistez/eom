@@ -15,7 +15,7 @@
     }
 
     .logo {
-        transition: top ease $tr;
+        transition: top ease $tr, opacity ease $tr;
     }
 
     .header__logo_wrapper {
