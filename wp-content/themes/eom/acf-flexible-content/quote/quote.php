@@ -46,7 +46,7 @@ if( $section_type === 'slider' ){
 						$tablet		= esc_url( wp_get_attachment_image_url( $bg_image_tablet, 'video-poster@2x' ) );
 						$mobile		= esc_url( wp_get_attachment_image_url( $bg_image_mobile, 'video-poster@2x' ) );
 						?>
-						<div class="quote-slider-bg">
+						<div class="quote-bg">
 							<img srcset="<?php echo "$mobile 768w, $tablet 992w, $desktop 1240w" ?>" src="<?php echo $desktop ?>" alt="" />
 						</div>
 						<?php
@@ -68,8 +68,21 @@ if( $section_type === 'slider' ){
 			}
 		}else{
 			?>
-			<div class="quote-single"<?php echo $style ?>>
-				<?php get_template_part( 'components/cards/quote', null, ['quote' => $single_quote] ) ?>
+			<div class="quote-single">
+				<?php
+				if( $bg_image ){
+					$desktop	= esc_url( wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) );
+					$tablet		= esc_url( wp_get_attachment_image_url( $bg_image_tablet, 'video-poster@2x' ) );
+					$mobile		= esc_url( wp_get_attachment_image_url( $bg_image_mobile, 'video-poster@2x' ) );
+					?>
+					<div class="quote-bg">
+						<img srcset="<?php echo "$mobile 768w, $tablet 992w, $desktop 1240w" ?>" src="<?php echo $desktop ?>" alt="" />
+					</div>
+					<?php
+				}
+
+				get_template_part( 'components/cards/quote', null, ['quote' => $single_quote] );
+				?>
 			</div>
 			<?php
 		}
