@@ -13,10 +13,12 @@ wp_enqueue_style( 'swiper', THEME_URI . '/static/css/pages/swiper.min.css', [], 
 wp_enqueue_style( 'quote', THEME_URI . '/static/css/quote/quote.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'quote', THEME_URI . '/static/js/quote/quote.min.js', ['jquery'], THEME_VERSION, true );
 
-$section_type	= get_sub_field( 'section_type' );
-$bg_image		= get_sub_field( 'bg_image' );
-$style			= $bg_image ? ' style="background-image: url(' . wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) . ')"' : '';
-$single_quote	= [];
+$section_type		= get_sub_field( 'section_type' );
+$bg_image			= get_sub_field( 'bg_image' );
+$bg_image_tablet	= get_sub_field( 'bg_image_tablet' ) ?: $bg_image;
+$bg_image_mobile	= get_sub_field( 'bg_image_mobile' ) ?: $bg_image_tablet;
+//$style				= $bg_image ? ' style="background-image: url(' . wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) . ')"' : '';
+$single_quote		= [];
 
 if( $section_type === 'slider' ){
 	$slider = get_sub_field( 'slider' );
@@ -37,7 +39,20 @@ if( $section_type === 'slider' ){
 		if( $section_type === 'slider' ){
 			if( ! empty( $slider ) ){
 				?>
-				<div class="quote-slider swiper"<?php echo $style ?>>
+				<div class="quote-slider swiper">
+					<?php
+					if( $bg_image ){
+						$desktop	= esc_url( wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) );
+						$tablet		= esc_url( wp_get_attachment_image_url( $bg_image_tablet, 'video-poster@2x' ) );
+						$mobile		= esc_url( wp_get_attachment_image_url( $bg_image_mobile, 'video-poster@2x' ) );
+						?>
+						<div class="quote-slider-bg">
+							<img srcset="<?php echo "$mobile 768w, $tablet 992w, $desktop 1240w" ?>" src="<?php echo $desktop ?>" alt="" />
+						</div>
+						<?php
+					}
+					?>
+
 					<div class="swiper-wrapper">
 						<?php
 						foreach( $slider as $slide )
