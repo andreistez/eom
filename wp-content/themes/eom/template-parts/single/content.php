@@ -31,7 +31,7 @@ $additional	= get_field( 'additional_info' );
                         <?php echo eom_get_reading_time( $post_id ), ' ', __( 'min read', 'eom' ) ?>
                     </div>
                     <div class="post-single-date">
-						<?php /*echo get_the_date( 'M Y', $post_id ) */?>
+						<?php echo get_the_date( 'M Y', $post_id ) ?>
                     </div>
                 </div>
 
