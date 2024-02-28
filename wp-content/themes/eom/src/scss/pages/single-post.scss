@@ -11,7 +11,7 @@
     h1 {
 		padding-bottom: 15px;
         margin-bottom: 32px;
-		border-bottom: 2px solid $black
+		border-bottom: 2px solid $dark-blue
     }
 
     &-content-inner {
@@ -45,6 +45,8 @@
 
     hr {
         margin: 32px 0;
+        border-color: $dark-blue;
+        opacity: 1;
     }
 
     h3 {
