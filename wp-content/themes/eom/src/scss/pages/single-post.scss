@@ -51,7 +51,8 @@
         margin-bottom: 20px;
 
         em {
-            display: block;
+            display: flex;
+            flex-direction: column;
             width: 100%;
             max-width: 703px;
             margin-left: auto;
