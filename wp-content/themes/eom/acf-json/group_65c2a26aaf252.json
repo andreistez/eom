@@ -736,7 +736,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -753,7 +753,7 @@
                         },
                         {
                             "key": "field_65c543eb231e2",
-                            "label": "Background Image",
+                            "label": "Background Image (Desktop)",
                             "name": "bg_image",
                             "aria-label": "",
                             "type": "image",
@@ -761,7 +761,57 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_65dfa7621ba26",
+                            "label": "Background Image Tablet",
+                            "name": "bg_image_tablet",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "(992px x auto)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_65dfa77d1ba27",
+                            "label": "Background Image Mobile",
+                            "name": "bg_image_mobile",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "(768px x auto)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1833,5 +1883,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708979485
+    "modified": 1709156439
 }
