@@ -4,7 +4,7 @@
  * Template name: ACF Flexible Content
  *
  * @package WordPress
- * @subpackage livanta
+ * @subpackage eom
  */
 
 get_header();
