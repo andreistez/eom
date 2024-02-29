@@ -209,8 +209,22 @@
 
     ul {
         list-style: none;
-        padding-left: 15px;
         margin-bottom: 14px;
-        position: relative;
+
+        li {
+            @include standfirst();
+            position: relative;
+            padding-left: 15px;
+        }
+
+        li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-55%);
+            color: inherit;
+            font-size: inherit;
+        }
     }
 }

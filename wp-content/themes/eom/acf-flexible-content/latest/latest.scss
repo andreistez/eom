@@ -3,7 +3,7 @@
 
 .latest {
     @include borderTop;
-    padding: 16px 0;
+    padding: 16px 0 0;
 
     .subtitle {
         font-family: $ff;
@@ -22,11 +22,11 @@
     }
 
     &__wrapper {        
-        padding: 6px 15px;
+        padding: 15px;
         overflow: hidden;
 
         @media(min-width: $md) {
-            padding: 20px 20px 20px;
+            padding: 32px;
         }
 
         @media(min-width: $xl) {
@@ -47,7 +47,11 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 16px;
+        margin-bottom: 9px;
+
+        @media(min-width: $md) {
+            margin-bottom: 0;
+        }
     }
 
     p {
