@@ -3,6 +3,7 @@
 
 .latest {
     @include borderTop;
+    padding: 16px 0;
 
     .subtitle {
         font-family: $ff;
@@ -46,7 +47,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
 
     p {
@@ -72,5 +73,9 @@
         @media(min-width: $xl) {
             height: 90px;
         }
+    }
+
+    .link__arrow_wrapper {
+        margin: 0;
     }
 }

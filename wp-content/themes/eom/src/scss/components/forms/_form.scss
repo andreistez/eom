@@ -49,7 +49,7 @@
 		width: 100%;
 		font-family: $ff;
 		color: $dark-blue;
-		padding: 4px 14px;
+		padding: 10px 16px;
 		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
@@ -79,7 +79,7 @@
 			font-size: 18px;
 			line-height: 18px;
 			letter-spacing: -0.54px;
-			padding: 6px 15px
+			padding: 10px 15px
 		}
 
 		&.wpcf7-not-valid {
@@ -93,7 +93,7 @@
 
 		@media(min-width: $md) {
 			height: 150px;
-			padding-top: 8px
+			padding-top: 10px
 		}
 	}
 
