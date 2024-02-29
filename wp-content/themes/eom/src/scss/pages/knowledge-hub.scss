@@ -6,15 +6,15 @@
     @media(min-width: $md) {
         padding: 50px 0;
     }
+
+	&-cats {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%
+	}
 }
 
 .categories {
-    &-box {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     &-wrapper {
         width: 100%;
         padding: 20px;
@@ -140,8 +140,8 @@
     &-inner {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        justify-content: flex-start;
+        gap: 10px
     }
 
     &-link-wrapper {

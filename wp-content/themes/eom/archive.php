@@ -8,7 +8,6 @@
 
 get_header();
 
-// Archive styles and scripts.
 wp_enqueue_style( 'archive', THEME_URI . '/static/css/pages/archive.min.css', [], THEME_VERSION );
 ?>
 

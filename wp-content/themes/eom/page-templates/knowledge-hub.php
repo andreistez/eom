@@ -10,629 +10,103 @@
 get_header();
 
 wp_enqueue_style( 'knowledge-hub', THEME_URI . '/static/css/pages/knowledge-hub.min.css', [], THEME_VERSION );
+
+$cats = get_field( 'categories' );
+
+/*$news = get_posts( [
+	'post_type'		=> 'post',
+	'post_status'	=> 'publish',
+	'category_name'	=> 'latest-news'
+] );
+$news_cat = get_category_by_slug( 'latest-news' );*/
 ?>
 
 <main class="main">
 	<section class="knowledge-hub">
 		<div class="container">
-            <h1>Knowledge Hub</h1>
-            <div class="categories-box">
-                <div class="categories-wrapper">
-                    <h2>News</h2>
-                    <div class="categories-inner">
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View More
-                        </a>
-                    </div>
-                </div>
-                <div class="categories-wrapper">
-                    <h2>Articles</h2>
-                    <div class="categories-inner">
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hub-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                    <a href="#">
-                                        View Post
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="categories-box">
-                <div class="categories-wrapper">
-                    <h2>Videos and Podcasts</h2>
-                    <div class="categories-inner">
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View More
-                        </a>
-                    </div>
-                </div>
-                <div class="categories-wrapper">
-                    <h2>Applied Research</h2>
-                    <div class="categories-inner">
-                        <a href="#" class="hub-card link-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="categories-wrapper full-width">
-                <h2>Business Case Studies</h2>
-                <div class="categories-inner">
-                    <div class="hub-card">
-                        <div class="hub-card-inner">
-                            <div class="hub-card-img">
-                                <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                            </div>
-                            <div class="hub-card-bottom">
-                                <p>
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </p>
-                                <a href="#">
-                                    View Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hub-card">
-                        <div class="hub-card-inner">
-                            <div class="hub-card-img">
-                                <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                            </div>
-                            <div class="hub-card-bottom">
-                                <p>
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </p>
-                                <a href="#">
-                                    View Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hub-card">
-                        <div class="hub-card-inner">
-                            <div class="hub-card-img">
-                                <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                            </div>
-                            <div class="hub-card-bottom">
-                                <p>
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </p>
-                                <a href="#">
-                                    View Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hub-card">
-                        <div class="hub-card-inner">
-                            <div class="hub-card-img">
-                                <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                            </div>
-                            <div class="hub-card-bottom">
-                                <p>
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </p>
-                                <a href="#">
-                                    View Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hub-card">
-                        <div class="hub-card-inner">
-                            <div class="hub-card-img">
-                                <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                            </div>
-                            <div class="hub-card-bottom">
-                                <p>
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                </p>
-                                <a href="#">
-                                    View Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="categories-link-wrapper">
-                    <a href="#">
-                        View More
-                    </a>
-                </div>
-            </div>
-            <div class="categories-wrapper full-width">
-                    <h2>Free to Access Book</h2>
-                    <p>
-                    Putting Purpose into Practice: The Economics of Mutuality. Edited by Colin Mayer and Bruno Roche; Oxford University Press, 2021. Explores how the Economics of Mutuality empowers business to thrive by meeting the needs of the world. Includes chapters written by responsible business experts, as well as in-depth case studies covering a wide range of contexts.
-                    </p>
-                    <div class="categories-inner">
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View all chapters
-                        </a>
-                    </div>
-            </div>
-            <div class="categories-wrapper full-width">
-                    <h2>Literature Reviews</h2>
-                    <div class="categories-inner">
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="hub-card link-card">
-                            <div class="hub-card-inner">
-                                <div class="hub-card-img">
-                                    <img src="<?php echo THEME_URI ?>/static/img/test.jpg" alt="">
-                                </div>
-                                <div class="hub-card-bottom">
-                                    <p>
-                                        Why I’m No Longer Calling Myself a Brand Purpose Consultant
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="categories-link-wrapper">
-                        <a href="#">
-                            View More
-                        </a>
-                    </div>
-            </div>
+            <h1><?php the_title() ?></h1>
+
+			<div class="knowledge-hub-cats">
+				<?php
+				if( ! empty( $cats ) ){
+					foreach( $cats as $cat ){
+						$type = $cat['appearance'] ?: 'half-width';
+
+						// If these are custom links.
+						if( $cat['is_custom'] ){
+							if( ! $custom_links = $cat['custom_links'] ) continue;
+
+							$title			= $cat['title'];
+							$desc			= $cat['desc'];
+							$view_all_link	= $cat['view_all_link'];
+							?>
+							<div class="categories-wrapper <?php echo esc_attr( $type ) ?>">
+								<?php
+								if( $title ) echo '<h2>', esc_html( $title ), '</h2>';
+
+								if( $desc ) echo '<p>', esc_html( $desc ), '</p>';
+								?>
+
+								<div class="categories-inner">
+									<?php
+									foreach( $custom_links as $link )
+										get_template_part( 'components/cards/post', 'hub-custom', ['link' => $link] );
+									?>
+								</div>
+
+								<?php
+								if( $view_all_link ){
+									$l_title	= $view_all_link['title'];
+									$l_url		= $view_all_link['url'];
+									$l_target	= $view_all_link['target'] ? ' target="_blank"' : '';
+									?>
+									<div class="categories-link-wrapper">
+										<a href="<?php echo esc_url( $l_url ) ?>"<?php echo $l_target?>>
+											<?php echo esc_html( $l_title ) ?>
+										</a>
+									</div>
+									<?php
+								}
+								?>
+							</div>
+							<?php
+						}else{
+							if( ! $term = $cat['category'] ) continue;
+
+							$term_id	= $term->term_id;
+							$posts		= get_posts( [
+								'post_type'		=> 'post',
+								'post_status'	=> 'publish',
+								'numberposts'	=> 5,
+								'category_name'	=> $term->slug
+							] );
+							?>
+							<div class="categories-wrapper <?php echo esc_attr( $type ) ?>">
+								<h2><?php echo esc_html( $term->name ) ?></h2>
+
+								<?php
+								if( ! empty( $posts ) ){
+									echo '<div class="categories-inner">';
+
+									foreach( $posts as $_p )
+										get_template_part( 'components/cards/post', 'hub', ['id' => $_p->ID] );
+
+									echo '</div>';
+								}
+								?>
+
+								<div class="categories-link-wrapper">
+									<a href="<?php echo get_category_link( $term_id ) ?>">
+										<?php _e( 'View More', 'eom' ) ?>
+									</a>
+								</div>
+							</div>
+							<?php
+						}
+					}
+				}
+				?>
+			</div>
 		</div>
 	</section>
 </main>
