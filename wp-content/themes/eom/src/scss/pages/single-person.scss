@@ -8,17 +8,17 @@
 }
 
 .person-single {
-    padding: 40px 0 32px;
 
     &-content {
-        padding: 0 10px;
+        background-color: $white;
+        padding: 40px 10px;
 
         @media (min-width: $md) {
-            padding: 0 30px;
+            padding: 40px 30px;
         }
 
         @media (min-width: $xl) {
-            padding: 0 116px;
+            padding: 40px 116px;
         }
 
         &-body {

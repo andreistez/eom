@@ -75,7 +75,7 @@ h2, .h2 {
 }
 
 .image__text_heading p, .h2__wrapper p {
-    display: none;
+    display: inline-block;
     font-family: $ff;
     font-size: 10px;
     font-style: normal;
@@ -89,7 +89,6 @@ h2, .h2 {
     }
 
     @media all and (min-width: $xl) {
-        display: inline-block;
         font-size: 14px;
         line-height: 20px; 
         letter-spacing: 1.26px;

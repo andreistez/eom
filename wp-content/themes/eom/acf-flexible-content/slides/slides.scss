@@ -32,6 +32,7 @@
         width: 100%;
         border: 2px solid $dark-blue;
         height: auto;
+        background-color: $white;
 
         @media(min-width: $sm) {
             width: 350px;
