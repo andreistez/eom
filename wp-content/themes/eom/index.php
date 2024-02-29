@@ -11,6 +11,11 @@ get_header();
 
 $posts_page_id	= get_option( 'page_for_posts', true );
 $term_id		= get_queried_object()->term_id ?? 0;
+
+global $query_string;
+parse_str( $query_string, $args );
+$args['category_name'] = 'show-in-section';
+query_posts( $args );
 ?>
 
 <main class="main">
@@ -27,7 +32,7 @@ $term_id		= get_queried_object()->term_id ?? 0;
 				?>
 			</div>
 
-            <button class="more" data-page="1">
+            <button class="more" data-page="1" data-term="show-in-section">
 				<?php _e( 'Load more', 'eom' ) ?>
 			</button>
 

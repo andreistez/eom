@@ -18,10 +18,12 @@ const loadMorePosts = () => {
 
 		const
 			formData	= new FormData(),
-			page		= btn.dataset.page || 1
+			page		= btn.dataset.page || 1,
+			termName	= btn.dataset.term || ''
 
 		formData.append( 'action', 'eom_ajax_load_more_posts' )
 		formData.append( 'page', page )
+		formData.append( 'term', termName )
 
 		customAjaxRequest( formData ).then( res => {
 			if( res ){
@@ -29,6 +31,8 @@ const loadMorePosts = () => {
 					case true:
 						btn.setAttribute( 'data-page', res.data.page )
 						wrap.insertAdjacentHTML( 'beforeend', res.data.posts )
+
+						if( res.data.end ) btn.remove()
 						break
 
 					case false:

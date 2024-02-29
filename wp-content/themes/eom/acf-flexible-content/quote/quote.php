@@ -17,7 +17,6 @@ $section_type		= get_sub_field( 'section_type' );
 $bg_image			= get_sub_field( 'bg_image' );
 $bg_image_tablet	= get_sub_field( 'bg_image_tablet' ) ?: $bg_image;
 $bg_image_mobile	= get_sub_field( 'bg_image_mobile' ) ?: $bg_image_tablet;
-//$style				= $bg_image ? ' style="background-image: url(' . wp_get_attachment_image_url( $bg_image, 'video-poster@2x' ) . ')"' : '';
 $single_quote		= [];
 
 if( $section_type === 'slider' ){
