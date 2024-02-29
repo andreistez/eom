@@ -7,13 +7,15 @@
  */
 
 get_header();
+
+// Archive styles and scripts.
+wp_enqueue_style( 'archive', THEME_URI . '/static/css/pages/archive.min.css', [], THEME_VERSION );
 ?>
 
 <main class="main">
 	<section class="archive-wrap">
 		<div class="container">
 			<h1 class="archive-title"><?php single_cat_title() ?></h1>
-
 			<?php
 			if( have_posts() ){
 				echo '<div class="archive-posts">';
