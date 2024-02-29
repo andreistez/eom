@@ -95,10 +95,15 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+              -moz-border-radius: 50%;
+                   border-radius: 50%;
             outline: 2px solid $black;
             z-index: 1;
             pointer-events: none;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
         }
 
         &::before {
