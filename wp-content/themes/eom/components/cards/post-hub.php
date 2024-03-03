@@ -12,7 +12,7 @@
 if( ! $post_id = $args['id'] ?? null ) return;
 ?>
 
-<div class="hub-card">
+<div class="hub-card post-<?php echo esc_attr( $post_id ) ?>">
 	<div class="hub-card-inner">
 		<?php
 		if( has_post_thumbnail( $post_id ) )
