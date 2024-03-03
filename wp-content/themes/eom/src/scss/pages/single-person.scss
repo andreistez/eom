@@ -32,21 +32,23 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
-        min-height: 400px;
         margin-bottom: 32px;
 
         @media (min-width: $md) {
             flex-direction: row;
-            min-height: 500px;
+            justify-content: space-between;
         }
     }
 
     &-image {
-        width: 100%;
+        width: 254px;
+        height: 254px;
         border: 2px solid $dark-blue;
+        margin-right: 10px;
 
         @media (min-width: $md) {
-            width: 50%;
+            width: 304px;
+            height: 304px;
         }
 
         img {
