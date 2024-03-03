@@ -15,7 +15,7 @@ if( ! $post_id = $args['id'] ?? null ) return;
 $type = $args['type'] ?? 'no-thumb';
 ?>
 
-<div class="latest__item">
+<div class="latest__item post-<?php echo esc_attr( $post_id ) ?>">
 	<div class="latest__item_inner">
 		<?php
 		if( $type === 'thumb' ){
