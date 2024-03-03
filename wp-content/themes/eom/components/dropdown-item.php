@@ -33,7 +33,7 @@ if( ! $title && ! $text ) return;
 		?>
 		<div class="dropdown__open">
 			<div class="dropdown__inner">
-				<div class="dropdown__text"><?php echo esc_html( $text ) ?></div>
+				<div class="dropdown__text"><?php echo $text ?></div>
 			</div>
 		</div>
 		<?php
