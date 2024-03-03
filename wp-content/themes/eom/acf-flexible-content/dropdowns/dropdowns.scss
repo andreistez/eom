@@ -241,18 +241,34 @@
 
     &:first-child {
         background-color: #EE6A5E;
+
+        .dropdown__text strong {
+            color: #EE6A5E;
+        }
     }
 
     &:nth-child(2) {
         background-color: #44929F;
+
+        .dropdown__text strong {
+            color: #44929F;
+        }
     }
 
     &:nth-child(3) {
         background-color: #7379AD;
+
+        .dropdown__text strong {
+            color: #7379AD;
+        }
     }
 
     &:last-child {
         background-color: #73932F;
+
+        .dropdown__text strong {
+            color: #73932F;
+        }
     }
 
     &__open {
