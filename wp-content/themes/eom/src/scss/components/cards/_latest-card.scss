@@ -18,13 +18,20 @@
 
     h5 {
         margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 30px;
 
         @media(min-width: $md) {
+            height: 78px;
             margin-bottom: 16px;
         }
 
-        @media(min-width: $xl) {
-            margin-bottom: 16px;
+        @media(min-width: $lg) {
+            height: 120px;
+            -webkit-line-clamp: 4;
         }
     }
 
@@ -78,6 +85,18 @@
 
             @media(min-width: $md) {
                 flex-direction: row;
+            }
+        }
+
+        p {
+            height: 30px;
+
+            @media(min-width: $md) {
+                height: 50px;
+            }
+
+            @media(min-width: $lg) {
+                height: 66px;
             }
         }
     }

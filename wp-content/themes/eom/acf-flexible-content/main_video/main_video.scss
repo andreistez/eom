@@ -5,6 +5,8 @@
 .main__video {
     @include borderTop;
 
+    --plyr-color-main: #5bacb8;
+
     &_wrapper {
         position: relative;
         background-color: $dark-blue;
@@ -74,3 +76,4 @@
         border: 2px solid $light;
     }
 }
+
