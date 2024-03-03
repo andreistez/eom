@@ -1,0 +1,50 @@
+@import "../../src/scss/utils/vars/vars.scss";
+@import "../../src/scss/utils/typography/typography.scss";
+
+.text__rows {
+  @include borderTop();
+
+  &.animated {
+    .text__image_info {
+      animation: imageTextRight 1s forwards ease;
+    }
+
+    .image__text_heading {
+      p {
+        animation: textOpacity 2s forwards ease;
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .image__text_heading {
+    margin-bottom: 16px;
+  }
+
+  &_wrapper {
+    padding: 15px;
+
+    @media(min-width: $md) {
+        padding: 32px;
+    }
+  }
+
+  &_blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+
+        @media(min-width: $md) {
+            gap: 32px;
+        }
+    }
+
+    &_block {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(50% - 16px);
+        }
+    }
+}
