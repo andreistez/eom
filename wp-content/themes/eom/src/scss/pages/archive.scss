@@ -6,6 +6,7 @@
     font-size: 40px;
     line-height: 1;
     margin-bottom: 20px;
+    color: $violet;
 
     @media (min-width: $md) {
       font-size: 70px;
@@ -39,6 +40,8 @@
             .latest__item_img {
                 width: 50%;
                 min-height: 200px;
+                border-right: 2px solid $dark-blue;
+                border-bottom: 0;
             }
     
             .latest__item_info {
@@ -70,6 +73,7 @@
         border-right: 0;
         width: 100%;
         min-height: 150px;
+        border-bottom: 2px solid $dark-blue;
       }
     }
 
@@ -142,6 +146,10 @@
             background-color: $white;
             color: $dark-blue;
         }
+    }
+
+    &.dots {
+        background-color: $cerulean;
     }
   }
 

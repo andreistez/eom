@@ -240,7 +240,7 @@
     }
 
     &::before {
-        left: 9px;
+        left: 10px;
 
         @media (min-width: $sm) {
             left: 20px;
@@ -256,7 +256,7 @@
     }
 
     &::after {
-        right: 9px;
+        right: 10px;
 
         @media (min-width: $sm) {
             right: 20px;

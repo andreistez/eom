@@ -27,6 +27,7 @@
             margin-bottom: 10px;
             font-size: 25px;
             line-height: $lh;
+            color: $cerulean;
 
             @media(min-width: $md) {
                 font-size: 40px;
@@ -187,6 +188,7 @@ h1 {
     font-size: 40px;
     line-height: 1;
     margin-bottom: 20px;
+    color: $violet;
 
     @media(min-width: $md) {
         font-size: 70px;
@@ -266,7 +268,7 @@ h1 {
     }
 
     @media(min-width: $lg) {
-        width: calc(33.333% - 8px);
+        width: calc(33.333% - 7px);
 
         &:nth-child(-n + 2) {
             width: calc(50% - 5px);
