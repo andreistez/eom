@@ -66,13 +66,13 @@
             color: $dark-blue;
     
             @media(min-width: $md) {
-                height: 45px;
+                height: 42px;
                 font-size: 14px;
                 line-height: 1;
             }
     
             @media(min-width: $lg) {
-                height: 75px;
+                height: 73px;
                 -webkit-line-clamp: 4;
                 font-size: 18px;
             }
