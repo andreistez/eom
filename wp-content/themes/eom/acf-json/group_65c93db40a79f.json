@@ -23,6 +23,26 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_65e6521dc7ffc",
+            "label": "Short Position",
+            "name": "short_position",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_65c93dd98ce92",
             "label": "Social Links",
             "name": "social_links",
@@ -73,7 +93,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -102,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707687921
+    "modified": 1709593139
 }

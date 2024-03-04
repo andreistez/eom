@@ -12,7 +12,7 @@
 
 if( ! $person_id = $args['id'] ?? null ) return;
 
-$position = get_field( 'position', $person_id );
+$short_position = get_field( 'short_position', $person_id );
 ?>
 
 <div class="swiper-slide">
@@ -29,7 +29,7 @@ $position = get_field( 'position', $person_id );
                 <?php echo get_the_title( $person_id ) ?>
             </div>
 
-            <?php if( $position ) echo '<div class="swiper-slide__text">', $position, '</div>' ?>
+            <?php if( $short_position ) echo '<div class="swiper-slide__text">', $short_position, '</div>' ?>
 
             <a href="<?php echo get_the_permalink( $person_id ) ?>" class="link__arrow">
                 <?php _e( 'View Profile', 'eom' ) ?> <span>→</span>
