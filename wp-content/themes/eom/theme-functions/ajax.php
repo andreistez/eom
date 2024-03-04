@@ -27,7 +27,7 @@ function eom_ajax_load_more_posts(): void
 	$page		= ( int ) eom_clean( $_POST['page'] ) + 1;
 	$term_name	= eom_clean( $_POST['term'] );
 	$per_page	= 4;	// yes, just hardcoded count.
-	$offset		= $per_page * $page - $per_page;
+	$offset		= $page === 2 ? 5 : 5 + $per_page * ( $page - 1 ) - $per_page;	// First time need to left 5 posts behind.
 	$args		= [
 		'post_type'		=> 'post',
 		'post_status'	=> 'publish',
@@ -42,12 +42,15 @@ function eom_ajax_load_more_posts(): void
 	$posts					= '';
 
 	if( empty( $posts_arr ) )
-		wp_send_json_error( ['msg' => __( 'No posts were found matching your selection.', 'eom' )] );
+		wp_send_json_error( [
+			'msg'	=> __( 'No posts were found matching your selection.', 'eom' ),
+			'end'	=> 1
+		] );
 
 	foreach( $posts_arr as $p )
 		$posts .= eom_load_template_part( 'components/cards/post', null, ['id' => $p->ID, 'type' => 'thumb'] );
 
-	$is_end = ( $page * $per_page >= $posts_count ) ? 1 : '';
+	$is_end = ( 5 + $per_page * ( $page - 1 ) >= $posts_count ) ? 1 : '';
 	wp_send_json_success( ['posts' => $posts, 'page' => $page, 'end' => $is_end] );
 }
 
