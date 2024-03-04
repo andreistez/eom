@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
+    showPopup('.modal__wrapper', '.call__modal', '.close__button', '#modal-lock')
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {
@@ -133,5 +134,50 @@ const generateSectionIds = () => {
 
 		section.id = `${ sectionName }-${ store[sectionName] }`
 	} )
+}
+
+export const showPopup = (selector, btn, close, lock) => {
+	const popupWrapper = document.querySelector(selector)
+	const popButtons = document.querySelectorAll(btn)
+    const closeBtns   = document.querySelectorAll(close)
+	setTargetElement(document.querySelector(lock))
+
+	if (!popupWrapper) return
+	popButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			if (!popupWrapper.classList.contains('showed')) {
+				popupWrapper.classList.add('showed')
+				popupWrapper.classList.remove('closed')
+				disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+			} else {
+				popupWrapper.classList.add('closed')
+				setTimeout(() => popupWrapper.classList.remove('showed'), 350);
+				setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+				enableBodyScroll(getTargetElement())
+			}
+		})
+	})
+
+    closeBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            popupWrapper.classList.add('closed')
+            setTimeout(() => popupWrapper.classList.remove('showed'), 350);
+			setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+			enableBodyScroll(getTargetElement())      
+        })
+    })
+
+	popupWrapper.addEventListener('click', e => {
+		e.stopPropagation()
+
+		const target = e.target
+
+		if (target.className && target.classList.contains('modal__wrapper')) {
+			popupWrapper.classList.add('closed')
+			setTimeout(() => popupWrapper.classList.remove('showed'), 350);
+			setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+			enableBodyScroll(getTargetElement())
+		}
+	})
 }
 

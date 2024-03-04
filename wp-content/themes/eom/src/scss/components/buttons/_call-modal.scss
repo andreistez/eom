@@ -1,0 +1,23 @@
+.call__modal {
+    color: $white;
+    font-family: $ff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: $fw-bold;
+    line-height: 10px;
+    letter-spacing: 1.26px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 2px solid $white;
+    transition: background-color ease $tr, color ease $tr;
+
+    @media(min-width: $md) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $dark-blue;
+    }
+}

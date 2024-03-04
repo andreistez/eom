@@ -17,6 +17,10 @@
         }
     }
 
+    h2 {
+        margin-bottom: 0;
+    }
+
     &_wrapper {
         display: flex;
         flex-direction: column;
@@ -41,10 +45,7 @@
 
         .image__text_heading {
             width: 100%;
-        }
-
-        h2 {
-            margin: 16px 0;
+            margin-bottom: 16px;
         }
     }
 

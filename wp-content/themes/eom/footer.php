@@ -70,8 +70,9 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                                 <?php
                                 if( $col_title_4 ) echo '<div class="footer__heading">', esc_html( $col_title_4 ), '</div>';
 
-								echo do_shortcode( '[contact-form-7 id="d1561b2" title="Subscribe"]' );
-								?>
+								// echo do_shortcode( '[contact-form-7 id="d1561b2" title="Subscribe"]' );
+                                ?>
+                                <button class="call__modal" type="button">Subscribe</button>
                             </div>
                         </div>
                     </div>
@@ -90,6 +91,28 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                     </div>
                 </div>
 			</footer>
+            <div class="modal__wrapper" id="modal-lock">
+                <div class="modal">
+                    <div class="modal__top">
+                        <div class="modal__title">
+                            Newsletter
+                        </div>
+                        <button class="close__button">
+                            <span></span>
+                        </button>
+                    </div>
+                    <form>
+                        <fieldset>
+                            <input type="text" name="name" placeholder="First Name">
+                            <input type="text" name="last-name" placeholder="Last Name">
+                            <input type="text" name="job-title" placeholder="Job Title">
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="text" name="organization" placeholder="Organization"> 
+                            <button class="modal__button">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
 			<?php wp_footer() ?>
 		</div><!-- .wrapper -->
         <div class="lines"></div>

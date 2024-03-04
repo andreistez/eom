@@ -92,6 +92,7 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                     </div>
                 </div>
 			</footer>
+        </div>
 			<?php wp_footer() ?>
 		</div><!-- .wrapper -->
         <div class="lines"></div>
