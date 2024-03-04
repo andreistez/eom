@@ -2,6 +2,10 @@
 
 .blog {
 
+    &-posts {
+        padding-bottom: 16px;
+    }
+
     &-cards {
         display: flex;
         flex-wrap: wrap;
@@ -143,7 +147,7 @@
     .more {
         display: flex;
         justify-content: center;
-        margin: 16px auto;
+        margin: 16px auto 0 auto;
         text-transform: capitalize;
     }
 }

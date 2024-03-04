@@ -9,17 +9,20 @@
     font-weight: $fw-bold;
     line-height: 1;
     letter-spacing: 1.26px;
-    text-transform: uppercase;
-    padding: 5px;
+    text-transform: capitalize;
+    padding: 11px;
     border: 2px solid $white;
-    transition: background-color ease $tr, color ease $tr;
+    background-color: $dark-blue;
+    transition: background-color ease $tr, color ease $tr,
+            border-color ease $tr;
 
     @media(min-width: $md) {
         font-size: 14px;
     }
 
     &:hover {
-        background-color: $white;
-        color: $dark-blue;
+        background-color: $grass;
+        color: $white;
+        border-color: $grass;
     }
 }
