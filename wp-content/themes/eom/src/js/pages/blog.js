@@ -31,14 +31,14 @@ const loadMorePosts = () => {
 					case true:
 						btn.setAttribute( 'data-page', res.data.page )
 						wrap.insertAdjacentHTML( 'beforeend', res.data.posts )
-
-						if( res.data.end ) btn.remove()
 						break
 
 					case false:
 						console.error( res.data.msg )
 						break
 				}
+
+				if( res.data.end ) btn.remove()
 			}
 
 			btn.removeAttribute( 'disabled' )
