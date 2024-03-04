@@ -9,13 +9,13 @@
  * @subpackage eom
  */
 
-if(
-	! ( $video = get_sub_field( 'video' ) ?: null ) &&
-	! ( $vimeo_url = get_sub_field( 'vimeo_url' ) ?: null )
-) return;
-
 wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.min.js', ['jquery'], THEME_VERSION, true );
+
+$video		= get_sub_field( 'video' );
+$vimeo_url	= get_sub_field( 'vimeo_url' );
+
+if( ! $video && ! $vimeo_url ) return;
 
 $video_type	= get_sub_field( 'video_type' );	// 'local' | 'vimeo'
 $poster		= get_sub_field( 'poster' );
