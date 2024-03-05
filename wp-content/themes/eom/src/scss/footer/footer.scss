@@ -54,7 +54,7 @@
         }
 
         @media(min-width: $xl) {
-            max-width: 788px;
+            max-width: 740px;
             flex-wrap: nowrap;
         }
     }
@@ -86,10 +86,15 @@
             width: 33%;
             min-width: 168px;
             margin-bottom: 0;
+            max-width: 235px;
         }
 
         @media(min-width: $xl) {
-            width: fit-content;
+            width: auto;
+        }
+
+        .footer__heading {
+            max-width: 235px;
         }
     }
 

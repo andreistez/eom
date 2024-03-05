@@ -101,6 +101,12 @@
         }
     }
 
+    @media(min-width: $md) {
+        &:nth-last-child(-n + 4) {
+            margin-bottom: 0;
+        }
+    }
+
     &:nth-child(even) {
         margin-right: 0;
     }
