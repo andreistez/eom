@@ -2,10 +2,6 @@
 
 .blog {
 
-    &-posts {
-        padding-bottom: 16px;
-    }
-
     &-cards {
         display: flex;
         flex-wrap: wrap;
@@ -25,6 +21,10 @@
         width: calc(50% - 5px);
         outline: 0;
         border: 2px solid $dark-blue;
+
+        &:last-child {
+            margin-bottom: 16px;
+        }
 
         &:first-child {
             border-top: 0;
@@ -150,7 +150,7 @@
     .more {
         display: flex;
         justify-content: center;
-        margin: 16px auto 0 auto;
+        margin: 0 auto;
         text-transform: capitalize;
     }
 }

@@ -86,7 +86,7 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
 		                        'menu_class'		=> 'footer__legal_links'
 	                        ] );
 	                        ?>
-                            <div class="footer__year">© Economics of Mutuality Alliance<?php echo date( 'Y' ) ?></div>
+                            <div class="footer__year">© Economics of Mutuality Alliance <?php echo date( 'Y' ) ?></div>
                         </div>
                     </div>
                 </div>
