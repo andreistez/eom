@@ -27,6 +27,10 @@
     @media(min-width: $md) {
         padding: 32px;
     }
+
+    p {
+        font-weight: $fw-light;
+    }
   }
 
   &_blocks {

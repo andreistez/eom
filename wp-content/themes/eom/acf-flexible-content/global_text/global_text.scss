@@ -3,7 +3,7 @@
 
 .global__text {
    @include borderTop;
-   font-weight: $fw-regular;
+   font-weight: $fw-light;
 
     &_wrapper {
         padding: 15px;
@@ -19,6 +19,7 @@
     }
 
     p {
-        @include firstLine
+        @include firstLine();
+        font-weight: $fw-light;
     }
 }

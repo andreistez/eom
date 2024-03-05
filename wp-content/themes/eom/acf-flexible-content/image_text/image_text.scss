@@ -115,6 +115,10 @@
             padding-top: 28px;
         }
 
+        p {
+            font-weight: $fw-light;
+        }
+
         a {
             text-align: right;
             font-family: $ff;
@@ -213,6 +217,7 @@
 
         li {
             @include standfirst();
+            font-weight: $fw-light;
             position: relative;
             padding-left: 15px;
         }
@@ -225,6 +230,7 @@
             transform: translateY(-2px);
             color: inherit;
             font-size: inherit;
+            font-weight: inherit;
         }
     }
 }
