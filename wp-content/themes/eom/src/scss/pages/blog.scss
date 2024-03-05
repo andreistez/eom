@@ -2,6 +2,12 @@
 
 .blog {
 
+    &-posts {
+        .resources {
+            margin-top: 16px;
+        }
+    }
+
     &-cards {
         display: flex;
         flex-wrap: wrap;
@@ -11,6 +17,7 @@
         @media(min-width: $xl) {
             gap: 0;
             padding: 0;
+            padding-bottom: 16px;
         }
     }
 
@@ -21,10 +28,6 @@
         width: calc(50% - 5px);
         outline: 0;
         border: 2px solid $dark-blue;
-
-        &:last-child {
-            margin-bottom: 16px;
-        }
 
         &:first-child {
             border-top: 0;
