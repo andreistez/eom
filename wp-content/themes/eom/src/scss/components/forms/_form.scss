@@ -120,9 +120,15 @@
 		margin: 20px 0 0
 	}
 
-	&.invalid .wpcf7-response-output {
-		border-color: red;
-		background-color: #ff9696
+	&.invalid {
+		.wpcf7-response-output {
+			border-color: red;
+			background-color: #ff9696
+		}
+
+		.wpcf7-form-control.wpcf7-not-valid {
+			margin-bottom: 0
+		}
 	}
 
 	&.sent .wpcf7-response-output {
