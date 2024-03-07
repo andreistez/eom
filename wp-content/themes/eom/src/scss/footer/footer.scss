@@ -231,10 +231,9 @@
         font-style: normal;
         font-weight: $fw-bold;
         background-color: $white;
-        line-height: 10px;
+        line-height: 1;
         transition: background-color ease $tr, color ease $tr;
         padding: 10px 16px;
-        margin-left: 2.5px;
 
         &:hover {
             opacity: 1;
@@ -244,7 +243,8 @@
 
         @media(min-width: $md) {
             font-size: 14px;
-            line-height: 16px;
+            line-height: 1;
+            margin-left: 2.5px;
         }
     }
 }
