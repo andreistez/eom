@@ -60,7 +60,7 @@
         color: $dark-blue;
 
         @media(min-width: $md) {
-            height: 48px;
+            height: 65px;
             font-size: 14px;
         }
 
@@ -71,7 +71,8 @@
         }
 
         @media(min-width: $xl) {
-            height: 90px;
+            height: 112px;
+            line-height: 28px;
         }
     }
 

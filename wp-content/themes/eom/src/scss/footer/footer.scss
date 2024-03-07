@@ -223,6 +223,29 @@
             line-height: 16px;
         }
     }
+
+    .call__modal {
+        color: $dark-blue;
+        font-family: $ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fw-bold;
+        background-color: $white;
+        line-height: 10px;
+        transition: background-color ease $tr, color ease $tr;
+        padding: 10px 16px;
+
+        &:hover {
+            opacity: 1;
+            background-color: $grass;
+            color: $white;
+        }
+
+        @media(min-width: $md) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
 }
 
 .lines {

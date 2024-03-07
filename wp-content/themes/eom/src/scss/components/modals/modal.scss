@@ -89,7 +89,7 @@
 		padding: 34px 20px;
 		margin: auto 0;
 		background: $white;
-		max-width: 277px;
+		max-width: 300px;
 		position: relative;
         border: 2px solid $dark-blue;
 
@@ -148,6 +148,31 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+        }
+
+        .checkbox__wrapper {
+            margin: 0 0 32px;
+
+            input {
+                margin: 0;
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                margin: 0;
+            }
+
+            .wpcf7-list-item-label {
+
+                @media(min-width: $md) {
+                    &::before {
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+
+        .wpcf7-list-item.first.last {
+            margin-left: 0;
         }
 
         .modal__button {

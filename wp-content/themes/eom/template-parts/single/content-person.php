@@ -50,7 +50,7 @@ $social_links = get_field( 'social_links' );
 					</div>
 
 					<div class="person-bottom">
-						<a href="<?php echo home_url( '/#latest-1' ) ?>" class="back">
+						<a href="<?php echo home_url( '/#slides-1' ) ?>" class="back">
 							← <?php _e( 'Back', 'eom' ) ?>
 						</a>
 

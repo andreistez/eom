@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
-    showPopup('.modal__wrapper', '.call__modal', '.close__button', '#modal-lock')
+    showPopup('.modal__wrapper', 'a[href="#call-modal"', '.close__button', '#modal-lock')
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {
@@ -144,7 +144,9 @@ export const showPopup = (selector, btn, close, lock) => {
 
 	if (!popupWrapper) return
 	popButtons.forEach(button => {
-		button.addEventListener('click', () => {
+		button.addEventListener('click', e => {
+            e.preventDefault()
+
 			if (!popupWrapper.classList.contains('showed')) {
 				popupWrapper.classList.add('showed')
 				popupWrapper.classList.remove('closed')

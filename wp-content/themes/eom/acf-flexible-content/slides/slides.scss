@@ -112,6 +112,11 @@
                 font-size: 14px;
                 line-height: 16px;
             }
+
+            strong {
+                font-weight: $fw-regular;
+                color: $grass;
+            }
         }
 
         .link__arrow {

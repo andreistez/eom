@@ -72,7 +72,7 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
 
 								// echo do_shortcode( '[contact-form-7 id="d1561b2" title="Subscribe"]' );
                                 ?>
-                                <button class="call__modal" type="button">Subscribe</button>
+                                <a href="#call-modal" class="call__modal" type="button">Subscribe</a>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,19 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                             <input type="text" name="last-name" placeholder="Last Name">
                             <input type="text" name="job-title" placeholder="Job Title">
                             <input type="email" name="email" placeholder="Email">
-                            <input type="text" name="organization" placeholder="Organization"> 
+                            <input type="text" name="organization" placeholder="Organization">
+                            <div class="checkbox__wrapper">
+                                <span class="wpcf7-form-control-wrap" data-name="check">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first last">
+                                            <label>
+                                                <input type="checkbox" name="check[]" value="I give you permission to contact me.">
+                                                <span class="wpcf7-list-item-label">I give you permission to contact me.</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+						    </div> 
                             <button class="modal__button">Submit</button>
                         </fieldset>
                     </form>
