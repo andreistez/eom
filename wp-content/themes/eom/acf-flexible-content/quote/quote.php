@@ -59,8 +59,8 @@ if( $section_type === 'slider' ){
 						?>
 					</div>
                     <div class="swiper-navigation">
-                        <div class="swiper-prev"><span>→</span></div>
-                        <div class="swiper-next"><span><?php _e( 'View more', 'eom' ) ?></span>→</div>
+                        <div class="swiper-prev"><span class="arrow">→</span></div>
+                        <div class="swiper-next"><span class="arrow">→</span></div>
                     </div>
 				</div>
 				<?php

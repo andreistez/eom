@@ -28,7 +28,8 @@
     
             .quote__name, .quote__job {
                 animation: quoteText 1.5s forwards ease; 
-                animation-delay: 0.5s;  
+                animation-delay: 0.5s;
+                font-weight: $fw-light;
             }
         }
     }
@@ -127,6 +128,10 @@
 
         @media(min-width: $xl) {
             max-width: 550px
+        }
+
+        p {
+            font-weight: $fw-light;
         }
     }
 
