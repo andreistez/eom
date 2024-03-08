@@ -95,7 +95,7 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                 <div class="modal">
                     <div class="modal__top">
                         <div class="modal__title">
-                            Newsletter
+                            Sign Up for Our Newsletter
                         </div>
                         <button class="close__button">
                             <span></span>

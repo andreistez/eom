@@ -40,6 +40,8 @@
         }
 
 		&_text {
+            font-weight: $fw-light;
+
 			@media(min-width: $xl) {
 				width: calc(50% - 13px);
 				letter-spacing: -0.4px;
@@ -121,11 +123,15 @@
             @include caps;
 
             margin-bottom: 10px;
-            word-wrap: break-word;
 
             @media(min-width: $xl) {
                 min-height: 48px;
                 margin-bottom: 6px;
+                font-size: 18px;
+            }
+
+            @media(min-width: $xxl) {
+                font-size: 20px;
             }
         }
 

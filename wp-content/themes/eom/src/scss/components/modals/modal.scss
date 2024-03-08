@@ -160,15 +160,6 @@
                 opacity: 0;
                 margin: 0;
             }
-
-            .wpcf7-list-item-label {
-
-                @media(min-width: $md) {
-                    &::before {
-                        margin-top: 3px;
-                    }
-                }
-            }
         }
 
         .wpcf7-list-item.first.last {

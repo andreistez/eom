@@ -49,14 +49,17 @@
 		width: 100%;
 		font-family: $ff;
 		color: $dark-blue;
-		padding: 10px 16px;
-		font-size: 18px;
+		padding: 10px 15px;
+		font-size: 17px;
 		font-style: normal;
 		font-weight: $fw-regular;
-		line-height: 18px;
+		line-height: 17px;
 		letter-spacing: -0.42px;
 		border: 1px solid $dark-blue;
 		background-color: $white;
+        border-radius: 0;
+        outline: 0;
+        box-shadow: none;
 
 		&::placeholder {
 			opacity: 1;
@@ -69,17 +72,14 @@
 			letter-spacing: -0.42px;
 
 			@media(min-width: $md) {
-				font-size: 18px;
-				line-height: 18px;
+				font-size: 17px;
+				line-height: 17px;
 				letter-spacing: -0.54px;
 			}
 		}
 
 		@media(min-width: $md) {
-			font-size: 18px;
-			line-height: 18px;
 			letter-spacing: -0.54px;
-			padding: 10px 15px
 		}
 
 		&.wpcf7-not-valid {

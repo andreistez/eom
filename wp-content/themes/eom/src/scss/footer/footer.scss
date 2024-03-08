@@ -28,6 +28,7 @@
     &__logo {
         width: 159px;
         margin-bottom: 32px;
+        margin-right: 32px;
 
         @media(min-width: $md) {
             width: 249px;
@@ -225,13 +226,14 @@
     }
 
     .call__modal {
+        display: inline-block;
         color: $dark-blue;
         font-family: $ff;
-        font-size: 14px;
+        font-size: 10px;
         font-style: normal;
-        font-weight: $fw-bold;
+        font-weight: $fw-regular;
         background-color: $white;
-        line-height: 1;
+        line-height: 10px;
         transition: background-color ease $tr, color ease $tr;
         padding: 10px 16px;
 
@@ -243,8 +245,8 @@
 
         @media(min-width: $md) {
             font-size: 14px;
-            line-height: 1;
-            margin-left: 2.5px;
+            line-height: 16px;
+            margin: 0 2.5px;
         }
     }
 }

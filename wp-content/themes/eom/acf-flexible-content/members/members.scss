@@ -84,6 +84,10 @@
                 padding-right: 10px;
             }
         }
+
+        &_text {
+            font-weight: $fw-light;
+        }
     }
 
     &__logo {
@@ -224,12 +228,12 @@
             display: flex;
             height: calc(100% - 91px);
             flex-direction: column;
-            padding: 5px 11px 10px 7px;
+            padding: 10px 11px 10px 7px;
             min-height: 148px;
 
             @media(min-width: $md) {
                 height: calc(100% - 115px);
-                padding: 5px 16px 16px 16px;
+                padding: 10px 16px 16px 16px;
                 min-height: 194px;
             }
 

@@ -58,6 +58,12 @@
         }
     }
 
+    .h2__box_text {
+        p {
+            font-weight: $fw-light;
+        }
+    }
+
     &__circle_wrapper {
         display: flex;
         justify-content: center;
@@ -320,6 +326,7 @@
     &__text {
         @include standfirst;
 
+        font-weight: $fw-light;
         padding: 10px;
     }
 
