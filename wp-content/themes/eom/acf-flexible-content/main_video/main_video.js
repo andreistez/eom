@@ -1,38 +1,38 @@
-import Plyr from 'plyr'
+import lazyframe from "lazyframe"
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'
 
-	setPlayer()
-    playOnClick('.play')
+    initLazy()
+    playOnClick()
 })
 
-const setPlayer = () => {
-	const players = document.querySelectorAll( 'div[data-plyr-provider="vimeo"]' )
-
-	if( ! players.length ) return
-
-	players.forEach( pl => {
-		new Plyr( pl )
-	} )
+const initLazy = () => {
+    lazyframe('.embededVideo', {
+        debounce: 1000,
+        lazyload: true,
+        autoplay: true
+    })
 }
 
-const playOnClick = (buttonSelector) => {
-    const playButtons = document.querySelectorAll(buttonSelector)
+const playOnClick = () => {
+    const videoWrappers = document.querySelectorAll('.main__video_wrapper')
 
-    if(!playButtons.length) return
+    if (!videoWrappers.length) return
 
-    playButtons.forEach((playButton) => {
-        playButton.addEventListener('click', () => {
-            const videoWrapper = playButton.closest('.main__video_wrapper')
+    videoWrappers.forEach((videoWrapper) => {
+        videoWrapper.addEventListener('click', () => {
+            const vimeoVideo = videoWrapper.querySelector('.embededVideo')
+            const videoElement = videoWrapper.querySelector('video')
 
-            if (videoWrapper) {
-                const video = videoWrapper.querySelector('video')
-                if (video) {
-                    videoWrapper.classList.add('playing')
-                    video.play()
-                    video.setAttribute('controls', 'true')
-                }
+            if (vimeoVideo) {
+                videoWrapper.classList.add('playing')
+            }
+            
+            if (videoElement) {
+                videoWrapper.classList.add('playing')
+                videoElement.play()
+                videoElement.setAttribute('controls', 'true')
             }
         })
     })

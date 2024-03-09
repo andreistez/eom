@@ -31,14 +31,20 @@ $poster		= $poster ? ' poster="' . wp_get_attachment_image_url( $poster, 'video-
 				<video playsinline<?php echo $poster ?>>
 					<source src="<?php echo esc_url( $video['url'] ) ?>" type="<?php echo esc_attr( $video['mime_type'] ) ?>">
 				</video>
-				<div class="play"></div>
 				<?php
 			}else{
 				?>
-				<div data-plyr-provider="vimeo" data-plyr-embed-id="<?php echo esc_url( $vimeo_url ) ?>"></div>
+                <div class="main__video_vimeo">
+                    <div class="embededVideo"
+                        data-src="<?php echo esc_url( $vimeo_url ) ?>"
+		                data-vendor="vimeo"
+		                data-thumbnail="<?php echo THEME_URI ?>/static/img/bg.jpg">
+                    </div>  
+                </div>
 				<?php
 			}
 			?>
+            <div class="play"></div>
 		</div>
 	</div>
 </section>

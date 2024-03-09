@@ -1,20 +1,53 @@
-@import '../../node_modules/plyr/dist/plyr';
 @import '../../src/scss/utils/vars/vars.scss';
 @import '../../src/scss/utils/typography/typography.scss';
 
 .main__video {
     @include borderTop;
 
-    --plyr-color-main: #5bacb8;
+    .lazyframe__title {
+        display: none;
+    }
+
+    &_vimeo {
+        &.playing {
+            img {
+                animation: removePlay 1s forwards ease;
+            }
+        }
+
+        .embededVideo {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border: 2px solid $light;
+            aspect-ratio: 16/9;
+            background-size: cover;
+    
+            iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 
     &_wrapper {
         position: relative;
         background-color: $dark-blue;
         padding: 10px;
         overflow: hidden;
+        cursor: pointer;
 
         @media(min-width: $md) {
             padding: 30px;
+        }
+
+        &:hover {
+            .play::before {
+                border-left-color: #5bacb8;
+            }
         }
 
         &.playing {
@@ -49,6 +82,7 @@
             cursor: pointer;
             transition: opacity ease $tr;
             z-index: 10;
+            pointer-events: none;
 
             &::before {
 				content: '';
@@ -58,6 +92,7 @@
 				border-top: 30px solid transparent;
 				border-bottom: 30px solid transparent;
 				border-left: 60px solid #EEEDE9;
+                transition: border-color ease $tr;
 
                 @media(min-width: $md) {
                     border-top: 55px solid transparent;
@@ -70,10 +105,6 @@
                 opacity: $op07;
             }
         }
-    }
-
-    .plyr {
-        border: 2px solid $light;
     }
 }
 

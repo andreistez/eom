@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
-    "plyr": "^3.7.8",
+    "lazyframe": "^2.2.7",
     "swiper": "^11.0.6"
   },
   "babel": {
