@@ -21,6 +21,17 @@
         }
     }
 
+    &__item {
+        .link__arrow_wrapper {
+            a {
+                color: $grass;
+                font-weight: $fw-bold;
+                text-transform: capitalize;
+                margin-left: auto;
+            }
+        }
+    }
+
     &__wrapper {        
         padding: 15px;
         overflow: hidden;
@@ -80,5 +91,11 @@
         .link__arrow_wrapper {
             margin-top: 32px;
         }
+    }
+}
+
+.link__arrow_wrapper {
+    a {
+        margin-left: auto;
     }
 }

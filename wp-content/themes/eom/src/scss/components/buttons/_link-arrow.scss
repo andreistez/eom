@@ -4,10 +4,11 @@
     font-family: $ff;
     font-size: 10px;
     font-style: normal;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     line-height: 18px;
     letter-spacing: -0.54px;
     transition: opacity ease $tr;
+    text-transform: capitalize;
 
     span {
         margin-left: 5px;

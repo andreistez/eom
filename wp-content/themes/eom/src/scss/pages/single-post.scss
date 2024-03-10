@@ -234,6 +234,10 @@
                 border: 0;
                 outline: 2px solid $dark-blue;
 
+                a {
+                   color: $grass; 
+                }
+
                 p {
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
@@ -295,6 +299,8 @@
 
     .link__arrow {
         font-size: 14px;
+        text-transform: capitalize;
+        margin-left: auto;
 
         @media(min-width: $md) {
             font-size: 18px;

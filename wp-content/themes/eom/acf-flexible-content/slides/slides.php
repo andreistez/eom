@@ -21,6 +21,7 @@ $people			= get_sub_field( 'people' );
 <section class="slides">
 	<div class="container">
 		<div class="slides__wrapper">
+            <div class="subtitle" style="color: <?php echo esc_attr( $title_color ) ?>">OUR ORGANIZATION</div>
 			<?php
 			if( $title ) echo '<h2 class="h2" style="color: ', esc_attr( $title_color ), '">', $title, '</h2>';
 

@@ -189,8 +189,9 @@
         &_links {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             margin-bottom: 16px;
+            gap: 20px;
 
 			a {
 				color: $white;

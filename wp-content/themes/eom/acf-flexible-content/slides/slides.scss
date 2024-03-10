@@ -4,6 +4,23 @@
 .slides {
     @include borderTop;
 
+    .subtitle {
+        font-family: $ff;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: $fw-bold;
+        line-height: 10px;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    
+        @media all and (min-width: $xl) {
+            font-size: 14px;
+            line-height: 20px; 
+            letter-spacing: 1.26px;
+        }
+    }
+
     h2 {
         margin-bottom: 32px;
     }

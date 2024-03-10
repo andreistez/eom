@@ -273,9 +273,15 @@
         }
 
         &_link {
-           @include link;
+           @include link();
+
             padding-top: 10px;
-           margin: auto 0 0 auto;
+            margin: auto 0 0 auto;
+            font-weight: $fw-bold;
+
+            &.dark {
+                color: $violet;
+            }
         }
     }
 
