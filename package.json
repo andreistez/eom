@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@vimeo/player": "^2.22.0"
+  }
+}

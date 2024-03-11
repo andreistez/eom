@@ -34,13 +34,9 @@ $poster		= $poster ? ' poster="' . wp_get_attachment_image_url( $poster, 'video-
 				<?php
 			}else{
 				?>
-                <div class="main__video_vimeo">
-                    <div class="embededVideo"
-                        data-src="<?php echo esc_url( $vimeo_url ) ?>"
-		                data-vendor="vimeo"
-		                data-thumbnail="<?php echo THEME_URI ?>/static/img/bg.jpg">
+                    <div class="embededVideo" data-id-vimeo="<?php echo esc_url( $vimeo_url ) ?>">
+                        <img src="<?php echo THEME_URI ?>/static/img/bg.jpg" alt="">
                     </div>  
-                </div>
 				<?php
 			}
 			?>
