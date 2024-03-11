@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         controls: true
                     })
 
+                    vimeoPlayer.setVolume(0)
                     vimeoPlayer.play()
                 }
                 

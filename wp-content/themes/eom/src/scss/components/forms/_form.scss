@@ -87,6 +87,12 @@
 		}
 	}
 
+    input {
+        height: 44px;
+        padding: 0 15px;
+        line-height: 44px;
+    }
+
 	textarea {
 		resize: none;
 		height: 100px;
