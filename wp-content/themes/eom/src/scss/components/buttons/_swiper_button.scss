@@ -1,16 +1,12 @@
 .swiper-prev, .swiper-next {
     width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline;
     color: $dark-blue;
     text-align: center;
     font-family: $ff;
     font-size: 26px;
     font-style: normal;
     font-weight: $fw-regular;
-    line-height: 1;
     cursor: pointer;
     position: relative;
     transition: color ease $tr, opacity ease $tr;
@@ -31,8 +27,8 @@
 }
 
 
-.swiper-prev {
-    .arrow {
+.swiper-next {
+    img {
         transform: scaleX(-1);
     }
 }

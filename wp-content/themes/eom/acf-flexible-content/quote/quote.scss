@@ -139,9 +139,28 @@
         padding: 30px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         .swiper-prev, .swiper-next {
             color: $white;
+        }
+    }
+
+    &-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: $white;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: transparent;
+            border: 2px solid $white;
         }
     }
 }

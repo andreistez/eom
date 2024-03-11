@@ -59,8 +59,13 @@ if( $section_type === 'slider' ){
 						?>
 					</div>
                     <div class="swiper-navigation">
-                        <div class="swiper-prev"><span class="arrow">→</span></div>
-                        <div class="swiper-next"><span class="arrow">→</span></div>
+                        <div class="swiper-prev">
+                            <img src="<?php echo THEME_URI ?>/static/img/arrowForQuote.svg"" alt="">
+                        </div>
+                        <div class="quote-pagination"></div>
+                        <div class="swiper-next">
+                            <img src="<?php echo THEME_URI ?>/static/img/arrowForQuote.svg"" alt="">
+                        </div>
                     </div>
 				</div>
 				<?php
