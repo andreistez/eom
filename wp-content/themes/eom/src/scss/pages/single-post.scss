@@ -1,13 +1,13 @@
 @import '../utils/vars/vars';
 @import '../utils/base/wp-content';
 
-.single-post {
+.single-post, .page-template-default {
     .header {
         border-bottom: 2px solid $dark-blue;
     }
 }
 
-.post-single {
+.post-single, .page-template-default {
     h1 {
 		padding-bottom: 15px;
         margin-bottom: 32px;
@@ -100,6 +100,25 @@
 
         @media(min-width: $lg) {
             height: 121px;
+        }
+    }
+
+    .quote__author_wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .quote__author_texts {
+        max-width: auto;
+
+        p {
+            margin-bottom: 6px;
+        }
+    }
+
+    figure {
+        img {
+            width: 100%;
         }
     }
 
@@ -309,5 +328,12 @@
         &_wrapper {
             padding-top: 14px;
         }
+    }
+}
+
+.page-template-default {
+    h1 {
+        border-bottom: 0;
+        padding: 0;
     }
 }
