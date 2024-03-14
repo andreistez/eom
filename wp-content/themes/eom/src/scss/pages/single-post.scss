@@ -1,5 +1,6 @@
 @import '../utils/vars/vars';
 @import '../utils/base/wp-content';
+@import '../utils/typography/mixins';
 
 .single-post, .page-template-default {
     .header {
@@ -119,6 +120,34 @@
     figure {
         img {
             width: 100%;
+        }
+
+        figcaption {
+            margin-top: 16px;
+
+            a {
+                text-align: right;
+                font-family: $ff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $fw-regular;
+                line-height: 19px;
+                letter-spacing: -0.32px;
+                display: inline;
+                color: inherit;
+                text-decoration: underline;
+                margin-top: 16px;
+    
+                &:hover {
+                    text-decoration: none;
+                }
+    
+                @media(min-width: $md) {
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: -0.4px;
+                }
+            }
         }
     }
 
@@ -333,7 +362,60 @@
 
 .page-template-default {
     h1 {
+        margin-bottom: 0;
         border-bottom: 0;
         padding: 0;
+    }
+
+    .page-single {
+        ul {
+            list-style: none;
+            margin-bottom: 16px;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            li {
+                @include standfirst();
+                position: relative;
+                padding-left: 15px;
+    
+                a {
+                    text-align: right;
+                    font-family: $ff;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: $fw-regular;
+                    line-height: 19px;
+                    letter-spacing: -0.32px;
+                    display: inline;
+                    color: inherit;
+                    text-decoration: underline;
+                    margin-top: 16px;
+        
+                    &:hover {
+                        text-decoration: none;
+                    }
+        
+                    @media(min-width: $md) {
+                        font-size: 20px;
+                        line-height: 23px;
+                        letter-spacing: -0.4px;
+                    }
+                }
+            }
+    
+            li:before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(-2px);
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+            }
+        }
     }
 }
