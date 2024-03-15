@@ -10,16 +10,11 @@
  */
 
 wp_enqueue_style( 'latest', THEME_URI . '/static/css/latest/latest.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'latest', THEME_URI . '/static/js/latest/latest.min.js', ['jquery'], THEME_VERSION, true );
 
 $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' );
 $link			= get_sub_field( 'link' );
-$news			= get_posts( [
-	'post_type'		=> 'post',
-	'post_status'	=> 'publish',
-	'numberposts'	=> 6,
-	'category_name'	=> 'show-in-section'
-] );
 ?>
 
 <section class="latest">
@@ -27,19 +22,13 @@ $news			= get_posts( [
 		<div class="latest__wrapper">
             <div class="subtitle" style="color: <?php echo esc_attr( $title_color ) ?>">Economics of Mutuality Alliance</div>
 			<?php
-			if( $title ) echo '<h2 class="h2" style="color:', esc_attr( $title_color ), '">', $title, '</h2>';
+			if( $title )
+				echo '<h2 class="h2" style="color:', esc_attr( $title_color ), '">', $title, '</h2>';
+			?>
 
-			if( ! empty( $news ) ){
-				echo '<div class="latest__inner">';
+			<div class="latest__inner"><span class="loader"></span></div>
 
-				foreach( $news as $key => $p ){
-					$type = ( ! $key || $key === 1 ) ? 'thumb' : 'no-thumb';
-				    get_template_part( 'components/cards/post', null, ['id' => $p->ID, 'type' => $type] );
-				}
-
-				echo '</div>';
-			}
-
+			<?php
 			if( $link ){
 				$link_url	= $link['url'];
 				$link_title	= $link['title'];

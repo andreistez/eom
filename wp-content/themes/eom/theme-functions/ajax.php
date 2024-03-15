@@ -48,9 +48,39 @@ function eom_ajax_load_more_posts(): void
 		] );
 
 	foreach( $posts_arr as $p )
-		$posts .= eom_load_template_part( 'components/cards/post', null, ['id' => $p->ID, 'type' => 'thumb'] );
+		$posts .= eom_load_template_part( 'components/cards/post', null, [
+			'id' => $p->ID, 'type' => 'thumb'
+		] );
 
 	$is_end = ( 5 + $per_page * ( $page - 1 ) >= $posts_count ) ? 1 : '';
 	wp_send_json_success( ['posts' => $posts, 'page' => $page, 'end' => $is_end] );
+}
+
+add_action( 'wp_ajax_eom_ajax_load_remote_posts', 'eom_ajax_load_remote_posts' );
+add_action( 'wp_ajax_nopriv_eom_ajax_load_remote_posts', 'eom_ajax_load_remote_posts' );
+/**
+ * AJAX load remote posts.
+ */
+function eom_ajax_load_remote_posts(): void
+{
+	$response	= wp_remote_get( add_query_arg( ['per_page' => 6], 'https://eom.org/wp-json/wp/v2/posts?_embed&categories=20' ) );
+	$news		= [];
+	$posts		= '';
+
+	if( 200 === wp_remote_retrieve_response_code( $response ) )
+		$news = json_decode( wp_remote_retrieve_body( $response ), true );
+	else
+		wp_send_json_error( ['msg' => __( 'Error: not able to fetch the remote posts.' )] );
+
+	if( empty( $news ) ) wp_send_json_error( ['msg' => __( 'Ooops!.. Seems there are no remote posts.' )] );
+
+	foreach( $news as $key => $_p ){
+		$type	= ( ! $key || $key === 1 ) ? 'thumb' : 'no-thumb';
+		$posts	.= eom_load_template_part( 'components/cards/post', 'remote', [
+			'post' => $_p, 'type' => $type
+		] );
+	}
+
+	wp_send_json_success( ['posts' => $posts] );
 }
 
