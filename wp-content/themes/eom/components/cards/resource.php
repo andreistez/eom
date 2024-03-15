@@ -21,7 +21,7 @@ $link	= $res['link'];
 		<?php
 		if( $image )
 			echo '<div class="resources__img">',
-				wp_get_attachment_image( $image, 'medium', false, ['loading' => 'lazy'] ),
+				wp_get_attachment_image( $image, 'large', false, ['loading' => 'lazy'] ),
 			'</div>';
 
 		if( $link ){
