@@ -51,9 +51,9 @@ $excerpt	= $_p['excerpt']['rendered'] ?? null;
 		?>
 
 		<div class="link__arrow_wrapper">
-			<a class="link__arrow" href="<?php echo get_the_permalink( $_p['link'] ) ?>">
-				<?php _e( 'Read on', 'eom' ) ?> <span>→</span>
-			</a>
+            <a class="link__arrow" href="<?php echo esc_url( $_p['link'] ) ?>">
+                <?php _e( 'Read on', 'eom' ) ?> <span>→</span>
+            </a>
 		</div>
 
 		<?php if( $type === 'thumb' ) echo '</div>' ?>
