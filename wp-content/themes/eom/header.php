@@ -31,16 +31,7 @@ $site_desc = get_bloginfo( 'description', 'display' );
     <meta name="theme-color" content="#ffffff">
 	<!-- /Favicon -->
 
-	<title>
-		<?php
-		wp_title( '|', true, 'right' );
-		bloginfo( 'name' );
-
-		if( $site_desc && ( is_home() || is_front_page() ) ) echo " | $site_desc";
-
-		if( $paged > 1 || $page > 1 ) echo ' | ' . sprintf( __( 'Page %s', 'eom' ), max( $paged, $page ) );
-		?>
-	</title>
+	<title></title>
 
 	<?php wp_head() ?>
 </head>
