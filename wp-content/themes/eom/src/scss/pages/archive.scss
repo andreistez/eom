@@ -96,10 +96,9 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 45px;
+      height: 42px;
       font-size: 14px;
       color: $dark-blue;
-      padding: 0 10px;
       margin-bottom: 10px;
       line-height: 1;
 
@@ -108,7 +107,7 @@
       }
 
       @media (min-width: $lg) {
-        height: 50px;
+        height: 47px;
         -webkit-line-clamp: 3;
         font-size: 14px;
         line-height: 1.1;
