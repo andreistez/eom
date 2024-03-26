@@ -27,7 +27,7 @@
             margin-bottom: 10px;
             font-size: 25px;
             line-height: $lh;
-            color: $cerulean;
+            color: $grass;
 
             @media(min-width: $md) {
                 font-size: 40px;
@@ -62,15 +62,19 @@
                 }
 
                 p {
-                    font-size: 14px;
-                    height: 58px;
-
+                    font-size: 10px;
+                    line-height: 16px;
+                    padding: 0 5px;
+        
                     @media(min-width: $md) {
-                        height: 68px;
+                        font-size: 14px;
+                        margin-bottom: 32px;
+                        padding: 0 10px;
                     }
-
-                    @media(min-width: $lg) {
-                        height: 63px;
+        
+                    @media(min-width: $xl) {
+                        font-size: 20px;
+                        line-height: 23px;
                     }
                 }
 
@@ -106,32 +110,54 @@
             .hub-card, .link-card {
                 &:nth-child(-n+2) {
                     p {
-                        @media(min-width: $sm) {
-                            height: 35px;
-                        }
-    
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        margin-bottom: 14px;
+                        overflow: hidden;
+                        height: 63px;
+                        color: $dark-blue;
+                
                         @media(min-width: $md) {
-                            height: 45px;
+                            height: 65px;
+                            font-size: 14px;
                         }
-    
-                         @media(min-width: $lg) {
-                            height: 32px;
+                
+                        @media(min-width: $lg) {
+                            height: 65px;
+                            font-size: 18px;
+                        }
+                
+                        @media(min-width: $xl) {
+                            height: 112px;
+                            line-height: 28px;
                         }
                     }
                     
                 }
 
                 p {
-                    @media(min-width: $sm) {
-                        height: 35px;
-                    }
-
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    margin-bottom: 14px;
+                    overflow: hidden;
+                    height: 63px;
+                    color: $dark-blue;
+            
                     @media(min-width: $md) {
-                        height: 45px;
+                        height: 65px;
+                        font-size: 14px;
                     }
-
-                     @media(min-width: $lg) {
-                        height: 32px;
+            
+                    @media(min-width: $lg) {
+                        height: 65px;
+                        font-size: 18px;
+                    }
+            
+                    @media(min-width: $xl) {
+                        height: 112px;
+                        line-height: 28px;
                     }
                 }
             }
@@ -204,18 +230,60 @@ h1 {
     width: 100%;
     background-color: $white;
 
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        margin-bottom: 14px;
+        font-size: 10px;
+        line-height: 10px;
+        overflow: hidden;
+        height: 63px;
+        color: $dark-blue;
+        padding: 0 5px;
+
+        @media(min-width: $md) {
+            height: 65px;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 0 10px;
+        }
+
+        @media(min-width: $lg) {
+            height: 65px;
+            font-size: 18px;
+        }
+
+        @media(min-width: $xl) {
+            height: 112px;
+            line-height: 28px;
+        }
+    }
+
     &.link-card {
         p {
-            height: 35px;
-            -webkit-line-clamp: 2;
-
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin-bottom: 14px;
+            overflow: hidden;
+            height: 63px;
+            color: $dark-blue;
+    
             @media(min-width: $md) {
-                height: 45px;
+                height: 65px;
+                font-size: 14px;
             }
-
+    
             @media(min-width: $lg) {
-                height: 35px;
+                height: 65px;
+                font-size: 18px;
             }
+    
+            @media(min-width: $xl) {
+                height: 112px;
+                line-height: 28px;
+            }       
         }
 
         &:hover {
@@ -224,16 +292,28 @@ h1 {
 
         &:nth-child(-n + 2) {
             p {
-                height: 40px;
-                -webkit-line-clamp: 2;
-
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                margin-bottom: 14px;
+                overflow: hidden;
+                height: 41px;
+                color: $dark-blue;
+        
                 @media(min-width: $md) {
-                    height: 45px;
+                    height: 65px;
+                    font-size: 14px;
                 }
-
+        
                 @media(min-width: $lg) {
-                    height: 40px;
+                    height: 65px;
+                    font-size: 18px;
                 }
+        
+                @media(min-width: $xl) {
+                    height: 112px;
+                    line-height: 28px;
+                }          
             }
         }
     }
@@ -277,19 +357,6 @@ h1 {
             .hub-card-img {
                 height: 250px;
             }
-    
-            p {
-                @media(min-width: $md) {
-                    height: 65px;
-                    font-size: 14px;
-                }
-        
-                @media(min-width: $lg) {
-                    height: 78px;
-                    -webkit-line-clamp: 4;
-                    font-size: 18px;
-                }
-            }
         }
     }
 
@@ -316,40 +383,15 @@ h1 {
         }
     }
 
-    p {
-        font-family: $ff;
-        font-weight: $fw-regular;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        height: 60px;
-        font-size: 14px;
-        color: $dark-blue;
-        padding: 0 10px;
-        margin-bottom: 10px;
-
-        @media(min-width: $md) {
-            height: 66px;
-        }
-
-        @media(min-width: $lg) {
-            height: 47px;
-            -webkit-line-clamp: 3;
-            font-size: 14px;
-            line-height: 1.1;
-        }
-    }
-
     a {
         font-family: $ff;
         font-weight: $fw-regular;
-        font-size: 14px;
+        font-size: 10px;
         color: $dark-blue;
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 10px 0;
+        padding: 5px 0;
         border-top: 2px solid $dark-blue;
         transition: color ease $tr, background-color ease $tr;
 
@@ -360,6 +402,7 @@ h1 {
 
         @media(min-width: $md) {
             font-size: 14px;
+            padding: 10px 0;
         }
     }
 }
