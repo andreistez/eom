@@ -31,6 +31,8 @@
         }
 
         p {
+            font-weight: $fw-light;
+
             a {
                 color: $dark-blue;
                 text-decoration: underline;
@@ -219,6 +221,7 @@
         &-inner {
             p {
                 font-family: $ff;
+                font-weight: $fw-regular;
                 font-size: $fs-lg;
                 line-height: $lh;
                 color: $black;
