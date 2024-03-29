@@ -12,13 +12,6 @@ get_header();
 wp_enqueue_style( 'knowledge-hub', THEME_URI . '/static/css/pages/knowledge-hub.min.css', [], THEME_VERSION );
 
 $cats = get_field( 'categories' );
-
-/*$news = get_posts( [
-	'post_type'		=> 'post',
-	'post_status'	=> 'publish',
-	'category_name'	=> 'latest-news'
-] );
-$news_cat = get_category_by_slug( 'latest-news' );*/
 ?>
 
 <main class="main">
@@ -77,7 +70,7 @@ $news_cat = get_category_by_slug( 'latest-news' );*/
 							$posts		= get_posts( [
 								'post_type'		=> 'post',
 								'post_status'	=> 'publish',
-								'numberposts'	=> 5,
+								'numberposts'	=> 6,
 								'category_name'	=> $term->slug
 							] );
 							?>
@@ -88,8 +81,13 @@ $news_cat = get_category_by_slug( 'latest-news' );*/
 								if( ! empty( $posts ) ){
 									echo '<div class="categories-inner">';
 
-									foreach( $posts as $_p )
-										get_template_part( 'components/cards/post', 'hub', ['id' => $_p->ID] );
+									foreach( $posts as $key => $_p ){
+										$type = $key > 1 ? 'no-thumb' : 'thumb';
+										get_template_part( 'components/cards/post', null, [
+											'id'	=> $_p->ID,
+											'type'	=> $type
+										] );
+									}
 
 									echo '</div>';
 								}
