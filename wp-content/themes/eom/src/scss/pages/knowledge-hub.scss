@@ -82,7 +82,19 @@
                 &-bottom {
                     display: flex;
                     flex-direction: column;
-                    margin-top: auto;
+                    height: calc(100% - 160px);
+
+                    @media(min-width: $sm) {
+                        height: calc(100% - 110px);
+                    }
+
+                    @media(min-width: $lg) {
+                        height: calc(100% - 160px);
+                    }
+
+                    a {
+                        margin-top: auto;
+                    }
                 }
 
                 &:last-child {
@@ -157,17 +169,7 @@
             }
 
             .categories-link-wrapper {
-                justify-content: flex-start;
-
-                a {
-                    @media(min-width: $xl) {
-                        width: 204px;
-                    }
-
-                    @media(min-width: $xxl) {
-                        width: 237px;
-                    }
-                }
+                justify-content: flex-end;
             }
 
             .hub-card, .link-card {
@@ -240,33 +242,19 @@
         margin-top: 20px;
 
         a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: $ff;
-            font-weight: $fw-regular;
-            font-size: 14px;
-            color: $dark-blue;
-            width: 100%;
-            padding: 10px;
-            transition: color ease $tr, background-color ease $tr;
-            background-color: $dark-blue;
-            color: $white;
-            border: 2px solid $dark-blue;
-    
-            &:hover {
-                background-color: transparent;
-                color: $dark-blue;
-            }
-    
-            @media(min-width: $md) {
-                font-size: 14px;
-                width: 100%;
-            }
-    
-            @media(min-width: $lg) {
-                font-size: 18px;
-            }
+            .link__arrow {
+				font-size: 14px;
+				text-transform: capitalize;
+				margin-left: auto;
+		
+				@media(min-width: $md) {
+					font-size: 18px;
+				}
+		
+				&_wrapper {
+					padding-top: 14px;
+				}
+			}
         }
     }
 }

@@ -54,8 +54,9 @@ $cats = get_field( 'categories' );
 									$l_target	= $view_all_link['target'] ? ' target="_blank"' : '';
 									?>
 									<div class="categories-link-wrapper">
-										<a href="<?php echo esc_url( $l_url ) ?>"<?php echo $l_target?>>
+										<a class="link__arrow" href="<?php echo esc_url( $l_url ) ?>"<?php echo $l_target?>>
 											<?php echo esc_html( $l_title ) ?>
+											<span>→</span>
 										</a>
 									</div>
 									<?php
@@ -94,8 +95,9 @@ $cats = get_field( 'categories' );
 								?>
 
 								<div class="categories-link-wrapper">
-									<a href="<?php echo get_category_link( $term_id ) ?>">
+									<a class="link__arrow" href="<?php echo get_category_link( $term_id ) ?>">
 										<?php _e( 'View More', 'eom' ) ?>
+										<span>→</span>
 									</a>
 								</div>
 							</div>
