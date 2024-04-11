@@ -16,7 +16,7 @@
     }
 
     &-content {
-        background-color: $white;
+        background-color: #eeede9;
     }
 
     &-content-inner {
@@ -295,8 +295,8 @@
                     -webkit-box-orient: vertical;
                     margin-bottom: 14px;
                     overflow: hidden;
-                    height: 50px;
-                    line-height: 16px;
+                    height: 51px;
+                    line-height: 17px;
                     color: $dark-blue;
             
                     @media(min-width: $lg) {
@@ -306,7 +306,7 @@
                     }
             
                     @media(min-width: $xl) {
-                        height: 90px;
+                        height: 88px;
                     }
                 }
 
