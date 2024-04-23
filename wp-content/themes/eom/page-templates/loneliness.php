@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: ACF Flexible Content
+ * Template name: Loneliness
  *
  * @package WordPress
  * @subpackage eom

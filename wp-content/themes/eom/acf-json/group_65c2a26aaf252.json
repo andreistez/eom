@@ -2219,6 +2219,13 @@
                 "operator": "==",
                 "value": "page-templates\/acf-flexible-content.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/loneliness.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -2230,5 +2237,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709502507
+    "modified": 1713903949
 }
