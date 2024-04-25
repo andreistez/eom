@@ -38,3 +38,47 @@
         animation: imageTextRight 1s forwards ease;
     }
 }
+
+.page-template-loneliness {
+	.hero__wrapper  {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 7px 7px 30px 12px;
+
+		@media(min-width: $lg) {
+			padding: 40px 32px 120px 32px;
+		}
+
+		.hero-subtitle {
+			font-family: $ff;
+			color: $white;
+			font-size: 30px;
+
+			@media(min-width: 393px) {
+				font-size: 45px;
+			}
+
+			@media(min-width: $md) {
+				font-size: 58px;
+			}
+		}
+
+		h1 {
+			font-size: 50px;
+			color: $terracota;
+
+			@media(min-width: 393px) {
+				font-size: 65px;
+			}
+
+			@media(min-width: $md) {
+				font-size: 120px;
+			}
+
+			@media(min-width: $lg) {
+				font-size: 132px;
+			}
+		}
+	}
+}

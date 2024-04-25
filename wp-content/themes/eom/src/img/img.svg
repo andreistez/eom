@@ -1,0 +1,21 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 473.5 277" style="enable-background:new 0 0 473.5 277;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:#EC5447;}
+		.st1{fill:none;stroke:#EC5447;stroke-width:2;stroke-miterlimit:8;}
+		.st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+		.st3{fill:none;}
+		.st4{font-family:'Brown';}
+		.st5{font-size:18.2012px;}
+		.st6{fill:#FFFFFF;}
+	</style>
+	<path class="st0" d="M236.6,46.2c-49.4,52.3-49.4,133.4,0,185.7C285.9,179.6,285.9,98.5,236.6,46.2z"/>
+	<circle class="st1" cx="139.2" cy="138.4" r="134.3"/>
+	<circle class="st2" cx="333.9" cy="138.4" r="134.3"/>
+	<rect x="46.4" y="122.6" class="st3" width="124.3" height="43.2"/>
+	<text transform="matrix(1 0 0 1 63.6017 135.4822)"><tspan x="0" y="0" class="st0 st4 st5">LONELINESS </tspan><tspan x="22.8" y="21.8" class="st0 st4 st5">PROBLEM</tspan></text>
+	<rect x="296.2" y="122.6" class="st3" width="123.5" height="52.3"/>
+	<text transform="matrix(1 0 0 1 296.2262 135.4822)"><tspan x="0" y="0" class="st6 st4 st5">YOUR </tspan><tspan x="0" y="21.8" class="st6 st4 st5">CAPABILITY</tspan></text>
+	<rect x="230.5" y="67.6" class="st3" width="22.1" height="141.4"/>
+	<text transform="matrix(0 -1 1 0 243.4137 202.1619)" class="st6 st4 st5">OPPORTUNITY</text>
+</svg>

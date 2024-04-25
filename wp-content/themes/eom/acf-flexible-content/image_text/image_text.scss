@@ -234,3 +234,75 @@
         }
     }
 }
+
+.page-template-loneliness {
+	.image__text {
+		&_right {
+			background-color: $terracota;
+			padding: 15px;
+
+			@media (min-width: $md) {
+				padding: 50px 35px 30px 50px;
+			}
+		}
+	}
+	
+	.image__text_info {
+		.image__text_heading {
+			p {
+				font-size: 20px;
+				text-transform: none;
+
+				@media (min-width: $md) {
+					font-size: 27px;
+				}
+			}
+
+			h2 {
+				margin-bottom: 16px;
+				line-height: 1;
+			}
+		}
+
+		p em {
+			font-size: 29px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		ol {
+			list-style: decimal;
+			padding-left: 20px;
+			font-size: 19px;
+			font-weight: $fw-light;
+		}
+
+		a {
+			width: 180px;
+			padding: 10px 20px;
+			background-color: $dark-blue;
+			color: $white;
+			text-decoration: none;
+			text-align: center;
+			margin-left: auto;
+			margin-top: 50px;
+			transition: opacity ease $tr;
+			
+			span {
+				display: none;
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	.call-modal-wrapper {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 15px;
+	}
+}
