@@ -2,13 +2,27 @@
 @import '../../src/scss/utils/typography/typography.scss';
 
 .hero {
+	&-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover
+		}
+	}
+
     &__wrapper {
-        overflow: hidden;
+		position: relative;
         width: 100%;
         display: flex;
+		flex-wrap: wrap;
         align-items: flex-end;
         padding: 7px 7px 30px 12px;
-        position: relative;
         min-height: 706px;
         overflow: hidden;
 
@@ -22,7 +36,8 @@
         }
 
         h1 {
-            max-width: 100%;
+			position: relative;
+            max-width: 100%
         }
     }
 
@@ -37,6 +52,21 @@
         transform: translateX(-200%);
         animation: imageTextRight 1s forwards ease;
     }
+
+	&-subtitle {
+		position: relative;
+		font-family: $ff;
+		color: $white;
+		font-size: 30px;
+
+		@media(min-width: 393px) {
+			font-size: 45px;
+		}
+
+		@media(min-width: $md) {
+			font-size: 58px;
+		}
+	}
 }
 
 .page-template-loneliness {
@@ -48,20 +78,6 @@
 
 		@media(min-width: $lg) {
 			padding: 40px 32px 120px 32px;
-		}
-
-		.hero-subtitle {
-			font-family: $ff;
-			color: $white;
-			font-size: 30px;
-
-			@media(min-width: 393px) {
-				font-size: 45px;
-			}
-
-			@media(min-width: $md) {
-				font-size: 58px;
-			}
 		}
 
 		h1 {

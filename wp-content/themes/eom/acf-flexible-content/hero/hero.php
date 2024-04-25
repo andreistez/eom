@@ -11,7 +11,10 @@
 
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
 
+$bg_type		= get_sub_field( 'background_type' ) ?: 'video';
 $video_bg		= get_sub_field( 'video_bg' );
+$image			= get_sub_field( 'image' );
+$subtitle		= get_sub_field( 'subtitle' );
 $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' ) ?: '#fff';
 ?>
@@ -20,10 +23,16 @@ $title_color	= get_sub_field( 'title_color' ) ?: '#fff';
 	<div class="container">
 		<div class="hero__wrapper">
 			<?php
+			if( $bg_type === 'image' && $image )
+				echo '<div class="hero-bg">', wp_get_attachment_image( $image, 'video-poster' ), '</div>';
+
+			if( $subtitle )
+				echo '<div class="hero-subtitle" style="color: ', esc_attr( $title_color ), '">', $subtitle, '</div>';
+
 			if( $title )
 				echo '<h1 class="h1" style="color: ', esc_attr( $title_color ), '">', $title, '</h1>';
 
-			if( $video_bg ){
+			if( $bg_type === 'video' && $video_bg ){
 				?>
 				<video autoplay muted playsinline loop>
 					<source
