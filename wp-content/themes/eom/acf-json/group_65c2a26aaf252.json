@@ -525,6 +525,53 @@
                                     "enable_opacity": 0,
                                     "return_format": "string",
                                     "parent_repeater": "field_65c2a77d71ced"
+                                },
+                                {
+                                    "key": "field_662c045f3877a",
+                                    "label": "Popup Button Label",
+                                    "name": "popup_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "(Loneliness page template)",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_65c2a77d71ced"
+                                },
+                                {
+                                    "key": "field_662c052d3877b",
+                                    "label": "Popup Button Justify",
+                                    "name": "popup_button_justify",
+                                    "aria-label": "",
+                                    "type": "radio",
+                                    "instructions": "(Loneliness page template)",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "start": "Start",
+                                        "end": "End"
+                                    },
+                                    "default_value": "start",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical",
+                                    "save_other_choice": 0,
+                                    "parent_repeater": "field_65c2a77d71ced"
                                 }
                             ]
                         }
@@ -2323,5 +2370,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714080519
+    "modified": 1714161108
 }

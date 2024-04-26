@@ -105,20 +105,6 @@ $col_title_4	= get_field( 'fourth_column_title', 'option' );
                     <?php echo do_shortcode( '[contact-form-7 id="87ed618" title="Subscribe Popup"]' ) ?>
                 </div>
             </div>
-			<div class="modal__wrapper signup-modal" id="modal-lock-1">
-                <div class="modal">
-                    <div class="modal__top">
-                        <div class="modal__title">
-                            Sign Up
-                        </div>
-                        <button class="close__button">
-                            <span></span>
-                        </button>
-                    </div>
-
-                    <?php echo do_shortcode( '[contact-form-7 id="bc9ae45" title="Loneliness modal"]' ) ?>
-                </div>
-            </div>
 			<?php wp_footer() ?>
 		</div><!-- .wrapper -->
         <div class="lines"></div>

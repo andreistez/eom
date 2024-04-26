@@ -12,8 +12,7 @@
 wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'image-text', THEME_URI . '/static/js/image_text/image_text.min.js', ['jquery'], THEME_VERSION, true );
 
-$type			= get_sub_field( 'type' ) ?: '';
-$type			= $type ? ' ' . esc_attr( $type ) : '';
+$type			= get_sub_field( 'type' ) ? ' ' . get_sub_field( 'type' ) : '';
 $image			= get_sub_field( 'image' );
 $bg_color		= get_sub_field( 'bg_color' );
 $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' : '';
