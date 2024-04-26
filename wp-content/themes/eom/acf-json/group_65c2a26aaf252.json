@@ -974,31 +974,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_65d8fa967787c",
-                            "label": "Video Type",
-                            "name": "video_type",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "34",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "local": "Self-hosted",
-                                "vimeo": "Vimeo"
-                            },
-                            "default_value": "local",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "layout": "vertical",
-                            "save_other_choice": 0
-                        },
-                        {
                             "key": "field_65c534d47df7a",
                             "label": "Poster",
                             "name": "poster",
@@ -1016,7 +991,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "33",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -1032,34 +1007,6 @@
                             "preview_size": "thumbnail"
                         },
                         {
-                            "key": "field_65c534f57df7c",
-                            "label": "Video",
-                            "name": "video",
-                            "aria-label": "",
-                            "type": "file",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65d8fa967787c",
-                                        "operator": "==",
-                                        "value": "local"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "33",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
                             "key": "field_65d8fb057787d",
                             "label": "Vimeo URL",
                             "name": "vimeo_url",
@@ -1067,17 +1014,9 @@
                             "type": "url",
                             "instructions": "Please paste Vimeo video URL",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65d8fa967787c",
-                                        "operator": "==",
-                                        "value": "vimeo"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
-                                "width": "66",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -1094,7 +1033,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -2593,5 +2532,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714165074
+    "modified": 1714165824
 }
