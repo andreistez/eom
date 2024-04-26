@@ -46,7 +46,7 @@ $form = get_field( 'form' );
 		 * will use template from 'theme_name/acf-flexible-content/hero_section/hero_section.php'
 		 */
 		?>
-		<!--<section
+		<section
 			class="hero"
 			id="hero-1"
 		>
@@ -436,7 +436,7 @@ $form = get_field( 'form' );
 					</div>
 				</div>
 			</div>
-		</section>-->
+		</section>
 		<?php
 		if( have_rows( 'flexible_content' ) ){
 			while( have_rows( 'flexible_content' ) ){
