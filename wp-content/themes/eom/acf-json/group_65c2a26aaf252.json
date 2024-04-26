@@ -741,6 +741,47 @@
                             "default_value": "#000000",
                             "enable_opacity": 0,
                             "return_format": "string"
+                        },
+                        {
+                            "key": "field_662c11b0e76f6",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_662c11bee76f7",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "(Loneliness page template)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "type-1": "1",
+                                "type-2": "2"
+                            },
+                            "default_value": "type-1",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         }
                     ],
                     "min": "",
@@ -2532,5 +2573,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714163535
+    "modified": 1714164673
 }
