@@ -62,6 +62,10 @@
             .play {
                 animation: removePlay 1s forwards ease;
             }
+
+			.video__desc {
+				display: none;
+			}
         }
 
         video {
@@ -114,5 +118,52 @@
             }
         }
     }
+
+	.video__desc {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		z-index: 1;
+		
+
+		p {
+			font-weight: $fw-light;
+			color: $white;
+			font-size: 12px;
+			line-height: 12px;
+			max-width: 200px;
+
+			@media(min-width: $md) {
+				font-size: 20px;
+				line-height: 20px;
+				max-width: 400px;
+			}
+		}
+
+		@media(min-width: $md) {
+			left: 20px;
+			bottom: 20px;
+		}
+	}
+}
+
+.page-template-loneliness {
+
+	.main__video_wrapper {
+		&:hover {
+			.play::before {
+				border-left-color: $terracota;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.play {
+		&::before {
+			border-left-color: $terracota;
+			transition: opacity ease $tr;
+		}
+	}
+	
 }
 

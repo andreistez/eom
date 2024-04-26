@@ -16,6 +16,8 @@ wp_enqueue_script( 'text_image', THEME_URI . '/static/js/text_image/text_image.m
 wp_enqueue_style( 'image_text', THEME_URI . '/static/css/image_text/image_text.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'image-text', THEME_URI . '/static/js/image_text/image_text.min.js', ['jquery'], THEME_VERSION, true );
 wp_enqueue_style( 'blocks', THEME_URI . '/static/css/blocks/blocks.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.min.js', ['jquery'], THEME_VERSION, true );
 ?>
 
 <main class="main">
@@ -46,7 +48,7 @@ wp_enqueue_style( 'blocks', THEME_URI . '/static/css/blocks/blocks.min.css', [],
 				</div>
 				<h1 class="h1" style="color: #eb5347">LONELINESS</h1>
 				<video autoplay="" muted="" playsinline="" loop="">
-				<source src="https://eom.org/wp-content/uploads/2024/04/BUSINESS-vs.-LONELINESS-header-video-online-video-cutter.com_.mp4" type="video/mp4">
+					<source src="https://eom.org/wp-content/uploads/2024/04/BUSINESS-vs.-LONELINESS-header-video-online-video-cutter.com_.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -246,6 +248,24 @@ wp_enqueue_style( 'blocks', THEME_URI . '/static/css/blocks/blocks.min.css', [],
 			</div>
 		</div>
 	</section>
+	<section class="main__video">
+		<div class="container">
+			<div class="main__video_wrapper">
+						<div class="embededVideo" data-id-vimeo="https://player.vimeo.com/video/936630816?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+							<img src="<?php echo THEME_URI ?>/static/img/vid1.jpg" alt="">
+							<div class="video__desc">
+								<p>
+									<b>How Companies Can Take Action</b> <br>
+									Insights From Professor Pamela Qualter
+								</p>
+							</div>
+						</div>  
+				<div class="play"></div>
+		</div>
+	</div>
+</section>
+
+
 	<?php
 	if( have_rows( 'flexible_content' ) ){
 		while( have_rows( 'flexible_content' ) ){
