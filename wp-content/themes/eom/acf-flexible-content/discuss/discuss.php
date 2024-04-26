@@ -29,46 +29,6 @@ if( ! $title && ! $desc ) return;
 			</div>
 
 			<?php echo do_shortcode( '[contact-form-7 id="076c6e5" title="Discuss"]' ) ?>
-
-			<!--<form class="form">
-				<fieldset>
-					<div class="form__inputs">
-						<div class="form__inputs_top">
-							<div class="form__inputs_wrapper">
-								<input name="name" type="text" placeholder="First name">
-								<input name="lastname" type="text" placeholder="Last name">
-							</div>
-							<input name="email" type="email" placeholder="Email">
-						</div>
-						<div class="form__inputs_bottom">
-							<div class="form__inputs_wrapper">
-								<input name="job" type="text" placeholder="Job Title">
-							</div>
-							<input name="organization" type="text" placeholder="Organization">
-						</div>
-						<textarea name="text" placeholder="Message"></textarea>
-					</div>
-					<div class="form__submit">
-						<div class="checkbox__wrapper">
-							<input name="check" id="check" type="checkbox">
-							<label for="check">
-                                    <span class="check__text">
-                                        Permission
-                                    </span>
-								<span class="check__text_desktop">
-                                        I give you permission to contact me.
-                                    </span>
-							</label>
-						</div>
-						<button class="form__button">
-							Submit
-							<div class="form__button_arrow">
-								→
-							</div>
-						</button>
-					</div>
-				</fieldset>
-			</form>-->
 		</div>
 	</div>
 </section>

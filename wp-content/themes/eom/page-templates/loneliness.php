@@ -18,6 +18,11 @@ wp_enqueue_script( 'image-text', THEME_URI . '/static/js/image_text/image_text.m
 wp_enqueue_style( 'blocks', THEME_URI . '/static/css/blocks/blocks.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'main-video', THEME_URI . '/static/css/main_video/main_video.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.min.js', ['jquery'], THEME_VERSION, true );
+wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', [], THEME_VERSION );
+
+$title	= get_sub_field( 'title' );
+$desc	= get_sub_field( 'desc' );
+
 ?>
 
 <main class="main">
@@ -62,7 +67,7 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 			</div>
 		</div>
 	</section>
-	 <section class="text__image">
+	 <section class="text__image type-1">
 		<div class="container">
 			<div class="text__image_wrapper">
 				<div class="text__image_info">
@@ -106,8 +111,8 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 										<li><i>The Opportunity: Mutual Value Creation</i></li>
 										<li><i>Your Pathway to Action: From Insight to Impact</i></li>
 									</ol>
-									<div class="call-modal-wrapper">
-										<button class="call-modal">
+									<div class="button-wrapper end">
+										<button class="button bg dark">
 											Download PDF
 										</button>
 									</div>
@@ -148,7 +153,7 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="call-modal call-block-modal">
+								<button class="button bg dark">
 									Sign Up
 								</button>
 							</div>
@@ -178,7 +183,7 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="call-modal call-block-modal">
+								<button class="button bg dark">
 									Sign Up
 								</button>
 							</div>
@@ -208,7 +213,7 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="call-modal call-block-modal">
+								<button class="button bg dark">
 									Sign Up
 								</button>
 							</div>
@@ -238,7 +243,7 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="call-modal call-block-modal">
+								<button class="button bg dark">
 									Sign Up
 								</button>
 							</div>
@@ -251,19 +256,141 @@ wp_enqueue_script( 'main-video', THEME_URI . '/static/js/main_video/main_video.m
 	<section class="main__video">
 		<div class="container">
 			<div class="main__video_wrapper">
-						<div class="embededVideo" data-id-vimeo="https://player.vimeo.com/video/936630816?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
-							<img src="<?php echo THEME_URI ?>/static/img/vid1.jpg" alt="">
-							<div class="video__desc">
-								<p>
-									<b>How Companies Can Take Action</b> <br>
-									Insights From Professor Pamela Qualter
-								</p>
-							</div>
-						</div>  
+				<div class="embededVideo" data-id-vimeo="https://player.vimeo.com/video/936630816?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+					<img src="<?php echo THEME_URI ?>/static/img/vid1.jpg" alt="">
+					<div class="video__desc">
+						<p>
+							<b>How Companies Can Take Action</b> <br>
+							Insights From Professor Pamela Qualter
+						</p>
+					</div>
+				</div>  
 				<div class="play"></div>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	<section class="image__text column">
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/it2.jpg" alt="">
+				</div>
+				<div class="image__text_right">
+						<div class="image__text_inner">
+							<div class="image__text_info column">
+								<div class="image__text_heading">
+									<p>BUSINESS vs. LONELINESS</p>
+									<h2>Manchester Change Forum</h2>
+								</div>
+								<div class="image__text_paragraphs">
+									<p>
+										<b>February 2025</b><br>
+										Manchester, UK
+									</p>
+									<p>
+										Free in-person changemaker conference with virtual options. Bringing together stakeholders from the private, public, and non-profit sectors to explore how business can tackle the problem of loneliness by creating mutual value.
+									</p>
+									<p>
+										With presentations from leading experts, practical case studies, interactive sessions, and 'hackathon' opportunities. More details to follow.
+									</p>
+									<div class="button-wrapper start">
+										<button class="button bg dark">
+											Register Your Interest
+										</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="text__image type-2">
+		<div class="container">
+			<div class="text__image_wrapper">
+				<div class="text__image_info">
+						<div class="image__text_heading">
+						<h2>Driving Systemic Change, Together</h2>
+					</div>
+					<div class="image__text_content">
+						<p>
+							Loneliness is a so-called wicked problem that can't be solved by one industry alone. Cross-sector actors must work together to go beyond typical 'solutions' that merely treat the symptoms of the issue without addressing the root causes.
+						</p>
+						<p>
+							With its four partners working across the whole economic system, the Economics of Mutuality Alliance is uniquely positioned to help diverse stakeholders find good solutions to systemic problems- profitable solutions that are good for business and good for society.
+						</p>
+						<a href="#" class="button bg white">Learn more</a>
+					</div>
+				</div>
+				<div class="text__image_item">
+					<img src="<?php echo THEME_URI ?>/static/img/ti2.svg" alt="">
+				</div>
+		</div>
+	</section>
+	<section class="discuss">
+		<div class="container">
+			<div class="discuss__wrapper">
+				<div class="discuss__heading">
+					<h2 class="h2 terracota">
+						Let's Discuss
+					</h2>
+					
+					<p>
+						If you’d like to explore how the Economics of Mutuality could drive transformation in your context, just reach out. We'd be delighted to start a conversation.
+					</p>
+				</div>
+
+				<?php echo do_shortcode( '[contact-form-7 id="076c6e5" title="Discuss"]' ) ?>
+			</div>
+		</div>
+	</section>
+	<section class="main__video">
+		<div class="container">
+			<div class="main__video_wrapper">
+				<div class="embededVideo" data-id-vimeo="https://player.vimeo.com/video/936630683?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+					<img src="<?php echo THEME_URI ?>/static/img/vid2.jpg" alt="">
+					<div class="video__desc">
+						<p>
+							<b>Tackling Loneliness in the Healthcare Sector</b> <br>
+							A Converstion With Professor Pamela Qualter and Pascal Riederer
+						</p>
+					</div>
+				</div>  
+				<div class="play"></div>
+			</div>
+		</div>
+	</section>
+	<section class="image__text reverse column">
+		<div class="container">
+			<div class="image__text_wrapper">
+				<div class="image__text_left">
+					<img src="<?php echo THEME_URI ?>/static/img/it3.jpg" alt="">
+				</div>
+				<div class="image__text_right">
+						<div class="image__text_inner">
+							<div class="image__text_info column">
+								<div class="image__text_heading">
+									<h2>Be Part of the Solution</h2>
+								</div>
+								<div class="image__text_paragraphs">
+									<p>
+										The impact of social isolation on mortality rates rivals that of well-known risk factors such as smoking and obesity. In workplaces, lonely employees take more sick days, display reduced commitment, and exhibit weaker performance.
+									</p>
+									<p>
+										Dysfunctional business models have contributed to this problem. But better business practices can help solve it. If you'd like to be part of the solution, sign up to our BUSINESS vs. LONELINESS mailing list to hear about upcoming events, thought leadership pieces, and action initiatives.
+									</p>
+									<div class="button-wrapper end">
+										<button class="button bg dark">
+											Sign Up
+										</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 	<?php

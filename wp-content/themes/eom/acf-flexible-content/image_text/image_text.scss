@@ -300,9 +300,12 @@
 		}
 	}
 
-	.call-modal-wrapper {
+	.button-wrapper {
 		display: flex;
-		justify-content: flex-end;
 		margin-top: 15px;
+
+		&.end {
+			justify-content: flex-end;
+		}
 	}
 }
