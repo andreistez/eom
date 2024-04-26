@@ -46,8 +46,7 @@ $form = get_field( 'form' );
 		 * will use template from 'theme_name/acf-flexible-content/hero_section/hero_section.php'
 		 */
 		?>
-		<!--
-		<section
+		<!--<section
 			class="hero"
 			id="hero-1"
 		>
