@@ -1083,6 +1083,26 @@
                             },
                             "default_value": "",
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_662c153f89df0",
+                            "label": "Video Description",
+                            "name": "video_desc",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -2573,5 +2593,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714164673
+    "modified": 1714165074
 }

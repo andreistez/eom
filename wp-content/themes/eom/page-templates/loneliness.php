@@ -393,9 +393,7 @@ $form = get_field( 'form' );
 							alt=""
 						>
 						<div class="video__desc">
-							<p>
-								<b>Tackling Loneliness in the Healthcare Sector</b> <br> A Converstion With Professor
-								Pamela Qualter and Pascal Riederer </p>
+							<p><b>Tackling Loneliness in the Healthcare Sector</b> <br> A Converstion With Professor Pamela Qualter and Pascal Riederer</p>
 						</div>
 					</div>
 					<div class="play"></div>
