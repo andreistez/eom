@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
     showPopup('.modal__wrapper', 'a[href="#call-modal"', '.close__button', '#modal-lock')
+    showPopup('.signup-modal', '.call-signup', '.close__button', '#modal-lock-1')
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {

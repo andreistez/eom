@@ -112,7 +112,7 @@ $desc	= get_sub_field( 'desc' );
 										<li><i>Your Pathway to Action: From Insight to Impact</i></li>
 									</ol>
 									<div class="button-wrapper end">
-										<button class="button bg dark">
+										<button class="button bg dark call-signup">
 											Download PDF
 										</button>
 									</div>
@@ -153,7 +153,7 @@ $desc	= get_sub_field( 'desc' );
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="button bg dark">
+								<button class="button bg dark call-signup">
 									Sign Up
 								</button>
 							</div>
@@ -183,7 +183,7 @@ $desc	= get_sub_field( 'desc' );
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="button bg dark">
+								<button class="button bg dark call-signup">
 									Sign Up
 								</button>
 							</div>
@@ -213,7 +213,7 @@ $desc	= get_sub_field( 'desc' );
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="button bg dark">
+								<button class="button bg dark call-signup">
 									Sign Up
 								</button>
 							</div>
@@ -243,7 +243,7 @@ $desc	= get_sub_field( 'desc' );
 								</p>
 							</div>
 							<div class="button-wrapper">
-								<button class="button bg dark">
+								<button class="button bg dark call-signup">
 									Sign Up
 								</button>
 							</div>
@@ -294,7 +294,7 @@ $desc	= get_sub_field( 'desc' );
 										With presentations from leading experts, practical case studies, interactive sessions, and 'hackathon' opportunities. More details to follow.
 									</p>
 									<div class="button-wrapper start">
-										<button class="button bg dark">
+										<button class="button bg dark call-signup">
 											Register Your Interest
 										</button>
 									</div>
@@ -380,7 +380,7 @@ $desc	= get_sub_field( 'desc' );
 										Dysfunctional business models have contributed to this problem. But better business practices can help solve it. If you'd like to be part of the solution, sign up to our BUSINESS vs. LONELINESS mailing list to hear about upcoming events, thought leadership pieces, and action initiatives.
 									</p>
 									<div class="button-wrapper end">
-										<button class="button bg dark">
+										<button class="button bg dark call-signup">
 											Sign Up
 										</button>
 									</div>
@@ -391,7 +391,6 @@ $desc	= get_sub_field( 'desc' );
 			</div>
 		</div>
 	</section>
-
 
 	<?php
 	if( have_rows( 'flexible_content' ) ){
@@ -406,4 +405,3 @@ $desc	= get_sub_field( 'desc' );
 
 <?php
 get_footer();
-
