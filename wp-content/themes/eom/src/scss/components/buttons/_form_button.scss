@@ -38,4 +38,9 @@
         color: $white;
 		line-height: 14px;
     }
+
+	&.terracota {
+		background-color: $terracota;
+		border-color: $terracota;
+	}
 }

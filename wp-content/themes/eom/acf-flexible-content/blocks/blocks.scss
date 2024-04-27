@@ -31,6 +31,7 @@
 	.block {
 		width: 100%;
 		border: 2px solid $dark-blue;
+		padding: 0;
 
 		@media(min-width: $sm) {
 			width: calc(50% - 15px);
@@ -89,5 +90,6 @@
 	.button-wrapper {
 		display: flex;
 		justify-content: flex-end;
+		margin-top: auto;
 	}
 }
