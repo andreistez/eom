@@ -13,8 +13,9 @@ wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', 
 
 $title	= get_sub_field( 'title' );
 $desc	= get_sub_field( 'desc' );
+$form	= get_sub_field( 'form' );
 
-if( ! $title && ! $desc ) return;
+if( ! $title && ! $desc && ! $form ) return;
 ?>
 
 <section class="discuss">
@@ -28,7 +29,7 @@ if( ! $title && ! $desc ) return;
 				?>
 			</div>
 
-			<?php echo do_shortcode( '[contact-form-7 id="076c6e5" title="Discuss"]' ) ?>
+			<?php echo $form ? do_shortcode( '[contact-form-7 id="' . $form . '" title="Discuss"]' ) : '' ?>
 		</div>
 	</div>
 </section>
