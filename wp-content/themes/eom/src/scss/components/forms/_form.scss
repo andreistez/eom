@@ -208,6 +208,13 @@
 	.signup-modal .modal .wpcf7 .wpcf7-form .form__submit .form__button .wpcf7-submit {
 		background-color: $terracota;
 	}
+
+	.wpcf7-form {
+		.form__button {
+			background-color: $dark-blue;
+			color: $white;
+		}
+	}
 } 
 		
 

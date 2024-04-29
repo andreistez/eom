@@ -47,11 +47,7 @@
 		h2 {
 			color: $terracota;
 		}
-	}
-	.form__button .wpcf7-submit {
-		background-color: $dark-blue;
-		color: $white;
-	}
+	}	
 
 	.checkbox__wrapper input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
 		background-color: $terracota;

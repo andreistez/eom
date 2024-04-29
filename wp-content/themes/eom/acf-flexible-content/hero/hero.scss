@@ -58,6 +58,7 @@
 		font-family: $ff;
 		color: $white;
 		font-size: 30px;
+		margin-bottom: 10px;
 
 		@media(min-width: 393px) {
 			font-size: 45px;
@@ -65,6 +66,7 @@
 
 		@media(min-width: $md) {
 			font-size: 58px;
+			margin-bottom: 20px;
 		}
 	}
 }

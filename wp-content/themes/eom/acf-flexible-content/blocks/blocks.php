@@ -25,7 +25,7 @@ $blocks   = get_sub_field( 'blocks' );
 
 				if( $subtitle ) echo '<p>', esc_html( $subtitle ), '</p>';
 
-				if( $title ) echo '<h2>', $subtitle, '</h2>';
+				if( $title ) echo '<h2>', $title, '</h2>';
 
 				echo '</div>';
 			}

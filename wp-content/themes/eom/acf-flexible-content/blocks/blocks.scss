@@ -77,13 +77,17 @@
 
 			@media(min-width: $lg) {
 				width: 70%;
-				padding: 32px;
-				gap: 30px;
+				padding: 20px 15px 20px 30px;
+				gap: 40px;
 			}
 
 			h5 {
 				color: $terracota;
 			}
+		}
+
+		&-date {
+			font-size: 19px;
 		}
 	}
 
