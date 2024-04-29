@@ -265,9 +265,14 @@
 		}
 
 		p em {
-			font-size: 28px;
 			font-weight: $fw-light;
+			font-size: 22px;
 			line-height: 28px;
+
+			@media (min-width: $md) {
+				font-size: 28px;
+				line-height: 30px;
+			}
 		}
 
 		p {

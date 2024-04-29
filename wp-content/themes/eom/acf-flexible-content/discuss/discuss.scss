@@ -44,8 +44,29 @@
 
 .page-template-loneliness {
 	.discuss {
+		&__heading {
+			margin-bottom: 15px;
+
+			@media(min-width: $lg) {
+				margin-bottom: 25px;
+			}
+		}
+
 		h2 {
 			color: $terracota;
+			margin-bottom: 15px;
+
+			@media(min-width: $lg) {
+				margin-bottom: 25px;
+			}
+		}
+
+		.wpcf7-form {
+			.form__submit {
+				.checkbox__wrapper {
+					flex-direction: column;
+				}
+			}
 		}
 	}	
 
