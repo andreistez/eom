@@ -63,8 +63,31 @@
 
 		.wpcf7-form {
 			.form__submit {
+				flex-direction: column;
+
+				@media(min-width: $lg) {
+					flex-direction: row;
+				}
+
+				.wpcf7-list-item-label {
+					position: relative;
+					padding-left: 25px;
+
+					&::before {
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+
 				.checkbox__wrapper {
 					flex-direction: column;
+					margin-bottom: 20px;
+
+					@media(min-width: $lg) {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
