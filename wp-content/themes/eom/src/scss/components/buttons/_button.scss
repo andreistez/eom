@@ -21,20 +21,30 @@ button,
 	}
 
 	&.bg {
+		padding: 9px 15px;
+		display: flex;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 14px;
+		letter-spacing: -0.42px;
+		text-transform: capitalize;
 		background-color: $dark-blue;
 		color: $white;
-		text-transform: none;
-		font-size: 18px;
-		padding: 10px;
-		line-height: 1;
 		transition: opacity ease $tr;
 	
 		&:hover {
 			opacity: 0.7;
 		}
+
+		@media(min-width: $md) {
+			font-size: 18px;
+			line-height: 18px;
+			letter-spacing: -0.54px;
+		}
 	
-		@media (min-width: $md) {
-			font-size: 22px;
+		@media(min-width: $xl) {
+			line-height: 14px;
 		}
 
 		&.white {

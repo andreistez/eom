@@ -123,11 +123,15 @@
 		}
 
 		&.type-2 {
+			.text__image_wrapper {
+				align-items: center;
+			}
+
 			.text__image_info {
 				width: 100%;
 
 				@media(min-width: $lg) {
-					max-width: 600px;
+					max-width: 500px;
 				}
 			}
 

@@ -131,9 +131,10 @@
 			font-size: 16px;
 			line-height: 16px;
 			max-width: 400px;
+			letter-spacing: normal;
 			font-weight: $fw-regular;
 
-			b {
+			b, strong {
 				font-size: 18px;
 				line-height: 18px;
 			}
@@ -143,9 +144,11 @@
 				line-height: 20px;
 				max-width: 800px;
 
-				b {
+				b, strong {
+					font-weight: $fw-bold;
 					font-size: 28px;
 					line-height: 40px;
+					letter-spacing: normal;
 				}
 			}
 		}
