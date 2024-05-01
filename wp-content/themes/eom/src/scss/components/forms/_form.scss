@@ -205,8 +205,14 @@
 		width: 100%;
 	}
 
-	.signup-modal .modal .wpcf7 .wpcf7-form .form__submit .form__button .wpcf7-submit {
-		background-color: $terracota;
+	#modal-lock-1 {
+		.wpcf7-form {
+			.form__button {
+				background-color: $terracota;
+				color: $white;
+				border-color: $terracota;
+			}
+		}
 	}
 
 	.wpcf7-form {
