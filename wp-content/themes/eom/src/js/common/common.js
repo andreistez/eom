@@ -16,11 +16,12 @@ const toggleBurgerMenu = (button, selector, lock) => {
     const header = document.querySelector('.header')
 	const burgerButton = document.querySelector(button)
 	const headerInner = document.querySelector(selector)
-	setTargetElement(document.querySelector(lock)) //Target element for body lock
 
 	if (!burgerButton && !headerInner) return
 
 	burgerButton.addEventListener('click', () => {
+		setTargetElement(document.querySelector(lock)) //Target element for body lock
+
 		if (!headerInner.classList.contains('opened')) {
             burgerButton.classList.add('clicked')
 			headerInner.classList.add('opened')
@@ -141,12 +142,12 @@ export const showPopup = (selector, btn, close, lock) => {
 	const popupWrapper = document.querySelector(selector)
 	const popButtons = document.querySelectorAll(btn)
     const closeBtns   = document.querySelectorAll(close)
-	setTargetElement(document.querySelector(lock))
 
 	if (!popupWrapper) return
 	popButtons.forEach(button => {
 		button.addEventListener('click', e => {
             e.preventDefault()
+			setTargetElement(document.querySelector(lock))
 
 			if (!popupWrapper.classList.contains('showed')) {
 				popupWrapper.classList.add('showed')
