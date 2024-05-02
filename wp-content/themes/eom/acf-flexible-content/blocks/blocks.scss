@@ -17,6 +17,7 @@
 		p {
 			font-size: 20px;
 			text-transform: none;
+			color: $dark-blue;
 
 			@media (min-width: $md) {
 				font-size: 27px;
@@ -24,7 +25,7 @@
 		}
 
 		h2 {
-			margin-bottom: 16px;
+			color: $dark-blue;
 		}
 	}
 
@@ -87,16 +88,19 @@
 				width: 70%;
 				padding: 20px 15px 20px 30px;
 				gap: 40px;
-			}
 
-			h5 {
-				font-weight: $fw-regular;
-				color: $terracota;
-				font-size: 26px;
-       			line-height: 30px;
-        		letter-spacing: -0.78px;
-				
+				h5 {
+					font-weight: $fw-regular;
+					color: $terracota;
+					font-size: 30px;
+					   line-height: 30px;
+					letter-spacing: -0.78px;	
+				}
 			}
+		}
+
+		&-title, &-title, &-date {
+			color: $dark-blue;
 		}
 
 		&-date {

@@ -28,7 +28,7 @@ $text  = $block['text'] ?? '';
 			<?php
 			if( $title ) echo '<div class="block-title">', $title, '</div>';
 
-			if( $date ) echo '<div class="block-title">', $date, '</div>';
+			if( $date ) echo '<div class="block-date">', $date, '</div>';
 
 			if( $text ) echo '<div class="block-text">', $text, '</div>';
 			?>
