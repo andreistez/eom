@@ -53,7 +53,7 @@
 		&-img {
 			width: 100%;
 			border-bottom: 2px solid $dark-blue;
-			height: 200px;
+			height: 350px;
 
 			@media(min-width: $lg) {
 				height: 100%;
@@ -77,11 +77,12 @@
 			padding: 15px;
 
 			h5 {
-				font-size: 18px;
+				font-size: 24px;
 				font-style: normal;
 				font-weight: $fw-bold;
-				line-height: 20px;
+				line-height: 24px;
 				letter-spacing: -0.48px;
+				color: $terracota;
 			}
 
 			@media(min-width: $lg) {
@@ -93,13 +94,13 @@
 					font-weight: $fw-regular;
 					color: $terracota;
 					font-size: 30px;
-					   line-height: 30px;
+					line-height: 30px;
 					letter-spacing: -0.78px;	
 				}
 			}
 		}
 
-		&-title, &-title, &-date {
+		&-text, &-date {
 			color: $dark-blue;
 		}
 
