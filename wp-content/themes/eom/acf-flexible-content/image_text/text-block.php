@@ -27,10 +27,12 @@ $border_color         = ( isset( $block['border_color'] ) && $block['border_colo
 $popup_label          = ( isset( $block['popup_label'] ) && $block['popup_label'] ) ? $block['popup_label'] : null;
 $popup_button_justify = ( isset( $block['popup_button_justify'] ) &&
                           $block['popup_button_justify'] ) ? $block['popup_button_justify'] : 'start';    // 'start' | 'end'
+$form_id              = $block['form'] ?? '';
+$id_rand              = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
 ?>
 
 <div class="image__text_info<?php echo $text_type ?>">
-	<hr style="background-color: <?php echo esc_attr( $border_color ) ?>" />
+	<hr style="background-color: <?php echo esc_attr( $border_color ) ?>"/>
 
 	<?php
 	if( $subtitle || $title ){
@@ -65,6 +67,20 @@ $popup_button_justify = ( isset( $block['popup_button_justify'] ) &&
 		}
 
 		echo '</div>';
+	}
+
+	if( $form_id ){
+		?>
+		<div id="<?php echo $id_rand ?>" class="modal__wrapper signup-modal">
+			<div class="modal">
+				<?php echo do_shortcode( "[contact-form-7 id='$form_id']" ) ?>
+
+				<button class="close__button">
+					<span></span>
+				</button>
+			</div>
+		</div>
+		<?php
 	}
 	?>
 </div>
