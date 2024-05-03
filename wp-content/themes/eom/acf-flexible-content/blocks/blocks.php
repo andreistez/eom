@@ -10,6 +10,8 @@
  */
 
 wp_enqueue_style( 'blocks', THEME_URI . '/static/css/blocks/blocks.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'blocks', THEME_URI . '/static/js/blocks/blocks.min.js', [ 'jquery' ], THEME_VERSION, true );
+
 
 $subtitle = get_sub_field( 'subtitle' );
 $title    = get_sub_field( 'title' );

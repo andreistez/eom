@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()
-    showPopup('#modal-lock', 'a[href="#call-modal"', '.close__button', '#modal-lock')
-    showPopup('#modal-lock-1', '.call-signup', '.close__button', '#modal-lock-1')
+    showFooterPopup()
 })
 
 const toggleBurgerMenu = (button, selector, lock) => {
@@ -138,16 +137,16 @@ const generateSectionIds = () => {
 	} )
 }
 
-export const showPopup = (selector, btn, close, lock) => {
-	const popupWrapper = document.querySelector(selector)
-	const popButtons = document.querySelectorAll(btn)
-    const closeBtns   = document.querySelectorAll(close)
+export const showFooterPopup = () => {
+	const popupWrapper = document.querySelector('#modal-lock')
+	const popButtons = document.querySelectorAll('a[href="#call-modal"')
+    const closeBtns   = document.querySelectorAll('.close__button')
 
 	if (!popupWrapper) return
 	popButtons.forEach(button => {
 		button.addEventListener('click', e => {
             e.preventDefault()
-			setTargetElement(document.querySelector(lock))
+			setTargetElement(document.querySelector('#modal-lock'))
 
 			if (!popupWrapper.classList.contains('showed')) {
 				popupWrapper.classList.add('showed')
@@ -184,4 +183,3 @@ export const showPopup = (selector, btn, close, lock) => {
 		}
 	})
 }
-

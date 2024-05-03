@@ -590,35 +590,34 @@
                                     "layout": "vertical",
                                     "save_other_choice": 0,
                                     "parent_repeater": "field_65c2a77d71ced"
-                                },
-                                {
-                                    "key": "field_6633fa680ecf5",
-                                    "label": "CF7 Form",
-                                    "name": "form",
-                                    "aria-label": "",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "wpcf7_contact_form"
-                                    ],
-                                    "post_status": "",
-                                    "taxonomy": "",
-                                    "return_format": "id",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "bidirectional": 0,
-                                    "ui": 1,
-                                    "bidirectional_target": [],
-                                    "parent_repeater": "field_65c2a77d71ced"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_66346367ba7b3",
+                            "label": "CF7 Form",
+                            "name": "form",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "return_format": "id",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": []
                         }
                     ],
                     "min": "",
@@ -2604,5 +2603,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714682509
+    "modified": 1714709874
 }

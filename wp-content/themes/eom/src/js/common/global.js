@@ -1,3 +1,5 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 const ajaxUrl = window.wpData.ajaxUrl
 let targetElement
 
@@ -111,6 +113,55 @@ export const isInScope = ( elementSelector, st, offset = 100 ) => {
 	return st >= (elemTop - getWindowHeight() + offset) && st <= (elemTop + element.clientHeight - offset)
 }
 
-  
+export const showFormModal = (buttonsSelector, parentSelector) => {
+    const popupButtons = document.querySelectorAll(buttonsSelector)
+    const closeBtns = document.querySelectorAll('.close__button')
 
+    if (!popupButtons.length && !parentSelector) return
 
+    popupButtons.forEach(popupButton => {
+        popupButton.addEventListener('click', e => {
+            e.preventDefault()
+
+            const modalWrapper = popupButton.closest(parentSelector).querySelector('.signup-modal')
+            const modalId = `#${modalWrapper.id}`
+            setTargetElement(modalId)
+            console.log(modalId)
+
+            toggleModal(modalWrapper)
+        })
+    })
+
+    closeBtns.forEach(button => {
+        if (!button) return
+
+        button.addEventListener('click', () => {
+            const modalWrapper = button.closest('.signup-modal')
+            toggleModal(modalWrapper)
+        })
+    })
+
+    document.addEventListener('click', e => {
+        const target = e.target
+        const modalWrapper = e.target.closest('.signup-modal')
+
+        if (target.className && target.classList.contains('signup-modal')) {
+            toggleModal(modalWrapper)
+        }
+    })
+}
+
+const toggleModal = modalWrapper => {
+    if (!modalWrapper) return
+
+    if (!modalWrapper.classList.contains('showed')) {
+        modalWrapper.classList.add('showed')
+        modalWrapper.classList.remove('closed')
+        disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+    } else {
+        modalWrapper.classList.add('closed')
+        setTimeout(() => modalWrapper.classList.remove('showed'), 350)
+        setTimeout(() => modalWrapper.classList.remove('closed'), 350)
+        enableBodyScroll(getTargetElement())
+    }
+}

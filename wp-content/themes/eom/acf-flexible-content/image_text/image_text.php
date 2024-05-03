@@ -18,6 +18,8 @@ $bg_color		= get_sub_field( 'bg_color' );
 $bg				= $bg_color ? ' style="background-color:' . esc_attr( $bg_color ) . '"' : '';
 $bottom_spacing	= get_sub_field( 'additional_bottom_spacing' );
 $text_blocks	= get_sub_field( 'text_blocks' );
+$id_rand        = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
+$form_id        = get_sub_field('form') ?? '';
 ?>
 
 <section class="image__text<?php echo $type ?>">
@@ -49,5 +51,20 @@ $text_blocks	= get_sub_field( 'text_blocks' );
 			</div>
 		</div>
 	</div>
+	<?php
+	if( $form_id ){
+		?>
+		<div id="<?php echo $id_rand ?>" class="modal__wrapper signup-modal">
+			<div class="modal">
+				<?php echo do_shortcode( "[contact-form-7 id='$form_id']" ) ?>
+
+				<button class="close__button">
+					<span></span>
+				</button>
+			</div>
+		</div>
+		<?php
+	}
+	?>
 </section>
 
