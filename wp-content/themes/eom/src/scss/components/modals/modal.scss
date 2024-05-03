@@ -236,4 +236,40 @@
 		text-align: left;
 		margin-bottom: 20px;
 	}
+
+	.wpcf7-form.init {
+		.form__submit {
+			.form__button.wpcf7-submit {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+
+.signup__modal {
+	.wpcf7-form.init {
+		.form__submit {
+			.form__button.wpcf7-submit {
+				margin: 0 auto;
+				background-color: $terracota;
+				border-color: $terracota;
+			}
+		}
+
+		.form__button.wpcf7-submit {
+			margin: 0 auto;
+			background-color: $terracota;
+			border-color: $terracota;
+		}
+	}
+}
+
+.modal__wrapper {
+	.form__button.wpcf7-submit {
+		background-color: $dark-blue;
+		width: 80%;
+		margin: 0 auto;
+	}
 }

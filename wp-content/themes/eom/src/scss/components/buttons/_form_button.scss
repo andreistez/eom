@@ -12,7 +12,6 @@
     text-transform: capitalize;
     background-color: transparent;
     transition: opacity ease $tr;
-	margin: 0 auto;
 
     &_arrow {
         margin-left: 5px;
@@ -45,3 +44,4 @@
 		border-color: $terracota;
 	}
 }
+

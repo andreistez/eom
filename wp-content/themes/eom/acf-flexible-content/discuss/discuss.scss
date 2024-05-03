@@ -89,6 +89,12 @@
 						margin-bottom: 0;
 					}
 				}
+
+				button.form__button.wpcf7-submit {
+					background-color: $dark-blue;
+					border-color: $dark-blue;
+					margin: 0;
+				}
 			}
 		}
 	}	
