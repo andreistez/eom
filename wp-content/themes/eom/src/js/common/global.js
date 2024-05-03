@@ -114,39 +114,38 @@ export const isInScope = ( elementSelector, st, offset = 100 ) => {
 }
 
 export const showFormModal = (buttonsSelector, parentSelector) => {
-    const popupButtons = document.querySelectorAll(buttonsSelector)
-    const closeBtns = document.querySelectorAll('.close__button')
+	const wrappers = document.querySelectorAll( parentSelector )
 
-    if (!popupButtons.length && !parentSelector) return
+    if (!wrappers.length) return
 
-    popupButtons.forEach(popupButton => {
-        popupButton.addEventListener('click', e => {
-            e.preventDefault()
+	wrappers.forEach( wrapper => {
+		const
+			popupButtons = wrapper.querySelectorAll(buttonsSelector),
+			closeBtns = wrapper.querySelectorAll('.close__button'),
+			modalWrapper = wrapper.querySelector('.signup-modal'),
+			modalId = `#${modalWrapper.id}`
 
-            const modalWrapper = popupButton.closest(parentSelector).querySelector('.signup-modal')
-            const modalId = `#${modalWrapper.id}`
-            setTargetElement(modalId)
-            console.log(modalId)
+		if( ! popupButtons.length || ! closeBtns.length || ! modalWrapper ) return
 
-            toggleModal(modalWrapper)
-        })
-    })
+		popupButtons.forEach(popupButton => {
+			popupButton.addEventListener('click', e => {
+				e.preventDefault()
 
-    closeBtns.forEach(button => {
-        if (!button) return
+				setTargetElement(modalId)
+				toggleModal(modalWrapper)
+			})
+		})
 
-        button.addEventListener('click', () => {
-            const modalWrapper = button.closest('.signup-modal')
-            toggleModal(modalWrapper)
-        })
-    })
+		closeBtns.forEach(button => {
+			button.addEventListener('click', () => toggleModal(button.closest('.signup-modal')))
+		})
+	} )
 
     document.addEventListener('click', e => {
         const target = e.target
-        const modalWrapper = e.target.closest('.signup-modal')
 
         if (target.className && target.classList.contains('signup-modal')) {
-            toggleModal(modalWrapper)
+            toggleModal(target.closest('.signup-modal'))
         }
     })
 }
