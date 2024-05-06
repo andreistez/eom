@@ -120,11 +120,30 @@
 					max-width: 450px;
 				}
 			}
+
+
+
+			.text__image_wrapper {
+				gap: 6px;
+				padding: 20px 15px;
+
+				@media(min-width: $lg) {
+					gap: 50px;
+					padding: 32px;
+				}
+			}
 		}
 
 		&.type-2 {
 			.text__image_wrapper {
 				align-items: center;
+				gap: 20px;
+				padding: 20px 15px;
+
+				@media(min-width: $lg) {
+					gap: 50px;
+					padding: 32px;
+				}
 			}
 
 			.text__image_info {
