@@ -74,10 +74,6 @@
 }
 
 .page-template-loneliness {
-	
-	.hero-subtitle {
-		margin-bottom: 0;
-	}
 	 
 	.hero__wrapper  {
 		flex-direction: column;
@@ -89,9 +85,18 @@
 			padding: 40px 32px 120px 32px;
 		}
 
+		.hero-subtitle {
+			margin-bottom: 5px;
+
+			@media(min-width: $md) {
+				margin-bottom: 10px;
+			}
+		}
+
 		h1 {
 			font-size: 50px;
 			color: $terracota;
+			line-height: 1;
 
 			@media(min-width: 393px) {
 				font-size: 65px;
@@ -99,10 +104,12 @@
 
 			@media(min-width: $md) {
 				font-size: 120px;
+				line-height: 88px;
 			}
 
 			@media(min-width: $lg) {
 				font-size: 132px;
+				line-height: 100px;
 			}
 		}
 	}

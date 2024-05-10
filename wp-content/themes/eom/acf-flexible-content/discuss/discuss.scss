@@ -93,6 +93,7 @@
 				button.form__button.wpcf7-submit {
 					background-color: $dark-blue;
 					border-color: $dark-blue;
+					color: $white;
 					margin: 0;
 					margin-left: auto;
 				}
@@ -103,5 +104,9 @@
 	.checkbox__wrapper input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
 		background-color: $terracota;
 		border-color: $terracota;
+	}
+
+	.form__button {
+		color: $white;
 	}
 }
