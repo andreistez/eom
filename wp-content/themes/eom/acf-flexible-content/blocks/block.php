@@ -12,18 +12,28 @@
 
 if( ! $block = $args['block'] ?? null ) return;
 
-$image   = $block['image'] ?? '';
-$title   = $block['title'] ?? '';
-$date    = $block['date'] ?? '';
-$text    = $block['text'] ?? '';
-$form_id = $block['form'] ?? '';
-$id_rand = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
+$image        = $block['image'] ?? '';
+$image_mobile = $block['image_mobile'] ?? '';
+$title        = $block['title'] ?? '';
+$date         = $block['date'] ?? '';
+$text         = $block['text'] ?? '';
+$form_id      = $block['form'] ?? '';
+$id_rand      = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
 ?>
 
 <div class="block">
 	<div class="block-inner">
 		<?php
-		if( $image ) echo '<div class="block-img">', wp_get_attachment_image( $image, 'image-text@2x', null, [ 'loading' => 'lazy' ] ), '</div>';
+		if( $image ){
+			echo '<div class="block-img">';
+			get_template_part( 'components/image', null, [
+				'data' => crit_prepare_image_data( $image, 'image-text', [
+					'mobile'      => $image_mobile,
+					'mobile_size' => 'blocks-mobile'
+				] )
+			] );
+			echo '</div>';
+			}
 		?>
 
 		<div class="block-info">
