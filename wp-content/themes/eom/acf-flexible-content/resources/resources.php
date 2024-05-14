@@ -14,9 +14,10 @@ wp_enqueue_style( 'resources', THEME_URI . '/static/css/resources/resources.min.
 $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' ) ?: '#000';
 $resources		= get_sub_field( 'resources' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="resources">
+<section class="resources" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="resources__wrapper">
 			<?php

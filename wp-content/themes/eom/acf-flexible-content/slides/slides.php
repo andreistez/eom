@@ -16,9 +16,10 @@ wp_enqueue_script( 'slides', THEME_URI . '/static/js/slides/slides.min.js', ['jq
 $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' ) ?: '#000';
 $people			= get_sub_field( 'people' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="slides">
+<section class="slides" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="slides__wrapper">
             <div class="subtitle" style="color: <?php echo esc_attr( $title_color ) ?>">OUR ORGANIZATION</div>

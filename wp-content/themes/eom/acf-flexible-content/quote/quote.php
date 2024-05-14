@@ -18,6 +18,7 @@ $bg_image			= get_sub_field( 'bg_image' );
 $bg_image_tablet	= get_sub_field( 'bg_image_tablet' ) ?: $bg_image;
 $bg_image_mobile	= get_sub_field( 'bg_image_mobile' ) ?: $bg_image_tablet;
 $single_quote		= [];
+$section_id = get_sub_field( 'section_id' ) ?? '';
 
 if( $section_type === 'slider' ){
 	$slider = get_sub_field( 'slider' );
@@ -32,7 +33,7 @@ if( $section_type === 'slider' ){
 }
 ?>
 
-<section class="quote">
+<section class="quote" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<?php
 		if( $section_type === 'slider' ){

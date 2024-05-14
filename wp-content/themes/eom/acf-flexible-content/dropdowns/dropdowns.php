@@ -17,9 +17,10 @@ $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' );
 $text			= get_sub_field( 'text' );
 $dropdowns		= get_sub_field( 'dropdowns' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="dropdowns">
+<section id="<?php echo esc_attr( $section_id ); ?>" class="dropdowns">
 	<div class="container">
 		<div class="dropdowns__wrapper">
 			<?php

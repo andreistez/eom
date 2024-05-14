@@ -19,9 +19,10 @@ $text			= get_sub_field( 'text' );
 $main_logo_text	= get_sub_field( 'main_logo_text' );
 $slogan			= get_sub_field( 'slogan' );
 $members		= get_sub_field( 'members' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="members">
+<section class="members" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="members__wrapper">
 			<?php

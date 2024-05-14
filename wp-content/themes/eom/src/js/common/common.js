@@ -4,7 +4,7 @@ import { setTargetElement, getTargetElement } from './global'
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	generateSectionIds()
+	// generateSectionIds()
 	toggleBurgerMenu('.burger__button', '.header__inner', '#menu-lock')
 	closeMenuByTapLink('.burger__button', '.menu-item a', '.header__inner')
     animateHeader()

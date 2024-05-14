@@ -20,9 +20,10 @@ $bottom_spacing	= get_sub_field( 'additional_bottom_spacing' );
 $text_blocks	= get_sub_field( 'text_blocks' );
 $id_rand        = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
 $form_id        = get_sub_field('form') ?? '';
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="image__text<?php echo $type ?>">
+<section class="image__text <?php echo $type; ?>" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="image__text_wrapper">
 			<?php

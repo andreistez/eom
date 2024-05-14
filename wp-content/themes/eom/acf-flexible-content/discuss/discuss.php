@@ -14,11 +14,12 @@ wp_enqueue_style( 'discuss', THEME_URI . '/static/css/discuss/discuss.min.css', 
 $title	= get_sub_field( 'title' );
 $desc	= get_sub_field( 'desc' );
 $form	= get_sub_field( 'form' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 
 if( ! $title && ! $desc && ! $form ) return;
 ?>
 
-<section class="discuss">
+<section id="<?php echo esc_attr( $section_id ); ?>" class="discuss">
 	<div class="container">
 		<div class="discuss__wrapper">
 			<div class="discuss__heading">

@@ -22,9 +22,10 @@ $text_left			= get_sub_field( 'text_left' );
 $text_left_color	= get_sub_field( 'text_left_color' ) ?: '#000';
 $text_right			= get_sub_field( 'text_right' );
 $text_right_color	= get_sub_field( 'text_right_color' ) ?: '#000';
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="text__rows">
+<section class="text__rows" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="text__rows_wrapper"<?php echo $bg ?>>
 			<?php

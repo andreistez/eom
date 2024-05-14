@@ -17,9 +17,10 @@ $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' );
 $text			= get_sub_field( 'text' );
 $cards			= get_sub_field( 'cards' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="perks">
+<section class="perks" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="perks__wrapper">
 			<?php

@@ -24,9 +24,10 @@ $text           = get_sub_field( 'text' );
 $text_color     = get_sub_field( 'text_color' ) ?: '#000';
 $type           = get_sub_field( 'type' ) ?: 'type-1';    // 'type-1' | 'type-2'
 $link           = get_sub_field( 'link' ) ?: '';
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="text__image <?php echo esc_attr( $type ) ?>">
+<section class="text__image <?php echo esc_attr( $type ); ?>" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="text__image_wrapper"<?php echo $bg ?>>
 			<div class="text__image_info">

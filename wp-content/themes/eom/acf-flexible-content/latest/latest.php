@@ -15,9 +15,10 @@ wp_enqueue_script( 'latest', THEME_URI . '/static/js/latest/latest.min.js', ['jq
 $title			= get_sub_field( 'title' );
 $title_color	= get_sub_field( 'title_color' );
 $link			= get_sub_field( 'link' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="latest">
+<section class="latest" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="latest__wrapper">
             <div class="subtitle" style="color: <?php echo esc_attr( $title_color ) ?>">Economics of Mutuality Alliance</div>

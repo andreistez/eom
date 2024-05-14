@@ -16,9 +16,10 @@ wp_enqueue_script( 'blocks', THEME_URI . '/static/js/blocks/blocks.min.js', [ 'j
 $subtitle = get_sub_field( 'subtitle' );
 $title    = get_sub_field( 'title' );
 $blocks   = get_sub_field( 'blocks' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="blocks">
+<section class="blocks" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="blocks-wrapper">
 			<?php

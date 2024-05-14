@@ -17,9 +17,10 @@ if( ! $vimeo_url = get_sub_field( 'vimeo_url' ) ) return;
 
 $poster     = get_sub_field( 'poster' );
 $video_desc = get_sub_field( 'video_desc' );
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="main__video">
+<section class="main__video" id="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container">
 		<div class="main__video_wrapper">
 			<div

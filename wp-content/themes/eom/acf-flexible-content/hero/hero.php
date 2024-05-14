@@ -18,9 +18,10 @@ $subtitle       = get_sub_field( 'subtitle' );
 $title          = get_sub_field( 'title' );
 $title_color    = get_sub_field( 'title_color' ) ?: '#fff';
 $subtitle_color = get_sub_field( 'subtitle_color' ) ?: '#fff';
+$section_id = get_sub_field( 'section_id' ) ?? '';
 ?>
 
-<section class="hero">
+<section id="<?php echo esc_attr( $section_id ); ?>" class="hero">
 	<div class="container">
 		<div class="hero__wrapper">
 			<?php
