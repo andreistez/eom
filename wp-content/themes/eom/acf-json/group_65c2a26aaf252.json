@@ -184,26 +184,6 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "thumbnail"
-                        },
-                        {
-                            "key": "field_66437195eb066",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -234,26 +214,6 @@
                             "toolbar": "full",
                             "media_upload": 0,
                             "delay": 0
-                        },
-                        {
-                            "key": "field_664374e27be17",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -318,7 +278,7 @@
                             "name": "image",
                             "aria-label": "",
                             "type": "image",
-                            "instructions": "(409px x auto)",
+                            "instructions": "(818px x auto)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -658,26 +618,6 @@
                             "bidirectional": 0,
                             "ui": 1,
                             "bidirectional_target": []
-                        },
-                        {
-                            "key": "field_664374f87be18",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -886,26 +826,6 @@
                             "other_choice": 0,
                             "layout": "vertical",
                             "save_other_choice": 0
-                        },
-                        {
-                            "key": "field_66437550d4c47",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1086,26 +1006,6 @@
                             "default_value": "#000000",
                             "enable_opacity": 0,
                             "return_format": "string"
-                        },
-                        {
-                            "key": "field_6643757ed4c48",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1186,26 +1086,6 @@
                             "toolbar": "full",
                             "media_upload": 0,
                             "delay": 0
-                        },
-                        {
-                            "key": "field_6643758dd4c49",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1359,26 +1239,6 @@
                                     "parent_repeater": "field_65c537a1c5033"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_66437599d4c4a",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1752,26 +1612,6 @@
                                     "parent_repeater": "field_65d9e0ef8fad7"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_664375c6d4c4b",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1951,26 +1791,6 @@
                                     "parent_repeater": "field_65c54856cbb6f"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_664375d8d4c4c",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2049,26 +1869,6 @@
                             "bidirectional": 0,
                             "ui": 1,
                             "bidirectional_target": []
-                        },
-                        {
-                            "key": "field_664375e2d4c4d",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2300,26 +2100,6 @@
                                     "parent_repeater": "field_65c8bdaa18b49"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_664375ebd4c4e",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2434,26 +2214,6 @@
                                     "parent_repeater": "field_65c9368014cce"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_66437621d4c4f",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2554,26 +2314,6 @@
                                     "parent_repeater": "field_65c93e9834978"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_66437637d4c50",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2638,26 +2378,6 @@
                                 "id": ""
                             },
                             "return_format": "array"
-                        },
-                        {
-                            "key": "field_66437640d4c51",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2757,6 +2477,32 @@
                                     "parent_repeater": "field_662c08ba58c80"
                                 },
                                 {
+                                    "key": "field_663e66fe5aa3d",
+                                    "label": "Image Mobile",
+                                    "name": "image_mobile",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "(870 x auto)",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "thumbnail",
+                                    "parent_repeater": "field_662c08ba58c80"
+                                },
+                                {
                                     "key": "field_662c08c258c81",
                                     "label": "Title",
                                     "name": "title",
@@ -2829,7 +2575,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -2847,26 +2593,6 @@
                                     "parent_repeater": "field_662c08ba58c80"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_6643764cd4c52",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2903,5 +2629,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715697249
+    "modified": 1715718633
 }

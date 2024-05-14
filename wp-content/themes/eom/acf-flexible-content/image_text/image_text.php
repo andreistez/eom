@@ -27,10 +27,13 @@ $section_id = get_sub_field( 'section_id' ) ?? '';
 	<div class="container">
 		<div class="image__text_wrapper">
 			<?php
-			if( $image )
-				echo '<div class="image__text_left">',
-					wp_get_attachment_image( $image, 'image-text@2x', null, ['loading' => 'lazy'] ),
-				'</div>';
+			if( $image ){
+				echo '<div class="image__text_left">';
+				get_template_part( 'components/image', null, [
+					'data' => crit_prepare_image_data( $image, 'image-text', ['is_lazy' => 1] )
+				] );
+				echo '</div>';
+			}
 			?>
 
 			<div class="image__text_right"<?php echo $bg ?>>
