@@ -123,7 +123,7 @@ export const showFormModal = (buttonsSelector, parentSelector) => {
 			popupButtons = wrapper.querySelectorAll(buttonsSelector),
 			closeBtns = wrapper.querySelectorAll('.close__button'),
 			modalWrapper = wrapper.querySelector('.signup-modal'),
-			modalId = `#${modalWrapper.id}`
+			modalId = modalWrapper ? `#${modalWrapper.id}` : null
 
 		if( ! popupButtons.length || ! closeBtns.length || ! modalWrapper ) return
 
