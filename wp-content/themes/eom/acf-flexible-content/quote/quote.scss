@@ -150,6 +150,12 @@
         .swiper-prev, .swiper-next {
             color: $white;
         }
+
+		.swiper-prev {
+			img {
+				transform: scaleX(-1);
+			}
+		}
     }
 
     &-pagination {
