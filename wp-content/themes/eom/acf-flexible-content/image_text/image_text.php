@@ -30,7 +30,7 @@ $section_id = get_sub_field( 'section_id' ) ?? '';
 			if( $image ){
 				echo '<div class="image__text_left">';
 				get_template_part( 'components/image', null, [
-					'data' => crit_prepare_image_data( $image, 'image-text', ['is_lazy' => 1] )
+					'data' => crit_prepare_image_data( $image, 'full', ['is_lazy' => 1] )
 				] );
 				echo '</div>';
 			}
