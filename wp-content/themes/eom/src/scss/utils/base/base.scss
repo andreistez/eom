@@ -76,10 +76,11 @@ section {
     scroll-margin-top: 80px;
 
     @media(min-width: $xl) {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 150px;
     }
 }
 
+//Temporary for client
 .post-901 {
     .latest__item_img img {
         object-position: 70%;
