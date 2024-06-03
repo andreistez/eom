@@ -12,10 +12,8 @@ get_header();
 
 <main class="main">
 	<section class="elementor-wrap">
-		<div class="container">
-			<div class="elementor-content">
-				<?php the_content() ?>
-			</div>
+		<div class="elementor-content">
+			<?php the_content() ?>
 		</div>
 	</section>
 </main>
