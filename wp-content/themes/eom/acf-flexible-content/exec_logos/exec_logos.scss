@@ -1,0 +1,35 @@
+@import '../../src/scss/utils/vars/vars';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.exec-logos {
+	padding: 30px 0;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 0 40px;
+
+		h2 {
+			margin-bottom: 30px;
+			max-width: 100%;
+		}
+
+		p {
+			max-width: 95%;
+		}
+	}
+
+	&-info {
+		margin-bottom: 50px;
+	}
+
+	&-images {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+
+		@media(min-width: $md) {
+			flex-direction: row;
+		}
+	}
+}

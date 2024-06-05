@@ -1,0 +1,86 @@
+@import '../../src/scss/utils/vars/vars';
+@import '../../src/scss/utils/typography/typography.scss';
+
+.experts {
+	padding: 40px 0;
+
+	&-wrapper {
+		padding: 0 20px;
+
+		@media(min-width: $lg) {
+			padding: 0 35px;
+		}
+
+		h2 {
+			margin-bottom: 50px;
+		}
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		@media(min-width: $lg) {
+			gap: 50px;
+		}
+	}
+
+	.expert-item {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media(min-width: $sm) {
+			width: calc(100% / 2 - 10px);
+		}
+
+		@media(min-width: $lg) {
+			width: calc(100% / 4 - 38px);
+		}
+	}
+
+	.expert-img {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 14px;
+
+		img {
+			width: 150px;
+			height: 150px;
+			object-fit: cover;
+			border-radius: 50%;
+
+			@media(min-width: $xl) {
+				width: 230px;
+				height: 230px;
+			}
+		}
+	}
+
+	.expert-name {
+		font-family: $ff;
+		font-weight: $fw-bold;
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 8px;
+
+		@media(min-width: $lg) {
+			font-size: 21px;
+		}
+	}
+
+	p {
+		font-family: $ff;
+		font-weight: $fw-regular;
+		font-size: 16px;
+		text-align: center;
+		padding: 0 5px;
+
+		@media(min-width: $lg) {
+			font-size: 19px;
+		}
+	}
+
+}

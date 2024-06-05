@@ -1,0 +1,16 @@
+@import '../utils/vars/vars';
+
+.page-template-exec {
+
+	.button.white {
+		font-size: 20px;
+		font-weight: $fw-bold;
+		padding: 12px 12px 10px 12px;
+		line-height: 20px;
+
+		@media(min-width: $lg) {
+			font-size: 22px;
+			line-height: 22px;
+		}
+	}
+}

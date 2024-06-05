@@ -25,10 +25,26 @@
             padding-left: 98px;
 			align-items: center
         }
+
+		&_img {
+			margin-left: 20px;
+
+			@media (min-width: $md) {
+				margin-left: 50px;
+			}
+
+			img {
+				height: 50px;
+				transition: height ease $tr;
+
+				@media (min-width: $md) {
+					height: 95px;
+				}
+			}
+		}
     }
 
     &__text {
-        min-width: 190px;
         font-family: $ff;
         font-weight: $fw-bold;
         line-height: 1;
