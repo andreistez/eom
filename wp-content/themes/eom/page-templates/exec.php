@@ -10,166 +10,39 @@
 get_header();
 
 wp_enqueue_style( 'exec', THEME_URI . '/static/css/pages/exec.min.css', [], THEME_VERSION );
-wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
-wp_enqueue_style( 'global_text', THEME_URI . '/static/css/global_text/global_text.min.css', [], THEME_VERSION );
-wp_enqueue_style( 'experts', THEME_URI . '/static/css/experts/experts.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'exec_items', THEME_URI . '/static/css/exec_items/exec_items.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'exec_logos', THEME_URI . '/static/css/exec_logos/exec_logos.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'find_out', THEME_URI . '/static/css/find_out/find_out.min.css', [], THEME_VERSION );
 ?>
 
 	<main class="main">
-		<section class="hero exec">
-			<div class="container">
-				<div class="hero__wrapper">
-					<div class="hero-bg">
-                		<img src="<?php echo THEME_URI ?>/static/img/exec-bg.jpg" alt="Alt text for image" />
-           			 </div>
-					<h1 class="h1">
-						Driving Impact Through 
-						Mutual Value Creation
-					</h1>
-					<div class="hero-subtitle">
-						Oxford Virtual Executive Education Program
-					</div>
-					<div class="hero-date">
-						September 12 – October 31, 2024
-					</div>
-					<button class="button bg white">
-						Download Brochure
-					</button>
-				</div>
-			</div>
-		</section>
-		<section class="experts">
-			<div class="container">
-				<div class="experts-wrapper">
-					<h2>Hear From Top Experts</h2>
-					<div class="experts-items">
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-						<div class="expert-item">
-							<div class="expert-inner">
-								<div class="expert-img">
-									<img src="<?php echo THEME_URI ?>/static/img/photo.png" alt="">
-								</div>
-								<div class="expert-name">
-									Colin Mayer
-								</div>
-								<p>
-									Former Dean & Professor, 
-									Oxford University’s 
-									Saïd Business School
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<?php
+		/**
+		 * 1. Please create ACF Flexible Content setting
+		 * for pages with slug 'flexible_content'.
+		 *
+		 * 2. Then set names of sections PHP-files
+		 * the same as ACF Flexible Content sections slugs.
+		 *
+		 * 3. Put all JavaScript and SCSS files for your section
+		 * right inside its PHP-file directory.
+		 *
+		 * 4. Include these scripts & styles right inside your
+		 * PHP-file code from theme_name/static/acf-flexible-content.
+		 *
+		 * @example
+		 * 'hero_section' in ACF Flexible Content sections
+		 * will use template from 'theme_name/acf-flexible-content/hero_section/hero_section.php'
+		 */
+		if( have_rows( 'flexible_content' ) ){
+			while( have_rows( 'flexible_content' ) ){
+				the_row();
+				$slug = get_row_layout();
+				get_template_part( "acf-flexible-content/$slug/$slug" );
+			}
+		}
+		?>
+
 		<section class="exec-items">
 			<div class="container">
 				<div class="exec-items-wrapper">

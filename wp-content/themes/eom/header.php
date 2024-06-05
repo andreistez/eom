@@ -44,6 +44,7 @@ $site_desc = get_bloginfo( 'description', 'display' );
             <div class="container">
                 <div class="header__wrapper">
                     <?php get_template_part( 'components/logo/header' ) ?>
+
                     <button class="burger__button">
                         <span></span>
                     </button>
