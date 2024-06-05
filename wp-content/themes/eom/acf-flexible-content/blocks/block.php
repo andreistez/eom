@@ -13,7 +13,7 @@
 if( ! $block = $args['block'] ?? null ) return;
 
 $image        = $block['image'] ?? '';
-$image_mobile = $block['image_mobile'] ?? '';
+$image_mobile = $block['image_mob'] ?? '';
 $title        = $block['title'] ?? '';
 $date         = $block['date'] ?? '';
 $text         = $block['text'] ?? '';

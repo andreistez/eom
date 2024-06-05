@@ -39,6 +39,16 @@
             .red__gear, .blue__gear {
                 animation: none;
             }
+
+			&__inner_img {
+				img {
+					height: 45px;
+
+					@media(min-width: $md) {
+						height: 80px;
+					}
+				}
+			}
         }
 
         .header__logo_wrapper {
