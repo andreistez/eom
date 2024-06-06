@@ -1,16 +1,49 @@
 @import '../utils/vars/vars';
 
 .page-template-exec {
+	.hero {
+		.button.white {
+			font-size: 20px;
+			font-weight: $fw-bold;
+			padding: 12px 12px 10px 12px;
+			line-height: 20px;
+	
+			@media(min-width: $lg) {
+				font-size: 22px;
+				line-height: 22px;
+			}
+		}	
+	}
 
-	.button.white {
-		font-size: 20px;
-		font-weight: $fw-bold;
-		padding: 12px 12px 10px 12px;
-		line-height: 20px;
+	.image__text {
+		.button.bg {
+			background-color: $white;
+			color: $black;
+		}
+	}
 
-		@media(min-width: $lg) {
-			font-size: 22px;
-			line-height: 22px;
+	#lead {
+		h2 {
+			max-width: 100%;
+		}
+
+		.image__text_left {
+			@media(min-width: $md) {
+				width: 51%;
+			}
+		}
+
+		.image__text_right {
+			@media(min-width: $md) {
+				width: 49%;
+			}
+		}
+	}
+
+	#growing {
+		.button {
+			background-color: $dark-blue;
+			color: $white;
 		}
 	}
 }

@@ -328,6 +328,15 @@
 
         font-weight: $fw-light;
         padding: 10px;
+
+		span {
+			text-decoration: line-through;
+			color: red;
+		}
+
+		b {
+			color: red;
+		}
     }
 
     &__start {
