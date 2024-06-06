@@ -46,4 +46,12 @@
 			color: $white;
 		}
 	}
+
+	.find-out {
+		&-form {
+			.wpcf7-response-output {
+				color: $white;
+			}
+		}
+	}
 }

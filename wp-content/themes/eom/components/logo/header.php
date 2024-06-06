@@ -14,7 +14,7 @@ $additional_logo = get_field( 'additional_logo' ) ?: '';
 	<a href="/" class="logo">
 		<div class="logo__inner">
 			<?php
-			get_template_part( 'components/logo/gears-and-text', null, ['text' => 'Mutual<br/>Value<br/>Labs'] );
+			get_template_part( 'components/logo/gears-and-text', null, ['text' => 'Economics<br/>of mutuality<br/>alliance'] );
 
 			if( $additional_logo ){
 				echo '<div class="logo__inner_img">', wp_get_attachment_image( $additional_logo, 'medium' ), '</div>';

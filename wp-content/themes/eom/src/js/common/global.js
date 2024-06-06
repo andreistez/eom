@@ -130,6 +130,7 @@ export const showFormModal = (buttonsSelector, parentSelector) => {
 		popupButtons.forEach(popupButton => {
 			popupButton.addEventListener('click', e => {
 				e.preventDefault()
+				console.log('click')
 
 				setTargetElement(modalId)
 				toggleModal(modalWrapper)
@@ -143,7 +144,6 @@ export const showFormModal = (buttonsSelector, parentSelector) => {
 
     document.addEventListener('click', e => {
         const target = e.target
-
         if (target.className && target.classList.contains('signup-modal')) {
             toggleModal(target.closest('.signup-modal'))
         }
