@@ -54,4 +54,10 @@
 			}
 		}
 	}
+
+	.logo {
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
