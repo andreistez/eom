@@ -52,19 +52,16 @@ $id_rand        	   = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000,
 
 				if( $download_button_label ){
 					echo '<button class="button bg white call-signup">', esc_html( $download_button_label ), '</button>';
-					if( $form_id ){
 						?>
 						<div id="<?php echo $id_rand ?>" class="modal__wrapper signup-modal">
 							<div class="modal">
-								<?php echo do_shortcode( "[contact-form-7 id='$form_id']" ) ?>
-				
+							<iframe src="https://www2.eom.org/l/1031581/2024-06-06/wgz4" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 								<button class="close__button">
 									<span></span>
 								</button>
 							</div>
 						</div>
 						<?php
-					}
 				}
 			}
 

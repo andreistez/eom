@@ -3,6 +3,7 @@
 
 .experts {
 	padding: 40px 0;
+	@include borderTop;
 
 	&-wrapper {
 		padding: 0 20px;
@@ -13,6 +14,7 @@
 
 		h2 {
 			margin-bottom: 50px;
+			color: $dark-blue;
 		}
 	}
 
@@ -73,7 +75,7 @@
 
 	p {
 		font-family: $ff;
-		font-weight: $fw-regular;
+		font-weight: $fw-light;
 		font-size: 16px;
 		text-align: center;
 		padding: 0 5px;

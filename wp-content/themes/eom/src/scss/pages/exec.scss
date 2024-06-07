@@ -19,24 +19,7 @@
 		.button.bg {
 			background-color: $white;
 			color: $black;
-		}
-	}
-
-	#lead {
-		h2 {
-			max-width: 100%;
-		}
-
-		.image__text_left {
-			@media(min-width: $md) {
-				width: 51%;
-			}
-		}
-
-		.image__text_right {
-			@media(min-width: $md) {
-				width: 49%;
-			}
+			margin-top: 20px;
 		}
 	}
 

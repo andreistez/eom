@@ -21,6 +21,8 @@ $text_blocks	= get_sub_field( 'text_blocks' );
 $id_rand        = 'modal-' . random_int( 10000, 99999 ) . random_int( 10000, 99999 );
 $form_id        = get_sub_field('form') ?? '';
 $section_id = get_sub_field( 'section_id' ) ?? '';
+$modal_content_type = get_sub_field('modal_select');
+$iframe_url     = get_sub_field('iframe_url');
 ?>
 
 <section class="image__text <?php echo $type; ?>" id="<?php echo esc_attr( $section_id ); ?>">
@@ -56,19 +58,29 @@ $section_id = get_sub_field( 'section_id' ) ?? '';
 		</div>
 	</div>
 	<?php
-	if( $form_id ){
-		?>
-		<div id="<?php echo $id_rand ?>" class="modal__wrapper signup-modal">
-			<div class="modal">
-				<?php echo do_shortcode( "[contact-form-7 id='$form_id']" ) ?>
-
-				<button class="close__button">
-					<span></span>
-				</button>
-			</div>
-		</div>
-		<?php
-	}
-	?>
+    if ($modal_content_type === 'form' && $form_id) {
+        ?>
+        <div id="<?php echo $id_rand; ?>" class="modal__wrapper signup-modal">
+            <div class="modal">
+                <?php echo do_shortcode("[contact-form-7 id='$form_id']"); ?>
+                <button class="close__button">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <?php
+    } elseif ($modal_content_type === 'iframe' && $iframe_url) {
+        ?>
+        <div id="<?php echo $id_rand; ?>" class="modal__wrapper signup-modal">
+            <div class="modal">
+                <iframe src="<?php echo esc_url($iframe_url); ?>" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+                <button class="close__button">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </section>
 

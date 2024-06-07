@@ -2,7 +2,7 @@
 @import '../../src/scss/utils/typography/typography.scss';
 
 .find-out {
-	padding: 30px 0;
+	@include borderTop;
 
 	&-items {
 		display: flex;
