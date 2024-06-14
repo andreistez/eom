@@ -50,11 +50,6 @@
 				}
 			}
         }
-
-        .header__logo_wrapper {
-            position: relative;
-            z-index: 101;
-        }
     }
 
     &.opened {
@@ -68,6 +63,13 @@
         justify-content: space-between;
         position: relative;
     }
+
+	&__logo_wrapper {
+		position: relative;
+		z-index: 101;
+		display: flex;
+		align-items: center;
+	}
 
     &__inner {
         position: relative;

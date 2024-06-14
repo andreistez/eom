@@ -13,10 +13,10 @@ wp_enqueue_style( 'find_out', THEME_URI . '/static/css/find_out/find_out.min.css
 
 $section_id        = get_sub_field( 'section_id' ) ?? '';
 $title             = get_sub_field( 'title' ) ?: '';
-$form_shortcode    = get_sub_field( 'form_shortcode' ) ?: '';
+$form_shortcodes    = get_sub_field( 'form_shortcodes' ) ?: '';
 $image             = get_sub_field( 'image' ) ?: [];
-$modal_content_type = get_sub_field( 'form_select' );
-$iframe_url        = get_sub_field( 'iframe_url' );
+$forms_content_type = get_sub_field( 'forms_findout' );
+$iframe_urls        = get_sub_field( 'iframe_urls' );
 
 ?>
 
@@ -24,19 +24,16 @@ $iframe_url        = get_sub_field( 'iframe_url' );
     <div class="container">
         <div class="find-out-items">
             <?php
-            if( $title || $form_shortcode || ($modal_content_type === 'iframe' && $iframe_url) ){
                 echo '<div class="find-out-form">';
 
                 if( $title ) echo '<h2>', esc_html( $title ), '</h2>';
 
-                if ($modal_content_type === 'form' && $form_shortcode) {
-                    echo do_shortcode( $form_shortcode );
-                } elseif ($modal_content_type === 'iframe' && $iframe_url) {
-                    echo '<iframe src="' . esc_url( $iframe_url ) . '" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
+                if ($forms_content_type === 'formF' && $form_shortcodes) {
+                    echo do_shortcode( $form_shortcodes );
+                } elseif ($forms_content_type === 'iframeF' && $iframe_urls) {
+                    echo '<iframe src="' . esc_url( $iframe_urls ) . '" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
                 }
-
                 echo '</div>';
-            }
 
             if( $image ){
                 echo '<div class="find-out-img">',

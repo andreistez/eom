@@ -237,6 +237,12 @@
 
 .page-template-loneliness {
 	.image__text {
+		.modal__wrapper {
+			iframe {
+				height: 570px;
+			}
+		}
+
 		&_right {
 			background-color: $terracota;
 			padding: 15px;

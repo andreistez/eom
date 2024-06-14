@@ -118,4 +118,16 @@
 		justify-content: flex-end;
 		margin-top: auto;
 	}
+
+	.modal__wrapper {
+		iframe {
+			height: 655px;
+
+			@media(min-width: $sm) {
+				height: 570px;
+			}
+			
+		}
+	}
+
 }

@@ -3,12 +3,13 @@
 
 .exec-logos {
 	padding: 30px 0;
+
 	@include borderTop;
 
 	&-wrapper {
 		display: flex;
 		flex-direction: column;
-		padding: 0 40px;
+		padding: 0 40px 30px 40px;
 
 		h2 {
 			margin-bottom: 30px;

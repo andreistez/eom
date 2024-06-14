@@ -795,6 +795,42 @@
                             "append": ""
                         },
                         {
+                            "key": "field_666b9033e7a82",
+                            "label": "Form shortcode",
+                            "name": "form",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66346367ba7b3",
+                                        "operator": "==",
+                                        "value": "form"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "return_format": "id",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
                             "key": "field_664374f87be18",
                             "label": "Section ID",
                             "name": "section_id",
@@ -2183,16 +2219,69 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_65c7ec69f889d",
-                            "label": "Form",
-                            "name": "form",
+                            "key": "field_664375e2d4c4d",
+                            "label": "Section ID",
+                            "name": "section_id",
                             "aria-label": "",
-                            "type": "post_object",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_666bd3f306b52",
+                            "label": "Select forms",
+                            "name": "select_forms",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "forms": "Form",
+                                "iframes": "Iframe"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_666bd43db6f37",
+                            "label": "Form Discuss",
+                            "name": "form_discuss",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_666bd3f306b52",
+                                        "operator": "==",
+                                        "value": "forms"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2211,14 +2300,22 @@
                             "bidirectional_target": []
                         },
                         {
-                            "key": "field_664375e2d4c4d",
-                            "label": "Section ID",
-                            "name": "section_id",
+                            "key": "field_666bd48db6f38",
+                            "label": "Iframe Discuss",
+                            "name": "iframe_discuss",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_666bd3f306b52",
+                                        "operator": "==",
+                                        "value": "iframes"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2980,11 +3077,11 @@
                                     "parent_repeater": "field_662c08ba58c80"
                                 },
                                 {
-                                    "key": "field_6633f8ad76fe7",
-                                    "label": "CF7 Form",
-                                    "name": "form",
+                                    "key": "field_666ba2a6bc83b",
+                                    "label": "Modal select",
+                                    "name": "modal_select",
                                     "aria-label": "",
-                                    "type": "post_object",
+                                    "type": "select",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -2993,10 +3090,76 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "choices": {
+                                        "form": "Form",
+                                        "iframe": "Iframe"
+                                    },
+                                    "default_value": "iframe",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_662c08ba58c80"
+                                },
+                                {
+                                    "key": "field_666ba2e38bcf0",
+                                    "label": "Iframe url",
+                                    "name": "iframe_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_666ba2a6bc83b",
+                                                "operator": "==",
+                                                "value": "iframe"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_662c08ba58c80"
+                                },
+                                {
+                                    "key": "field_666ba30f8bcf1",
+                                    "label": "Form shortcode",
+                                    "name": "form",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_666ba2a6bc83b",
+                                                "operator": "==",
+                                                "value": "form"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
                                     "post_type": [
                                         "wpcf7_contact_form"
                                     ],
-                                    "post_status": "",
+                                    "post_status": [
+                                        "publish"
+                                    ],
                                     "taxonomy": "",
                                     "return_format": "id",
                                     "multiple": 0,
@@ -3467,9 +3630,9 @@
                         {
                             "key": "field_666390df90830",
                             "label": "Form select",
-                            "name": "form_select",
+                            "name": "forms_findout",
                             "aria-label": "",
-                            "type": "select",
+                            "type": "radio",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3479,21 +3642,20 @@
                                 "id": ""
                             },
                             "choices": {
-                                "form": "Form",
-                                "iframe": "Iframe"
+                                "formF": "Form",
+                                "iframeF": "Iframe"
                             },
-                            "default_value": false,
+                            "default_value": "",
                             "return_format": "value",
-                            "multiple": 0,
                             "allow_null": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": ""
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         },
                         {
                             "key": "field_6660c72941993",
                             "label": "Form Shortcode",
-                            "name": "form_shortcode",
+                            "name": "form_shortcodes",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "Contact Form 7 shortcode",
@@ -3503,7 +3665,7 @@
                                     {
                                         "field": "field_666390df90830",
                                         "operator": "==",
-                                        "value": "form"
+                                        "value": "formF"
                                     }
                                 ]
                             ],
@@ -3521,7 +3683,7 @@
                         {
                             "key": "field_6663912390831",
                             "label": "Iframe Url",
-                            "name": "iframe_url",
+                            "name": "iframe_urls",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -3531,7 +3693,7 @@
                                     {
                                         "field": "field_666390df90830",
                                         "operator": "==",
-                                        "value": "iframe"
+                                        "value": "iframeF"
                                     }
                                 ]
                             ],
@@ -3588,5 +3750,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717801445
+    "modified": 1718344195
 }

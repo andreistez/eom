@@ -15,7 +15,30 @@
 		}	
 	}
 
+	h2 {
+		font-size: 40px;
+		line-height: 40px;
+		max-width: 100%;
+
+		@media(min-width: $md) {
+			font-size: 56px;
+			line-height: 56px;
+		}
+	}
+
 	.image__text {
+		.image__text_heading h2 {
+				max-width: 800px;
+		}
+
+		&_right {
+			padding: 25px 15px;
+
+			@media(min-width: $md) {
+				padding: 28px 32px 40px 32px;
+			}
+		}
+
 		.button.bg {
 			background-color: $white;
 			color: $black;
@@ -24,6 +47,13 @@
 	}
 
 	#growing {
+		.image__text_left {
+			height: 400px;
+
+			@media(min-width: $md) {
+				height: auto;
+			}
+		}
 		.button {
 			background-color: $dark-blue;
 			color: $white;
@@ -42,5 +72,25 @@
 		&:hover {
 			opacity: 1;
 		}
+	}
+
+	.signup-modal {
+		iframe {
+			height: 430px;
+		}
+
+		.modal {
+			background-color: $dark-blue;
+		}
+	}
+
+	.modal__wrapper {
+		.form__button.wpcf7-submit {
+			color: $white;
+		}
+	}
+
+	.dropdowns {
+		padding: 32px;
 	}
 }
