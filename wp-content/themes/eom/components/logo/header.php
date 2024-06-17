@@ -7,14 +7,14 @@
  * @subpackage eom
  */
 
-$additional_logo = get_field( 'additional_logo' ) ?: '';
+ $additional_logo = get_field('additional_logo') ?: get_field('additional_logo_app');
 ?>
 
 <div class="header__logo_wrapper">
 	<a href="/" class="logo">
 		<div class="logo__inner">
 			<?php
-			get_template_part( 'components/logo/gears-and-text', null, ['text' => 'Economics<br/>of mutuality<br/>alliance'] );
+			get_template_part( 'components/logo/gears-and-text', null, ['text' => 'Mutual<br/>Value<br/>Labs'] );
 			?>
 		</div>
 	</a>

@@ -1,11 +1,11 @@
 {
-    "key": "group_6660ba490e545",
-    "title": "Page Template: Exec",
+    "key": "group_6670059bc0498",
+    "title": "Page Template: Application",
     "fields": [
         {
-            "key": "field_6660ba49058b0",
+            "key": "field_6670059bc50a3",
             "label": "Additional Logo",
-            "name": "additional_logo",
+            "name": "additional_logo_app",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -33,11 +33,6 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/exec.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "==",
                 "value": "page-templates\/application.php"
             }
         ]
@@ -51,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718350678
+    "modified": 1718617628
 }
