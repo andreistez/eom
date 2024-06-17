@@ -24,7 +24,7 @@
 				margin-bottom: 20px;
 			}
 
-			.application-list {
+			ul {
 				font-family: $ff;
 				font-size: 18px;
 				list-style: disc;
@@ -35,10 +35,6 @@
 
 				&:last-child {
 					margin-bottom: 0;
-				}
-
-				&.italic {
-					font-style: italic;
 				}
 			}
 
