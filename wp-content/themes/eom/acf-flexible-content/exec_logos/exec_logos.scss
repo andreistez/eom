@@ -35,10 +35,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		gap: 50px;
-
+		gap: 10px;
+		
 		@media(min-width: $md) {
 			flex-direction: row;
+			gap: 50px;
 		}
 	}
 
