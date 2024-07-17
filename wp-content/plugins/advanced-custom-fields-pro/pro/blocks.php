@@ -513,6 +513,7 @@ function acf_get_block_back_compat_attribute_key_array() {
  * @return  string The block HTML.
  */
 function acf_render_block_callback( $attributes, $content = '', $wp_block = null ) {
+
 	$is_preview = false;
 	$post_id    = get_the_ID();
 
@@ -680,6 +681,7 @@ function acf_rendered_block( $attributes, $content = '', $is_preview = false, $p
  * @return  void|string
  */
 function acf_render_block( $attributes, $content = '', $is_preview = false, $post_id = 0, $wp_block = null, $context = false ) {
+
 	// Prepare block ensuring all settings and attributes exist.
 	$block = acf_prepare_block( $attributes );
 	if ( ! $block ) {
@@ -868,7 +870,8 @@ function acf_enqueue_block_type_assets( $block_type ) {
  */
 function acf_ajax_fetch_block() {
 	// Validate ajax request.
-	if ( ! acf_verify_ajax() ) {
+	$render_capability = apply_filters( 'acf/blocks/render_capability', 'edit_posts' );
+	if ( ! acf_verify_ajax() || ! current_user_can( $render_capability ) ) {
 		wp_send_json_error();
 	}
 
@@ -945,9 +948,19 @@ function acf_ajax_fetch_block() {
 	// Vars.
 	$response = array( 'clientId' => $client_id );
 
+	// Check if we've recieved serialised form data
+	$use_post_data = false;
+	if ( ! empty( $block['data'] ) && is_array( $block['data'] ) ) {
+		// Ensure we've got field keys posted.
+		$valid_field_keys = array_filter( array_keys( $block['data'] ), 'acf_is_field_key' );
+		if ( ! empty( $valid_field_keys ) ) {
+			$use_post_data = true;
+		}
+	}
+
 	$query['validate'] = ( ! empty( $query['validate'] ) && ( $query['validate'] === 'true' || $query['validate'] === true ) );
 	if ( ! empty( $query['validate'] ) || ! empty( $block['validate'] ) ) {
-		$response['validation'] = acf_get_block_validation_state( $block, $first_preview, true );
+		$response['validation'] = acf_get_block_validation_state( $block, $first_preview, $use_post_data );
 	}
 
 	// Query form.
@@ -1016,7 +1029,15 @@ function acf_get_empty_block_form_html( $block_name ) {
 
 	$message = apply_filters( 'acf/blocks/no_fields_assigned_message', $message, $block_name );
 
-	return empty( $message ) ? '' : acf_esc_html( '<div class="acf-block-fields acf-fields acf-empty-block-fields">' . $message . '</div>' );
+	if ( ! is_string( $message ) ) {
+		$message = '';
+	}
+
+	if ( empty( $message ) ) {
+		return acf_esc_html( '<div class="acf-empty-block-fields"></div>' );
+	} else {
+		return acf_esc_html( '<div class="acf-block-fields acf-fields acf-empty-block-fields">' . $message . '</div>' );
+	}
 }
 
 /**
@@ -1108,6 +1129,9 @@ function acf_parse_save_blocks_callback( $matches ) {
  * @return string A block ID.
  */
 function acf_get_block_id( $attributes, $context = array(), $force = false ) {
+	$context = is_array( $context ) ? $context : array();
+
+	ksort( $context );
 	$attributes['_acf_context'] = $context;
 	if ( empty( $attributes['id'] ) || $force ) {
 		unset( $attributes['id'] );
