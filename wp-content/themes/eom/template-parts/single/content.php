@@ -27,9 +27,6 @@ $additional	= get_field( 'additional_info' );
 
             <div class="post-single-content-inner">
                 <div class="post-single-estimate">
-                    <div class="post-single-read">
-                        <?php echo eom_get_reading_time( $post_id ), ' ', __( 'min read', 'eom' ) ?>
-                    </div>
                     <div class="post-single-date">
 						<?php echo get_the_date( 'M Y', $post_id ) ?>
                     </div>
@@ -59,8 +56,6 @@ $additional	= get_field( 'additional_info' );
 						<?php
 					}
 					?>
-
-					<?php get_template_part( 'components/addtoany' ) ?>
                 </div>
 
 				<?php

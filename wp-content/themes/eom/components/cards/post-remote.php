@@ -35,9 +35,6 @@ $excerpt	= $_p['excerpt']['rendered'] ?? null;
 		?>
 
 		<div class="latest__case_wrapper">
-			<!--<div class="latest__case">
-				<?php /*echo eom_get_reading_time( $post_id ), ' ', __( 'min read', 'eom' ) */?>
-			</div>-->
 			<div class="latest__case">
 				<?php echo date( 'M Y', strtotime( $_p['date'] ) ) ?>
 			</div>

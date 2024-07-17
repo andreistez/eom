@@ -31,9 +31,6 @@ $type = $args['type'] ?? 'no-thumb';
 
 		<div class="latest__case_wrapper">
 			<div class="latest__case">
-				<?php echo eom_get_reading_time( $post_id ), ' ', __( 'min read', 'eom' ) ?>
-			</div>
-			<div class="latest__case">
 				<?php echo get_the_date( 'M Y', $post_id ) ?>
 			</div>
 		</div>
