@@ -306,3 +306,20 @@
     }
 }
 
+.page-template-elementor_header_footer .lines {
+	@media (max-width: 1343px) {
+		--container-default-padding-left: 20px;
+		--container-default-padding-right: 20px;
+
+		max-width: 100%;
+		padding: 0 10px;
+
+		&::before {
+			left: 7px
+		}
+
+		&::after {
+			right: 7px
+		}
+	}
+}
