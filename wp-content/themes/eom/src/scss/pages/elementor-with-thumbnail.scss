@@ -1,0 +1,13 @@
+@import '../utils/vars/vars';
+@import '../utils/grid/mixins';
+
+.elementor-wt-content {
+	@media (max-width: 1343px) {
+		width: 100%;
+		padding: 0 7px
+	}
+
+	@media (min-width: 1344px) {
+		@include container
+	}
+}
