@@ -97,8 +97,8 @@ function eom_inclusion_enqueue(): void
 		wp_enqueue_script( 'blog', THEME_URI . '/static/js/blog/blog.min.js', ['jquery'], THEME_VERSION, true );
 	}
 
-	if( is_page_template( 'page-templates/elementor-with-thumbnail.php' ) )
-		wp_enqueue_style( 'elementor-wt', THEME_URI . '/static/css/pages/elementor-with-thumbnail.min.css', [], THEME_VERSION );
+	if( is_page_template( 'page-templates/elementor-with-featured-image.php' ) )
+		wp_enqueue_style( 'elementor-wt', THEME_URI . '/static/css/pages/elementor-with-featured-image.min.css', [], THEME_VERSION );
 }
 
 add_action( 'acf/init', 'eom_acf_init' );

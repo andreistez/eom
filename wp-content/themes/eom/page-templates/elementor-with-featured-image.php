@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Elementor With Thumbnail
+ * Template name: Elementor With Featured Image
  *
  * @package WordPress
  * @subpackage eom
