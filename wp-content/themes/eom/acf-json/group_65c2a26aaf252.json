@@ -287,14 +287,48 @@
                             "append": ""
                         },
                         {
+                            "key": "field_6797c86236b67",
+                            "label": "Modal select",
+                            "name": "modal_select",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "form": "Form",
+                                "iframe": "Iframe"
+                            },
+                            "default_value": "iframe",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_666209b704aeb",
-                            "label": "form",
+                            "label": "Form select",
                             "name": "form",
                             "aria-label": "",
                             "type": "post_object",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6797c86236b67",
+                                        "operator": "==",
+                                        "value": "form"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -311,6 +345,34 @@
                             "bidirectional": 0,
                             "ui": 1,
                             "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_6797c8d036b68",
+                            "label": "Iframe url",
+                            "name": "iframe_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6797c86236b67",
+                                        "operator": "==",
+                                        "value": "iframe"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -3750,5 +3812,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718344195
+    "modified": 1738001281
 }
